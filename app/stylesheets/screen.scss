@@ -1,0 +1,54 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "partials/base";
+@import "compass/reset";
+@import "blueprint";
+@import "compass/utilities";
+@import "blueprint/typography";
+@import "partials/layout";
+
+@include blueprint-typography;
+
+body {
+  a {
+    @include hover-link;
+  }
+}
+  
+#wrapper {
+}
+#header {
+}
+#usernav {
+  text-align: right;
+}
+
+
+#footer {
+  ul {
+    @include no-bullets;
+    padding: 0;
+  }
+}
+
+#content {
+}
+
+.leftmiddle {
+}
+
+.left {
+}
+
+.middle {
+}
+
+.right {
+}
+
+#signin-menu {
+  border: 1px solid;
+}

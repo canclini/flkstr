@@ -1,0 +1,58 @@
+#wrapper {
+  @include container();
+}
+#header {
+  @include column(24);
+}
+
+#logo {
+  @include column(3);
+}
+
+#topsearch {
+  margin-top: 20px;
+  @include column(12);
+}
+#usernav {
+  @include column(8);
+  @include last;
+}
+
+
+#footer {
+  @include column(24);
+  @include last;
+}
+
+#content {
+  @include column(24);
+}
+
+.leftmiddle {
+  @include column(16);
+}
+
+.left {
+  @include column(8);
+}
+
+.middle {
+  @include column(8);
+}
+
+.right {
+  @include column(8);
+  @include last;
+}
+
+.box {
+  padding: 10px;
+  margin: 10px;
+  @include bordered;
+  @include rounded(10px);
+}
+
+#copyright {
+  font-weight: bold;
+  text-align: right;
+}

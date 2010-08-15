@@ -1,0 +1,57 @@
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+$blueprint_grid_columns: 24;
+$blueprint_container_size: 950px;
+$blueprint_grid_margin: 10px;
+
+// Use this to calculate the width based on the total width.
+// Or you can set !blueprint_grid_width to a fixed value and unset !blueprint_container_size -- it will be calculated for you.
+$blueprint_grid_width: ($blueprint_container_size + $blueprint_grid_margin) / $blueprint_grid_columns - $blueprint_grid_margin;
+
+// flockstreet colors
+$flk_blue: #1a92d3;
+$flk_orange: #d94a0b;
+$flk_magenta: #ce3caa;
+$flk_green: #72ad00;
+
+$darker: #222222;
+$lighter: #222222;
+
+$flk_darkblue: $flk_blue - $darker;
+$flk_darkorange: $flk_orange - $darker;
+$flk_darkmagenta: $flk_magenta - $darker;
+$flk_darkgreen: $flk_green - $darker;
+
+$flk_lightblue: $flk_blue + $lighter;
+$flk_lightorange: $flk_orange + $lighter;
+$flk_lightmagenta: $flk_magenta + $lighter;
+$flk_lightgreen: $flk_green + $lighter;
+
+$light_grey: #f3f3f3;
+
+// mixins
+@mixin bordered($width: 2px) {
+  border: $width solid #777777; }
+
+@mixin boxed($bkgrnd: $light_grey, $bordercolor: #aaaaaa) {
+  background: $bkgrnd;
+  border: 1px solid $bordercolor; }
+
+@mixin rounded($radius: 10px) {
+  border-top-left-radius: $radius; 
+  border-top-right-radius: $radius; 
+  border-bottom-left-radius: $radius; 
+  border-bottom-right-radius: $radius; 
+
+  //-webkit-border-top-left-radius: $radius; 
+  //-webkit-border-top-right-radius: $radius; 
+  //-webkit-border-bottom-left-radius: $radius; 
+  //-webkit-border-bottom-right-radius: $radius; 
+  //
+  -moz-border-radius-topleft: $radius; 
+  -moz-border-radius-topright: $radius; 
+  -moz-border-radius-bottomleft: $radius; 
+  -moz-border-radius-bottomright: $radius; 
+  
+}

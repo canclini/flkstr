@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+%html
+  %head
+    %meta{"http-equiv"=>"Content-type", :content=>"text/html;charset=utf-8"}/
+    %title=h(yield(:title) || "Untitled")
+    = render :partial => 'layouts/includes'
+    = yield :head
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "simplemodal"
+    = csrf_meta_tag
+
+  %body.login
+    #wrapper.wrap
+      #header
+        #logo
+          =link_to image_tag("flockstreet-blue.png", :border => 0), root_url
+      #content
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}"
+        = yield
+    = render :partial => 'layouts/uservoice'

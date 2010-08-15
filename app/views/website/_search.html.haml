@@ -1,0 +1,4 @@
+%strong Dienstleistung suchen, Firma finden, Firma beauftragen
+- form_tag companies_path do
+  %p
+    = text_field_tag :search, params[:search] = "Suche nach Dienstleistung oder Firma", :size => 50, :class => "clearme"
