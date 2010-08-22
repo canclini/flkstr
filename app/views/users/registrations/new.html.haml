@@ -22,5 +22,8 @@
     = f.label :password_confirmation
     %br/
     = f.password_field :password_confirmation
+    = hidden_field :plan, :name
+    = hidden_field :company, :id
+    
   %p= f.submit "Sign up", :class => "button"
 = render :partial => "devise/shared/links"

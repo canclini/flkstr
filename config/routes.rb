@@ -1,7 +1,11 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
-  devise_for :users, :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => "register"}
+#  devise_for :users, :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => "register"}
+  devise_for :users, :controllers => { :registrations => "users/registrations"}#, :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => "register"}
+#  resources :users, :only => [:new]
   resources :products, :companies, :requests, :leads, :companies
+  
+  
 
 #  resources :leads do
 #    member do
@@ -41,6 +45,12 @@ Flockstreet::Application.routes.draw do
   match "/signup" => "plans#index", :as => :signup
   #ist der Plan gewählt, wird die Firma erfasst
   match "/signup(/:plan)" => "companies#new", :as => :signup
+  #ist die Firma erfasst und der Plan gewählt, kommt die User registrierung
+  devise_for :users do
+    match "/signup/:plan/:company" => "users/registrations#new", :as => :register
+  end
+  #und am Schluss wird noch bezahlt.
+  match "payment/:plan" => "companies#payment", :as => :payment
   
   
   # The priority is based upon order of creation:

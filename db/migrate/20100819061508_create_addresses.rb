@@ -2,7 +2,7 @@ class CreateAddresses < ActiveRecord::Migration
   def self.up
     create_table :addresses do |t|
       t.references :company
-      t.boolean :main, :default => 'false'
+      t.boolean :main, :default => false
       t.string :street
       t.string :city
       t.string :plz

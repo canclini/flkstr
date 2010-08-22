@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(:version => 20100819061851) do
   end
 
   create_table "companies", :force => true do |t|
-    t.string   "permalink"
     t.string   "name"
     t.text     "teaser"
     t.text     "history"
@@ -36,13 +35,10 @@ ActiveRecord::Schema.define(:version => 20100819061851) do
     t.string   "twitter"
     t.string   "website"
     t.integer  "staff"
+    t.string   "permalink"
     t.integer  "sector_id"
-    t.integer  "requests_count",    :default => 0, :null => false
-    t.integer  "leads_count",       :default => 0, :null => false
-    t.string   "logo_file_name"
-    t.string   "logo_content_type"
-    t.integer  "logo_file_size"
-    t.datetime "logo_updated_at"
+    t.integer  "requests_count", :default => 0, :null => false
+    t.integer  "leads_count",    :default => 0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -85,6 +81,32 @@ ActiveRecord::Schema.define(:version => 20100819061851) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "tolk_locales", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tolk_locales", ["name"], :name => "index_tolk_locales_on_name", :unique => true
+
+  create_table "tolk_phrases", :force => true do |t|
+    t.text     "key"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tolk_translations", :force => true do |t|
+    t.integer  "phrase_id"
+    t.integer  "locale_id"
+    t.text     "text"
+    t.text     "previous_text"
+    t.boolean  "primary_updated", :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tolk_translations", ["phrase_id", "locale_id"], :name => "index_tolk_translations_on_phrase_id_and_locale_id", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "",    :null => false

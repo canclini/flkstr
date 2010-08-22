@@ -1,6 +1,11 @@
 - title ("Neues Firmenprofil")
-%h2 
-  You are about to subscribe to a
-  %strong= @plan.name
-  plan
-= render 'form'
+%strong= @plan.name
+
+-form_for @company do |f|
+  = f.error_messages
+  %p  
+    = f.label :name, "Company Name"
+    %br
+    = f.text_field :name, :class => "text focus"
+    = hidden_field :plan, :name
+  %p= f.submit "Sign up", :class => "button"

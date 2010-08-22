@@ -11,7 +11,7 @@
       %li unlimited requests
       %li unlimited mails
       %li unlimited leads
-      = link_to "Bestellen", new_user_registration_path(), :class => 'button'
+      = link_to "Bestellen", signup_path(:scale), :class => 'button'
   #connect.normal
     %h1 CONNECT
     %h2 CHF 49 / Monat
@@ -21,7 +21,7 @@
       %li 1 request
       %li notification mails
       %li 3 leads
-      = link_to "Bestellen", new_user_registration_path(), :class => 'button'
+      = link_to "Bestellen", signup_path(:connect), :class => 'button'
   #ready.normal
     %h1 READY
     %h2 GRATIS
@@ -31,4 +31,4 @@
       %li 0 requests
       %li 0 leads
       %li weekly notification
-      = link_to "Bestellen", new_user_registration_path(), :class => 'button'
+      = link_to "Bestellen", signup_path(:ready), :class => 'button'
