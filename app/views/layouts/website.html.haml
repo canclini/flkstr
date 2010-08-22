@@ -2,8 +2,7 @@
 %html
   %head
     %meta{"http-equiv"=>"Content-type", :content=>"text/html;charset=utf-8"}/
-    %title
-      = h(yield(:title) || "Untitled")
+    %title= h(yield(:title) || "flockstreet")
     = render :partial => 'layouts/includes'
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails"
     = csrf_meta_tag
@@ -12,9 +11,9 @@
     #wrapper
       #header
         #logo
-          = image_tag("blue_birds_only.png", :border => 0)
+          = link_to image_tag("blue_birds_only.png", :border => 0), root_url
         #topsearch
-          = render :partial => 'search'
+          = render :partial => 'website/search'
         #usernav
           = render :partial => 'nav/user'
                 
@@ -25,7 +24,7 @@
           = content_tag :div, msg, :id => "flash_#{name}"
         = yield
       #footer
-        = render 'footer'
+        = render 'website/footer'
       #copyright &copy; Flockstreet, 2010
         
     = render :partial => 'layouts/uservoice'

@@ -10,9 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100815111305) do
+ActiveRecord::Schema.define(:version => 20100819061851) do
+
+  create_table "addresses", :force => true do |t|
+    t.integer  "company_id"
+    t.boolean  "main",       :default => false
+    t.string   "street"
+    t.string   "city"
+    t.string   "plz"
+    t.string   "country"
+    t.float    "lng"
+    t.float    "lat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "companies", :force => true do |t|
+    t.string   "permalink"
     t.string   "name"
     t.text     "teaser"
     t.text     "history"
@@ -22,39 +36,55 @@ ActiveRecord::Schema.define(:version => 20100815111305) do
     t.string   "twitter"
     t.string   "website"
     t.integer  "staff"
-    t.string   "permalink"
     t.integer  "sector_id"
-    t.integer  "requests_count", :default => 0, :null => false
-    t.integer  "leads_count",    :default => 0, :null => false
+    t.integer  "requests_count",    :default => 0, :null => false
+    t.integer  "leads_count",       :default => 0, :null => false
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "tolk_locales", :force => true do |t|
+  create_table "leads", :force => true do |t|
+    t.integer  "company_id"
+    t.integer  "request_id"
+    t.integer  "source_id"
+    t.string   "status",     :default => "new"
+    t.integer  "weight",     :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "plans", :force => true do |t|
+    t.integer  "tags"
+    t.integer  "leads"
+    t.integer  "requests"
+    t.boolean  "notify"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "tolk_locales", ["name"], :name => "index_tolk_locales_on_name", :unique => true
-
-  create_table "tolk_phrases", :force => true do |t|
-    t.text     "key"
+  create_table "requests", :force => true do |t|
+    t.string   "name"
+    t.string   "teaser"
+    t.text     "description"
+    t.integer  "company_id"
+    t.datetime "duedate"
+    t.integer  "budget",      :default => 0
+    t.string   "area_filter", :default => "everywhere"
+    t.string   "distance",    :default => "0"
+    t.string   "language",    :default => "DE"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "tolk_translations", :force => true do |t|
-    t.integer  "phrase_id"
-    t.integer  "locale_id"
-    t.text     "text"
-    t.text     "previous_text"
-    t.boolean  "primary_updated", :default => false
+  create_table "subscriptions", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "tolk_translations", ["phrase_id", "locale_id"], :name => "index_tolk_translations_on_phrase_id_and_locale_id", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "",    :null => false
