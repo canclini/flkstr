@@ -6,6 +6,8 @@ Flockstreet::Application.routes.draw do
 
   get "website/agb"
 
+  get "website/faq"
+
   get "website/contact"
 
   devise_for :users
@@ -17,6 +19,7 @@ Flockstreet::Application.routes.draw do
   match "/about" => "website#about", :as => :about
   match "/contact" => "website#contact", :as => :contact
   match "/agb" => "website#agb", :as => :agb
+  match "/faq" => "website#faq", :as => :faq
   
   
   # The priority is based upon order of creation:

@@ -18,7 +18,6 @@
   @include last;
 }
 
-
 #footer {
   @include column(24);
   @include last;
@@ -32,16 +31,14 @@
   @include column(16);
 }
 
-.left {
+.left, .middle, .right {
   @include column(8);
 }
 
-.middle {
-  @include column(8);
+.first, .second, .third, .fourth {
+  @include column(6);
 }
-
-.right {
-  @include column(8);
+.fourth, .right {
   @include last;
 }
 
