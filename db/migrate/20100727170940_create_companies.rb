@@ -1,7 +1,7 @@
 class CreateCompanies < ActiveRecord::Migration
   def self.up
     create_table :companies do |t|
-      t.string :permalink
+      t.string :permalink # replaces the standard id in the URL
       t.string :name
       t.text :teaser
       t.text :history
@@ -12,7 +12,6 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :website
       t.integer :staff
       t.references :sector
-      #t.integer :products_count, :default => 0, :null => false
       t.integer :requests_count, :default => 0, :null => false
       t.integer :leads_count, :default => 0, :null => false
 

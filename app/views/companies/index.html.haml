@@ -1,0 +1,8 @@
+- title "Companies"
+
+- form_tag companies_path, :method => :get, :remote => true do
+  %p
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", :name => nil, :class => "button light"
+
+= render :partial => 'search_results'

@@ -469,7 +469,63 @@ body a:hover {
   margin-left: 0px;
 }
 
-/* line 52, ../../../app/stylesheets/screen.scss */
+/* line 37, ../../../app/stylesheets/screen.scss */
 #signin-menu {
   border: 1px solid;
+}
+
+/* line 41, ../../../app/stylesheets/screen.scss */
+#plans {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 870px;
+  display: inline;
+  float: right;
+  position: relative;
+  margin: 0 -80px 1.5em 80px;
+  margin-right: 0;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-head/gems/compass-0.10.4/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #plans {
+  overflow-x: hidden;
+}
+
+/* line 46, ../../../app/stylesheets/screen.scss */
+#plans .normal {
+  border: 1px solid #999;
+  height: 270px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -moz-border-radius-bottomright: 20px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+  text-align: center;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-head/gems/compass-0.10.4/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #plans .normal {
+  overflow-x: hidden;
+}
+
+/* line 54, ../../../app/stylesheets/screen.scss */
+#plans ul {
+  list-style: none;
+}
+
+/* line 58, ../../../app/stylesheets/screen.scss */
+.normal h3 {
+  margin: 0 0 15px 0;
+  padding: 0 0 7px 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  color: #73a1c7;
 }

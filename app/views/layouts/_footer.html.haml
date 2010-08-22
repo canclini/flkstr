@@ -1,5 +1,25 @@
-&copy; 2010 flockstreet
-%ul
-  %li= link_to "Blog", root_url
-  %li= link_to "Contact Us", root_url
-  %li= link_to "About", root_url
+%hr
+.left
+  %ul
+    %li
+      %strong Produkt
+    %li Suche
+    %li Beispiele
+    
+.middle
+  %ul
+    %li
+      %strong Firma
+    %li Blog
+    %li= link_to "Über Flockstreet", about_path
+    %li= link_to "AGB", agb_path
+    %li= link_to "Kontakt", contact_path
+
+.right
+  %ul
+    %li 
+      %strong Community
+    %li= link_to "folge uns auf Twitter", "http://twitter.com/flockstreet"
+    %li 
+      sende uns eine 
+      = link_to "eMail", "mailto:contact@flockstreet.com"

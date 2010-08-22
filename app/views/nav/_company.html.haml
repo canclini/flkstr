@@ -1,7 +1,0 @@
-%ul#side-navigation
-  %li= link_to "Profile", company_path(@company)
-  %li= link_to "Employees", staff_company_path(@company)
-  %li= link_to "Products (#{@company.products.size})", products_company_path(@company)
-  %li= link_to "Requests (#{@company.requests.size})", requests_company_path(@company)
-  %li= link_to "Leads (#{@company.leads.size})", leads_path() if current_user && @company == current_user.company
-  %li= link_to "Network", company_associates_path(@company) if current_user && @company == current_user.company

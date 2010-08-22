@@ -2,32 +2,29 @@
 %html
   %head
     %meta{"http-equiv"=>"Content-type", :content=>"text/html;charset=utf-8"}/
-    %title=h(yield(:title) || "Untitled")
+    %title= h(yield(:title) || "Untitled")
     = render :partial => 'layouts/includes'
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "simplemodal", "jquery.tokeninput", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"
-    
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails"  
     = csrf_meta_tag
-    
-    = yield :head
 
   %body.app
-    #wrapper.wrap
+    #wrapper
       #header
         #logo
-          - if current_user
-            =link_to image_tag("flockstreet-blue.png", :border => 0), root_url
-          -else
-            =link_to image_tag("flockstreet-blue.png", :border => 0), root_url
-          
-        #topnav= render :partial => 'nav/user'
-      #stripline
-        #mainnav
+          = link_to image_tag("blue_birds_only.png", :border => 0), root_url
+        #topsearch
+          = render :partial => 'website/search'
+        #usernav
+          = render :partial => 'nav/user'
+
+      - if show_title?
+        %h2=h yield(:title)  
       #content
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}"
         = yield
-      #sidebar
-        = yield :sidenav
       #footer
         = render 'layouts/footer'
+      #copyright &copy; Flockstreet, 2010
+      
     = render :partial => 'layouts/uservoice'

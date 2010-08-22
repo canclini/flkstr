@@ -34,21 +34,33 @@ body {
   }
 }
 
-#content {
-}
-
-.leftmiddle {
-}
-
-.left {
-}
-
-.middle {
-}
-
-.right {
-}
-
 #signin-menu {
   border: 1px solid;
+}
+
+#plans {
+  @include column(22);
+  @include push(2);
+  @include last;
+}
+#plans .normal {
+	border: 1px solid #999;
+	height: 270px;
+	@include rounded(20px);
+	@include column(6);  
+	text-align: center;
+}
+
+#plans ul {
+  list-style: none;
+}
+
+.normal h3 {
+	margin: 0 0 15px 0;
+	padding: 0 0 7px 0;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ccc;
+	color: #73a1c7;
 }
