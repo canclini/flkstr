@@ -10,6 +10,12 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /FAQ/
+      faq_path
+    when /contact/
+      contact_path
+    when /about flockstreet/
+      about_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
