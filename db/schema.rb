@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20100819061851) do
   end
 
   create_table "companies", :force => true do |t|
+    t.string   "permalink"
     t.string   "name"
     t.text     "teaser"
     t.text     "history"
@@ -35,10 +36,13 @@ ActiveRecord::Schema.define(:version => 20100819061851) do
     t.string   "twitter"
     t.string   "website"
     t.integer  "staff"
-    t.string   "permalink"
     t.integer  "sector_id"
-    t.integer  "requests_count", :default => 0, :null => false
-    t.integer  "leads_count",    :default => 0, :null => false
+    t.integer  "requests_count",    :default => 0, :null => false
+    t.integer  "leads_count",       :default => 0, :null => false
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

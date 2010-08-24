@@ -5,7 +5,7 @@ class WebsiteController < ApplicationController
   def about
   end
 
-  def agb
+  def terms
   end
 
   def contact

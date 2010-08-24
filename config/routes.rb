@@ -5,8 +5,6 @@ Flockstreet::Application.routes.draw do
 #  resources :users, :only => [:new]
   resources :products, :companies, :requests, :leads, :companies
   
-  
-
 #  resources :leads do
 #    member do
 #      put :decline
@@ -29,14 +27,14 @@ Flockstreet::Application.routes.draw do
   
   get "website/index"
   get "website/about"
-  get "website/agb"
+  get "website/terms"
   get "website/faq"
   get "website/contact"
   get "plans/index"
 
   match "/about" => "website#about", :as => :about
   match "/contact" => "website#contact", :as => :contact
-  match "/agb" => "website#agb", :as => :agb
+  match "/terms" => "website#terms", :as => :terms
   match "/faq" => "website#faq", :as => :faq
 
   match "/dashboard" => "dashboard#index", :as => :dashboard
