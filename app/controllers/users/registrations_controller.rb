@@ -8,7 +8,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
   
   def create
-    @planname = params[:plan][:name]
+    redirect_to signup_path unless Plan::NAMES.include? params[:plan][:name]
+    @plan = Plan.find_by_name(params[:plan][:name])    
+    
     @company = Company.find(params[:company][:id])
     
     build_resource
@@ -17,11 +19,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
       @company.users << resource
       set_flash_message :notice, :signed_up
       sign_in(resource_name, resource)
-      # redirect to credit card page or if free plan -> dashboard
-      if @planname == "ready"
+      # redirect to credit card page or if free plan -> create subscription and redirect to dashboard
+      if @plan.name == "ready"
+        @company.plan = @plan
         redirect_to dashboard_url
       else
-        redirect_to payment_url(:plan => @planname)
+        redirect_to new_company_subscription_path(@company, :plan => @plan.name)
       end
     else
       clean_up_passwords(resource)
