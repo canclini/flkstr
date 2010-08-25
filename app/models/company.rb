@@ -7,12 +7,12 @@ class Company < ActiveRecord::Base
 #                                 :thumb => "100x100#" }
 
   has_many :users
-#  has_many :addresses, :dependent => :destroy
+  has_many :addresses, :dependent => :destroy
 #  has_many :requests, :dependent => :destroy
 #  has_many :leads, :dependent => :destroy
   
-#  has_one :subscription, :dependent => :destroy
-#  has_one :plan, :through => :subscription
+  has_one :subscription, :dependent => :destroy
+  has_one :plan, :through => :subscription
   
   validates_uniqueness_of :name
   validates_presence_of :name

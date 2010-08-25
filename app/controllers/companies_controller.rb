@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   before_filter :authenticate_user!, :except => [:new, :show, :create]
+  before_filter :no_user!, :only => [:new, :create]
   
   def index
     @companies = Company.search(params[:search]).paginate :per_page => 10, :page => params[:page]
@@ -31,12 +32,12 @@ class CompaniesController < ApplicationController
     end
     
   end
-
-  def update
+  
+  def edit
     
   end
-
-  def payment
-
+  
+  def update
+    
   end
 end
