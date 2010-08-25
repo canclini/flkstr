@@ -14,6 +14,8 @@ module NavigationHelpers
       faq_path
     when /contact/
       contact_path
+    when /Terms & Conditions/
+      terms_path
     when /about flockstreet/
       about_path
 
