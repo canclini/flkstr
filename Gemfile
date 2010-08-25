@@ -47,4 +47,7 @@ group :test do
   gem 'cucumber'
   gem 'spork'
   gem 'launchy'
+  gem 'pickle'
+  gem 'machinist', '>= 2.0.0.beta1'
+  gem 'faker'
 end
