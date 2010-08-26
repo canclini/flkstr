@@ -4,9 +4,15 @@ Feature: Company Profile view
   I want to see the profile of the company
   
   Scenario: Watch the companies profile as an registered user
-    Given a company exists with name: "foobar"
+    Given a company exists
     When I go to the show page for that company
-    Then I should see "foobar"
+    Then show me the page
+#    Then I should see the name of that company
+
+#  Scenario: Watch the companies profile as an registered user
+#    Given a company exists with name: "foobar"
+#    When I go to the show page for that company
+#    Then I should see "foobar"
 
 #  Scenario: Not possible to watch de companies as a guest
 #    Given a guest

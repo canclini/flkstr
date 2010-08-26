@@ -56,3 +56,7 @@ if defined?(ActiveRecord::Base)
   rescue LoadError => ignore_if_database_cleaner_not_present
   end
 end
+
+# require "#{Rails.root}/spec/support/blueprints"
+# Before { Sham.reset } # reset Shams in between scenarios
+#before(:each) { Machinist.reset_before_test }
