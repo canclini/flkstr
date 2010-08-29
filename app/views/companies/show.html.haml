@@ -3,6 +3,7 @@
 = link_to "editieren", edit_company_path(current_user.company), :class => 'button edit'  if current_user && current_company == @company
 
 %h1= @company.name
+= image_tag @company.logo.url(:medium)
 = @company.teaser
 
 %p#address_map

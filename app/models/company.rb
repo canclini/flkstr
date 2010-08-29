@@ -1,10 +1,11 @@
 class Company < ActiveRecord::Base
 #  acts_as_taggable
 #  acts_as_taggable_on :tags
-  
-#  has_attached_file :logo, 
-#                    :styles => { :medium => "300x300>",
-#                                 :thumb => "100x100#" }
+
+# Paperclip stuff  
+  has_attached_file :logo, :styles => { :medium => "250x250>", :thumb => "80x80#" }
+  validates_attachment_size :logo, :less_than => 1.megabytes
+  validates_attachment_content_type :logo, :content_type => ['image/jpeg', 'image/png']
 
   has_many :users
   has_many :addresses, :dependent => :destroy
