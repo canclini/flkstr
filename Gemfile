@@ -15,6 +15,7 @@ gem 'compass'
 gem 'compass-colors'
 gem 'fancy-buttons'
 gem 'paperclip'
+gem 'cheddargetter'
 
 #gem 'hpricot'
 #gem 'tolk'

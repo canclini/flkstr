@@ -4,7 +4,7 @@ Flockstreet::Application.routes.draw do
 #  devise_for :users, :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => "register"}
   devise_for :users, :controllers => { :registrations => "users/registrations"}#, :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => "register"}
 #  resources :users, :only => [:new]
-  resources :products, :companies, :requests, :leads, :companies
+  resources :products, :companies, :requests, :leads
   
 #  resources :leads do
 #    member do
@@ -27,7 +27,7 @@ Flockstreet::Application.routes.draw do
   end
   root :to => "website#index"
 
-  match "/coompanies/:company_id/subscriptions/:plan/new" => "subscriptions#new", :as => :new_company_subscription,  :via => "get"
+  match "/companies/:company_id/subscriptions/:plan/new" => "subscriptions#new", :as => :new_company_subscription,  :via => "get"
   
   get "website/index"
   get "website/about"

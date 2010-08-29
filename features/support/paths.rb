@@ -10,8 +10,10 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-    when /the home\s?page/
-      '/'
+    when /login/
+      '/users/sign_in'
+    when /the dashboard/
+      dashboard_path
     when /FAQ/
       faq_path
     when /contact/

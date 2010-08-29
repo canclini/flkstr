@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20100819061851) do
     t.integer  "requests"
     t.boolean  "notify"
     t.string   "name"
+    t.string   "cheddarcode"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -82,6 +83,8 @@ ActiveRecord::Schema.define(:version => 20100819061851) do
   end
 
   create_table "subscriptions", :force => true do |t|
+    t.integer  "company_id"
+    t.integer  "plan_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

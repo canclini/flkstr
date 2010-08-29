@@ -39,11 +39,14 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.3)
+    cheddargetter (0.1.1)
+      httparty
     compass (0.10.4)
       haml (>= 3.0.4)
     compass-colors (0.3.1)
       compass (>= 0.8.7)
     configuration (1.1.0)
+    crack (0.1.8)
     cucumber (0.8.5)
       builder (~> 2.1.2)
       diff-lcs (~> 1.1.2)
@@ -70,6 +73,8 @@ GEM
     gherkin (2.1.5)
       trollop (~> 1.16.2)
     haml (3.0.17)
+    httparty (0.6.1)
+      crack (= 0.1.8)
     i18n (0.4.1)
     json_pure (1.4.6)
     launchy (0.3.7)
@@ -144,6 +149,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  cheddargetter
   compass
   compass-colors
   cucumber
