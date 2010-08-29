@@ -24,7 +24,7 @@ class CompaniesController < ApplicationController
     @plan = Plan.find_by_name(params[:plan][:name])
 
     @company = Company.new(params[:company])
-#    @company.addresses.build(:main => true)
+    @company.addresses.build(:main => true)
     if @company.save    
       flash[:notice] = "Die Firma wurde erstellt."
       redirect_to register_path(:plan => @plan.name, :company => @company)
@@ -35,10 +35,16 @@ class CompaniesController < ApplicationController
   end
   
   def edit
-    
+    @company = current_company
   end
   
   def update
-    
+    @company = current_company
+    if @company.update_attributes(params[:company])  
+      flash[:notice] = "Successfully updated company profile."  
+      redirect_to @company
+    else  
+      render :action => 'edit'  
+    end
   end
 end

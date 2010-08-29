@@ -1,2 +1,34 @@
-%h1 Companies#show
-%strong= @company.name
+- title @company.name
+
+= link_to "editieren", edit_company_path(current_user.company), :class => 'button edit'  if current_user && current_company == @company
+
+%h1= @company.name
+= @company.teaser
+
+%p#address_map
+  %strong main address
+  = render :partial =>  @company.main_address
+  = render :partial => 'maps/address', :locals => {:map =>  @company.main_address.map(@company.name)}
+
+#details
+  %p
+    %strong telephone
+    = @company.phone
+  %p 
+    %strong fax
+    = @company.fax
+  %p
+    %strong email
+    = @company.email
+  %p
+    %strong twitter
+    = @company.twitter
+  %p
+    %strong Webseite
+    = @company.website
+  %p
+    %strong anzahl mitarbeiter
+    = @company.staff
+  %p
+    %strong history
+    = @company.history

@@ -8,6 +8,8 @@ class Company < ActiveRecord::Base
 
   has_many :users
   has_many :addresses, :dependent => :destroy
+  accepts_nested_attributes_for :addresses
+  
 #  has_many :requests, :dependent => :destroy
 #  has_many :leads, :dependent => :destroy
   
@@ -24,6 +26,10 @@ class Company < ActiveRecord::Base
   
   def to_param
     [id, permalink].join('-')
+  end
+
+  def main_address
+    self.addresses.main.first
   end
   
   ############ PRIVATE ###############    

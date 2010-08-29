@@ -1,1 +1,50 @@
-%h1 Companies#edit
+-title "Firmendaten editieren"
+
+=form_for @company do |f|
+  = f.error_messages  
+  %p 
+    = f.label :name, "Company Name"
+    %br
+    = f.text_field :name, :class => 'text'
+  %p
+    = f.label :teaser, "Teaser"
+    %br
+    = f.text_area :teaser, :rows => 2, :cols => 100
+  %strong addresses
+
+  = f.fields_for :addresses do |builder|
+    = render "address_fields", :f => builder
+    
+  %strong more details
+
+  %p
+    = f.label :phone, "Phone"
+    %br
+    = f.text_field :phone, :class => 'text'
+  %p
+    = f.label :fax, "Fax"
+    %br
+    = f.text_field :fax, :class => 'text'
+  %p
+    = f.label :email, "email"
+    %br
+    = f.text_field :email, :class => 'text'
+  %p
+    = f.label :twitter, "Twitter"
+    %br
+    = f.text_field :twitter, :class => 'text'
+  %p
+    = f.label :website, "website"
+    %br
+    = f.text_field :website, :class => 'text'
+  %p
+    = f.label :staff, "anzahl mitarbeiter"
+    %br
+    = f.text_field :staff, :class => 'text'
+  %strong tell us about your company
+  %p  
+    = f.label :history, "History"
+    %br
+    = f.text_area :history, :rows => 7, :cols => 100
+
+  %p= f.submit "Submit", :class => "button light"
