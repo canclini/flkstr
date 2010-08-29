@@ -86,7 +86,6 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
-    mysql (2.8.1)
     nokogiri (1.4.3.1)
     paperclip (2.3.3)
       activerecord
@@ -127,6 +126,7 @@ GEM
     rspec-mocks (2.0.0.beta.20)
     rspec-rails (2.0.0.beta.20)
       rspec (= 2.0.0.beta.20)
+    ruby-mysql (2.9.3)
     rubyzip (0.9.4)
     selenium-webdriver (0.0.28)
       ffi (>= 0.6.1)
@@ -162,11 +162,11 @@ DEPENDENCIES
   haml
   launchy
   machinist (>= 2.0.0.beta1)
-  mysql
   paperclip
   pickle
   rails (= 3.0.0.rc2)
   rails3-generators
   rspec-rails (>= 2.0.0.beta.19)
+  ruby-mysql
   spork
   will_paginate (= 3.0.pre2)
