@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(:version => 20100819061851) do
 
   create_table "requests", :force => true do |t|
     t.string   "name"
-    t.string   "teaser"
     t.text     "description"
     t.integer  "company_id"
     t.datetime "duedate"

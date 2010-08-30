@@ -1,9 +1,8 @@
 Flockstreet::Application.routes.draw do
-
   # See how all your routes lay out with "rake routes"
-#  devise_for :users, :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => "register"}
-  devise_for :users, :controllers => { :registrations => "users/registrations"}#, :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => "register"}
-#  resources :users, :only => [:new]
+
+  devise_for :users, :controllers => { :registrations => "users/registrations"}
+
   resources :products, :companies, :requests, :leads
   
 #  resources :leads do
@@ -26,22 +25,22 @@ Flockstreet::Application.routes.draw do
 #      resources :associates
   end
   root :to => "website#index"
+  match "/dashboard" => "dashboard#index", :as => :dashboard
 
   match "/companies/:company_id/subscriptions/:plan/new" => "subscriptions#new", :as => :new_company_subscription,  :via => "get"
   
+  # static website pages
   get "website/index"
   get "website/about"
   get "website/terms"
   get "website/faq"
   get "website/contact"
-  get "plans/index"
-
   match "/about" => "website#about", :as => :about
   match "/contact" => "website#contact", :as => :contact
   match "/terms" => "website#terms", :as => :terms
   match "/faq" => "website#faq", :as => :faq
-
-  match "/dashboard" => "dashboard#index", :as => :dashboard
+  
+  get "plans/index"
   
   # bei einem signup muss erst der Plan gewählt werden
   match "/signup" => "plans#index", :as => :signup

@@ -20,7 +20,7 @@ $(document).ready(function() {
 
   $('.focus').focus();  
 
-  $('div.hide').hide();  
+  $('.hide').hide();  
 
   $('a#signinshow').click(function(){
     $('#signin-menu').show();

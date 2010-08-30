@@ -3,16 +3,17 @@ class Company < ActiveRecord::Base
 #  acts_as_taggable_on :tags
 
 # Paperclip stuff  
-  has_attached_file :logo, :styles => { :medium => "250x250>", :thumb => "80x80#" }
-  validates_attachment_size :logo, :less_than => 1.megabytes
-  validates_attachment_content_type :logo, :content_type => ['image/jpeg', 'image/png']
+  has_attached_file :logo, :styles => { :medium => "250x250>", :thumb => "50x50#" }
+#  validates_attachment_size :logo, :less_than => 1.megabytes
+#  validates_attachment_content_type :logo, :content_type => ['image/jpeg', 'image/png']
+  scope :with_logo, where("logo_file_name <> ?",'false').limit(10).order('rand()')
 
   has_many :users
   has_many :addresses, :dependent => :destroy
   accepts_nested_attributes_for :addresses
   
-#  has_many :requests, :dependent => :destroy
-#  has_many :leads, :dependent => :destroy
+  has_many :requests, :dependent => :destroy
+  has_many :leads, :dependent => :destroy
   
   has_one :subscription, :dependent => :destroy
   has_one :plan, :through => :subscription
@@ -31,6 +32,10 @@ class Company < ActiveRecord::Base
 
   def main_address
     self.addresses.main.first
+  end
+  
+  def add_request?
+    requests.this_month.size < plan.requests    
   end
   
   ############ PRIVATE ###############    

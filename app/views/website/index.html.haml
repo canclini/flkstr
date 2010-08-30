@@ -11,8 +11,7 @@
     %p Neu bei Flockstreet? Jetzt kostenlos Mitglied werden:
     =link_to "Jetzt mitmachen", signup_path, :class => "button blue"
   .box
-    Firmen die bereits auf flockstreet registriert sind:  
-    me, them, others
+    = render :partial => 'signedupcompanies'
   
 .left
   %h3 neue Lieferanten

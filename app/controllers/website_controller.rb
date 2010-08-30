@@ -1,5 +1,6 @@
 class WebsiteController < ApplicationController
   def index
+    @signedupcompanies = Company.with_logo
   end
 
   def about
