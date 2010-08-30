@@ -1,0 +1,33 @@
+-title "Neuer Auftrag erfassen"
+=form_for @request do |f|
+  = f.error_messages  
+  %p  
+    = f.label :name, "Request Name"
+    %br
+    = f.text_field :name, :class => 'text focus'
+  %p
+    = f.label :description, "Description"
+    %br
+    = f.text_area :description, :cols => 40, :rows => 3
+
+  %h2 Filter Kriterien
+  %p
+    = f.label :language, "Kontaktsprache: "
+    = f.select :language, [['Deutsch', 'DE'], ['Francais', 'FR'], ['Italiano', 'IT'], ['English', 'EN']]
+        
+  %p
+    = f.label :budget, "Budget [CHF]"
+    %br
+    = f.text_field :budget
+  %p
+    = f.label :duedate, "gewünschtes Datum"
+    %br
+    = f.text_field :duedate
+  %p
+    = f.label :area_filter, "welche Lieferanten sollen anvisiert werden?"
+    = f.select :area_filter, [['Alle', 'everywhere'], ['im eigenen Land', 'own country'], ['Im Umkreis von', 'distance']]
+    = f.select :distance, [['5km', 5], ['10km', 10], ['20km', 20], ['50km', 50],['100km', 100] ], {}, {:class => 'hide'}
+
+  
+  = f.hidden_field :company_id
+  %p= f.submit "Submit", :class => "button light"

@@ -1,0 +1,24 @@
+- title "Auftrag"
+
+%h2= @request.name
+= link_to "Edit Request", edit_request_path(@request), :class => 'button edit' if current_user && current_company == @company
+%p
+  = @request.description
+%p
+  %h3 Filter Kriterien
+  %strong Budget [CHF]:
+  = @request.budget
+%p
+  %strong: Wo:
+  -if @request.area_filter == 'distance'
+    Im Umkreis von 
+    %strong= @request.distance
+    km
+  - else
+    = @request.area_filter
+  
+
+%h3 generierte Leads
+Es wurden 
+%strong= @request.leads.size
+Firmen über diesen Auftrag informiert
