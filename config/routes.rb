@@ -3,7 +3,7 @@ Flockstreet::Application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => "users/registrations"}
 
-  resources :products, :companies, :requests, :leads
+  resources :products, :requests, :leads
   
 #  resources :leads do
 #    member do
@@ -13,6 +13,9 @@ Flockstreet::Application.routes.draw do
 #  end
 
   resources :companies do
+    collection do
+      get :exists
+    end
     resources :subscriptions
 #      member do
 #        get :products

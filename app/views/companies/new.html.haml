@@ -1,11 +1,12 @@
 - title ("Neues Firmenprofil")
 %strong= @plan.name
 
--form_for @company do |f|
+=form_for @company do |f|
   = f.error_messages
   %p  
-    = f.label :name, "Company Name"
+    = f.label :name, "Company Name", :id => "companycreate"
     %br
     = f.text_field :name, :class => "text focus"
     = hidden_field :plan, :name
   %p= f.submit "Sign up", :class => "button"
+= render :partial => 'existing_companies'

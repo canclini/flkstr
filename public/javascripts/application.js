@@ -13,7 +13,12 @@ jQuery.fn.submitWithAjax = function() {
   return this;
 };
 
-$(document).ready(function() {
+
+$(function() {  
+  $(".new_company").keydown(function(){
+       updateExistingCompanies();
+  });
+  
   $('.clearme').one("focus", function(){
     $(this).val('');
   });
@@ -33,3 +38,7 @@ $(document).ready(function() {
   //  $("#new_review").submitWithAjax();
 });
 
+function updateExistingCompanies() {
+  var company_search = $('#company_name').val();
+  $.getScript("/companies/exists.js?search=" + company_search)
+};
