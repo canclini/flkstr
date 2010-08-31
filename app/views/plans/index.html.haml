@@ -2,33 +2,7 @@
 %p Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.
 
 #plans
-  #scale.normal
-    %h1 SCALE
-    %h2 CHF 99 / Monat
-    %h3 scale your business
-    %ul
-      %li 5 tags
-      %li unlimited requests
-      %li unlimited mails
-      %li unlimited leads
-      = link_to "Bestellen", signup_path(:scale), :class => 'button'
-  #connect.normal
-    %h1 CONNECT
-    %h2 CHF 49 / Monat
-    %h3 get connected
-    %ul
-      %li 3 tags
-      %li 1 request
-      %li notification mails
-      %li 3 leads
-      = link_to "Bestellen", signup_path(:connect), :class => 'button'
-  #ready.normal
-    %h1 READY
-    %h2 GRATIS
-    %h3 get ready for flockstreet
-    %ul
-      %li 3 tags
-      %li 0 requests
-      %li 0 leads
-      %li weekly notification
-      = link_to "Bestellen", signup_path(:ready), :class => 'button'
+  - for plan in [:scale, :connect, :ready] do
+    .normal
+      = render :partial => "#{plan}"
+      = link_to "Bestellen", signup_path(plan), :class => 'button'

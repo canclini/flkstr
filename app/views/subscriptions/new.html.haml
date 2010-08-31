@@ -1,34 +1,40 @@
-Du hast dich für ein
-%strong= @plan.name
-Abo entschieden. Bitte gib hier deine gültigen Kreditkarten Informationen an
-=form_for [@company, @subscription] do |f|
-  = f.error_messages
-  %p
-    = f.label :ccFirstName, "Firstname on Card"
-    %br
-    = f.text_field :ccFirstName, :class => "text"  
-  %p
-    = f.label :ccLastName, "Lastname on Card"
-    %br
-    = f.text_field :ccLastName, :class => "text"
-  %p
-    = f.label :ccNumber, "CardNumber"
-    %br
-    = f.text_field :ccNumber, :class => "text"
-  %p
-    = f.label :ccCardCode, "CVV"
-    %br
-    = f.text_field :ccCardCode, :class => "text"
-  %p
-    = f.label :expiration, "Expiration"
-    %br
-    = f.select :month, [['Januar', 1], ['Februar', 2], ['Mar', 3], ['Apr', 4], ['Mai', 5], ['Jun', 6], ['Jul', 7], ['Aug', 8], ['Sept', 9], ['Okt', 10], ['Nov', 11], ['Dez', 12]]
-
-    = f.select :year, [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020]
+.leftmiddle
+  Du hast dich für ein
+  %strong= @plan.name
+  Abo entschieden. Bitte gib hier deine gültigen Kreditkarten Informationen an
+  =form_for [@company, @subscription] do |f|
+    = f.error_messages
+    %p
+      = f.label :ccFirstName, "Firstname on Card"
+      %br
+      = f.text_field :ccFirstName, :class => "text"  
+    %p
+      = f.label :ccLastName, "Lastname on Card"
+      %br
+      = f.text_field :ccLastName, :class => "text"
+    %p
+      = f.label :ccNumber, "CardNumber"
+      %br
+      = f.text_field :ccNumber, :class => "text"
+    %p
+      = f.label :ccCardCode, "CVV"
+      %br
+      = f.text_field :ccCardCode, :class => "text"
+    %p
+      = f.label :expiration, "Expiration"
+      %br
+      = f.select :month, [['Januar', 1], ['Februar', 2], ['Mar', 3], ['Apr', 4], ['Mai', 5], ['Jun', 6], ['Jul', 7], ['Aug', 8], ['Sept', 9], ['Okt', 10], ['Nov', 11], ['Dez', 12]]
   
-  %p
-    = f.label :ccZip, "Postleitzahl / Zip Code"
-    %br
-    = f.text_field :ccZip, :class => "text"
+      = f.select :year, [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020]
     
-  %p= f.submit "Verify and Continue", :class => "button"
+    %p
+      = f.label :ccZip, "Postleitzahl / Zip Code"
+      %br
+      = f.text_field :ccZip, :class => "text"
+      
+    %p= f.submit "Verify and Continue", :class => "button"
+
+.right
+  .box
+    .normal
+      = render :partial => "plans/#{@plan.name}"
