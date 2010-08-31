@@ -54,7 +54,7 @@ Flockstreet::Application.routes.draw do
   match "/signup(/:plan)" => "companies#new", :as => :signup
   #ist die Firma erfasst und der Plan gewählt, kommt die User registrierung
   devise_for :users do
-    match "/signup/:plan/:company" => "users/registrations#new", :as => :register
+    match "/signup/:company/user/new" => "users/registrations#new", :as => :register
   end
 
   # The priority is based upon order of creation:

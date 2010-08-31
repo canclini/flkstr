@@ -12,7 +12,7 @@ class SubscriptionsController < ApplicationController
   end
   
   def create  
-    @plan = Plan.find_by_name(params[:plan][:name])
+    @plan = Plan.find_by_name(session[:plan])
     @subscription = Subscription.new(params[:subscription])
     @company = current_company
     @user = current_user    

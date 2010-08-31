@@ -1,15 +1,15 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   
   def new
-    redirect_to signup_path unless Plan::NAMES.include? params[:plan]
-    @plan = Plan.find_by_name(params[:plan])
+#    redirect_to signup_path unless Plan::NAMES.include? params[:plan]
+#    @plan = Plan.find_by_name(params[:plan])
     @company = Company.find(params[:company])
     super
   end
   
   def create
-    redirect_to signup_path unless Plan::NAMES.include? params[:plan][:name]
-    @plan = Plan.find_by_name(params[:plan][:name])    
+#    redirect_to signup_path unless Plan::NAMES.include? params[:plan][:name]
+    @plan = Plan.find_by_name(session[:plan])    
     
     @company = Company.find(params[:company][:id])
     

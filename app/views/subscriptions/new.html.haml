@@ -1,4 +1,6 @@
+Du hast dich für ein
 %strong= @plan.name
+Abo entschieden. Bitte gib hier deine gültigen Kreditkarten Informationen an
 =form_for [@company, @subscription] do |f|
   = f.error_messages
   %p
@@ -28,6 +30,5 @@
     = f.label :ccZip, "Postleitzahl / Zip Code"
     %br
     = f.text_field :ccZip, :class => "text"
-    = hidden_field :plan, :name
     
   %p= f.submit "Verify and Continue", :class => "button"

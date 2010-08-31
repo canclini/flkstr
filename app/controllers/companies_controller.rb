@@ -36,17 +36,16 @@ class CompaniesController < ApplicationController
   def new
     redirect_to signup_path unless Plan::NAMES.include? params[:plan]
     @company = Company.new
-    @plan = Plan.find_by_name(params[:plan])
+    session[:plan] = params[:plan]
     @companies = []
   end
   
   def create
-    @plan = Plan.find_by_name(params[:plan][:name])
     @company = Company.new(params[:company])
     @company.addresses.build(:main => true)
     if @company.save    
       flash[:notice] = "Die Firma wurde erstellt."
-      redirect_to register_path(:plan => @plan.name, :company => @company)
+      redirect_to register_path(:company => @company)
     else
       @companies = Company.search(@company.name).limit(10)
       render :action => 'new'

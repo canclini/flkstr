@@ -1,5 +1,4 @@
 %h2 Sign up
-%strong= @plan.name
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = devise_error_messages!
   %p
@@ -22,7 +21,6 @@
     = f.label :password_confirmation
     %br/
     = f.password_field :password_confirmation
-    = hidden_field :plan, :name
     = hidden_field :company, :id
     
   %p= f.submit "Sign up", :class => "button"
