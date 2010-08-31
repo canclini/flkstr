@@ -42,7 +42,6 @@ class CompaniesController < ApplicationController
   
   def create
     @company = Company.new(params[:company])
-    @company.addresses.build(:main => true)
     if @company.save    
       flash[:notice] = "Die Firma wurde erstellt."
       redirect_to register_path(:company => @company)

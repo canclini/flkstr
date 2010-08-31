@@ -25,6 +25,7 @@ class Company < ActiveRecord::Base
   validates_length_of :fax, :in => 7..32, :allow_blank => true
   
   before_create :set_permalink
+  after_create :create_main_address
   
   def to_param
     [id, permalink].join('-')
@@ -43,9 +44,12 @@ class Company < ActiveRecord::Base
   end
   
   ############ PRIVATE ###############    
-    private
-    def set_permalink
-       self.permalink = name.downcase.gsub(/[^0-9a-z]+/, ' ').strip.gsub(' ', '-') if name
-    end
+  private
+  def set_permalink
+    self.permalink = name.downcase.gsub(/[^0-9a-z]+/, ' ').strip.gsub(' ', '-') if name
+  end
   
+  def create_main_address
+    self.addresses.create(:main => true)
+  end
 end
