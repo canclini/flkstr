@@ -16,6 +16,9 @@ Flockstreet::Application.routes.draw do
     collection do
       get :exists
     end
+    member do
+      get :join
+    end
     resources :subscriptions
 #      member do
 #        get :products

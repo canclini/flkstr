@@ -1,3 +1,7 @@
 #existing_companies
   - for company in @companies
-    = render company
+    #company
+      %h3= link_to company.name, "#", "data-id" => company.id, :id => "existingcompany"
+      = company.teaser
+    = render :partial =>  company.main_address unless company.main_address.nil?
+    

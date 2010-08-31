@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:new, :create, :exists]
+  before_filter :authenticate_user!, :except => [:new, :create, :exists, :join]
   before_filter :no_user!, :only => [:new, :create]
   
   def index
@@ -16,7 +16,19 @@ class CompaniesController < ApplicationController
       format.js
     end
   end
-
+  
+  def join
+    @company = Company.find(params[:id])
+    if @company.users.empty?
+      @takeorjoin = "takeover"
+    else
+      @takeorjoin = "join"
+    end
+    respond_to do |format|
+      format.js
+    end
+  end
+  
   def show
     @company = Company.find(params[:id])
   end

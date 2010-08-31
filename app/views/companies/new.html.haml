@@ -1,12 +1,20 @@
 - title ("Neues Firmenprofil")
-%strong= @plan.name
 
-=form_for @company do |f|
-  = f.error_messages
-  %p  
-    = f.label :name, "Company Name", :id => "companycreate"
-    %br
-    = f.text_field :name, :class => "text focus"
-    = hidden_field :plan, :name
-  %p= f.submit "Sign up", :class => "button"
-= render :partial => 'existing_companies'
+.leftmiddle
+  %strong= @plan.name
+
+  =form_for @company do |f|
+    = f.error_messages
+    %p  
+      = f.label :name, "Company Name", :id => "companycreate"
+      %br
+      = f.text_field :name, :class => "text focus"
+      = hidden_field :plan, :name
+      = f.submit "Jetzt Registrieren", :class => "button"
+  = render :partial => 'existing_companies'
+.right
+  .box
+    #newcompanyexplanation
+      %h3 Firma registrieren
+      %p Im nebenstehenden Feld einfach deinen Firmennamen eingeben und mit "Jetzt Registrieren" die Firma erstellen und zum nächsten Schritt weitergehen.
+      %p Unten erscheinen bereits registrierte Firmen mit ähnlichen Namen. Sollte deine Firma da bereits aufgelistet sein, kannst du mit einem Klick mehr darüber erfahren.

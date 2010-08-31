@@ -18,6 +18,10 @@ $(function() {
   $(".new_company").keydown(function(){
        updateExistingCompanies();
   });
+
+  $("#existingcompany").live('click',function(){
+    showExistingCompany($(this).attr("data-id"));
+  });
   
   $('.clearme').one("focus", function(){
     $(this).val('');
@@ -41,4 +45,8 @@ $(function() {
 function updateExistingCompanies() {
   var company_search = $('#company_name').val();
   $.getScript("/companies/exists.js?search=" + company_search)
+};
+
+function showExistingCompany(company_id) {
+  $.getScript("/companies/" + company_id + "/join.js")
 };
