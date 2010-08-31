@@ -30,6 +30,10 @@ class Company < ActiveRecord::Base
     [id, permalink].join('-')
   end
 
+  def self.search(query)
+     where("name like ?", "%#{query}%")
+  end
+
   def main_address
     self.addresses.main.first
   end

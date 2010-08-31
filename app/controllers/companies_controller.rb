@@ -2,13 +2,13 @@ class CompaniesController < ApplicationController
   before_filter :authenticate_user!, :except => [:new, :create]
   before_filter :no_user!, :only => [:new, :create]
   
-#  def index
-#    @companies = Company.search(params[:search]).paginate :per_page => 10, :page => params[:page]
-#    respond_to do |format|
-#      format.html
-#      format.js
-#    end
-#  end
+  def index
+    @companies = Company.search(params[:search]).paginate :per_page => 10, :page => params[:page]
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 
   def show
     @company = Company.find(params[:id])
