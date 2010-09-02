@@ -19,6 +19,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       @company.users << resource
       set_flash_message :notice, :signed_up
       sign_in(resource_name, resource)
+      UserMailer.registration_confirmation(resource).deliver
       # redirect to credit card page or if free plan -> create subscription and redirect to dashboard
       if @plan.name == "ready"
         @company.plan = @plan

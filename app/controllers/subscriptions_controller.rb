@@ -16,7 +16,7 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new(params[:subscription])
     @company = current_company
     @user = current_user    
-    cheddar = CheddarGetter.new('marcel@flockstreet.com', 'CGtmbg4e3', 'flockstreet_dev')
+    cheddar = CheddarGetter.new(ENV['CHEDDARUSER'], ENV['CHEDDARPWD'], 'flockstreet_dev')
     begin
       cheddar_customer = cheddar.create_customer(build_cheddargetterhash(@company, @user, @plan, params[:subscription]))
       @company.plan = @plan
