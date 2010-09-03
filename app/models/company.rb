@@ -38,6 +38,10 @@ class Company < ActiveRecord::Base
   def main_address
     self.addresses.main.first
   end
+
+    def accept_lead?
+    leads.this_month.size < plan.leads
+  end
   
   def add_request?
     requests.this_month.size < plan.requests    

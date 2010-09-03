@@ -1,8 +1,19 @@
 - title("Dashboard")
 
 .leftmiddle
-  Infos, Infos, Inofs...
-
+  %h3 Was gibt es Neues?
+  = form_tag companies_path, :method => :get do
+    %p
+      = text_field_tag :search, params[:search], :size=>100
+      = submit_tag "Send", :name => nil, :class => "button light"
+      %br
+      =check_box_tag("twitter", "yes") 
+      twitter
+      =check_box_tag("facebook", "yes") 
+      facebook      
+  
+  %h3 Neues aus meinem Netzwerk
+    
 .right
   =link_to "Neuer Auftrag", new_request_path, :class => 'button'
   .box
@@ -13,7 +24,16 @@
       %li= link_to "Passwort ändern", edit_user_registration_path()
   .box
     %h3 Leads
+    %ul
+      - for lead in @leads do
+        %li
+          = l lead.created_at, :format => :short
+          = link_to lead.request.name, lead
+    = link_to ">> Alle Leads anzeigen", leads_path()
   .box
-    %h3 Kontakte suche
+    %h3 Nachrichten
   .box
-    nächste Events
+    %h3 Netzwerk erweitern
+    = form_tag companies_path, :method => :get do
+      %p
+        = text_field_tag :search, params[:search] = "mail adresse",:size=>40, :class => "text clearme"  

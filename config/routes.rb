@@ -1,16 +1,20 @@
 Flockstreet::Application.routes.draw do
+  get "leads/index"
+
+  get "leads/show"
+
   # See how all your routes lay out with "rake routes"
 
   devise_for :users, :controllers => { :registrations => "users/registrations"}
 
-  resources :products, :requests, :leads
+  resources :products, :requests
   
-#  resources :leads do
-#    member do
-#      put :decline
-#      put :accept
-#    end
-#  end
+  resources :leads do
+    member do
+      put :decline
+      put :accept
+    end
+  end
 
   resources :companies do
     collection do
@@ -20,14 +24,6 @@ Flockstreet::Application.routes.draw do
       get :join
     end
     resources :subscriptions
-#      member do
-#        get :products
-#        get :requests
-#        get :staff
-#      end
-#      collection do
-#        get :search
-#      end
 #      resources :associates
   end
   root :to => "website#index"
@@ -67,21 +63,6 @@ Flockstreet::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get :short
-  #       post :toggle
-  #     end
-  #
-  #     collection do
-  #       get :sold
-  #     end
-  #   end
 
   # Sample resource route with sub-resources:
   #   resources :products do

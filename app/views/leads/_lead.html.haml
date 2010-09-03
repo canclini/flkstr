@@ -1,0 +1,6 @@
+#lead
+  %h3
+    -if lead.new?
+      %strong.new new
+    lead
+    = link_to lead.request.name, lead
