@@ -1,6 +1,6 @@
 class Request < ActiveRecord::Base
-#  acts_as_taggable
-#  acts_as_taggable_on :tags
+  acts_as_taggable
+  acts_as_taggable_on :tags
 
   belongs_to :company, :counter_cache => true
   has_many :leads, :dependent => :destroy

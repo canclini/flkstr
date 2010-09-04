@@ -1,6 +1,6 @@
 class Company < ActiveRecord::Base
-#  acts_as_taggable
-#  acts_as_taggable_on :tags
+  acts_as_taggable
+  acts_as_taggable_on :tags
 
 # Paperclip stuff  
   has_attached_file :logo, :styles => { :medium => "250x250>", :thumb => "50x50#" }

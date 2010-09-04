@@ -2,8 +2,8 @@
 
 %h2= @request.name
 = link_to "Edit Request", edit_request_path(@request), :class => 'button edit' if current_user && current_company == @company
-%p
-  = @request.description
+%p= @request.tag_list
+%p= @request.description
 %p
   %h3 Filter Kriterien
   %strong Budget [CHF]:

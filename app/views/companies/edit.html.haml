@@ -14,6 +14,11 @@
     = f.label :teaser, "Teaser"
     %br
     = f.text_area :teaser, :rows => 2, :cols => 100
+  %p
+    = f.label :tag_list, "Tags"
+    %br
+    = f.text_field :tag_list, :class => 'text'
+  
   %strong addresses
 
   = f.fields_for :addresses do |builder|

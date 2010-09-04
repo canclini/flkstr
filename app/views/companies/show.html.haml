@@ -6,6 +6,8 @@
 = image_tag @company.logo.url(:medium)
 = @company.teaser
 
+%p= @company.tag_list
+
 %p#address_map
   %strong main address
   = render :partial =>  @company.main_address
