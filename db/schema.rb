@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100904182541) do
+ActiveRecord::Schema.define(:version => 20100905171234) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "company_id"
@@ -130,6 +130,13 @@ ActiveRecord::Schema.define(:version => 20100904182541) do
   end
 
   add_index "tolk_translations", ["phrase_id", "locale_id"], :name => "index_tolk_translations_on_phrase_id_and_locale_id", :unique => true
+
+  create_table "updates", :force => true do |t|
+    t.integer  "company_id"
+    t.string   "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "",    :null => false

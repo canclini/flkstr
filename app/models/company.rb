@@ -18,6 +18,8 @@ class Company < ActiveRecord::Base
   has_one :subscription, :dependent => :destroy
   has_one :plan, :through => :subscription
   
+  has_many :updates, :dependent => :destroy
+  
   validates_uniqueness_of :name
   validates_presence_of :name
   validates_length_of :teaser, :in=>10...140, :allow_blank => true

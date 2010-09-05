@@ -2,15 +2,12 @@
 
 .leftmiddle
   %h3 Was gibt es Neues?
-  = form_tag companies_path, :method => :get do
+
+  = form_tag updates_path do
     %p
-      = text_field_tag :search, params[:search], :size=>100
+      = text_field_tag :update, params[:update], :size=>100
       = submit_tag "Send", :name => nil, :class => "button light"
-      %br
-      =check_box_tag("twitter", "yes") 
-      twitter
-      =check_box_tag("facebook", "yes") 
-      facebook      
+  .latestupdate= "#{@latest_update.message} - sent #{distance_of_time_in_words(@latest_update.created_at, Time.now)} ago"
   
   %h3 Neues aus meinem Netzwerk
     

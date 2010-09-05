@@ -1,13 +1,9 @@
 Flockstreet::Application.routes.draw do
-  get "leads/index"
-
-  get "leads/show"
-
   # See how all your routes lay out with "rake routes"
 
   devise_for :users, :controllers => { :registrations => "users/registrations"}
 
-  resources :products, :requests
+  resources :products, :requests, :updates
   
   resources :leads do
     member do
