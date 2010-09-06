@@ -7,7 +7,7 @@
     %p
       = text_field_tag :update, params[:update], :size=>100
       = submit_tag "Send", :name => nil, :class => "button light"
-  .latestupdate= "#{@latest_update.message} - sent #{distance_of_time_in_words(@latest_update.created_at, Time.now)} ago"
+  .latestupdate= "#{@latest_update.message} - sent #{distance_of_time_in_words(@latest_update.created_at, Time.now)} ago" unless @latest_update.nil?
   
   %h3 Neues aus meinem Netzwerk
     
