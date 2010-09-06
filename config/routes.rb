@@ -3,7 +3,7 @@ Flockstreet::Application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => "users/registrations"}
 
-  resources :products, :requests, :updates
+  resources :products, :requests, :updates  
   
   resources :leads do
     member do
@@ -33,6 +33,17 @@ Flockstreet::Application.routes.draw do
   get "website/terms"
   get "website/faq"
   get "website/contact"
+
+  # static tour pages
+  get "tour/profile", :as => :tour_profile
+  get "tour/leads", :as => :tour_leads
+  get "tour/messages", :as => :tour_messages
+  get "tour/notifications", :as => :tour_notifications
+  get "tour/network", :as => :tour_network
+  get "tour/request", :as => :tour_request
+  get "tour/tags", :as => :tour_tags
+  get "tour/updates", :as => :tour_updates
+  
   match "/about" => "website#about", :as => :about
   match "/contact" => "website#contact", :as => :contact
   match "/terms" => "website#terms", :as => :terms
