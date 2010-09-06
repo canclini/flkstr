@@ -22,6 +22,17 @@ Flockstreet::Application.routes.draw do
     resources :subscriptions
 #      resources :associates
   end
+  
+#  resources :twitter do
+#    collection do
+#      get :auth
+#      get :signin
+#      post :tweet
+#    end
+#  end
+get "twitter/auth"
+get "twitter/signin"
+  
   root :to => "website#index"
   match "/dashboard" => "dashboard#index", :as => :dashboard
 
