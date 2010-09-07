@@ -3,10 +3,15 @@ class CreateSettings < ActiveRecord::Migration
     create_table :settings do |t|
       t.references :company
       t.string :twitter_access_token
-      t.string :twitte_access_secret
+      t.string :twitter_access_secret
       t.boolean :default_twitter_send, :default => false
       t.timestamps
     end
+    
+    for company in Company.all
+      company.create_setting
+    end
+    
   end
 
   def self.down

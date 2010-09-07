@@ -1,10 +1,16 @@
+- title "Einstellung"
+
 %h1 Firmeneinstellungen
-%h3 Twitter settings
-- unless @twitter
-  %p
-    The application needs your permission to access your Twitter account. Please click the button below. If you've already signed in with Twitter, then refresh the page because Twitter might be unstable (so the application can't connect with it).
-  =link_to image_tag("http://apiwiki.twitter.com/f/1242697715/Sign-in-with-Twitter-darker.png"), twitter_signin_path
+=form_for @setting do |f|
+  = f.error_messages  
 
-%p Do you want to send updates to Twitter per default?
-
+  %h3 Twitter settings
+  - unless @twitter
+    %p
+      Um Status Updates auch gleich über Twitter zu senden muss der Account verifiziert werden.
+      =link_to image_tag("http://apiwiki.twitter.com/f/1242697715/Sign-in-with-Twitter-darker.png"), twitter_signin_path
+  = f.check_box :default_twitter_send
+  Jedes Statusupdate soll auch zu Twitter
+  %p= f.submit "Speichern", :class => "button light"
+  
 %h1 persönliche Einstellungen

@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(:version => 20100907104355) do
   create_table "settings", :force => true do |t|
     t.integer  "company_id"
     t.string   "twitter_access_token"
-    t.string   "twitte_access_secret"
-    t.boolean  "default_twitter_send", :default => false
+    t.string   "twitter_access_secret"
+    t.boolean  "default_twitter_send",  :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
