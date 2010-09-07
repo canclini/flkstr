@@ -1,4 +1,6 @@
 Flockstreet::Application.routes.draw do
+  get "settings/index"
+
   # See how all your routes lay out with "rake routes"
 
   devise_for :users, :controllers => { :registrations => "users/registrations"}
