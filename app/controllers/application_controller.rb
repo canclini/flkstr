@@ -55,4 +55,8 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def twitter_wrapper
+    @wrapper = TwitterWrapper.new File.join(Rails.root, 'config', 'twitter.yml'), current_company
+  end
+  
 end

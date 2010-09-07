@@ -1,16 +1,5 @@
 class TwitterController < ApplicationController
-
   before_filter :twitter_wrapper, :authenticate_user!
-
-  def index
-#    begin
-#      @twitter = @wrapper.get_twitter
-#      @account = @twitter.user_timeline.first.user.screen_name
-#      @tweets = @twitter.home_timeline
-#    rescue
-#      @twitter = nil
-#    end
-  end
   
   def signin
     begin
@@ -43,10 +32,4 @@ class TwitterController < ApplicationController
     redirect_to dashboard_path
   end
   
-  private
-  
-  def twitter_wrapper
-    @wrapper = TwitterWrapper.new File.join(Rails.root, 'config', 'twitter.yml'), current_company
-  end
-
 end

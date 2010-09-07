@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100905190912) do
+ActiveRecord::Schema.define(:version => 20100907104355) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "company_id"
@@ -45,8 +45,6 @@ ActiveRecord::Schema.define(:version => 20100905190912) do
     t.datetime "logo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "access_token"
-    t.string   "access_secret"
   end
 
   create_table "leads", :force => true do |t|
@@ -79,6 +77,15 @@ ActiveRecord::Schema.define(:version => 20100905190912) do
     t.string   "area_filter", :default => "everywhere"
     t.string   "distance",    :default => "0"
     t.string   "language",    :default => "DE"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "settings", :force => true do |t|
+    t.integer  "company_id"
+    t.string   "twitter_access_token"
+    t.string   "twitte_access_secret"
+    t.boolean  "default_twitter_send", :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

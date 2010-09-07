@@ -8,6 +8,7 @@ class Company < ActiveRecord::Base
 #  validates_attachment_content_type :logo, :content_type => ['image/jpeg', 'image/png']
   scope :with_logo, where("logo_file_name <> ?",'false').limit(10).order('rand()')
 
+  has_one :setting, :dependent => :destroy
   has_many :users
   has_many :addresses, :dependent => :destroy
   accepts_nested_attributes_for :addresses
@@ -27,7 +28,7 @@ class Company < ActiveRecord::Base
   validates_length_of :fax, :in => 7..32, :allow_blank => true
   
   before_create :set_permalink
-  after_create :create_main_address
+  after_create :create_related_models
   
   def to_param
     [id, permalink].join('-')
@@ -55,7 +56,8 @@ class Company < ActiveRecord::Base
     self.permalink = name.downcase.gsub(/[^0-9a-z]+/, ' ').strip.gsub(' ', '-') if name
   end
   
-  def create_main_address
+  def create_related_models
     self.addresses.create(:main => true)
+    self.create_setting
   end
 end
