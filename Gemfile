@@ -17,6 +17,7 @@ gem 'fancy-buttons'
 gem 'paperclip'
 gem 'cheddargetter'
 gem 'acts-as-taggable-on'
+gem 'twitter'
 
 #gem 'hpricot'
 #gem 'tolk'

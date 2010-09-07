@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100905171234) do
+ActiveRecord::Schema.define(:version => 20100905190912) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "company_id"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(:version => 20100905171234) do
     t.datetime "logo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "access_token"
+    t.string   "access_secret"
   end
 
   create_table "leads", :force => true do |t|
