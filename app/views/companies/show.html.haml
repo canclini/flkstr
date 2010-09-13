@@ -2,6 +2,9 @@
 
 = link_to "editieren", edit_company_path(current_user.company), :class => 'button edit'  if current_user && current_company == @company
 
+=link_to "Dran bleiben!", new_company_associate_path(@company) unless !current_user || current_company == @company || current_company.associates.include?(@company)
+
+
 %h1= @company.name
 = image_tag @company.logo.url(:medium)
 = @company.teaser

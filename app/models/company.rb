@@ -21,6 +21,13 @@ class Company < ActiveRecord::Base
   
   has_many :updates, :dependent => :destroy
   
+  # followers / associates
+  has_many :associations, :dependent => :destroy
+  has_many :associates, :through => :associations, :source => :associate
+  has_many :followers, :through => :follower_associations, :source => :company
+  
+  
+  
   validates_uniqueness_of :name
   validates_presence_of :name
   validates_length_of :teaser, :in=>10...140, :allow_blank => true

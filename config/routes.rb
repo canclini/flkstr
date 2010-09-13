@@ -1,6 +1,4 @@
 Flockstreet::Application.routes.draw do
-  get "settings/index"
-
   # See how all your routes lay out with "rake routes"
 
   devise_for :users, :controllers => { :registrations => "users/registrations"}
@@ -22,7 +20,7 @@ Flockstreet::Application.routes.draw do
       get :join
     end
     resources :subscriptions
-#      resources :associates
+    resources :associates
   end
   
 #  resources :twitter do

@@ -1,0 +1,8 @@
+-title "An #{@company.name} will ich dran bleiben"
+
+-form_for :associate, :url => company_associates_path(@company) do |f|
+  = f.error_messages  
+
+  = f.hidden_field :company_id
+  = f.hidden_field :associate_id
+  %p= f.submit "Dran bleiben!", :class => "button light"

@@ -1,0 +1,8 @@
+- title "Mein Netzwerk"
+
+#associations 
+  %h2 An diesen Firmen bin ich interessiert:
+  - for company in @associates do 
+    %h3= link_to company.name, company
+    = company.updates.last.message unless company.updates.empty?
+    = link_to "aus netzwerk entfernen", company_associate_path(current_company, company), :method => "delete"

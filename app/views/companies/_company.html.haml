@@ -1,3 +1,4 @@
 #company
   %h3= link_to company.name, company
   = company.teaser
+  = company.updates.last.message unless company.updates.empty?

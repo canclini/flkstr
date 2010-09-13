@@ -18,6 +18,7 @@
     %ul
       %li= link_to "Firmenverzeichnis", companies_path()
       %li= link_to "Passwort ändern", edit_user_registration_path()
+      %li= link_to "Mein Netzwerk", company_associates_path(current_company)
   .box
     %h3 Leads
     %ul
