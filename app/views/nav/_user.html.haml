@@ -1,6 +1,8 @@
 -if user_signed_in?
-  Willkommen
-  = link_to current_company.name, settings_path
+  Hallo
+  = current_company.name
+  = link_to "Firmenprofil", company_path(current_company)
+  = link_to "Einstellungen", settings_path
   = link_to "Sign out", destroy_user_session_path
 -else
   = link_to "Sign in", "#", :id => "signinshow"
