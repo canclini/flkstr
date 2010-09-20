@@ -6,6 +6,8 @@ class Lead < ActiveRecord::Base
   scope :new_or_accepted, where("status != ?", "declined")
   scope :this_month, where("status = 'accepted' and created_at > ?", Date.new(Time.now.year, Time.now.month, 1)) # accepted leads in current_month
   
+  after_create :add2feeds
+  
   # states (status attribute)
   # new: newly created by system (default)
   # accepted: company has accepted and will see all the details. It does count on its stats
@@ -17,6 +19,13 @@ class Lead < ActiveRecord::Base
   
   def accepted?
     status == 'accepted'
+  end
+
+private
+  def add2feeds
+    # dashboard feed (own)
+    feed_item = FeedItem.create(:item => self)
+    company.feed_items << feed_item
   end
   
 end

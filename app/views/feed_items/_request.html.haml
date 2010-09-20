@@ -1,3 +1,4 @@
 =link_to feed_item.company.name, feed_item.company
-%strong= feed_item.message
+hat einen neuen Auftrag veröffentlicht: 
+=link_to feed_item.name, feed_item
 = "#{distance_of_time_in_words(feed_item.created_at, Time.now)} ago"
