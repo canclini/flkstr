@@ -24,6 +24,7 @@ class Company < ActiveRecord::Base
   # followers / associates
   has_many :associations, :dependent => :destroy
   has_many :associates, :through => :associations, :source => :associate
+  has_many :follower_associations, :class_name => 'Association', :foreign_key => 'associate_id'
   has_many :followers, :through => :follower_associations, :source => :company
   
   

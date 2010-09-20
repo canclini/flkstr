@@ -6,3 +6,9 @@
     %h3= link_to company.name, company
     = company.updates.last.message unless company.updates.empty?
     = link_to "aus netzwerk entfernen", company_associate_path(current_company, company), :method => "delete"
+  %h2 Diese Firmen lesen meine News:
+  - for company in @followers do 
+    %h3= link_to company.name, company
+    = company.updates.last.message unless company.updates.empty?
+  
+  

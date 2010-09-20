@@ -2,6 +2,7 @@ class AssociatesController < ApplicationController
   def index
     @company = current_company
     @associates = @company.associates
+    @followers = @company.followers
   end
 
   def show
