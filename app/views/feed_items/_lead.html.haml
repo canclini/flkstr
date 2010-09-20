@@ -3,7 +3,5 @@ Ihr habt einen neuen Lead für
 - if feed_item.accepted?
   von 
   = link_to feed_item.source.name, company_path(feed_item.source)
-%br
-= feed_item.request.teaser
 = "#{distance_of_time_in_words(feed_item.created_at, Time.now)} ago"
   
