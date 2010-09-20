@@ -27,6 +27,9 @@ class Company < ActiveRecord::Base
   has_many :follower_associations, :class_name => 'Association', :foreign_key => 'associate_id'
   has_many :followers, :through => :follower_associations, :source => :company
   
+  # feeds
+  has_many :feeds
+  has_many :feed_items, :through => :feeds, :order => 'created_at desc'
   
   
   validates_uniqueness_of :name

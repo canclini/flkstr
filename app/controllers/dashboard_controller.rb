@@ -7,6 +7,8 @@ class DashboardController < ApplicationController
     @leads = current_company.leads.new_or_accepted
     @company = current_company
     @latest_update = @company.updates.last
+    
+    @feeds = @company.feed_items.limit(10)
   end
 
   private

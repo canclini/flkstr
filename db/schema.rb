@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100913095116) do
+ActiveRecord::Schema.define(:version => 20100920071130) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "company_id"
@@ -51,6 +51,20 @@ ActiveRecord::Schema.define(:version => 20100913095116) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feed_items", :force => true do |t|
+    t.string   "item_type"
+    t.integer  "item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feeds", :force => true do |t|
+    t.integer  "company_id"
+    t.integer  "feed_item_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
