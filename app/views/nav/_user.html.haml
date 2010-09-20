@@ -1,15 +1,21 @@
 -if user_signed_in?
-  Hallo
   = current_company.name
-  = link_to "Firmenprofil", company_path(current_company)
-  = link_to "Einstellungen", settings_path
-  = link_to "Sign out", destroy_user_session_path
+  <a id="settings">
+  Einstellungen &#9660;
+  </a>
+  = link_to "Abmelden", destroy_user_session_path
 -else
-  = link_to "Sign in", "#", :id => "signinshow"
-
+  = link_to "Anmelden", "#", :id => "signinshow"
 #signin-menu.hide
   = link_to "close", "#", :id => "signinclose"
   = form_tag new_user_session_path do
     = text_field_tag 'user[email]'
     = password_field_tag 'user[password]'
     %button Login
+    
+#settings-menu.hide
+  = link_to "Firmenprofil", company_path(current_company)
+  %br/
+  = link_to "Firmeneinstellungen", settings_path
+  %br/
+  = link_to "persönlich Einstellungen", edit_user_registration_path()

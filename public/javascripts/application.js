@@ -31,6 +31,10 @@ $(function() {
 
   $('.hide').hide();  
 
+  $('a#settings').click(function(){
+    $('#settings-menu').toggle();
+  });
+
   $('a#signinshow').click(function(){
     $('#signin-menu').show();
   });
