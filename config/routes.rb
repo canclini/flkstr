@@ -23,6 +23,16 @@ Flockstreet::Application.routes.draw do
     resources :associates
   end
   
+  resources :messages do
+    collection do
+      get :sent
+    end
+    member do
+      get :reply
+    end
+  end
+  
+  
 #  resources :twitter do
 #    collection do
 #      get :auth

@@ -31,6 +31,10 @@ class Company < ActiveRecord::Base
   has_many :feeds
   has_many :feed_items, :through => :feeds, :order => 'created_at desc'
   
+  # messages
+  has_many :sent_messages, :class_name => "Message", :foreign_key => "author_id"	 	
+  has_many :received_messages, :class_name => "MessageCopy", :foreign_key => "recipient_id"    
+  
   
   validates_uniqueness_of :name
   validates_presence_of :name

@@ -1,0 +1,16 @@
+- title "Nachricht"
+#message
+  %h2= @message.subject
+  %p
+    %strong Von:
+    = @message.author.name
+  %p
+    %strong An:
+    = @message.recipients.map(&:name).to_sentence
+  %p
+    %strong Zeit:
+    = @message.created_at.to_s(:long)
+  
+  %pre= @message.body
+  
+  %p= link_to "Antworten", reply_message_path(@message)

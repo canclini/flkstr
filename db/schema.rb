@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100920071130) do
+ActiveRecord::Schema.define(:version => 20100920161124) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "company_id"
@@ -75,6 +75,24 @@ ActiveRecord::Schema.define(:version => 20100920071130) do
     t.integer  "source_id"
     t.string   "status",     :default => "new"
     t.integer  "weight",     :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "message_copies", :force => true do |t|
+    t.integer  "recipient_id"
+    t.integer  "message_id"
+    t.boolean  "read",         :default => false
+    t.boolean  "deleted",      :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "author_id"
+    t.string   "subject"
+    t.text     "body"
+    t.boolean  "deleted",    :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

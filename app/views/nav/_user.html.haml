@@ -12,10 +12,10 @@
     = text_field_tag 'user[email]'
     = password_field_tag 'user[password]'
     %button Login
-    
-#settings-menu.hide
-  = link_to "Firmenprofil", company_path(current_company)
-  %br/
-  = link_to "Firmeneinstellungen", settings_path
-  %br/
-  = link_to "persönlich Einstellungen", edit_user_registration_path()
+- if user_signed_in?    
+  #settings-menu.hide
+    = link_to "Firmenprofil", company_path(current_company)
+    %br/
+    = link_to "Firmeneinstellungen", settings_path
+    %br/
+    = link_to "persönlich Einstellungen", edit_user_registration_path()

@@ -1,0 +1,23 @@
+-title "Nachrichten"
+#messages_list
+  %p= link_to "Nachricht schreiben", new_message_path
+  
+  %p
+    %strong Mailboxes
+  %ul
+    %strong Posteingang
+    %li= link_to "Gesendet", sent_messages_path
+    
+    %table
+      %tr
+        %th Von
+        %th Betreff
+        %th Erhalten
+
+      - for message in @messages
+        %tr
+          %td= message.author.name
+          %td= link_to message.subject, message_path(message)#, :remote => true
+          %td= "#{distance_of_time_in_words(message.created_at, Time.now)} ago"
+
+    = will_paginate @messages

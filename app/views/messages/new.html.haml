@@ -1,0 +1,18 @@
+-title "Nachricht verfassen"
+
+-form_for @message do |f|
+  = f.error_messages  
+  %p  
+    = f.label :to, "AN:"
+    %br
+    = f.text_field :to, :class => 'text companySuggest'
+  %p
+    = f.label :subject, "Betreff"
+    %br
+    = f.text_field :subject, :class => 'text'
+  %p
+    = f.label :body, "Text"
+    %br
+    = f.text_area :body, :cols => 40, :rows => 3
+
+  %p= f.submit "senden", :class => "button light"
