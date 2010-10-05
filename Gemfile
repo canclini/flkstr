@@ -18,6 +18,7 @@ gem 'paperclip'
 gem 'cheddargetter'
 gem 'acts-as-taggable-on'
 gem 'twitter'
+gem 'simple_form'
 
 #gem 'hpricot'
 #gem 'tolk'

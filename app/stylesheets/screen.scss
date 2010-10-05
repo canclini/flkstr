@@ -9,6 +9,7 @@
 @import "compass/utilities";
 @import "blueprint/typography";
 @import "partials/layout";
+@import "partials/forms";
 
 @include blueprint-typography;
 
@@ -19,6 +20,8 @@ body {
 }
   
 #wrapper {
+/*  @include showgrid; 
+*/
 }
 #header {
 }
