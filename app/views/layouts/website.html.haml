@@ -7,22 +7,37 @@
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails"
     = csrf_meta_tag
 
-  %body.app
+  %body
     #wrapper
-      #header
-        #logo
-          = link_to image_tag("blue_birds_only.png", :border => 0), root_url
-        #topsearch
-          = render :partial => 'website/search'
-        #usernav
-          = render :partial => 'nav/user'
-                
-      - if show_title?
-        %h2=h yield(:title)
-      #content
+      #header-meta-container
+        #header-meta
+          #header-meta-user
+            = render :partial => 'nav/user'
+      #header-content-container
+        #header-content
+          #header-content-logo
+            = link_to image_tag("3birds_signet.png", :border => 0), root_url
+          #header-content-tagline1
+            %h2 Was ist flockstreet?
+            Die Textarbeit für diesen Abschnitt liegt bei Marcel und Caroline
+          #header-content-tagline2
+            %h2 Abos & Preise
+            Hier steht ein Satz, der nicht mehr als 3 Zeilen lang ist.
+      #content_one
+        - if show_title?
+          %h2=h yield(:title)
+      
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}"
+      
         = yield
-      #footer
-        = render 'website/footer'
-      #copyright &copy; Flockstreet, 2010
+      #content_two-container
+        #content_two
+          = yield(:columns)
+      #footer-navi-container
+        #footer-navi
+          = render 'website/footer'
+      #footer-copy-container
+        #footer-copy
+          =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch"
+          &copy; Flockstreet, 2010

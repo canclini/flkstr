@@ -1,8 +1,78 @@
 #wrapper {
+}
+
+#header-meta-container {
+  background: $dark_green;  
+  float: left;
+  width: 100%;
+}
+#header-meta {
+  @include container();
+  padding: 5px;
+}
+
+#header-meta-user {
+  text-align: right;
+  @include last;
+}
+
+#header-content-container {
+  background: $light_green;  
+  clear: both;
+  border-bottom: 1px solid $dark_green;
+}
+
+#header-content {
+//  @include showgrid; 
+  padding: 20px;
   @include container();
 }
-#header {
-  @include column(24);
+#header-content-logo {
+  @include column(8);
+}
+#header-content-tagline1 {
+  text-align: center;
+  @include column(8);
+}
+#header-content-tagline2 {
+  text-align: center;
+  @include column(8);
+  @include last;
+}
+
+#content_one {
+  @include container();
+}
+
+#content_two-container {
+  background: $light_green;  
+  clear: both;
+  border-bottom: 1px solid $dark_green;
+  border-top: 1px solid $dark_green;
+}
+#content_two {
+  padding: 20px;
+  @include container();
+}
+
+#footer-navi-container {
+  background: $dark_grey;  
+  clear: both;
+}
+#footer-navi {
+  padding: 10px;
+  @include container();
+}
+
+#footer-copy-container {
+  background: $dark_green;  
+  clear: both;
+}
+
+#footer-copy {
+  padding: 8px;
+  @include container();
+  text-align: right;
 }
 
 #logo {
@@ -14,17 +84,9 @@
   @include column(12);
 }
 #usernav {
-  @include column(8);
+  @include column(9);
   @include last;
-}
-
-#footer {
-  @include column(24);
-  @include last;
-}
-
-#content {
-  @include column(24);
+  text-align: right;
 }
 
 .leftmiddle {
@@ -47,9 +109,4 @@
   margin: 10px;
   @include bordered;
   @include rounded(10px);
-}
-
-#copyright {
-  font-weight: bold;
-  text-align: right;
 }

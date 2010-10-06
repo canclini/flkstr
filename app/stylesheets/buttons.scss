@@ -1,4 +1,5 @@
 @import "fancy_buttons.sass";
+@import "partials/base";
 
 $green: darken(#57b42c, 8);
 $blue: adjust_hue($green, 110);
@@ -21,3 +22,13 @@ a.button, button, .button {
     @include fancy-button-colors(darken(desaturate(yellow, 35), 5)); }
   &.edit {
     @include fancy-button-colors(lighten($green, 10)); } }
+    
+a.big_button, .big_button {
+  @include fancy-button($dark_grey, 25px, 5px);
+  text-align: center;
+}
+
+a.small_button, .small_button {
+  @include fancy-button($dark_grey, 10px, 2px);
+  text-align: center;
+}

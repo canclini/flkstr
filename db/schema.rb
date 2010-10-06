@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(:version => 20100920161124) do
     t.datetime "logo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "access_token"
+    t.string   "access_secret"
   end
 
   create_table "feed_items", :force => true do |t|

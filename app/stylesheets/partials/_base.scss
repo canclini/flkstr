@@ -10,8 +10,13 @@ $blueprint_grid_margin: 10px;
 $blueprint_grid_width: ($blueprint_container_size + $blueprint_grid_margin) / $blueprint_grid_columns - $blueprint_grid_margin;
 
 // flockstreet colors
+
+$dark_green: #8cc6bf;
+$light_green: #edf6ed;
+$dark_grey: #3a464f;
+$flk_orange: #ea8c1c;
+
 $flk_blue: #1a92d3;
-$flk_orange: #d94a0b;
 $flk_magenta: #ce3caa;
 $flk_green: #72ad00;
 

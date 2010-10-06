@@ -10,30 +10,57 @@
 @import "blueprint/typography";
 @import "partials/layout";
 @import "partials/forms";
+@import "compass/css3";
+@import "compass/css3/gradient";
 
 @include blueprint-typography;
 
+
+@include font-face("Titillium", font-files("/fonts/TitilliumText22L002.otf", opentype,"/fonts/TitilliumText22L004.otf", opentype));
+
+@include font-face("Calluna", font-files("/fonts/Calluna-Regular.otf", opentype));
+
+a {
+  color: $flk_orange;
+}
+a:visited {
+  color: $flk_orange;
+}
+
 body {
-  a {
-    @include hover-link;
-  }
+  font-family: Titillium;
 }
-  
-#wrapper {
-/*  @include showgrid; 
-*/
+
+p {
+  font-family: Calluna;
+  font-size: 1.2em;
 }
-#header {
+h2 {
+  font-weight: bold;
 }
+h3 {
+  font-weight: bold;
+}
+
 #usernav {
   text-align: right;
 }
 
-
-#footer {
+#footer-navi {
+  color: #fdfdfd;
   ul {
     @include no-bullets;
     padding: 0;
+  }
+  a {
+    color: #fdfdfd;
+  }
+
+}
+#footer-copy-container {
+  a {
+    color: black;
+    @include hover-link;
   }
 }
 

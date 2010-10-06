@@ -1,3 +1,4 @@
+de | fr
 -if user_signed_in?
   = current_company.name
   <a id="settings">
@@ -5,7 +6,7 @@
   </a>
   = link_to "Abmelden", destroy_user_session_path
 -else
-  = link_to "Anmelden", "#", :id => "signinshow"
+  = link_to "Login", "#", :id => "signinshow", :class => "small_button"
 #signin-menu.hide
   = link_to "close", "#", :id => "signinclose"
   = form_tag new_user_session_path do

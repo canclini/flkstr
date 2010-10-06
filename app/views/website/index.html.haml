@@ -1,24 +1,34 @@
-- title("Flockstreet für Unternehmen")
+- title("flockstreet - Das soziale Netzwerk für Firmen.")
 
 .leftmiddle
   
   <object width="620" height="385"><param name="movie" value="http://www.youtube.com/v/MzWKaAfuZTU?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MzWKaAfuZTU?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="620" height="385"></embed></object>
   
-  %p Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.
+  %p
+    Weit hinten, hinter den
+    =link_to "Aufträge erfassen", "#"
+    , fern der Länder
+    =link_to "Leads generieren", "#"
+    und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in
+    =link_to "Kontakte knüpfen", "#"
+    an der Küste des Semantik, eines großen Sprachozeans.
+  =link_to "Rundgang machen", "#"
+.right
+  =link_to "Jetzt kostenlos testen!", signup_path, :class => "big_button"
 
-.right
-  .box
-    %p Neu bei Flockstreet? Jetzt kostenlos Mitglied werden:
-    =link_to "Jetzt mitmachen", signup_path, :class => "button blue"
-  .box
-    = render :partial => 'signedupcompanies'
+  = render :partial => 'signedupcompanies'
+    
   
-.left
-  %h3 neue Lieferanten
-  %p Mit flockstreet spare ich Zeit, weil ich meinen Auftrag hier einfach publiziere. Dann vergleicht ihn flockstreet automatisch mit den Firmen aus dem Netzwerk und schickt den passenden Firmen eine Info. Die kontaktieren mich dann direkt mit dem richtigen Angebot. Das geht schnell und ich hab weniger zu tun.
-.middle
-  %h3 mehr Aufträge
-  %p Neue Kunden zu finden ist eine Herausforderung. Mit flockstreet finden wenigstens diejenigen Kunden ohne Aufwand zu uns, welche sich für unsere Dienstleistung interessieren. Das hilft. Ich kann auch mit den Statusmeldungen ganz unkompliziert über meine Dienstleistungen schreiben. Da können plötzlich interessante Kontakte entstehen.
-.right
-  %h3 Netzwerk
-  %p Als Firma hat man immer mit diversen Kunden und Lieferanten zu tun. Mit flockstreet kann ich jetzt diese Firmen in mein Netzwerk aufnehmen. So sehen neue Partner gleich mit wem ich zusammen arbeite. Das fördert das Vertrauen in eine Firma, vorallem wenn sie sogar eine Firma aus meinem Netzwerk kennen. Das Netzwerk wächst übrigens, und dank den Statusmeldungen weiss ich auch immer was bei meinen Partnern so läuft.
+- content_for :columns do
+  .left
+    %h3 neue Lieferanten
+    %p Mit flockstreet spare ich Zeit, weil ich meinen Auftrag hier einfach publiziere. Dann vergleicht ihn flockstreet automatisch mit den Firmen aus dem Netzwerk und schickt den passenden Firmen eine Info. Die kontaktieren mich dann direkt mit dem richtigen Angebot. Das geht schnell und ich hab weniger zu tun.
+    =link_to "Mehr erfahren", "#"
+  .middle
+    %h3 mehr Aufträge
+    %p Neue Kunden zu finden ist eine Herausforderung. Mit flockstreet finden wenigstens diejenigen Kunden ohne Aufwand zu uns, welche sich für unsere Dienstleistung interessieren. Das hilft. Ich kann auch mit den Statusmeldungen ganz unkompliziert über meine Dienstleistungen schreiben. Da können plötzlich interessante Kontakte entstehen.
+    =link_to "Mehr erfahren", "#"
+  .right
+    %h3 Netzwerk
+    %p Als Firma hat man immer mit diversen Kunden und Lieferanten zu tun. Mit flockstreet kann ich jetzt diese Firmen in mein Netzwerk aufnehmen. So sehen neue Partner gleich mit wem ich zusammen arbeite. Das fördert das Vertrauen in eine Firma, vorallem wenn sie sogar eine Firma aus meinem Netzwerk kennen. Das Netzwerk wächst übrigens, und dank den Statusmeldungen weiss ich auch immer was bei meinen Partnern so läuft.
+    =link_to "Mehr erfahren", "#"
