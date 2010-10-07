@@ -1,12 +1,20 @@
-%h2 Sign up
+%h2 Kostenlose Anmeldung
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  = f.input :email, :input_html => { :class => 'focus' }
-  = f.input :firstname
-  = f.input :lastname
-  = f.input :password
-  = f.input :password_confirmation
-  = hidden_field :company, :id
-  = f.button :submit
-  
-= render :partial => "devise/shared/links"
+  = error_messages_for :company, :header_message => "Hoppla!", :message => "Da gab es Probleme beim erfassen der Firma"
+
+  = f.simple_fields_for :company do |c|
+    = c.input :name, :label => "Firmenname", :input_html => { :class => 'box_transition' }
+  %hr
+  %h3 Ihre Login-Daten
+  = f.input :email, :hint => 'ist auch gleich der Username', :input_html => {:class => 'box_transition', :placeholder => 'peter.meier@beispiel.ch' }
+  = f.input :password, :input_html => { :class => 'box_transition' }
+  = f.input :password_confirmation, :input_html => { :class => 'box_transition' }
+
+
+  %p
+    Wenn Sie auf "Konto erstellen" drücken, bestätigen sie, die
+    =link_to "Allgemeinen Geschäftsbestimmungen", terms_path()
+    gelesen und akzeptiert zu haben.
+
+
+  %p= f.submit "Konto erstellen", :class => "button"

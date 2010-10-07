@@ -4,9 +4,26 @@
   =form_for @company do |f|
     = f.error_messages
     %p  
-      = f.label :name, "Company Name", :id => "companycreate"
+      = f.label :name, "Company Name"#, :id => "companycreate"
       %br
       = f.text_field :name, :class => "text focus"
+
+    %hr
+    = f.fields_for :user do |u|
+      %p
+        = u.label :email
+        %br/
+        = u.text_field :email
+      %p
+        = u.label :password
+        %br/
+        = u.password_field :password
+      %p
+        = u.label :password_confirmation
+        %br/
+        = u.password_field :password_confirmation
+
+
       = f.submit "Jetzt Registrieren", :class => "button"
   = render :partial => 'existing_companies'
 .right

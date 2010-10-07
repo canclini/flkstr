@@ -1,4 +1,6 @@
 class CompaniesController < ApplicationController
+  layout 'website', :only => [:new]
+
   before_filter :authenticate_user!, :except => [:new, :create, :exists, :join]
   before_filter :no_user!, :only => [:new, :create]
   
@@ -34,21 +36,19 @@ class CompaniesController < ApplicationController
   end
 
   def new
-    redirect_to signup_path unless Plan::NAMES.include? params[:plan]
     @company = Company.new
-    session[:plan] = params[:plan]
     @companies = []
   end
   
   def create
-    @company = Company.new(params[:company])
-    if @company.save    
-      flash[:notice] = "Die Firma wurde erstellt."
-      redirect_to register_path(:company => @company)
-    else
-      @companies = Company.search(@company.name).limit(10)
-      render :action => 'new'
-    end
+#    @company = Company.new(params[:company])
+#    if @company.save    
+#      flash[:notice] = "Die Firma wurde erstellt."
+#      redirect_to register_path(:company => @company)
+#    else
+#      @companies = Company.search(@company.name).limit(10)
+#      render :action => 'new'
+#    end
     
   end
   

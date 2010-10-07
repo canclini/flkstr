@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  layout :specify_layout
+
   helper :all
   
   before_filter :set_user_language
@@ -15,6 +17,14 @@ class ApplicationController < ActionController::Base
     new_company_path
   end
   
+  #### PROTECTED #######
+  protected 
+
+  def specify_layout
+      controller_name == 'sessions' ? 'website' : 'application'
+  end
+
+  #### PRIVATE #######
   private
   
   def no_user!

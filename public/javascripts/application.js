@@ -15,7 +15,27 @@ jQuery.fn.submitWithAjax = function() {
 
 
 $(function() {  
-  $(".new_company").keydown(function(){
+
+  $(".signin").click(function(e) {
+                  e.preventDefault();
+                  $("#signin_menu").toggle();
+                  $(".signin").toggleClass("menu-open");
+              });
+
+              $("#signin_menu").mouseup(function() {
+                  return false
+              });
+              $(document).mouseup(function(e) {
+                  if($(e.target).parent("a.signin").length==0) {
+                      $(".signin").removeClass("menu-open");
+                      $("#signin_menu").hide();
+                  }
+              });
+
+
+
+
+  $("#company_name").keydown(function(){
        updateExistingCompanies();
   });
 
@@ -33,14 +53,6 @@ $(function() {
 
   $('a#settings').click(function(){
     $('#settings-menu').toggle();
-  });
-
-  $('a#signinshow').click(function(){
-    $('#signin-menu').show();
-  });
-
-  $('a#signinclose').click(function(){
-    $('#signin-menu').hide();
   });
 
   //  $("#new_review").submitWithAjax();

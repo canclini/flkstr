@@ -70,15 +70,12 @@ get "twitter/signin"
   match "/terms" => "website#terms", :as => :terms
   match "/faq" => "website#faq", :as => :faq
   
-  get "plans/index"
+  match "plans" => "plans#index", :as => :plans
   
-  # bei einem signup muss erst der Plan gewählt werden
-  match "/signup" => "plans#index", :as => :signup
-  #ist der Plan gewählt, wird die Firma erfasst
-  match "/signup(/:plan)" => "companies#new", :as => :signup
-  #ist die Firma erfasst und der Plan gewählt, kommt die User registrierung
+#  match "/signup" => "companies#new", :as => :signup
+
   devise_for :users do
-    match "/signup/:company/user/new" => "users/registrations#new", :as => :register
+    match "/signup" => "users/registrations#new", :as => :register
   end
 
   # The priority is based upon order of creation:

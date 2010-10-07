@@ -1,8 +1,8 @@
 - title("Abos & Preise")
 %p Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.
+= link_to "Jetzt kostenlos mitmachen", register_path, :class => 'big_button'
 
 #plans
   - for plan in [:scale, :connect, :ready] do
     .normal
       = render :partial => "#{plan}"
-      = link_to "Bestellen", signup_path(plan), :class => 'button'

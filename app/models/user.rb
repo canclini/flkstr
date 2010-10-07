@@ -11,7 +11,11 @@ class User < ActiveRecord::Base
   validates_length_of :phone, :in => 7..32, :allow_blank => true
   
   def fullname
-    lastname.capitalize + " " + firstname.capitalize
+    if firstname? and lastname? then
+      lastname.capitalize + " " + firstname.capitalize
+    else
+      email
+    end
   end
     
 end

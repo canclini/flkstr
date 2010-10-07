@@ -1,22 +1,24 @@
-de | fr
--if user_signed_in?
-  = current_company.name
-  <a id="settings">
-  Einstellungen &#9660;
-  </a>
-  = link_to "Abmelden", destroy_user_session_path
--else
-  = link_to "Login", "#", :id => "signinshow", :class => "small_button"
-#signin-menu.hide
-  = link_to "close", "#", :id => "signinclose"
-  = form_tag new_user_session_path do
-    = text_field_tag 'user[email]'
-    = password_field_tag 'user[password]'
-    %button Login
-- if user_signed_in?    
-  #settings-menu.hide
-    = link_to "Firmenprofil", company_path(current_company)
-    %br/
-    = link_to "Firmeneinstellungen", settings_path
-    %br/
-    = link_to "persönlich Einstellungen", edit_user_registration_path()
+#header-meta-user
+  -if user_signed_in?
+    = current_company.name
+    <a id="settings">
+    Einstellungen &#9660;
+    </a>
+    = link_to "Abmelden", destroy_user_session_path
+  
+  -else
+    = link_to "Login", new_user_session_path, :class => "signin"
+    #signin_menu
+      = form_tag new_user_session_path do
+        = text_field_tag 'user[email]'
+        = password_field_tag 'user[password]'
+        %button Login
+      
+  
+  - if user_signed_in?    
+    #settings-menu.hide
+      = link_to "Firmenprofil", company_path(current_company)
+      %br/
+      = link_to "Firmeneinstellungen", settings_path
+      %br/
+      = link_to "persönlich Einstellungen", edit_user_registration_path()

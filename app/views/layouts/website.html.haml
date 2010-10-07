@@ -11,17 +11,17 @@
     #wrapper
       #header-meta-container
         #header-meta
-          #header-meta-user
-            = render :partial => 'nav/user'
+          = render :partial => 'nav/user'
+        
       #header-content-container
         #header-content
           #header-content-logo
             = link_to image_tag("3birds_signet.png", :border => 0), root_url
           #header-content-tagline1
-            %h2 Was ist flockstreet?
+            %h2= link_to "Was ist flockstreet?", tour_profile_path()
             Die Textarbeit für diesen Abschnitt liegt bei Marcel und Caroline
           #header-content-tagline2
-            %h2 Abos & Preise
+            %h2= link_to "Abos & Preise", plans_path()
             Hier steht ein Satz, der nicht mehr als 3 Zeilen lang ist.
       #content_one
         - if show_title?
@@ -39,5 +39,5 @@
           = render 'website/footer'
       #footer-copy-container
         #footer-copy
-          =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch"
+          =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "box_transition"
           &copy; Flockstreet, 2010

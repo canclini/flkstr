@@ -8,6 +8,8 @@
 }
 #header-meta {
   @include container();
+  position: relative;
+  overflow: visible;
   padding: 5px;
 }
 
@@ -42,6 +44,7 @@
 
 #content_one {
   @include container();
+  padding: 10px;
 }
 
 #content_two-container {
