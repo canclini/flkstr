@@ -32,3 +32,8 @@ a.small_button, .small_button {
   @include fancy-button($dark_grey, 10px, 2px);
   text-align: center;
 }
+
+.search_button {
+  @include fancy-button($dark_grey, 13px, 2px);
+  text-align: center;
+}

@@ -1,11 +1,9 @@
-- title("Dashboard")
-
 .leftmiddle
   %h3 Was gibt es Neues?
     
   = form_tag updates_path do
     %p
-      = text_field_tag :update, params[:update], :size=>100
+      = text_field_tag :update, params[:update], :size=>80
       = submit_tag "Send", :name => nil, :class => "button light"
   .latestupdate= "#{@latest_update.message} - sent #{distance_of_time_in_words(@latest_update.created_at, Time.now)} ago" unless @latest_update.nil?
   
@@ -36,4 +34,4 @@
     %h3 Netzwerk erweitern
     = form_tag companies_path, :method => :get do
       %p
-        = text_field_tag :search, params[:search] = "mail adresse",:size=>40, :class => "text clearme"  
+        = text_field_tag :search, params[:search] = "mail adresse",:size=>30, :class => "text clearme"  

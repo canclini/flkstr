@@ -3,18 +3,19 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "partials/base";
-@import "compass/reset";
 @import "blueprint";
-@import "compass/utilities";
 @import "blueprint/typography";
-@import "partials/layout";
-@import "partials/forms";
+@import "compass/reset";
+@import "compass/utilities";
 @import "compass/css3";
 @import "compass/css3/gradient";
 
-@include blueprint-typography;
+@import "partials/base";
+@import "partials/layout";
+@import "partials/forms";
+@import "partials/menu";
 
+@include blueprint-typography;
 
 @include font-face("Titillium", font-files("/fonts/TitilliumText22L002.otf", opentype,"/fonts/TitilliumText22L004.otf", opentype));
 
@@ -60,6 +61,7 @@ h3 {
 
 }
 #footer-copy-container {
+  height: 30px;
   a {
     color: black;
     @include hover-link;
@@ -69,11 +71,7 @@ h3 {
   }
   
 }
-
-#signin-menu {
-  border: 1px solid;
-}
-
+// PLANS
 #plans {
   @include column(22);
   @include push(2);
@@ -101,6 +99,8 @@ h3 {
 	color: #73a1c7;
 }
 
+
+// FLASH MESSAGES, NOTICE MESSAGES, ERROR IN FORMS
 #flash_notice {
   @include boxed($flk_green, $flk_darkgreen);
 }
@@ -115,7 +115,11 @@ h3 {
   @include boxed($light_grey, red);
 }
 
-// Crazy Genc stuff
+.field_with_errors input { 
+  border-color: red;
+}
+
+// Crazy GENC stuff
 
 .box_transition {
   -o-transition: all 0.3s ease-out;
@@ -125,18 +129,18 @@ h3 {
 }
 
 input[type="text"], input[type="email"], textarea {
-  background-color: $light_green;
+//  background-color: $light_green;
 }
 
 input:hover, textarea:hover {
-  background-color: $dark_green;
+//  background-color: $dark_green;
 }
 input:focus, textarea:focus {
-  border-color: $dark_green;
+//  border-color: $dark_green;
   outline: none;
 }
 
-// simple_form stuff (from railscasts.com)
+// SIMPLE_FORM stuff (from railscasts.com)
 .simple_form label {
   float: left;
   width: 100px;
@@ -177,115 +181,4 @@ input:focus, textarea:focus {
   color: #555;
   display: block;
   font-style: italic;
-}
-.field_with_errors input { 
-  border-color: red;
-  }
-
-
-// signin menu stuff
-//http://aext.net/2009/08/perfect-sign-in-dropdown-box-likes-twitter-with-jquery/
-
-#header-meta-user a.signin {
-    background:$dark_grey;
-    padding:4px 6px 6px;
-    text-decoration:none;
-    font-weight:bold;
-    color:#fff;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-}
-#header-meta-user a.signin:hover {
-    background:$dark_grey;
-}
-#header-meta-user a.signin, #header-meta-user a.signin:hover {
-    *background-position:0 3px!important;
-}
-
-a.signin {
-    position:relative;
-    margin-left:3px;
-}
-a.signin span {
-    background-repeat:no-repeat;
-    background-position:100% 50%;
-    padding:4px 16px 6px 0;
-}
-#header-meta-user a.menu-open {
-    background:#ddeef6!important;
-    color:#666!important;
-    outline:none;
-}
-#small_signup {
-    display:inline;
-    float:none;
-    line-height:23px;
-    margin:25px 0 0;
-    width:170px;
-}
-a.signin.menu-open span {
-    color:#789;
-}
-
-#signin_menu {
-    -moz-border-radius-topleft:5px;
-    -moz-border-radius-bottomleft:5px;
-    -moz-border-radius-bottomright:5px;
-    -webkit-border-top-left-radius:5px;
-    -webkit-border-bottom-left-radius:5px;
-    -webkit-border-bottom-right-radius:5px;
-    display:none;
-    background-color:$dark_green;
-    position:absolute;
-    width:210px;
-    z-index:100;
-    border:1px transparent;
-    text-align:left;
-    padding:12px;
-    top: 24.5px; 
-    right: 0px; 
-    margin-top:5px;
-    margin-right: 0px;
-    *margin-right: -1px;
-    font-size:11px;
-}
-
-#signin_menu input[type=text], #signin_menu input[type=password] {
-    display:block;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    border:1px solid #ACE;
-    font-size:13px;
-    margin:0 0 5px;
-    padding:5px;
-    width:203px;
-}
-#signin_menu p {
-    margin:0;
-}
-#signin_menu a {
-    color:#6AC;
-}
-#signin_menu label {
-    font-weight:normal;
-}
-#signin_menu p.remember {
-    padding:10px 0;
-}
-#signin_menu p.forgot, #signin_menu p.complete {
-    clear:both;
-    margin:5px 0;
-}
-#signin_menu p a {
-    color:#27B!important;
-}
-
-#signin_submit::-moz-focus-inner {
-padding:0;
-border:0;
-}
-#signin_submit:hover, #signin_submit:focus {
-    background-position:0 -5px;
-    cursor:pointer;
 }

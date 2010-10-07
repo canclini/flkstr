@@ -620,3 +620,106 @@ a.small_button:active, .small_button:active {
 a.small_button:active, a.small_button:active:visited, .small_button:active, .small_button:active:visited {
   color: white;
 }
+
+/* line 36, ../../../app/stylesheets/buttons.scss */
+.search_button {
+  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
+  background: url('/images/button_bg.png?1280252158') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 15.6px;
+  padding: 2px 10px;
+  border-width: 1px;
+  background-color: #1f4a6a;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #899ba8), color-stop(10%, #5a6d7b), color-stop(50%, #333e46), color-stop(50%, #2d363d), color-stop(100%, #43505a));
+  background-image: -moz-linear-gradient(top, #899ba8 0%, #5a6d7b 10%, #333e46 50%, #2d363d 50%, #43505a 100%);
+  background-image: linear-gradient(top, #899ba8 0%, #5a6d7b 10%, #333e46 50%, #2d363d 50%, #43505a 100%);
+  border-color: #1a1f23;
+  text-shadow: #020507 0px 1px 1px;
+  text-align: center;
+}
+/* line 172, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 175, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button:focus {
+  outline: none;
+}
+/* line 178, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button.disabled, .search_button[disabled] {
+  opacity: 0.7;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+}
+/* line 183, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button.disabled:hover, .search_button.disabled:focus, .search_button[disabled]:hover, .search_button[disabled]:focus {
+  cursor: default;
+}
+/* line 152, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button:active {
+  padding: 1px 9px;
+  border-width: 2px;
+}
+/* line 156, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button.disabled:active, .search_button[disabled] {
+  padding: 2px 10px;
+  border-width: 1px;
+}
+/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button, .search_button:visited {
+  color: white;
+}
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button.disabled:active, .search_button.disabled:hover, .search_button[disabled]:active, .search_button[disabled]:hover {
+  background-color: #1f4a6a;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #899ba8), color-stop(10%, #5a6d7b), color-stop(50%, #333e46), color-stop(50%, #2d363d), color-stop(100%, #43505a));
+  background-image: -moz-linear-gradient(top, #899ba8 0%, #5a6d7b 10%, #333e46 50%, #2d363d 50%, #43505a 100%);
+  background-image: linear-gradient(top, #899ba8 0%, #5a6d7b 10%, #333e46 50%, #2d363d 50%, #43505a 100%);
+  border-color: #1a1f23;
+  text-shadow: #020507 0px 1px 1px;
+}
+/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button.disabled:active, .search_button.disabled:active:visited, .search_button.disabled:hover, .search_button.disabled:hover:visited, .search_button[disabled]:active, .search_button[disabled]:active:visited, .search_button[disabled]:hover, .search_button[disabled]:hover:visited {
+  color: white;
+}
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button:hover, .search_button:focus {
+  background-color: #1c415e;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #8193a1), color-stop(10%, #556572), color-stop(50%, #2e363d), color-stop(50%, #272e34), color-stop(100%, #3d4851));
+  background-image: -moz-linear-gradient(top, #8193a1 0%, #556572 10%, #2e363d 50%, #272e34 50%, #3d4851 100%);
+  background-image: linear-gradient(top, #8193a1 0%, #556572 10%, #2e363d 50%, #272e34 50%, #3d4851 100%);
+  border-color: #13171a;
+  text-shadow: black 0px 1px 1px;
+}
+/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button:hover, .search_button:hover:visited, .search_button:focus, .search_button:focus:visited {
+  color: white;
+}
+/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button:active {
+  background-color: #183952;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #2d363d), color-stop(30%, #313b42), color-stop(50%, #293037), color-stop(50%, #22292e), color-stop(100%, #3e4a54));
+  background-image: -moz-linear-gradient(top, #2d363d 0%, #313b42 30%, #293037 50%, #22292e 50%, #3e4a54 100%);
+  background-image: linear-gradient(top, #2d363d 0%, #313b42 30%, #293037 50%, #22292e 50%, #3e4a54 100%);
+  border-color: #0d0f11;
+  text-shadow: black 0px -1px -1px;
+}
+/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
+.search_button:active, .search_button:active:visited {
+  color: white;
+}

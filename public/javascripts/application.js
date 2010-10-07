@@ -16,21 +16,69 @@ jQuery.fn.submitWithAjax = function() {
 
 $(function() {  
 
+//signin menu on website
   $(".signin").click(function(e) {
-                  e.preventDefault();
-                  $("#signin_menu").toggle();
-                  $(".signin").toggleClass("menu-open");
-              });
+    e.preventDefault();
+    //$("#message_menu").toggle();
+    $("#signin_menu").fadeTo("fast", 1);
+    $(".signin").toggleClass("menu-open");
+  });
+  $("#signin_menu").mouseup(function() {
+    return false
+  });
+  $(document).mouseup(function(e) {
+    if($(e.target).parent("a.signin").length==0) {
+      $(".signin").removeClass("menu-open");
+      $("#signin_menu").fadeTo("fast", 0);
+    }
+  });
 
-              $("#signin_menu").mouseup(function() {
-                  return false
-              });
-              $(document).mouseup(function(e) {
-                  if($(e.target).parent("a.signin").length==0) {
-                      $(".signin").removeClass("menu-open");
-                      $("#signin_menu").hide();
-                  }
-              });
+//actionbox
+  $(".message").click(function(e) {
+    e.preventDefault();
+    $("#message_menu").fadeTo("fast", 1);
+    $(".message").toggleClass("menu-open");
+  });
+  $("#message_menu").mouseup(function() {
+    return false
+  });
+  $(document).mouseup(function(e) {
+    if($(e.target).parent("a.message").length==0) {
+      $(".message").removeClass("menu-open");
+      $("#message_menu").fadeTo("fast", 0);
+    }
+  });
+
+  $(".contact").click(function(e) {
+    e.preventDefault();
+    $("#contact_menu").fadeTo("fast", 1);
+    $(".contact").toggleClass("menu-open");
+  });
+  $("#contact_menu").mouseup(function() {
+    return false
+  });
+  $(document).mouseup(function(e) {
+    if($(e.target).parent("a.contact").length==0) {
+      $(".contact").removeClass("menu-open");
+      $("#contact_menu").fadeTo("fast", 0);
+    }
+  });
+
+  $(".lead").click(function(e) {
+    e.preventDefault();
+    $("#lead_menu").fadeTo("fast", 1);
+    $(".lead").toggleClass("menu-open");
+  });
+  $("#lead_menu").mouseup(function() {
+    return false
+  });
+  $(document).mouseup(function(e) {
+    if($(e.target).parent("a.lead").length==0) {
+      $(".lead").removeClass("menu-open");
+      $("#lead_menu").fadeTo("fast", 0);
+    }
+  });
+
 
 
 

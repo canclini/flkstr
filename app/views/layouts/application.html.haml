@@ -2,30 +2,35 @@
 %html
   %head
     %meta{"http-equiv"=>"Content-type", :content=>"text/html;charset=utf-8"}/
-    %title= h(yield(:title) || "Untitled")
+    %title= "flockstreet"
     = render :partial => 'layouts/includes'
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails"  
     = csrf_meta_tag
 
-  %body.app
+  %body
     #wrapper
-      #header
-        #logo
-          - if user_signed_in?
-            = link_to image_tag("blue_birds_only.png", :border => 0), dashboard_url
-          - else
-            = link_to image_tag("blue_birds_only.png", :border => 0), root_url
-        #topsearch
-          = render :partial => 'website/search'
-        #usernav
+      #header-meta-container
+        #header-meta
+          #header-meta-logo
+            = link_to image_tag("3birds_signet.png", :border => 0), dashboard_url
+          #header-meta-actionbox
+            = render :partial => 'actionbox/actionbox'
           = render :partial => 'nav/user'
-
-      - if show_title?
-        %h2=h yield(:title)  
-      #content
+  
+      #header-content-container
+        #header-content
+          #header-content-logo
+            
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}"
+
+      #content_one
+        - if show_title?
+          %h2=h yield(:title)
+      
         = yield
-      #footer
-        = render 'layouts/footer'
-      #copyright &copy; Flockstreet, 2010
+      #push_footer
+    #footer-copy-container
+      #footer-copy
+        =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "box_transition"
+        &copy; Flockstreet, 2010
