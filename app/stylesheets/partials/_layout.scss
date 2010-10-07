@@ -3,6 +3,7 @@
 
 #header-meta-container {
   background: $dark_green;  
+  background-image: -moz-linear-gradient(top, $dark_green, $dark_green + #0F0F0F); /* FF3.6 */
   float: left;
   width: 100%;
 }
@@ -20,6 +21,7 @@
 
 #header-content-container {
   background: $light_green;  
+  background-image: -moz-linear-gradient(top, $light_green, $light_green + #080808); /* FF3.6 */
   clear: both;
   border-bottom: 1px solid $dark_green;
 }

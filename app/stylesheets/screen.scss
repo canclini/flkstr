@@ -20,13 +20,6 @@
 
 @include font-face("Calluna", font-files("/fonts/Calluna-Regular.otf", opentype));
 
-a {
-  color: $flk_orange;
-}
-a:visited {
-  color: $flk_orange;
-}
-
 body {
   font-family: Titillium;
 }
@@ -35,19 +28,21 @@ p {
   font-family: Calluna;
   font-size: 1.2em;
 }
+
+a { color: $flk_orange; }
+a:visited { color: $flk_orange; }
+
 h2 {
   font-weight: bold;
-  a {
-    color: black;
-  }
-  a:visited {
-    color: black;
-  }
-  
+  a { color: black; }
+  a:visited { color: black; }
 }
+
 h3 {
   font-weight: bold;
 }
+
+.strong { font-weight: bold; }
 
 #usernav {
   text-align: right;
@@ -106,10 +101,6 @@ h3 {
 	color: #73a1c7;
 }
 
-.strong {
-  font-weight: bold;
-}
-
 #flash_notice {
   @include boxed($flk_green, $flk_darkgreen);
 }
@@ -124,18 +115,13 @@ h3 {
   @include boxed($light_grey, red);
 }
 
-.fieldWithErrors {
-  input {
-    border: 1px solid red;
-  }
-}
-
 // Crazy Genc stuff
 
 .box_transition {
   -o-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; 
 }
 
 input[type="text"], input[type="email"], textarea {
