@@ -73,8 +73,9 @@ html, body {
   @include last;
 }
 
-#content_one {
+#content_one, #container {
   @include container();
+//  @include showgrid;
   padding: 10px;
 }
 
@@ -107,6 +108,45 @@ html, body {
   padding: 8px;
   @include container();
   text-align: right;
+}
+
+#navigation {
+  height: 40px;
+  @include column(24);
+  border-bottom: 2px solid black;
+}
+
+#dashboard {
+  @include column(5);
+  a {
+    font-size: 1.5em;
+    color: black;
+  }
+}
+
+#maintopics {
+  @include column(11);
+}
+
+#mainaction {
+  text-align: right;
+  @include column(8);
+  @include last;
+}
+
+#sidebar {
+  @include column(5);
+  font-size: 1.2em;
+}
+.filter {
+  height: 40px;
+  padding: 5px 0px;
+}
+
+#content {
+  @include column(19);
+  @include last;
+  padding: 5px 0px;
 }
 
 #logo {

@@ -32,9 +32,7 @@
             = render :partial => 'layouts/maintopics'
           #mainaction
             =link_to "Neuer Auftrag", new_request_path, :class => 'button'
-        #sidebar      
-          = yield(:sidebar)
-        #content
+        #content_dashboard
           = yield
       #push_footer
     #footer-copy-container

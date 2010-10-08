@@ -1,8 +1,5 @@
 class CompaniesController < ApplicationController
-  layout 'website', :only => [:new]
-
   before_filter :authenticate_user!, :except => [:new, :create, :exists, :join]
-  before_filter :no_user!, :only => [:new, :create]
   
   def index
     @companies = Company.search(params[:search]).paginate :per_page => 10, :page => params[:page]
@@ -33,23 +30,6 @@ class CompaniesController < ApplicationController
   
   def show
     @company = Company.find(params[:id])
-  end
-
-  def new
-    @company = Company.new
-    @companies = []
-  end
-  
-  def create
-#    @company = Company.new(params[:company])
-#    if @company.save    
-#      flash[:notice] = "Die Firma wurde erstellt."
-#      redirect_to register_path(:company => @company)
-#    else
-#      @companies = Company.search(@company.name).limit(10)
-#      render :action => 'new'
-#    end
-    
   end
   
   def edit

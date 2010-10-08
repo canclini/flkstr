@@ -1,0 +1,7 @@
+=link_block(request_path(request)) do
+  .entry
+    .title= truncate(request.name, :length => 30)
+    .date= request.created_at.to_s(:short)
+    .tags
+      .tag CSS
+      .tag HTML

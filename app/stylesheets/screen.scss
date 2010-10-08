@@ -98,7 +98,60 @@ h3 {
 	border-bottom: 1px solid #ccc;
 	color: #73a1c7;
 }
+// NAVIGATION
+#maintopics {
+  a {
+    font-size: 1.5em;
+    color: black;
+  }
+  span {
+    margin: 0px 10px;
+  }
+}
 
+// SIDEBAR
+.active {
+  background: $dark_green;
+}
+
+// content biglist
+.biglist .entry {
+  border-bottom: 1px solid black;
+  height: 30px;
+  font-size: 1.2em;
+  padding-top: 8px;
+}
+.biglist .heading {
+  height: 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-top: 8px;
+}
+
+.biglist .entry:hover {
+  background: $light_green; 
+}
+
+.title {
+  @include column(6);
+}
+.date {
+  @include column(3);
+}
+.tags {
+  @include column(9);
+}
+.tags .tag {
+  float: left;
+  padding: 0px 5px;
+  margin: 0px 5px;
+}
+.tag {
+  background: $dark_green;
+       -moz-border-radius: 12px; 
+    -webkit-border-radius: 12px; 
+            border-radius: 12px; 
+}
 // ACTIONBOX design stuff
 .actionbox_header {
   background: $light_grey;

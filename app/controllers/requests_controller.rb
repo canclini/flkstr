@@ -1,5 +1,8 @@
 class RequestsController < ApplicationController
+
   def index
+    #params[:filter] ||= "all"
+    @requests = current_company.requests.paginate :per_page => 5, :page => params[:page], :order => 'created_at ASC'
   end
 
   def show
@@ -9,7 +12,7 @@ class RequestsController < ApplicationController
 
   def new
     @company = current_company
-    redirect_to signup_path unless @company.add_request?
+    redirect_to settings_path unless @company.add_request?
     @request = current_company.requests.new(:company => @company)
   end
 

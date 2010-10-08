@@ -202,7 +202,7 @@ html, body {
 }
 
 /* line 76, ../../../app/stylesheets/partials/_layout.scss */
-#content_one {
+#content_one, #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
@@ -210,7 +210,7 @@ html, body {
   padding: 10px;
 }
 
-/* line 81, ../../../app/stylesheets/partials/_layout.scss */
+/* line 82, ../../../app/stylesheets/partials/_layout.scss */
 #content_two-container {
   background: #edf6ed;
   clear: both;
@@ -218,7 +218,7 @@ html, body {
   border-top: 1px solid #8cc6bf;
 }
 
-/* line 87, ../../../app/stylesheets/partials/_layout.scss */
+/* line 88, ../../../app/stylesheets/partials/_layout.scss */
 #content_two {
   padding: 20px;
   width: 950px;
@@ -227,13 +227,13 @@ html, body {
   *zoom: 1;
 }
 
-/* line 92, ../../../app/stylesheets/partials/_layout.scss */
+/* line 93, ../../../app/stylesheets/partials/_layout.scss */
 #footer-navi-container {
   background: #3a464f;
   clear: both;
 }
 
-/* line 96, ../../../app/stylesheets/partials/_layout.scss */
+/* line 97, ../../../app/stylesheets/partials/_layout.scss */
 #footer-navi {
   padding: 10px;
   width: 950px;
@@ -242,13 +242,13 @@ html, body {
   *zoom: 1;
 }
 
-/* line 101, ../../../app/stylesheets/partials/_layout.scss */
+/* line 102, ../../../app/stylesheets/partials/_layout.scss */
 #footer-copy-container {
   background: #8cc6bf;
   clear: both;
 }
 
-/* line 106, ../../../app/stylesheets/partials/_layout.scss */
+/* line 107, ../../../app/stylesheets/partials/_layout.scss */
 #footer-copy {
   padding: 8px;
   width: 950px;
@@ -258,7 +258,97 @@ html, body {
   text-align: right;
 }
 
-/* line 112, ../../../app/stylesheets/partials/_layout.scss */
+/* line 113, ../../../app/stylesheets/partials/_layout.scss */
+#navigation {
+  height: 40px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  border-bottom: 2px solid black;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #navigation {
+  overflow-x: hidden;
+}
+
+/* line 119, ../../../app/stylesheets/partials/_layout.scss */
+#dashboard {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #dashboard {
+  overflow-x: hidden;
+}
+/* line 121, ../../../app/stylesheets/partials/_layout.scss */
+#dashboard a {
+  font-size: 1.5em;
+  color: black;
+}
+
+/* line 127, ../../../app/stylesheets/partials/_layout.scss */
+#maintopics {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 430px;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #maintopics {
+  overflow-x: hidden;
+}
+
+/* line 131, ../../../app/stylesheets/partials/_layout.scss */
+#mainaction {
+  text-align: right;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+  margin-right: 0;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #mainaction {
+  overflow-x: hidden;
+}
+
+/* line 137, ../../../app/stylesheets/partials/_layout.scss */
+#sidebar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+  font-size: 1.2em;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #sidebar {
+  overflow-x: hidden;
+}
+
+/* line 141, ../../../app/stylesheets/partials/_layout.scss */
+.filter {
+  height: 40px;
+  padding: 5px 0px;
+}
+
+/* line 146, ../../../app/stylesheets/partials/_layout.scss */
+#content {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 750px;
+  margin-right: 0;
+  padding: 5px 0px;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content {
+  overflow-x: hidden;
+}
+
+/* line 152, ../../../app/stylesheets/partials/_layout.scss */
 #logo {
   display: inline;
   float: left;
@@ -270,7 +360,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 117, ../../../app/stylesheets/partials/_layout.scss */
+/* line 157, ../../../app/stylesheets/partials/_layout.scss */
 .leftmiddle {
   display: inline;
   float: left;
@@ -282,7 +372,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 121, ../../../app/stylesheets/partials/_layout.scss */
+/* line 161, ../../../app/stylesheets/partials/_layout.scss */
 .left, .middle, .right {
   display: inline;
   float: left;
@@ -294,7 +384,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 125, ../../../app/stylesheets/partials/_layout.scss */
+/* line 165, ../../../app/stylesheets/partials/_layout.scss */
 .first, .second, .third, .fourth {
   display: inline;
   float: left;
@@ -306,12 +396,12 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 129, ../../../app/stylesheets/partials/_layout.scss */
+/* line 169, ../../../app/stylesheets/partials/_layout.scss */
 .fourth, .right {
   margin-right: 0;
 }
 
-/* line 133, ../../../app/stylesheets/partials/_layout.scss */
+/* line 173, ../../../app/stylesheets/partials/_layout.scss */
 .box {
   padding: 10px;
   margin: 10px;
@@ -902,24 +992,111 @@ h3 {
 }
 
 /* line 103, ../../../app/stylesheets/screen.scss */
+#maintopics a {
+  font-size: 1.5em;
+  color: black;
+}
+/* line 107, ../../../app/stylesheets/screen.scss */
+#maintopics span {
+  margin: 0px 10px;
+}
+
+/* line 113, ../../../app/stylesheets/screen.scss */
+.active {
+  background: #8cc6bf;
+}
+
+/* line 118, ../../../app/stylesheets/screen.scss */
+.biglist .entry {
+  border-bottom: 1px solid black;
+  height: 30px;
+  font-size: 1.2em;
+  padding-top: 8px;
+}
+
+/* line 124, ../../../app/stylesheets/screen.scss */
+.biglist .heading {
+  height: 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-top: 8px;
+}
+
+/* line 131, ../../../app/stylesheets/screen.scss */
+.biglist .entry:hover {
+  background: #edf6ed;
+}
+
+/* line 135, ../../../app/stylesheets/screen.scss */
+.title {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .title {
+  overflow-x: hidden;
+}
+
+/* line 138, ../../../app/stylesheets/screen.scss */
+.date {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 110px;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .date {
+  overflow-x: hidden;
+}
+
+/* line 141, ../../../app/stylesheets/screen.scss */
+.tags {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 350px;
+}
+/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tags {
+  overflow-x: hidden;
+}
+
+/* line 144, ../../../app/stylesheets/screen.scss */
+.tags .tag {
+  float: left;
+  padding: 0px 5px;
+  margin: 0px 5px;
+}
+
+/* line 149, ../../../app/stylesheets/screen.scss */
+.tag {
+  background: #8cc6bf;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+}
+
+/* line 156, ../../../app/stylesheets/screen.scss */
 .actionbox_header {
   background: #f3f3f3;
   padding: 3px;
   height: 15px;
 }
 
-/* line 110, ../../../app/stylesheets/screen.scss */
+/* line 163, ../../../app/stylesheets/screen.scss */
 .actionbox_title {
   float: left;
   height: 15px;
 }
 
-/* line 114, ../../../app/stylesheets/screen.scss */
+/* line 167, ../../../app/stylesheets/screen.scss */
 .actionbox_top_link {
   text-align: right;
 }
 
-/* line 117, ../../../app/stylesheets/screen.scss */
+/* line 170, ../../../app/stylesheets/screen.scss */
 .actionbox_footer {
   text-align: right;
   background: #f3f3f3;
@@ -928,42 +1105,42 @@ h3 {
   height: 18px;
 }
 
-/* line 124, ../../../app/stylesheets/screen.scss */
+/* line 177, ../../../app/stylesheets/screen.scss */
 .actionbox_entry {
   border-bottom: 1px solid black;
   padding: 2px;
 }
 
-/* line 128, ../../../app/stylesheets/screen.scss */
+/* line 181, ../../../app/stylesheets/screen.scss */
 a.linkblock:hover, .actionbox_entry:hover {
   background: #edf6ed;
 }
 
-/* line 132, ../../../app/stylesheets/screen.scss */
+/* line 185, ../../../app/stylesheets/screen.scss */
 .actionbox_entry .title {
   font-weight: bold;
   text-align: left;
 }
 
-/* line 139, ../../../app/stylesheets/screen.scss */
+/* line 192, ../../../app/stylesheets/screen.scss */
 a.linkblock {
   color: black;
   text-decoration: none;
 }
 
-/* line 144, ../../../app/stylesheets/screen.scss */
+/* line 197, ../../../app/stylesheets/screen.scss */
 #flash_notice {
   background: #72ad00;
   border: 1px solid #508b00;
 }
 
-/* line 148, ../../../app/stylesheets/screen.scss */
+/* line 201, ../../../app/stylesheets/screen.scss */
 #flash_error {
   background: #ce3caa;
   border: 1px solid #ac1a88;
 }
 
-/* line 152, ../../../app/stylesheets/screen.scss */
+/* line 205, ../../../app/stylesheets/screen.scss */
 #errorExplanation {
   margin: 10px;
   padding: 2px;
@@ -971,12 +1148,12 @@ a.linkblock {
   border: 1px solid red;
 }
 
-/* line 158, ../../../app/stylesheets/screen.scss */
+/* line 211, ../../../app/stylesheets/screen.scss */
 .field_with_errors input {
   border-color: red;
 }
 
-/* line 164, ../../../app/stylesheets/screen.scss */
+/* line 217, ../../../app/stylesheets/screen.scss */
 .transition {
   -o-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -984,19 +1161,19 @@ a.linkblock {
   transition: all 0.3s ease-out;
 }
 
-/* line 171, ../../../app/stylesheets/screen.scss */
+/* line 224, ../../../app/stylesheets/screen.scss */
 .box_shadow {
   -moz-box-shadow: 2px 2px 6px #222222;
   -webkit-box-shadow: 2px 2px 6px #222222;
   box-shadow: 2px 2px 6px #222222;
 }
 
-/* line 183, ../../../app/stylesheets/screen.scss */
+/* line 236, ../../../app/stylesheets/screen.scss */
 input:focus, textarea:focus {
   outline: none;
 }
 
-/* line 189, ../../../app/stylesheets/screen.scss */
+/* line 242, ../../../app/stylesheets/screen.scss */
 .simple_form label {
   float: left;
   width: 100px;
@@ -1004,29 +1181,29 @@ input:focus, textarea:focus {
   margin: 2px 10px;
 }
 
-/* line 196, ../../../app/stylesheets/screen.scss */
+/* line 249, ../../../app/stylesheets/screen.scss */
 .simple_form div.input {
   margin-bottom: 10px;
 }
 
-/* line 200, ../../../app/stylesheets/screen.scss */
+/* line 253, ../../../app/stylesheets/screen.scss */
 .simple_form div.boolean, .simple_form input[type='submit'] {
   margin-left: 120px;
 }
 
-/* line 204, ../../../app/stylesheets/screen.scss */
+/* line 257, ../../../app/stylesheets/screen.scss */
 .simple_form div.boolean label, .simple_form label.collection_radio {
   float: none;
   margin: 0;
 }
 
-/* line 209, ../../../app/stylesheets/screen.scss */
+/* line 262, ../../../app/stylesheets/screen.scss */
 .simple_form label.collection_radio {
   margin-right: 10px;
   margin-left: 2px;
 }
 
-/* line 214, ../../../app/stylesheets/screen.scss */
+/* line 267, ../../../app/stylesheets/screen.scss */
 .simple_form .error {
   clear: left;
   margin-left: 120px;
@@ -1035,7 +1212,7 @@ input:focus, textarea:focus {
   display: block;
 }
 
-/* line 222, ../../../app/stylesheets/screen.scss */
+/* line 275, ../../../app/stylesheets/screen.scss */
 .simple_form .hint {
   clear: left;
   margin-left: 120px;
