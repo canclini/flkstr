@@ -2,6 +2,11 @@ class LeadsController < ApplicationController
   def index
     @company = current_company
     @leads = current_company.leads.new_or_accepted
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    
   end
 
   def show

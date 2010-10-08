@@ -1,0 +1,9 @@
+- for lead in @leads
+  =link_block(lead_path(lead)) do
+    .actionbox_entry
+      .title= lead.request.name
+      .content
+        .tag CSS
+
+-if @leads.empty?
+  %span Keine Leads

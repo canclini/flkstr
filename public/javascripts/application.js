@@ -69,6 +69,7 @@ $(document).ready(function() {
     e.preventDefault();
     $("#lead_menu").fadeTo("fast", 1);
     $(".lead").toggleClass("menu-open");
+    updateActionboxLeads();
   });
   $("#lead_menu").mouseup(function() {
     return false
@@ -116,4 +117,8 @@ function showExistingCompany(company_id) {
 // ACTIONBOX: message update on activation
 function updateActionboxMessages() {
   $.getScript("/messages.js")
+};
+
+function updateActionboxLeads() {
+  $.getScript("/leads.js")
 };

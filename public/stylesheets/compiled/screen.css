@@ -480,7 +480,23 @@ a.signin span {
   z-index: 1;
 }
 
-/* line 92, ../../../app/stylesheets/partials/_menu.scss */
+/* line 91, ../../../app/stylesheets/partials/_menu.scss */
+#settings-menu {
+  right: 60px;
+  top: 25px;
+  width: 120px;
+  text-align: right;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  display: none;
+  position: absolute;
+  border: 1px solid black;
+  margin-right: 0px;
+  *margin-right: -1px;
+  font-size: 11px;
+}
+
+/* line 107, ../../../app/stylesheets/partials/_menu.scss */
 .dropdownmenu {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;

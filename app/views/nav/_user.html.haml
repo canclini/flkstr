@@ -16,7 +16,7 @@
       
   
   - if user_signed_in?    
-    #settings-menu.hide
+    #settings-menu.transition
       = link_to "Firmenprofil", company_path(current_company)
       %br/
       = link_to "Firmeneinstellungen", settings_path
