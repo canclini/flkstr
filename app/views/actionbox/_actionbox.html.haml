@@ -7,15 +7,35 @@
   =link_to image_tag("contact.png", :border=>0), company_associates_path(current_company), :class => "contact dropdown"
   =link_to image_tag("lead.png", :border=>0), leads_path(), :class => "lead dropdown"
   
-  #message_menu.dropdownmenu
-    MESSAGE ACTION BOX
-    %p and some message text
+  #message_menu.dropdownmenu.box_shadow.transition
+    .actionbox_header
+      .actionbox_title
+        %h4 Nachrichten
+      .actionbox_top_link
+        = link_to "Alle Nachrichten >>", messages_path()
+      
+    #actionbox_messages
+      Loading...
+    .actionbox_footer
+      = link_to "Neue Nachricht", new_message_path(), :class => "small_button"
   
-  #contact_menu.dropdownmenu
-      CONTACT ACTION BOX
-    %p and some contact text
+  #contact_menu.dropdownmenu.box_shadow
+    .actionbox_header
+      .actionbox_title
+        %h4 Beziehungen
+      .actionbox_top_link
+        = link_to "Netzwerk >>", company_associates_path(current_company)
+    #actionbox_contacts
+      Loading...
+    .actionbox_footer
 
-  #lead_menu.dropdownmenu
-    LEAD ACTION BOX
-    %p and some lead text
+  #lead_menu.dropdownmenu.box_shadow
+    .actionbox_header
+      .actionbox_title
+        %h4 Leads
+      .actionbox_top_link
+        = link_to "Alle Leads >>", leads_path()
+    #actionbox_leads
+      Loading...
+    .actionbox_footer
   

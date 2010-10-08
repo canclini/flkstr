@@ -76,13 +76,16 @@ a.signin span {
 // MESSAGE MENU
 #message_menu {
     right: 10px; 
+    z-index: 2;
 }
 #contact_menu{
   right: -30px;
+  z-index: 3;
 }
 
 #lead_menu {
   right: -60px;
+  z-index:1;
 }
 
 // GLOBAL
@@ -93,10 +96,9 @@ a.signin span {
   background-color:white;
   position:absolute;
   width:210px;
-  z-index:100;
   border:2px solid black;
   text-align:left;
-  padding:12px;
+//  padding:12px;
   top: 40px; 
 //  margin-top:5px;
   margin-right: 0px;

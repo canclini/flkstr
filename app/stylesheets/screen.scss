@@ -99,7 +99,47 @@ h3 {
 	color: #73a1c7;
 }
 
+// ACTIONBOX design stuff
+.actionbox_header {
+  background: $light_grey;
+  padding: 3px;
+  height: 15px;
+//  overflow: hidden;
+}
 
+.actionbox_title {
+  float: left;
+  height: 15px;
+}
+.actionbox_top_link {
+  text-align: right;
+}
+.actionbox_footer {
+  text-align: right;
+  background: $light_grey;
+  border-top: 1px solid black;
+  padding: 3px;
+  height: 18px;
+}
+.actionbox_entry {
+  border-bottom: 1px solid black;
+  padding: 2px;
+}
+a.linkblock:hover, .actionbox_entry:hover {
+  background: $light_green;
+}
+
+.actionbox_entry .title {
+  font-weight: bold;
+  text-align: left;
+}
+.actionbox_entry .content {
+}
+
+a.linkblock {
+  color: black;
+  text-decoration: none;
+}
 // FLASH MESSAGES, NOTICE MESSAGES, ERROR IN FORMS
 #flash_notice {
   @include boxed($flk_green, $flk_darkgreen);
@@ -121,13 +161,18 @@ h3 {
 
 // Crazy GENC stuff
 
-.box_transition {
+.transition {
   -o-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; 
 }
 
+.box_shadow {
+   -moz-box-shadow: 2px 2px 6px #222222; 
+-webkit-box-shadow: 2px 2px 6px #222222;
+        box-shadow: 2px 2px 6px #222222;
+}
 input[type="text"], input[type="email"], textarea {
 //  background-color: $light_green;
 }

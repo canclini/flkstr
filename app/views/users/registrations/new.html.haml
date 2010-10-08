@@ -3,12 +3,12 @@
   = error_messages_for :company, :header_message => "Hoppla!", :message => "Da gab es Probleme beim erfassen der Firma"
 
   = f.simple_fields_for :company do |c|
-    = c.input :name, :label => "Firmenname", :input_html => { :class => 'box_transition' }
+    = c.input :name, :label => "Firmenname", :input_html => { :class => 'transition' }
   %hr
   %h3 Ihre Login-Daten
-  = f.input :email, :hint => 'ist auch gleich der Username', :input_html => {:class => 'box_transition', :placeholder => 'peter.meier@beispiel.ch' }
-  = f.input :password, :input_html => { :class => 'box_transition' }
-  = f.input :password_confirmation, :input_html => { :class => 'box_transition' }
+  = f.input :email, :hint => 'ist auch gleich der Username', :input_html => {:class => 'transition', :placeholder => 'peter.meier@beispiel.ch' }
+  = f.input :password, :input_html => { :class => 'transition' }
+  = f.input :password_confirmation, :input_html => { :class => 'transition' }
 
 
   %p

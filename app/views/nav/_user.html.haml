@@ -7,8 +7,8 @@
     = link_to "Abmelden", destroy_user_session_path
   
   -else
-    = link_to "Login", new_user_session_path, :class => "signin dropdown box_transition"
-    #signin_menu.box_transition
+    = link_to "Login", new_user_session_path, :class => "signin dropdown transition"
+    #signin_menu.transition
       = form_tag new_user_session_path do
         = text_field_tag 'user[email]'
         = password_field_tag 'user[password]'

@@ -14,30 +14,31 @@ jQuery.fn.submitWithAjax = function() {
 };
 
 
-$(function() {  
+$(document).ready(function() {  
 
 //signin menu on website
   $(".signin").click(function(e) {
     e.preventDefault();
-    //$("#message_menu").toggle();
-    $("#signin_menu").fadeTo("fast", 1);
+    $("#signin_menu").toggle();
     $(".signin").toggleClass("menu-open");
   });
+
   $("#signin_menu").mouseup(function() {
     return false
   });
   $(document).mouseup(function(e) {
     if($(e.target).parent("a.signin").length==0) {
       $(".signin").removeClass("menu-open");
-      $("#signin_menu").fadeTo("fast", 0);
+      $("#signin_menu").hide();
     }
   });
 
 //actionbox
   $(".message").click(function(e) {
     e.preventDefault();
-    $("#message_menu").fadeTo("fast", 1);
+    $("#message_menu").toggle();
     $(".message").toggleClass("menu-open");
+    updateActionboxMessages();
   });
   $("#message_menu").mouseup(function() {
     return false
@@ -45,7 +46,7 @@ $(function() {
   $(document).mouseup(function(e) {
     if($(e.target).parent("a.message").length==0) {
       $(".message").removeClass("menu-open");
-      $("#message_menu").fadeTo("fast", 0);
+      $("#message_menu").hide();
     }
   });
 
@@ -60,7 +61,7 @@ $(function() {
   $(document).mouseup(function(e) {
     if($(e.target).parent("a.contact").length==0) {
       $(".contact").removeClass("menu-open");
-      $("#contact_menu").fadeTo("fast", 0);
+      $("#contact_menu").hide();
     }
   });
 
@@ -79,17 +80,19 @@ $(function() {
     }
   });
 
+// settings-menu
+  $('a#settings').click(function(){
+    $('#settings-menu').toggle();
+  });
 
-
-
-
-  $("#company_name").keydown(function(){
+/*  $("#company_name").keydown(function(){
        updateExistingCompanies();
   });
 
   $("#existingcompany").live('click',function(){
     showExistingCompany($(this).attr("data-id"));
   });
+*/
   
   $('.clearme').one("focus", function(){
     $(this).val('');
@@ -97,12 +100,7 @@ $(function() {
 
   $('.focus').focus();  
 
-  $('.hide').hide();  
-
-  $('a#settings').click(function(){
-    $('#settings-menu').toggle();
-  });
-
+//  $('.hide').hide();  // should be done with CSS display: none;
   //  $("#new_review").submitWithAjax();
 });
 
@@ -113,4 +111,9 @@ function updateExistingCompanies() {
 
 function showExistingCompany(company_id) {
   $.getScript("/companies/" + company_id + "/join.js")
+};
+
+// ACTIONBOX: message update on activation
+function updateActionboxMessages() {
+  $.getScript("/messages.js")
 };
