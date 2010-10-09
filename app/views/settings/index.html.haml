@@ -7,7 +7,8 @@
     %p
       Um Status Updates auch gleich über Twitter zu senden muss der Account verifiziert werden.
       =link_to image_tag("http://apiwiki.twitter.com/f/1242697715/Sign-in-with-Twitter-darker.png"), twitter_signin_path
-  = f.check_box :default_twitter_send
-  Jedes Statusupdate soll auch zu Twitter
+  - else
+    = f.check_box :default_twitter_send
+    Jedes Statusupdate soll auch zu Twitter
   %p= f.submit "Speichern", :class => "button light"
   

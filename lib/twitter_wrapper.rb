@@ -20,12 +20,13 @@ class TwitterWrapper
   
   def auth(rtoken, rsecret, verifier)
     @auth.authorize_from_request(rtoken, rsecret, verifier)
-    @company.setting.twitter_access_token, @company.settting.twitter_access_secret = @auth.access_token.token, @auth.access_token.secret
-    @company.save
+    setting = @company.setting
+    setting.twitter_access_token, setting.twitter_access_secret = @auth.access_token.token, @auth.access_token.secret
+    setting.save
   end
   
   def get_twitter
-    @auth.authorize_from_access(@company.setting.twitter_access_token, @company.settting.twitter_access_secre)
+    @auth.authorize_from_access(@company.setting.twitter_access_token, @company.setting.twitter_access_secret)
     twitter = Twitter::Base.new @auth
     twitter.home_timeline(:count => 1)
     twitter

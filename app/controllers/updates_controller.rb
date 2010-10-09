@@ -6,9 +6,12 @@ class UpdatesController < ApplicationController
     @update = @company.updates.build(:message => params[:update])
 
     if @update.save
-        flash[:notice] = "Dein Update wurde veroeffentlicht"
+      if @company.setting.default_twitter_send
+        Delayed::Job.enqueue(TweetJob.new(@company.id, params[:update]))  
+      end
+      flash[:notice] = "Dein Update wurde veroeffentlicht"  
     else
-        flash[:error] = "Da ging was schief..."
+      flash[:error] = "Da ging was schief..."
     end
 
     redirect_to dashboard_path()

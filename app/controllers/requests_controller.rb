@@ -24,8 +24,8 @@ class RequestsController < ApplicationController
     redirect_to signup_path unless @company.add_request? 
     @request = Request.new(params[:request])
     if @request.save
-#      Match.initiate(@request)
-      flash[:notice] = "Der Auftrag wurde erfasst"
+      Delayed::Job.enqueue(MatchJob.new(@request.id))
+      flash[:notice] = "Der Auftrag wurde erfasst. Wir suchen nach geeigneten Lieferanten"
       redirect_to request_path(@request)
     else
       @active = "create"

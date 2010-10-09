@@ -7,7 +7,7 @@ class TwitterController < ApplicationController
       redirect_to @wrapper.authorize_url
     rescue
       flash[:error] = 'Error while connecting with Twitter. Please try again.'
-      redirect_to dashboard_path
+      redirect_to settings_path
     end
   end
   
@@ -18,7 +18,7 @@ class TwitterController < ApplicationController
     rescue
       flash[:error] = 'You were not authorized by Twitter!'
     end
-    redirect_to dashboard_path
+    redirect_to settings_path
   end
   
   def tweet

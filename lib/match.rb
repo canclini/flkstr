@@ -2,16 +2,16 @@ class Match
   
   def self.initiate(request)
     #find all products matching the request
-    products = request.find_related_tags_for(Product)
+    companies = request.find_related_tags_for(Company).to_a
     
-    #deduct onw products
-    products = products - request.company.products
+    #deduct own company
+    companies.delete(request.company)
     
     
 
     #generate a lead for each product
-    products.each do |product| 
-      request.leads.create(:product => product, :company => product.company, :source => request.company)
+    companies.each do |company| 
+      request.leads.create(:company => company, :source => request.company)
     end
   end
   
