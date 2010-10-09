@@ -1,11 +1,4 @@
 - content_for :sidebar do
   =render :partial => 'sidebar'
   
-%h2 Aufträge
-#requests.biglist
-  .heading
-    .title Titel
-    .date Datum
-    .tags Keywords
-  = render @requests
-  = will_paginate @requests
+= render :partial => 'list'

@@ -1,4 +1,7 @@
--title "Neuer Auftrag erfassen"
+- content_for :sidebar do
+  =render :partial => 'sidebar'
+
+%h3 neuer Auftrag erfassen
 =form_for @request do |f|
   = f.error_messages  
   %p  

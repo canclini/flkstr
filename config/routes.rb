@@ -47,6 +47,8 @@ get "twitter/signin"
   match "/dashboard" => "dashboard#index", :as => :dashboard
 
   match "/companies/:company_id/subscriptions/:plan/new" => "subscriptions#new", :as => :new_company_subscription,  :via => "get"
+  match "requests" => "requests#index", :as => :requests, :via => "get"
+  match "requests/filter/:status" => "requests#index", :as => :requests_filter, :via => "get"
   
   # static website pages
   get "website/index"

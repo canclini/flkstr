@@ -1,4 +1,5 @@
-- title "Auftrag"
+- content_for :sidebar do
+  =render :partial => 'sidebar'
 
 %h2= @request.name
 = link_to "Edit Request", edit_request_path(@request), :class => 'button edit' if current_user && current_company == @company

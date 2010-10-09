@@ -110,9 +110,25 @@ h3 {
 }
 
 // SIDEBAR
-.active {
+#active {
+  height: 40px;
+  width: 190px;
+  z-index: -1;
+  opacity: .5;
+      filter: alpha(opacity=50);
+      -moz-opacity: .5;
   background: $dark_green;
+  position: absolute;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; 
+  
 }
+#active.menu_new { top: 200px; }
+#active.menu_open { top: 250px; }
+#active.menu_assigned { top: 300px; }
+#active.menu_archived { top: 350px; }
 
 // content biglist
 .biglist .entry {
@@ -225,6 +241,19 @@ a.linkblock {
    -moz-box-shadow: 2px 2px 6px #222222; 
 -webkit-box-shadow: 2px 2px 6px #222222;
         box-shadow: 2px 2px 6px #222222;
+}
+
+.box_rotate {
+     -moz-transform: rotate(7.5deg);  
+       -o-transform: rotate(7.5deg);  
+  -webkit-transform: rotate(7.5deg);  
+          transform: rotate(7.5deg);  
+             filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand',  
+                      M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104); 
+         -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(
+                      M11=0.9914448613738104, M12=-0.13052619222005157, M21=0.13052619222005157, M22=0.9914448613738104, 
+                      sizingMethod='auto expand')"; 
+               zoom: 1;
 }
 input[type="text"], input[type="email"], textarea {
 //  background-color: $light_green;
