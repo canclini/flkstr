@@ -9,7 +9,7 @@ class UpdatesController < ApplicationController
       if @company.setting.default_twitter_send
         Delayed::Job.enqueue(TweetJob.new(@company.id, params[:update]))  
       end
-      flash[:notice] = "Dein Update wurde veroeffentlicht"  
+      flash[:notice] = "Das Update wurde veroeffentlicht"  
     else
       flash[:error] = "Da ging was schief..."
     end
