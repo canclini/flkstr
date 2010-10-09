@@ -1,0 +1,8 @@
+%h2 gesendete Nachrichten
+#leads.biglist
+  .heading
+    .title Betreff
+    .date gesendet
+    .from an
+  = render @messages
+  = will_paginate @messages

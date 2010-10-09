@@ -1,0 +1,2 @@
+$("#content").html("<%= escape_javascript(render :partial => 'list') %>");
+$("#active").removeClass().addClass('<%= "menu_#{@active}" %>');;

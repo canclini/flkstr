@@ -1,0 +1,5 @@
+.filter= link_to "Nachricht verfassen", new_message_path()
+.filter= link_to "Eingang", messages_path(), :remote => true
+.filter= link_to "Gesendet", sent_messages_path(), :remote => true
+
+#active{:class => "menu_#{@active}"}

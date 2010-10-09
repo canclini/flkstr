@@ -1048,12 +1048,12 @@ h3 {
 }
 
 /* line 129, ../../../app/stylesheets/screen.scss */
-#active.menu_open, #active.menu_new {
+#active.menu_open, #active.menu_new, #active.menu_in {
   top: 250px;
 }
 
 /* line 130, ../../../app/stylesheets/screen.scss */
-#active.menu_assigned, #active.menu_accepted {
+#active.menu_assigned, #active.menu_accepted, #active.menu_out {
   top: 300px;
 }
 
@@ -1113,14 +1113,14 @@ h3 {
 }
 
 /* line 158, ../../../app/stylesheets/screen.scss */
-.tags {
+.from, .tags {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 350px;
 }
 /* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@r3rc2/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .tags {
+* html .from, * html .tags {
   overflow-x: hidden;
 }
 

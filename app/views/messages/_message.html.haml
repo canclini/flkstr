@@ -1,0 +1,5 @@
+=link_block(message_path(message)) do
+  .entry
+    .title= truncate(message.subject, :length => 30)
+    .date= message.created_at.to_s(:short)
+    .from= message.recipients.map(&:name).to_sentence

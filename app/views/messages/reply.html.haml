@@ -1,5 +1,7 @@
-- title "Antwort verfassen"
+- content_for :sidebar do
+  =render :partial => 'sidebar'
 
+%h3 Antwort verfassen
 -form_for @message do |f|
   = f.error_messages  
   %p  

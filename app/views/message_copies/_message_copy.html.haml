@@ -1,0 +1,5 @@
+=link_block(message_path(message_copy)) do
+  .entry
+    .title= truncate(message_copy.subject, :length => 30)
+    .date= message_copy.created_at.to_s(:short)
+    .from= message_copy.author.name

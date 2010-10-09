@@ -126,8 +126,8 @@ h3 {
   
 }
 #active.menu_create { top: 200px; }
-#active.menu_open, #active.menu_new { top: 250px; }
-#active.menu_assigned, #active.menu_accepted { top: 300px; }
+#active.menu_open, #active.menu_new, #active.menu_in { top: 250px; }
+#active.menu_assigned, #active.menu_accepted, #active.menu_out { top: 300px; }
 #active.menu_archived, #active.menu_won { top: 350px; }
 #active.menu_lost { top: 390px; }
 
@@ -155,7 +155,7 @@ h3 {
 .date {
   @include column(3);
 }
-.tags {
+.from, .tags {
   @include column(9);
 }
 .tags .tag {
