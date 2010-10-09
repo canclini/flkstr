@@ -19,6 +19,7 @@ gem 'cheddargetter'
 gem 'acts-as-taggable-on'
 gem 'twitter'
 gem 'simple_form'
+gem 'delayed_job', '>=2.1.pre2'
 
 #gem 'hpricot'
 #gem 'tolk'

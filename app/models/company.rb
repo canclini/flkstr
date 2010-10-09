@@ -45,6 +45,37 @@ class Company < ActiveRecord::Base
   before_create :set_permalink
   after_create :create_related_models
   
+  
+  # cancel post-processing now, and set flag...
+  before_logo_post_process do |company|
+    if company.logo_changed?
+      company.logo_processing = true
+      false # halts processing
+    end
+  end
+ 
+  # ...and perform after save in background
+  after_save do |company| 
+    if company.logo_changed?
+      Delayed::Job.enqueue LogoJob.new(company.id)
+    end
+  end
+ 
+  # generate styles (downloads original first)
+  def regenerate_styles!
+    self.logo.reprocess! 
+    self.logo_processing = false   
+    self.save(false)
+  end
+ 
+  # detect if our source file has changed
+  def logo_changed?
+    self.logo_file_size_changed? || 
+    self.logo_file_name_changed? ||
+    self.logo_content_type_changed? || 
+    self.logo_updated_at_changed?
+  end
+  
   def to_param
     [id, permalink].join('-')
   end
