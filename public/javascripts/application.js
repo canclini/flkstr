@@ -116,9 +116,9 @@ function showExistingCompany(company_id) {
 
 // ACTIONBOX: message update on activation
 function updateActionboxMessages() {
-  $.getScript("/messages.js")
+  $.getScript("/messages/actionbox.js")
 };
 
 function updateActionboxLeads() {
-  $.getScript("/leads.js")
+  $.getScript("/leads/actionbox.js")
 };

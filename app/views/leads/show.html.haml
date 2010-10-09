@@ -1,4 +1,7 @@
-- title "Lead #{@request.name}"
+- content_for :sidebar do
+  =render :partial => 'sidebar'
+
+%h2= "Lead #{@request.name}"
 = "created #{distance_of_time_in_words(@request.created_at, Time.now)} ago"
 %p= @request.description
 -if @lead.accepted?

@@ -1,18 +1,21 @@
 class LeadsController < ApplicationController
   def index
+    params[:status] ||= "open"
+    @company = current_company
+    @leads = current_company.leads.where("status = ?", params[:status]).paginate :per_page => 5, :page => params[:page], :order => 'created_at ASC'
+    @active = params[:status]
+  end
+  
+  def actionbox
     @company = current_company
     @leads = current_company.leads.new_or_accepted
-    respond_to do |format|
-      format.html
-      format.js
-    end
-    
   end
 
   def show
     @company = current_company
     @lead = @company.leads.find(params[:id])    
     @request = @lead.request
+    @active = @lead.status
   end
 
   def decline

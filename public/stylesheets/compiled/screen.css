@@ -1018,26 +1018,31 @@ h3 {
 }
 
 /* line 128, ../../../app/stylesheets/screen.scss */
-#active.menu_new {
+#active.menu_create {
   top: 200px;
 }
 
 /* line 129, ../../../app/stylesheets/screen.scss */
-#active.menu_open {
+#active.menu_open, #active.menu_new {
   top: 250px;
 }
 
 /* line 130, ../../../app/stylesheets/screen.scss */
-#active.menu_assigned {
+#active.menu_assigned, #active.menu_accepted {
   top: 300px;
 }
 
 /* line 131, ../../../app/stylesheets/screen.scss */
-#active.menu_archived {
+#active.menu_archived, #active.menu_won {
   top: 350px;
 }
 
-/* line 134, ../../../app/stylesheets/screen.scss */
+/* line 132, ../../../app/stylesheets/screen.scss */
+#active.menu_lost {
+  top: 390px;
+}
+
+/* line 135, ../../../app/stylesheets/screen.scss */
 .biglist .entry {
   border-bottom: 1px solid black;
   height: 30px;
@@ -1045,7 +1050,7 @@ h3 {
   padding-top: 8px;
 }
 
-/* line 140, ../../../app/stylesheets/screen.scss */
+/* line 141, ../../../app/stylesheets/screen.scss */
 .biglist .heading {
   height: 30px;
   font-weight: bold;
@@ -1053,12 +1058,12 @@ h3 {
   padding-top: 8px;
 }
 
-/* line 147, ../../../app/stylesheets/screen.scss */
+/* line 148, ../../../app/stylesheets/screen.scss */
 .biglist .entry:hover {
   background: #edf6ed;
 }
 
-/* line 151, ../../../app/stylesheets/screen.scss */
+/* line 152, ../../../app/stylesheets/screen.scss */
 .title {
   display: inline;
   float: left;
@@ -1070,7 +1075,7 @@ h3 {
   overflow-x: hidden;
 }
 
-/* line 154, ../../../app/stylesheets/screen.scss */
+/* line 155, ../../../app/stylesheets/screen.scss */
 .date {
   display: inline;
   float: left;
@@ -1082,7 +1087,7 @@ h3 {
   overflow-x: hidden;
 }
 
-/* line 157, ../../../app/stylesheets/screen.scss */
+/* line 158, ../../../app/stylesheets/screen.scss */
 .tags {
   display: inline;
   float: left;
@@ -1094,14 +1099,14 @@ h3 {
   overflow-x: hidden;
 }
 
-/* line 160, ../../../app/stylesheets/screen.scss */
+/* line 161, ../../../app/stylesheets/screen.scss */
 .tags .tag {
   float: left;
   padding: 0px 5px;
   margin: 0px 5px;
 }
 
-/* line 165, ../../../app/stylesheets/screen.scss */
+/* line 166, ../../../app/stylesheets/screen.scss */
 .tag {
   background: #8cc6bf;
   -moz-border-radius: 12px;
@@ -1109,25 +1114,25 @@ h3 {
   border-radius: 12px;
 }
 
-/* line 172, ../../../app/stylesheets/screen.scss */
+/* line 173, ../../../app/stylesheets/screen.scss */
 .actionbox_header {
   background: #f3f3f3;
   padding: 3px;
   height: 15px;
 }
 
-/* line 179, ../../../app/stylesheets/screen.scss */
+/* line 180, ../../../app/stylesheets/screen.scss */
 .actionbox_title {
   float: left;
   height: 15px;
 }
 
-/* line 183, ../../../app/stylesheets/screen.scss */
+/* line 184, ../../../app/stylesheets/screen.scss */
 .actionbox_top_link {
   text-align: right;
 }
 
-/* line 186, ../../../app/stylesheets/screen.scss */
+/* line 187, ../../../app/stylesheets/screen.scss */
 .actionbox_footer {
   text-align: right;
   background: #f3f3f3;
@@ -1136,42 +1141,42 @@ h3 {
   height: 18px;
 }
 
-/* line 193, ../../../app/stylesheets/screen.scss */
+/* line 194, ../../../app/stylesheets/screen.scss */
 .actionbox_entry {
   border-bottom: 1px solid black;
   padding: 2px;
 }
 
-/* line 197, ../../../app/stylesheets/screen.scss */
+/* line 198, ../../../app/stylesheets/screen.scss */
 a.linkblock:hover, .actionbox_entry:hover {
   background: #edf6ed;
 }
 
-/* line 201, ../../../app/stylesheets/screen.scss */
+/* line 202, ../../../app/stylesheets/screen.scss */
 .actionbox_entry .title {
   font-weight: bold;
   text-align: left;
 }
 
-/* line 208, ../../../app/stylesheets/screen.scss */
+/* line 209, ../../../app/stylesheets/screen.scss */
 a.linkblock {
   color: black;
   text-decoration: none;
 }
 
-/* line 213, ../../../app/stylesheets/screen.scss */
+/* line 214, ../../../app/stylesheets/screen.scss */
 #flash_notice {
   background: #72ad00;
   border: 1px solid #508b00;
 }
 
-/* line 217, ../../../app/stylesheets/screen.scss */
+/* line 218, ../../../app/stylesheets/screen.scss */
 #flash_error {
   background: #ce3caa;
   border: 1px solid #ac1a88;
 }
 
-/* line 221, ../../../app/stylesheets/screen.scss */
+/* line 222, ../../../app/stylesheets/screen.scss */
 #errorExplanation {
   margin: 10px;
   padding: 2px;
@@ -1179,12 +1184,12 @@ a.linkblock {
   border: 1px solid red;
 }
 
-/* line 227, ../../../app/stylesheets/screen.scss */
+/* line 228, ../../../app/stylesheets/screen.scss */
 .field_with_errors input {
   border-color: red;
 }
 
-/* line 233, ../../../app/stylesheets/screen.scss */
+/* line 234, ../../../app/stylesheets/screen.scss */
 .transition {
   -o-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -1192,14 +1197,14 @@ a.linkblock {
   transition: all 0.3s ease-out;
 }
 
-/* line 240, ../../../app/stylesheets/screen.scss */
+/* line 241, ../../../app/stylesheets/screen.scss */
 .box_shadow {
   -moz-box-shadow: 2px 2px 6px #222222;
   -webkit-box-shadow: 2px 2px 6px #222222;
   box-shadow: 2px 2px 6px #222222;
 }
 
-/* line 246, ../../../app/stylesheets/screen.scss */
+/* line 247, ../../../app/stylesheets/screen.scss */
 .box_rotate {
   -moz-transform: rotate(7.5deg);
   -o-transform: rotate(7.5deg);
@@ -1212,12 +1217,12 @@ a.linkblock {
   zoom: 1;
 }
 
-/* line 265, ../../../app/stylesheets/screen.scss */
+/* line 266, ../../../app/stylesheets/screen.scss */
 input:focus, textarea:focus {
   outline: none;
 }
 
-/* line 271, ../../../app/stylesheets/screen.scss */
+/* line 272, ../../../app/stylesheets/screen.scss */
 .simple_form label {
   float: left;
   width: 100px;
@@ -1225,29 +1230,29 @@ input:focus, textarea:focus {
   margin: 2px 10px;
 }
 
-/* line 278, ../../../app/stylesheets/screen.scss */
+/* line 279, ../../../app/stylesheets/screen.scss */
 .simple_form div.input {
   margin-bottom: 10px;
 }
 
-/* line 282, ../../../app/stylesheets/screen.scss */
+/* line 283, ../../../app/stylesheets/screen.scss */
 .simple_form div.boolean, .simple_form input[type='submit'] {
   margin-left: 120px;
 }
 
-/* line 286, ../../../app/stylesheets/screen.scss */
+/* line 287, ../../../app/stylesheets/screen.scss */
 .simple_form div.boolean label, .simple_form label.collection_radio {
   float: none;
   margin: 0;
 }
 
-/* line 291, ../../../app/stylesheets/screen.scss */
+/* line 292, ../../../app/stylesheets/screen.scss */
 .simple_form label.collection_radio {
   margin-right: 10px;
   margin-left: 2px;
 }
 
-/* line 296, ../../../app/stylesheets/screen.scss */
+/* line 297, ../../../app/stylesheets/screen.scss */
 .simple_form .error {
   clear: left;
   margin-left: 120px;
@@ -1256,7 +1261,7 @@ input:focus, textarea:focus {
   display: block;
 }
 
-/* line 304, ../../../app/stylesheets/screen.scss */
+/* line 305, ../../../app/stylesheets/screen.scss */
 .simple_form .hint {
   clear: left;
   margin-left: 120px;

@@ -12,6 +12,8 @@ class Lead < ActiveRecord::Base
   # new: newly created by system (default)
   # accepted: company has accepted and will see all the details. It does count on its stats
   # declined: company has declined this lead. it does not count on the companies lead statistic
+  # won:
+  # lost:
   
   def new?
     status == 'new'

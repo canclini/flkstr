@@ -125,10 +125,11 @@ h3 {
   transition: all 0.3s ease-out; 
   
 }
-#active.menu_new { top: 200px; }
-#active.menu_open { top: 250px; }
-#active.menu_assigned { top: 300px; }
-#active.menu_archived { top: 350px; }
+#active.menu_create { top: 200px; }
+#active.menu_open, #active.menu_new { top: 250px; }
+#active.menu_assigned, #active.menu_accepted { top: 300px; }
+#active.menu_archived, #active.menu_won { top: 350px; }
+#active.menu_lost { top: 390px; }
 
 // content biglist
 .biglist .entry {

@@ -6,6 +6,9 @@ Flockstreet::Application.routes.draw do
   resources :products, :requests, :updates, :settings
   
   resources :leads do
+    collection do
+      get :actionbox
+    end
     member do
       put :decline
       put :accept
@@ -26,6 +29,7 @@ Flockstreet::Application.routes.draw do
   resources :messages do
     collection do
       get :sent
+      get :actionbox
     end
     member do
       get :reply
@@ -47,8 +51,10 @@ get "twitter/signin"
   match "/dashboard" => "dashboard#index", :as => :dashboard
 
   match "/companies/:company_id/subscriptions/:plan/new" => "subscriptions#new", :as => :new_company_subscription,  :via => "get"
-  match "requests" => "requests#index", :as => :requests, :via => "get"
+
+#  match "requests" => "requests#index", :as => :requests, :via => "get"
   match "requests/filter/:status" => "requests#index", :as => :requests_filter, :via => "get"
+  match "leads/filter/:status" => "leads#index", :as => :leads_filter, :via => "get"
   
   # static website pages
   get "website/index"

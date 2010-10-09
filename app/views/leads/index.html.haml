@@ -1,4 +1,4 @@
-- title ("Leads Übersicht")
-
-#leads= render @leads
-
+- content_for :sidebar do
+  =render :partial => 'sidebar'
+  
+= render :partial => 'list'

@@ -1,0 +1,7 @@
+.filter 
+.filter= link_to "neu", leads_filter_path(:new), :remote => true
+.filter= link_to "in Bearbeitung", leads_filter_path(:accepted), :remote => true
+.filter= link_to "gewonnen", leads_filter_path(:won), :remote => true
+.filter= link_to "verloren", leads_filter_path(:lost), :remote => true
+
+#active{:class => "menu_#{@active}"}

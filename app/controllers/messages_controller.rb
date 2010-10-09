@@ -2,11 +2,11 @@ class MessagesController < ApplicationController
   before_filter :authenticate_user!
    
   def index
-    @messages = current_company.received_messages.paginate :per_page => 5, :page => params[:page], :order => 'updated_at DESC'
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    @messages = current_company.received_messages.paginate :per_page => 10, :page => params[:page], :order => 'updated_at DESC'
+  end
+  
+  def actionbox
+    @messages = current_company.received_messages.limit(5)
   end
   
   def sent
