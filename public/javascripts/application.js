@@ -34,10 +34,10 @@ $(document).ready(function() {
   });
 
 //actionbox
-  $(".message").click(function(e) {
+  $(".message.dropdown").click(function(e) {
     e.preventDefault();
     $("#message_menu").toggle();
-    $(".message").toggleClass("menu-open");
+    $(".message.dropdown").toggleClass("menu-open");
     updateActionboxMessages();
   });
   $("#message_menu").mouseup(function() {
@@ -45,30 +45,30 @@ $(document).ready(function() {
   });
   $(document).mouseup(function(e) {
     if($(e.target).parent("a.message").length==0) {
-      $(".message").removeClass("menu-open");
+      $(".message.dropdown").removeClass("menu-open");
       $("#message_menu").hide();
     }
   });
 
-  $(".contact").click(function(e) {
+  $(".contact.dropdown").click(function(e) {
     e.preventDefault();
-    $("#contact_menu").fadeTo("fast", 1);
-    $(".contact").toggleClass("menu-open");
+    $("#contact_menu").toggle();
+    $(".contact.dropdown").toggleClass("menu-open");
   });
   $("#contact_menu").mouseup(function() {
     return false
   });
   $(document).mouseup(function(e) {
     if($(e.target).parent("a.contact").length==0) {
-      $(".contact").removeClass("menu-open");
+      $(".contact.dropdown").removeClass("menu-open");
       $("#contact_menu").hide();
     }
   });
 
-  $(".lead").click(function(e) {
+  $(".lead.dropdown").click(function(e) {
     e.preventDefault();
-    $("#lead_menu").fadeTo("fast", 1);
-    $(".lead").toggleClass("menu-open");
+    $("#lead_menu").toggle();
+    $(".lead.dropdown").toggleClass("menu-open");
     updateActionboxLeads();
   });
   $("#lead_menu").mouseup(function() {
@@ -76,8 +76,8 @@ $(document).ready(function() {
   });
   $(document).mouseup(function(e) {
     if($(e.target).parent("a.lead").length==0) {
-      $(".lead").removeClass("menu-open");
-      $("#lead_menu").fadeTo("fast", 0);
+      $(".lead.dropdown").removeClass("menu-open");
+      $("#lead_menu").hide();
     }
   });
 
@@ -101,7 +101,6 @@ $(document).ready(function() {
 
   $('.focus').focus();  
 
-//  $('.hide').hide();  // should be done with CSS display: none;
   //  $("#new_review").submitWithAjax();
 });
 

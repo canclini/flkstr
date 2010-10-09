@@ -169,6 +169,25 @@ h3 {
     -webkit-border-radius: 12px; 
             border-radius: 12px; 
 }
+
+// RIGHT SIDE
+.processbox, .businesscard {
+  padding: 3px;
+  margin: 5px 0px;
+  @include column(9);
+  border: 1px solid black;
+     -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+          border-radius: 5px; 
+}
+.businesscard .logo {
+  @include column(2);
+}
+.businesscard .contact {
+  @include column(7);
+  @include last;
+}
+
 // ACTIONBOX design stuff
 .actionbox_header {
   background: $light_grey;

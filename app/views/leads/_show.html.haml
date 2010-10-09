@@ -1,0 +1,20 @@
+#leftcontent
+  %h2= "Lead #{@request.name}"
+  = "created #{distance_of_time_in_words(@request.created_at, Time.now)} ago"
+  %p= @request.description
+  
+#rightcontent
+  -if @lead.accepted?
+    = render :partial => 'companies/businesscard', :locals  => {:company => @lead.source}
+    .processbox
+      %h3 Status ändern
+      = button_to "Auftrag gewonnen", accept_lead_path(@lead), :remote => true, :method => :put, :class => 'button'
+      = button_to "Auftrag verloren", accept_lead_path(@lead), :remote => true, :method => :put, :class => 'button'
+  - else
+    .processbox
+      %h3 Status ändern
+      -if @company.accept_lead?
+        = button_to "Ja, unser Ding!", accept_lead_path(@lead), :remote => true, :method => :put, :class => 'button'
+      - else 
+        = link_to "Ja, unser Ding!", signup_path, :class => 'button'
+      = button_to "nicht interessant", decline_lead_path(@lead), :remote => true, :method => :put, :class => 'button'

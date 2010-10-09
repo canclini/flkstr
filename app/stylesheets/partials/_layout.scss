@@ -148,6 +148,13 @@ html, body {
   @include last;
   padding: 5px 0px;
 }
+#rightcontent {
+  @include column(9);
+  @include last;
+}
+#leftcontent {
+  @include column(10);
+}
 
 #logo {
   @include column(3);

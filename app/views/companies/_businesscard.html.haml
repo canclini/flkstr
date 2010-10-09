@@ -1,0 +1,8 @@
+.businesscard
+  .logo= image_tag company.logo.url(:thumb)
+  .contact
+    = link_to company.name, company
+    = render company.main_address
+    = company.phone
+    %br
+    = mail_to company.email

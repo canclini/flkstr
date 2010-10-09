@@ -1,6 +1,6 @@
 class LeadsController < ApplicationController
   def index
-    params[:status] ||= "open"
+    params[:status] ||= "new"
     @company = current_company
     @leads = current_company.leads.where("status = ?", params[:status]).paginate :per_page => 5, :page => params[:page], :order => 'created_at ASC'
     @active = params[:status]

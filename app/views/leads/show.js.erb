@@ -1,0 +1,7 @@
+$("#rightcontent").fadeTo("slow", 0, function() {
+      // Animation complete.
+      $("#content").html("<%= escape_javascript(render :partial => 'show') %>");
+      $("#rightcontent").attr("style", "opacity: 0");      
+      $("#rightcontent").fadeTo("slow", 1);
+      $("#active").removeClass().addClass('<%= "menu_#{@active}" %>');;
+    });

@@ -1,17 +1,4 @@
 - content_for :sidebar do
   =render :partial => 'sidebar'
 
-%h2= "Lead #{@request.name}"
-= "created #{distance_of_time_in_words(@request.created_at, Time.now)} ago"
-%p= @request.description
--if @lead.accepted?
-  %p
-    %strong Company: 
-    = link_to @lead.source.name, @lead.source
-- unless @lead.accepted?
-  %p
-  -if @company.accept_lead?
-    = link_to "Ja, unser Ding!", accept_lead_path(@lead), :method => :put, :class => 'button'
-  - else 
-    = link_to "Ja, unser Ding!", signup_path, :class => 'button'
-  = link_to "nicht interessant", decline_lead_path(@lead), :method => :put, :class => 'button'
+= render :partial => 'show'
