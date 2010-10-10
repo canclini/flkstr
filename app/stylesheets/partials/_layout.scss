@@ -1,5 +1,9 @@
 * { margin: 0; }
 
+section, header, footer, aside, nav, article{
+  display: block;
+}
+
 html, body {
   height: 100%;
 }
@@ -8,75 +12,82 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -4em;
+  margin: 0 auto -3em;
 }
 
-#push_footer, #footer-copy-container {
-  height: 4em;
-  clear: both;
-}
-
-#header-meta-container {
+#wrapper #meta  {
   background: $dark_green;  
   background-image: -moz-linear-gradient(top, $dark_green, $dark_green + #0F0F0F); /* FF3.6 */
   float: left;
   width: 100%;
-}
-#header-meta {
-  @include container();
-  position: relative;
-  overflow: visible;
-  padding: 5px;
+  
+  .content {
+    @include container();
+    position: relative;
+    overflow: visible;
+    padding: 5px;
+    
+    .logo {
+      @include column(6);
+    }
+    
+    nav.user { // Top Right User Navigation
+      text-align: right;
+      @include last;
+    }
+    
+    aside {  // Actionbox
+      @include column(12);
+      position: relative;
+      overflow: visible;
+      
+      #actionsearch {
+        float: left;
+        padding: 5px 15px 0px 0px;
+      }
+    }
+  }
 }
 
-#header-meta-logo {
-  @include column(6);
-}
-
-#header-meta-actionbox { 
-  @include column(12);
-  position: relative;
-  overflow: visible;
-}
-
-#actionsearch {
-  float: left;
-  padding: 5px 15px 0px 0px;
-}
-
-#header-meta-user {
-  text-align: right;
-  @include last;
-}
-
-#header-content-container {
+#wrapper header {
   background: $light_green;  
   background-image: -moz-linear-gradient(top, $light_green, $light_green + #080808); /* FF3.6 */
   clear: both;
   border-bottom: 1px solid $dark_green;
+  
+  .content {
+    padding: 20px;
+    @include container();
+    
+    .logo {
+      @include column(8);
+    }
+    .tagline1 {
+      text-align: center;
+      @include column(8);
+    }
+    .tagline2 {
+      text-align: center;
+      @include column(8);
+      @include last;
+    }
+  }
 }
 
-#header-content {
-  padding: 20px;
-  @include container();
-}
-#header-content-logo {
-  @include column(8);
-}
-#header-content-tagline1 {
-  text-align: center;
-  @include column(8);
-}
-#header-content-tagline2 {
-  text-align: center;
-  @include column(8);
-  @include last;
-}
-
-#content_one, #container {
+#container {
   @include container();
 //  @include showgrid;
   padding: 10px;
+}
+
+#container {
+  #dashboard {}
+  
+  #content {
+    @include column(19);
+    @include last;
+    padding: 5px 0px;
+  }
 }
 
 #content_two-container {
@@ -90,51 +101,57 @@ html, body {
   @include container();
 }
 
-#footer-navi-container {
+#push_footer, #copyright {
+  height: 3em;
+  clear: both;
+}
+
+#footer { // website footer link box
   background: $dark_grey;  
   clear: both;
-}
-#footer-navi {
-  padding: 10px;
-  @include container();
+  
+  nav.footer {
+    padding: 10px;
+    @include container();
+  }
+  
 }
 
-#footer-copy-container {
+#copyright {
   background: $dark_green;  
-  clear: both;
-}
-
-#footer-copy {
-  padding: 8px;
-  @include container();
-  text-align: right;
-}
-
-#navigation {
-  height: 40px;
-  @include column(24);
-  border-bottom: 2px solid black;
-}
-
-#dashboard {
-  @include column(5);
-  a {
-    font-size: 1.5em;
-    color: black;
+  
+  footer.copyright {
+    @include container();
+    padding: 8px;
+    text-align: right;
   }
 }
 
-#maintopics {
-  @include column(11);
+nav.main {
+  height: 40px;
+  @include column(24);
+  border-bottom: 2px solid black;
+  
+  #dashboard {
+    @include column(5);
+    a {
+      font-size: 1.5em;
+      color: black;
+    }
+  }
+
+  #maintopics {
+    @include column(11);
+  }
+
+  #mainaction {
+    text-align: right;
+    @include column(8);
+    @include last;
+  }
 }
 
-#mainaction {
-  text-align: right;
-  @include column(8);
-  @include last;
-}
-
-#sidebar {
+nav.sidebar {
   @include column(5);
   font-size: 1.2em;
 }
@@ -143,11 +160,7 @@ html, body {
   padding: 5px 0px;
 }
 
-#content {
-  @include column(19);
-  @include last;
-  padding: 5px 0px;
-}
+
 #rightcontent {
   @include column(9);
   @include last;
@@ -155,11 +168,6 @@ html, body {
 #leftcontent {
   @include column(10);
 }
-
-#logo {
-  @include column(3);
-}
-
 
 .leftmiddle {
   @include column(16);

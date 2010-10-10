@@ -13,12 +13,12 @@
       .item= render :partial => "feed_items/#{feed.partial}", :locals => {:feed_item =>  feed.item}
     
 .right
-  .box
+  %section.box
     %h3 LINKS (temp)
     %ul
       %li= link_to "Firmenverzeichnis", companies_path()
       %li= link_to "Mein Netzwerk", company_associates_path(current_company)
-  .box
+  %section.box
     %h3 Leads
     %ul
       - for lead in @leads do
@@ -26,10 +26,10 @@
           = l lead.created_at, :format => :short
           = link_to lead.request.name, lead
     = link_to ">> Alle Leads anzeigen", leads_path()
-  .box
+  %section.box
     %h3 Nachrichten
     = link_to ">> Alle Nachrichten anzeigen", messages_path()
-  .box
+  %section.box
     %h3 Netzwerk erweitern
     = form_tag companies_path, :method => :get do
       %p

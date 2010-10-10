@@ -2,7 +2,7 @@
   =link_block(message_path(message)) do
     .actionbox_entry
       .title= message.author.name
-      .content= truncate(message.subject, :length => 45)
+      = truncate(message.subject, :length => 45)
 
 -if @messages.empty?
   %span Keine Nachrichten

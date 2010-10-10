@@ -9,33 +9,32 @@
 
   %body
     #wrapper
-      #header-meta-container
-        #header-meta
-          #header-meta-logo
+      #meta
+        .content
+          .logo
             = link_to image_tag("3birds_signet.png", :border => 0), dashboard_url
-          #header-meta-actionbox
+          %aside
             = render :partial => 'actionbox/actionbox'
           = render :partial => 'nav/user'
   
-      #header-content-container
-        #header-content
-          #header-content-logo
-            
+      %header
+        .content
+          .logo
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}"
 
       #container
-        #navigation
+        %nav.main
           #dashboard
             =link_to "Dashboard", dashboard_path()
           #maintopics
             = render :partial => 'layouts/maintopics'
           #mainaction
             =link_to "Neuer Auftrag", new_request_path, :class => 'button'
-        #content_dashboard
+        #dashboard
           = yield
       #push_footer
-    #footer-copy-container
-      #footer-copy
+    #copyright
+      %footer.copyright
         =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition"
         &copy; Flockstreet, 2010

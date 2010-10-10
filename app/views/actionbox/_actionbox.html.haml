@@ -1,8 +1,8 @@
 #actionsearch
   = form_tag companies_path do |f|
-    = text_field_tag :search, params[:search] = "Suche nach Firma oder Tag", :size => 35, :class => "clearme"
+    = text_field_tag :search, params[:search] = "Suche nach Firma oder Tag", :size => 35, :class => "clearme", :type => "search"
     = submit_tag "suchen", :class => "search_button"
-#actionbuttons
+%nav.actionbuttons
   =link_to image_tag("message.png", :border=>0), messages_path(), :class => "message dropdown"  
   =link_to image_tag("contact.png", :border=>0), company_associates_path(current_company), :class => "contact dropdown"
   =link_to image_tag("lead.png", :border=>0), leads_path(), :class => "lead dropdown"

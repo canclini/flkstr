@@ -1,7 +1,7 @@
 // signin menu stuff
 //http://aext.net/2009/08/perfect-sign-in-dropdown-box-likes-twitter-with-jquery/
 
-#header-meta-user a.signin {
+nav.user a.signin {
     background:$dark_grey;
     padding:4px 6px 6px;
     text-decoration:none;
@@ -11,10 +11,10 @@
     -moz-border-radius:4px;
     border-radius:4px;
 }
-#header-meta-user a.signin:hover {
+nav.user a.signin:hover {
     background:$dark_grey;
 }
-#header-meta-user a.signin, #header-meta-user a.signin:hover {
+nav.user a.signin, nav.user a.signin:hover {
     *background-position:0 3px!important;
 }
 
@@ -27,7 +27,7 @@ a.signin span {
     background-position:100% 50%;
     padding:4px 16px 6px 0;
 }
-#header-meta-user a.menu-open {
+nav.user a.menu-open {
     background:#ddeef6!important;
     color:#666!important;
     outline:none;

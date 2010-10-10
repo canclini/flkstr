@@ -45,11 +45,7 @@ h3 {
 
 .strong { font-weight: bold; }
 
-#usernav {
-  text-align: right;
-}
-
-#footer-navi {
+nav.footer {
   color: #fdfdfd;
   ul {
     @include no-bullets;
@@ -60,8 +56,7 @@ h3 {
   }
 
 }
-#footer-copy-container {
-  height: 30px;
+footer.copyright {
   a {
     color: black;
     @include hover-link;
@@ -223,6 +218,7 @@ a.linkblock:hover, .actionbox_entry:hover {
   text-align: left;
 }
 .actionbox_entry .content {
+  
 }
 
 a.linkblock {

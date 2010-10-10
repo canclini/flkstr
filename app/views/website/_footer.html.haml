@@ -1,7 +1,6 @@
 .left
+  %h3 Produkt
   %ul
-    %li
-      %strong Produkt
     %li= link_to "Tour", tour_profile_path
     %li Erfolgsgeschichten
     %li= link_to "FAQ", faq_path
@@ -17,11 +16,12 @@
     %li= link_to "Kontakt", contact_path
 
 .right
-  %ul
-    %li 
-      %strong Community
-    %li= link_to "Blog", "http://blog.flockstreet.com"
-    %li= link_to "folge uns auf Twitter", "http://twitter.com/flockstreet"
-    %li 
-      sende uns eine 
-      = link_to "eMail", "mailto:contact@flockstreet.com"
+  %address
+    %ul
+      %li 
+        %strong Community
+        %li= link_to "Blog", "http://blog.flockstreet.com"
+        %li= link_to "folge uns auf Twitter", "http://twitter.com/flockstreet"
+        %li 
+        sende uns eine 
+        = link_to "eMail", "mailto:contact@flockstreet.com"
