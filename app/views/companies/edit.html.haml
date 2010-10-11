@@ -1,59 +1,26 @@
 -title "Firmendaten editieren"
 
-=form_for @company, :html => { :multipart => true } do |f|
+=simple_form_for @company, :html => { :multipart => true } do |f|
   = f.error_messages  
-  %p 
-    = f.label :name, "Company Name"
-    %br
-  %p
-    = f.file_field :logo
-    %br
-    
-    = f.text_field :name, :class => 'text'
-  %p
-    = f.label :teaser, "Teaser"
-    %br
-    = f.text_area :teaser, :rows => 2, :cols => 100
-  %p
-    = f.label :tag_list, "Tags"
-    %br
-    = f.text_field :tag_list, :class => 'text'
   
-  %strong addresses
-
-  = f.fields_for :addresses do |builder|
+  =f.input :name
+  =f.input :logo
+  =f.input :teaser
+  =f.input :tag_list
+  
+  %h3 addresses
+  = f.simple_fields_for :addresses do |builder|
     = render "addresses/address_fields", :f => builder
     
-  %strong more details
+  %h3 more details
+  = f.input :phone
+  = f.input :fax
+  = f.input :email
+  = f.input :twitter
+  = f.input :website, :as => :url
+  = f.input :staff, :input_html => {:min => 1, :step => 1}
+    
+  %h3 tell us about your company
+  = f.input :history
 
-  %p
-    = f.label :phone, "Phone"
-    %br
-    = f.text_field :phone, :class => 'text'
-  %p
-    = f.label :fax, "Fax"
-    %br
-    = f.text_field :fax, :class => 'text'
-  %p
-    = f.label :email, "email"
-    %br
-    = f.text_field :email, :class => 'text'
-  %p
-    = f.label :twitter, "Twitter"
-    %br
-    = f.text_field :twitter, :class => 'text'
-  %p
-    = f.label :website, "website"
-    %br
-    = f.text_field :website, :class => 'text'
-  %p
-    = f.label :staff, "anzahl mitarbeiter"
-    %br
-    = f.text_field :staff, :class => 'text'
-  %strong tell us about your company
-  %p  
-    = f.label :history, "History"
-    %br
-    = f.text_area :history, :rows => 7, :cols => 100
-
-  %p= f.submit "Submit", :class => "button light"
+  %p= f.submit "Speichern", :class => "button light"

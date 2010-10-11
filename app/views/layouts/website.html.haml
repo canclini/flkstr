@@ -4,7 +4,7 @@
     %meta{:charset=>"UTF-8"}
     %title= h(yield(:title) || "flockstreet")
     = render :partial => 'layouts/includes'
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails"
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "modernizr-1.5.min"
     = csrf_meta_tag
 
   %body

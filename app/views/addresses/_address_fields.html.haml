@@ -1,19 +1,5 @@
-%p
-  = f.label :street, "Street"
-  %br
-  = f.text_field :street, :class => 'text'
-%p
-  = f.label :plz, "Postalcode"
-  %br
-  = f.text_field :plz, :class => 'text'
-%p
-  = f.label :city, "City"
-  %br
-  = f.text_field :city, :class => 'text'
-%p
-  = f.label :country, "Country"
-  %br
-  = f.text_field :country, :class => 'text'
-%p
-  = f.check_box :main
-  = f.label :main, "main address"
+= f.input :street
+= f.input :plz
+= f.input :city
+= f.input :country, :as => 'string'
+= f.input :main

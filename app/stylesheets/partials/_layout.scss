@@ -76,11 +76,8 @@ html, body {
 
 #container {
   @include container();
-//  @include showgrid;
   padding: 10px;
-}
-
-#container {
+  overflow: visible;
   #dashboard {}
   
   #content {

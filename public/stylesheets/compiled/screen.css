@@ -198,9 +198,9 @@ html, body {
   overflow: hidden;
   *zoom: 1;
   padding: 10px;
+  overflow: visible;
 }
-
-/* line 86, ../../../app/stylesheets/partials/_layout.scss */
+/* line 83, ../../../app/stylesheets/partials/_layout.scss */
 #container #content {
   display: inline;
   float: left;
@@ -214,7 +214,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 93, ../../../app/stylesheets/partials/_layout.scss */
+/* line 90, ../../../app/stylesheets/partials/_layout.scss */
 #content_two-container {
   background: #edf6ed;
   clear: both;
@@ -222,7 +222,7 @@ html, body {
   border-top: 1px solid #8cc6bf;
 }
 
-/* line 99, ../../../app/stylesheets/partials/_layout.scss */
+/* line 96, ../../../app/stylesheets/partials/_layout.scss */
 #content_two {
   padding: 20px;
   width: 950px;
@@ -231,18 +231,18 @@ html, body {
   *zoom: 1;
 }
 
-/* line 104, ../../../app/stylesheets/partials/_layout.scss */
+/* line 101, ../../../app/stylesheets/partials/_layout.scss */
 #push_footer, #copyright {
   height: 3em;
   clear: both;
 }
 
-/* line 109, ../../../app/stylesheets/partials/_layout.scss */
+/* line 106, ../../../app/stylesheets/partials/_layout.scss */
 #footer {
   background: #3a464f;
   clear: both;
 }
-/* line 113, ../../../app/stylesheets/partials/_layout.scss */
+/* line 110, ../../../app/stylesheets/partials/_layout.scss */
 #footer nav.footer {
   padding: 10px;
   width: 950px;
@@ -251,11 +251,11 @@ html, body {
   *zoom: 1;
 }
 
-/* line 120, ../../../app/stylesheets/partials/_layout.scss */
+/* line 117, ../../../app/stylesheets/partials/_layout.scss */
 #copyright {
   background: #8cc6bf;
 }
-/* line 123, ../../../app/stylesheets/partials/_layout.scss */
+/* line 120, ../../../app/stylesheets/partials/_layout.scss */
 #copyright footer.copyright {
   width: 950px;
   margin: 0 auto;
@@ -265,7 +265,7 @@ html, body {
   text-align: right;
 }
 
-/* line 130, ../../../app/stylesheets/partials/_layout.scss */
+/* line 127, ../../../app/stylesheets/partials/_layout.scss */
 nav.main {
   height: 40px;
   display: inline;
@@ -278,7 +278,7 @@ nav.main {
 * html nav.main {
   overflow-x: hidden;
 }
-/* line 135, ../../../app/stylesheets/partials/_layout.scss */
+/* line 132, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #dashboard {
   display: inline;
   float: left;
@@ -289,12 +289,12 @@ nav.main #dashboard {
 * html nav.main #dashboard {
   overflow-x: hidden;
 }
-/* line 137, ../../../app/stylesheets/partials/_layout.scss */
+/* line 134, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #dashboard a {
   font-size: 1.5em;
   color: black;
 }
-/* line 143, ../../../app/stylesheets/partials/_layout.scss */
+/* line 140, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #maintopics {
   display: inline;
   float: left;
@@ -305,7 +305,7 @@ nav.main #maintopics {
 * html nav.main #maintopics {
   overflow-x: hidden;
 }
-/* line 147, ../../../app/stylesheets/partials/_layout.scss */
+/* line 144, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #mainaction {
   text-align: right;
   display: inline;
@@ -319,7 +319,7 @@ nav.main #mainaction {
   overflow-x: hidden;
 }
 
-/* line 154, ../../../app/stylesheets/partials/_layout.scss */
+/* line 151, ../../../app/stylesheets/partials/_layout.scss */
 nav.sidebar {
   display: inline;
   float: left;
@@ -332,13 +332,13 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 158, ../../../app/stylesheets/partials/_layout.scss */
+/* line 155, ../../../app/stylesheets/partials/_layout.scss */
 .filter {
   height: 40px;
   padding: 5px 0px;
 }
 
-/* line 164, ../../../app/stylesheets/partials/_layout.scss */
+/* line 161, ../../../app/stylesheets/partials/_layout.scss */
 #rightcontent {
   display: inline;
   float: left;
@@ -351,7 +351,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 168, ../../../app/stylesheets/partials/_layout.scss */
+/* line 165, ../../../app/stylesheets/partials/_layout.scss */
 #leftcontent {
   display: inline;
   float: left;
@@ -363,7 +363,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 172, ../../../app/stylesheets/partials/_layout.scss */
+/* line 169, ../../../app/stylesheets/partials/_layout.scss */
 .leftmiddle {
   display: inline;
   float: left;
@@ -375,7 +375,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 176, ../../../app/stylesheets/partials/_layout.scss */
+/* line 173, ../../../app/stylesheets/partials/_layout.scss */
 .left, .middle, .right {
   display: inline;
   float: left;
@@ -387,7 +387,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 180, ../../../app/stylesheets/partials/_layout.scss */
+/* line 177, ../../../app/stylesheets/partials/_layout.scss */
 .first, .second, .third, .fourth {
   display: inline;
   float: left;
@@ -399,12 +399,12 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 184, ../../../app/stylesheets/partials/_layout.scss */
+/* line 181, ../../../app/stylesheets/partials/_layout.scss */
 .fourth, .right {
   margin-right: 0;
 }
 
-/* line 188, ../../../app/stylesheets/partials/_layout.scss */
+/* line 185, ../../../app/stylesheets/partials/_layout.scss */
 .box {
   padding: 10px;
   margin: 10px;
@@ -1226,7 +1226,34 @@ a.linkblock {
   border-color: red;
 }
 
-/* line 249, ../../../app/stylesheets/screen.scss */
+@-webkit-keyframes pulse {
+  /* line 250, ../../../app/stylesheets/screen.scss */
+  from {
+    -webkit-transform: scale(1);
+    opacity: 1.0;
+  }
+
+  /* line 254, ../../../app/stylesheets/screen.scss */
+  20% {
+    -webkit-transform: scale(1.1);
+    opacity: 0.75;
+  }
+
+  /* line 258, ../../../app/stylesheets/screen.scss */
+  to {
+    -webkit-transform: scale(1);
+    opacity: 1.0;
+  }
+}
+
+/* line 264, ../../../app/stylesheets/screen.scss */
+.call2action:hover {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 0.7s;
+  -webkit-animation-iteration-count: 1;
+}
+
+/* line 270, ../../../app/stylesheets/screen.scss */
 .transition {
   -o-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -1234,14 +1261,14 @@ a.linkblock {
   transition: all 0.3s ease-out;
 }
 
-/* line 256, ../../../app/stylesheets/screen.scss */
+/* line 277, ../../../app/stylesheets/screen.scss */
 .box_shadow {
   -moz-box-shadow: 2px 2px 6px #222222;
   -webkit-box-shadow: 2px 2px 6px #222222;
   box-shadow: 2px 2px 6px #222222;
 }
 
-/* line 262, ../../../app/stylesheets/screen.scss */
+/* line 283, ../../../app/stylesheets/screen.scss */
 .box_rotate {
   -moz-transform: rotate(7.5deg);
   -o-transform: rotate(7.5deg);
@@ -1254,12 +1281,12 @@ a.linkblock {
   zoom: 1;
 }
 
-/* line 281, ../../../app/stylesheets/screen.scss */
+/* line 302, ../../../app/stylesheets/screen.scss */
 input:focus, textarea:focus {
   outline: none;
 }
 
-/* line 287, ../../../app/stylesheets/screen.scss */
+/* line 308, ../../../app/stylesheets/screen.scss */
 .simple_form label {
   float: left;
   width: 100px;
@@ -1267,29 +1294,29 @@ input:focus, textarea:focus {
   margin: 2px 10px;
 }
 
-/* line 294, ../../../app/stylesheets/screen.scss */
+/* line 315, ../../../app/stylesheets/screen.scss */
 .simple_form div.input {
   margin-bottom: 10px;
 }
 
-/* line 298, ../../../app/stylesheets/screen.scss */
+/* line 319, ../../../app/stylesheets/screen.scss */
 .simple_form div.boolean, .simple_form input[type='submit'] {
   margin-left: 120px;
 }
 
-/* line 302, ../../../app/stylesheets/screen.scss */
+/* line 323, ../../../app/stylesheets/screen.scss */
 .simple_form div.boolean label, .simple_form label.collection_radio {
   float: none;
   margin: 0;
 }
 
-/* line 307, ../../../app/stylesheets/screen.scss */
+/* line 328, ../../../app/stylesheets/screen.scss */
 .simple_form label.collection_radio {
   margin-right: 10px;
   margin-left: 2px;
 }
 
-/* line 312, ../../../app/stylesheets/screen.scss */
+/* line 333, ../../../app/stylesheets/screen.scss */
 .simple_form .error {
   clear: left;
   margin-left: 120px;
@@ -1298,7 +1325,7 @@ input:focus, textarea:focus {
   display: block;
 }
 
-/* line 320, ../../../app/stylesheets/screen.scss */
+/* line 341, ../../../app/stylesheets/screen.scss */
 .simple_form .hint {
   clear: left;
   margin-left: 120px;
