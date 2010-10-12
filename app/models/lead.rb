@@ -2,6 +2,8 @@ class Lead < ActiveRecord::Base
   belongs_to :company, :counter_cache => true
   belongs_to :source, :class_name => 'Company'
   belongs_to :request
+  has_many :feed_items, :as => :item, :dependent => :destroy
+  has_many :notifications, :as => :notifiable, :dependent => :destroy
   
   scope :new_or_accepted, where("status != ?", "declined")
   scope :this_month, where("status = 'accepted' and created_at > ?", Date.new(Time.now.year, Time.now.month, 1)) # accepted leads in current_month

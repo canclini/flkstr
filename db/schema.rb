@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101009145751) do
+ActiveRecord::Schema.define(:version => 20101012190055) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "company_id"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(:version => 20101009145751) do
     t.datetime "logo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "access_token"
+    t.string   "access_secret"
     t.boolean  "logo_processing",   :default => false
   end
 
@@ -109,6 +111,17 @@ ActiveRecord::Schema.define(:version => 20101009145751) do
     t.string   "subject"
     t.text     "body"
     t.boolean  "deleted",    :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "notifiable_id"
+    t.string   "notifiable_type"
+    t.string   "schedule",        :default => "weekly"
+    t.datetime "delivered_at"
+    t.string   "status",          :default => "new"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -205,9 +218,9 @@ ActiveRecord::Schema.define(:version => 20101009145751) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "",    :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "",    :null => false
-    t.string   "password_salt",                       :default => "",    :null => false
+    t.string   "email",                               :default => "",       :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "",       :null => false
+    t.string   "password_salt",                       :default => "",       :null => false
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"
@@ -231,6 +244,8 @@ ActiveRecord::Schema.define(:version => 20101009145751) do
     t.text     "details"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "notify",                              :default => "weekly"
+    t.integer  "notifiers_mask",                      :default => 7
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

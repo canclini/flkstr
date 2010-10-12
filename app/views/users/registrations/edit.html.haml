@@ -16,4 +16,18 @@
     = f.label "Neues Passwort bestätigen"
     %br/
     = f.password_field :password_confirmation
+  %p
+    = f.label "Notify schedule"
+    %br/
+    = f.collection_select :notify, User::NOTIFY, :to_s, :humanize
+    
+  %p
+    = f.label "Notify about"
+    %br/
+    - for notifier in User::NOTIFIERS
+      =check_box_tag "user[notifiers][]", notifier, resource.notifiers.include?(notifier)
+      =notifier.humanize
+    =hidden_field_tag "user[notifiers][]"
+    
+    
   %p= f.submit "Speichern"

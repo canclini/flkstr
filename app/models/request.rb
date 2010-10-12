@@ -6,6 +6,7 @@ class Request < ActiveRecord::Base
 
   belongs_to :company, :counter_cache => true
   has_many :leads, :dependent => :destroy
+  has_many :feed_items, :as => :item, :dependent => :destroy
   
   # scope :this_month - created since the first of current month
   scope :this_month, where("created_at > ?", Date.new(Time.now.year, Time.now.month, 1))
