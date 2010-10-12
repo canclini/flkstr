@@ -7,21 +7,19 @@
     %li Abo & Preise
 
 .middle
+  %h3 Firma
   %ul
-    %li
-      %strong Firma
     %li= link_to "Über Flockstreet", about_path
     %li Datenschutz
     %li= link_to "Nutzungsbedingungen", terms_path
     %li= link_to "Kontakt", contact_path
 
 .right
+  %h3 Community
   %address
     %ul
+      %li= link_to "Blog", "http://blog.flockstreet.com"
+      %li= link_to "folge uns auf Twitter", "http://twitter.com/flockstreet"
       %li 
-        %strong Community
-        %li= link_to "Blog", "http://blog.flockstreet.com"
-        %li= link_to "folge uns auf Twitter", "http://twitter.com/flockstreet"
-        %li 
         sende uns eine 
         = link_to "eMail", "mailto:contact@flockstreet.com"
