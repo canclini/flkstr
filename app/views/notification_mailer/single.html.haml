@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+%html
+  %head
+    %meta{:charset=>"UTF-8"}
+  %body
+    %h2= "Hallo #{@user.fullname},"
+    %p= "Deine Firma hat eine neue #{notifiable.class} bekommen"
+    %p= "weitere Infos findest du hier: #{url_for(@notifiable)}"

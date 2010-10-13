@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+%html
+  %head
+    %meta{:charset=>"UTF-8"}
+  %body
+    %h2= "Hallo #{@user.fullname},"
+    %p= "hier die Zusammenstellung der Neuigkeiten in ihrer Firma #{@company.name}"
+    -unless @leads.empty?
+      %h3 Leads
+      %p= "Ihre Firma hat #{@leads.size} neue Leads bekommen"
+      -for lead in @leads
+        = link_to lead.notifiable.request.name, lead_url(lead.notifiable)
+        
+    -unless @messages.empty?
+      %h3 Nachrichten
+      %p= "Ihre Firma hat #{@messages.size} neue Nachrichten bekommen"
+      -for message in @messages
+        = link_to message.notifiable.subject, message_url(message.notifiable)
