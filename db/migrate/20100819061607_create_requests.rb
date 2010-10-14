@@ -9,6 +9,7 @@ class CreateRequests < ActiveRecord::Migration
       t.string :area_filter, :default => 'everywhere'
       t.string :distance, :default => 0 
       t.string :language, :default => 'DE'
+      t.string :status, :default => 'open'
       t.timestamps
     end
   end
