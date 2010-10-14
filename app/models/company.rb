@@ -6,7 +6,7 @@ class Company < ActiveRecord::Base
   has_attached_file :logo, :styles => { :medium => "250x250>", :thumb => "50x50#" }
 #  validates_attachment_size :logo, :less_than => 1.megabytes
 #  validates_attachment_content_type :logo, :content_type => ['image/jpeg', 'image/png']
-  scope :with_logo, where("logo_file_name <> ?",'false').limit(10).order('rand()')
+  scope :with_logo, where("logo_file_name <> ?",'false').limit(10)#.order('rand()')
 
   has_one :setting, :dependent => :destroy
   has_many :users
