@@ -36,7 +36,7 @@ gem 'delayed_job', '>=2.1.pre2'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri', '1.4.1'
-# gem 'aws-s3', :require => 'aws/s3'
+gem 'aws-s3'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

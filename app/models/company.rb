@@ -3,7 +3,12 @@ class Company < ActiveRecord::Base
   acts_as_taggable_on :tags
 
 # Paperclip stuff  
-  has_attached_file :logo, :styles => { :medium => "250x250>", :thumb => "50x50#" }
+  has_attached_file :logo,
+    :styles => { :medium => "250x250>", :thumb => "50x50#" },
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root.to_s}/config/s3.yml",
+    :path => ":attachment/:style/:id.:extension"
+  
 #  validates_attachment_size :logo, :less_than => 1.megabytes
 #  validates_attachment_content_type :logo, :content_type => ['image/jpeg', 'image/png']
   scope :with_logo, where("logo_file_name <> ?",'false').limit(10).order('rand()')
@@ -50,14 +55,14 @@ class Company < ActiveRecord::Base
   before_logo_post_process do |company|
     if company.logo_changed?
       company.logo_processing = true
-      false # halts processing
+#      false # halts processing
     end
   end
  
   # ...and perform after save in background
   after_save do |company| 
     if company.logo_changed?
-      Delayed::Job.enqueue LogoJob.new(company.id)
+#      Delayed::Job.enqueue LogoJob.new(company.id)
     end
   end
  

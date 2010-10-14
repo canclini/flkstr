@@ -1,0 +1,10 @@
+development:
+  bucket: flkstrdev
+  access_key_id: AKIAJ5EVBINTIOIFHTZQ
+  secret_access_key: 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
+  
+production:
+  bucket: flkstr-prod
+  access_key_id: AKIAJ5EVBINTIOIFHTZQ
+  secret_access_key: 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
+  
