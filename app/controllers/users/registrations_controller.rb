@@ -1,6 +1,4 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  layout 'website', :only => [:new]
-  layout 'application'
   
   def new
     super

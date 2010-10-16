@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
 
   def specify_layout
       controller_name == 'sessions' ? 'website' : 'application'
+      controller_name == 'registrations' && action_name == 'edit' ? 'application' : 'website'
   end
 
   #### PRIVATE #######
