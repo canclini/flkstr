@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
    
   def index
     @messages = current_company.received_messages.paginate :per_page => 10, :page => params[:page], :order => 'updated_at DESC'
-    @active = "in"
+    @active = :in
   end
   
   def actionbox
@@ -12,21 +12,21 @@ class MessagesController < ApplicationController
   
   def sent
     @messages = current_company.sent_messages.paginate :per_page => 10, :page => params[:page], :order => 'created_at DESC'
-    @active = "out"
+    @active = :out
   end
   
   def show
     @message = Message.find(params[:id])
     if @message.author == current_company
-      @active = "out"
+      @active = :out
     else
-      @active = "in"
+      @active = :in
     end
   end
   
   def new
     @message = current_company.sent_messages.build
-    @active = "create"
+    @active = :create
   end
   
   def reply
@@ -35,7 +35,7 @@ class MessagesController < ApplicationController
     subject = @original.subject.sub(/^(Re: )?/, "Re: ")
     body = @original.body.gsub(/^/, "> ")
     @message = current_company.sent_messages.build(:to => @original.author.name, :subject => subject, :body => body)
-    @active = "create"
+    @active = :create
   end  
   
   def create
@@ -46,7 +46,7 @@ class MessagesController < ApplicationController
       flash[:notice] = "Message sent."
       redirect_to messages_path()
     else
-      @active = "create"
+      @active = :create
       render :action => "new"
     end
   end

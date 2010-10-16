@@ -1,15 +1,24 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  layout 'website'#, :only => [:new]
+  layout 'website', :only => [:new]
+  layout 'application'
   
   def new
     super
   end
   
+  def edit
+    @active = :second
+    super
+  end
+
+  def update
+    @active = :second
+    super
+  end
+  
   def create    
     @company = Company.new(params[:user][:company])
-        
     build_resource
-
     
     if @company.valid? && resource.valid?
       @company.save

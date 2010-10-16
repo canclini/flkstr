@@ -120,11 +120,11 @@ footer.copyright {
   transition: all 0.3s ease-out; 
   
 }
-#active.menu_create { top: 200px; }
-#active.menu_open, #active.menu_new, #active.menu_in { top: 250px; }
-#active.menu_assigned, #active.menu_accepted, #active.menu_out { top: 300px; }
-#active.menu_archived, #active.menu_won { top: 350px; }
-#active.menu_lost { top: 390px; }
+#active.menu_create, #active.menu_action { top: 200px; }
+#active.menu_open,#active.menu_first, #active.menu_new, #active.menu_in { top: 250px; }
+#active.menu_assigned, #active.menu_second, #active.menu_accepted, #active.menu_out { top: 300px; }
+#active.menu_archived, #active.menu_third, #active.menu_won { top: 350px; }
+#active.menu_lost, #active.menu_fourth { top: 390px; }
 
 // content biglist
 .biglist .entry {

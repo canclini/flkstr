@@ -16,7 +16,7 @@ class RequestsController < ApplicationController
     @company = current_company
     redirect_to settings_path unless @company.add_request?
     @request = current_company.requests.new(:company => @company)
-    @active = "create"
+    @active = :create
   end
 
   def create
@@ -28,7 +28,7 @@ class RequestsController < ApplicationController
       flash[:notice] = "Der Auftrag wurde erfasst. Wir suchen nach geeigneten Lieferanten"
       redirect_to request_path(@request)
     else
-      @active = "create"
+      @active = :create
       render :action => 'new'
     end
   end

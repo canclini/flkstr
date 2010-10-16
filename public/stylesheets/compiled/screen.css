@@ -1012,27 +1012,27 @@ footer.copyright a:hover {
 }
 
 /* line 123, ../../../app/stylesheets/screen.scss */
-#active.menu_create {
+#active.menu_create, #active.menu_action {
   top: 200px;
 }
 
 /* line 124, ../../../app/stylesheets/screen.scss */
-#active.menu_open, #active.menu_new, #active.menu_in {
+#active.menu_open, #active.menu_first, #active.menu_new, #active.menu_in {
   top: 250px;
 }
 
 /* line 125, ../../../app/stylesheets/screen.scss */
-#active.menu_assigned, #active.menu_accepted, #active.menu_out {
+#active.menu_assigned, #active.menu_second, #active.menu_accepted, #active.menu_out {
   top: 300px;
 }
 
 /* line 126, ../../../app/stylesheets/screen.scss */
-#active.menu_archived, #active.menu_won {
+#active.menu_archived, #active.menu_third, #active.menu_won {
   top: 350px;
 }
 
 /* line 127, ../../../app/stylesheets/screen.scss */
-#active.menu_lost {
+#active.menu_lost, #active.menu_fourth {
   top: 390px;
 }
 

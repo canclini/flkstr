@@ -18,7 +18,7 @@
   - if user_signed_in?    
     #settings-menu.transition
       = link_to "Firmenprofil", company_path(current_company)
-      %br/
+      %br
       = link_to "Firmeneinstellungen", settings_path
-      %br/
-      = link_to "persönlich Einstellungen", edit_user_registration_path()
+      %br
+      = link_to "Benutzereinstellungen", edit_user_registration_path

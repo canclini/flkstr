@@ -1,9 +1,6 @@
 class SubscriptionsController < ApplicationController
   before_filter :authenticate_user!, :needs_company!
 
-  def show
-  end
-
   def new
     redirect_to signup_path unless Plan::NAMES.include? params[:plan]
     @plan = Plan.find_by_name(params[:plan])
@@ -27,9 +24,6 @@ class SubscriptionsController < ApplicationController
       flash[:error] = "Something went wrong... #{exc.message}"
       render :action => 'new'
     end
-  end
-  
-  def edit
   end
 
   private
