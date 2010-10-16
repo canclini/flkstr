@@ -22,5 +22,24 @@ gem 'delayed_job', '>=2.1.pre2'
 # To use debugger
 # gem 'ruby-debug'
 
+group :test, :development do
+  gem 'rspec-rails', ">= 2.0.0.beta.19"
+  gem 'ruby-mysql'
+  gem 'compass-colors'
+  gem 'fancy-buttons'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'spork'
+  gem 'launchy'
+  gem 'pickle'
+  gem 'machinist', '>= 2.0.0.beta1'
+  gem 'faker'
+end
+
 # postgres gem which makes sure that the encoding is properly done on the heroku platform
 gem "pg", :group => :production 
