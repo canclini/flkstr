@@ -1,6 +1,8 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
-
+  
+  # users/sign_in redirected to website as long as we are not ready for logins. 
+  match "users/sign_in" => 'website#index' if $app_state == 'website'
   devise_for :users, :controllers => { :registrations => "users/registrations"}
 
   resources :products, :requests, :updates, :settings

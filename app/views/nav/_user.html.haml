@@ -1,4 +1,5 @@
 %nav.user
+  de | fr
   -if user_signed_in?
     = current_company.name
     <a id="settings">
@@ -7,12 +8,13 @@
     = link_to "Abmelden", destroy_user_session_path
   
   -else
-    = link_to "Login", new_user_session_path, :class => "signin dropdown transition"
-    #signin_menu.transition
-      = form_tag new_user_session_path do
-        = text_field_tag 'user[email]'
-        = password_field_tag 'user[password]'
-        %button Login
+    -unless $app_state == 'website'
+      = link_to "Login", new_user_session_path, :class => "signin dropdown transition"
+      #signin_menu.transition
+        = form_tag new_user_session_path do
+          = text_field_tag 'user[email]'
+          = password_field_tag 'user[password]'
+          %button Login
       
   
   - if user_signed_in?    

@@ -23,10 +23,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
       resource.save
       @company.plan = Plan.find_by_name('ready')    
       @company.users << resource
-      set_flash_message :notice, :signed_up
-      sign_in(resource_name, resource)
-      UserMailer.registration_confirmation(resource).deliver
-      redirect_to dashboard_url
+      if $app_state != 'website'
+        set_flash_message :notice, :signed_up
+        sign_in(resource_name, resource)
+        UserMailer.registration_confirmation(resource).deliver
+        redirect_to dashboard_url
+      else # application is not yet available
+        set_flash_message :notice, 'besten Dank fuer ihr Interesse! Sobald die Beta Phase von flockstreet losgeht werden wir sie informieren!'
+        UserMailer.website_registration_confirmation(resource).deliver
+        redirect_to root_url
+      end
+        
     else
       clean_up_passwords(resource)
       render_with_scope :new

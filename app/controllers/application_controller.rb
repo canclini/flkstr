@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
 
   helper :all
   
-  before_filter :set_user_language
+  before_filter :set_user_language, :app_state
   
-  helper_method :flockstreet?, :current_company, :no_user!, :needs_company!
+  helper_method :flockstreet?, :current_company, :no_user!, :needs_company!, :app_state
   
   def after_sign_in_path_for(resource_or_scope)
       dashboard_url
@@ -44,6 +44,10 @@ class ApplicationController < ActionController::Base
   
   def set_user_language
     I18n.locale = current_user.language if user_signed_in?
+  end
+  
+  def app_state
+    @app_state = ENV['APP_STATE']
   end
   
   def flockstreet?

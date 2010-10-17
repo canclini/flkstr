@@ -12,3 +12,10 @@ Flockstreet::Application.initialize!
 GoogleMap::Map::GOOGLE_APPLICATION_ID = ENV['GOOGLE_API_KEY'] ||= "ABQIAAAASgmYF4FMy5kATmYaVoSGFhT2yXp_ZAY8_ufC3CFXhHIE1NvwkxT3u2pKeo4tkpAHYpt24iftgOlVqw"
 
 #TagList.delimiter = ","
+
+# APP_STATE set via environment variable. use the state: 
+# 'full'
+# 'beta': Every function is there. But no plans yet available and no restrictions on requests or leads. Just one single user.
+# 'website': The Application is not yet available. Only the Website is visible plus a signup for the beta phase. No Logins allowed.
+
+$app_state = ENV['APP_STATE'] ||= 'full'

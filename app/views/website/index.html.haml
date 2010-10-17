@@ -14,7 +14,10 @@
     an der Küste des Semantik, eines großen Sprachozeans.
   =link_to "Rundgang machen", tour_profile_path()
 .right
-  =link_to "Jetzt kostenlos testen!", register_path(), :class => "big_button call2action"
+  - if $app_state == 'website'
+    =link_to "Für Beta registrieren!", register_path(), :class => "big_button call2action"
+  -else
+    =link_to "Jetzt kostenlos testen!", register_path(), :class => "big_button call2action"
 
   = render :partial => 'signedupcompanies'
     
