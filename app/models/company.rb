@@ -93,7 +93,7 @@ class Company < ActiveRecord::Base
     self.addresses.main.first
   end
 
-    def accept_lead?
+  def accept_lead?
     leads.this_month.size < plan.leads
   end
   
