@@ -21,8 +21,13 @@ class ApplicationController < ActionController::Base
   protected 
 
   def specify_layout
-      controller_name == 'sessions' ? 'website' : 'application'
-      controller_name == 'registrations' && action_name == 'edit' ? 'application' : 'website'
+    specific_layout = case controller_name
+       when 'sessions' then 'website'
+       when 'registrations' then action_name == 'edit' ? 'application' : 'website'
+       else "application"
+    end
+
+    specific_layout
   end
 
   #### PRIVATE #######
