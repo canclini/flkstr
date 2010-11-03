@@ -98,7 +98,7 @@ class Company < ActiveRecord::Base
   end
   
   def add_request?
-    requests.this_month.size < plan.requests    
+    requests.this_month.size < plan.requests
   end
   
   ############ PRIVATE ###############    

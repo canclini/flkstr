@@ -1,6 +1,6 @@
 consumer_secret: X6YGCRLAfuSrsWkDFR2rH4ctBzi1xoiNREOPX72WlMw
 consumer_token: esECas604WTO4uSP7RWRA
 callback_urls: 
-  production: http://flockstreet.com/twitter/auth
+  production: http://flockstreet.heroku.com/twitter/auth
   development: http://flkstrdev.dyndns.biz:3000/twitter/auth
   staging: http://flkstr-stage.heroku.com/twitter/auth
