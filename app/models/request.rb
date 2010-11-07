@@ -14,6 +14,12 @@ class Request < ActiveRecord::Base
   #validates_length_of :name, :within => 4..15, :too_long => "pick a shorter name", :too_short => "pick a longer name"
   validates_presence_of :name, :description
     
+  def self.search(query)
+    search = tagged_with(query)
+    search = search + where("name like ?", "%#{query}%")
+    search
+  end
+  
   private
   def add2feeds
     # dashboard feed for followers

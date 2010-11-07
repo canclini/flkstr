@@ -1,0 +1,9 @@
+#search_result
+  #companies
+    - for company in @companies
+      = render company
+      = will_paginate @companies
+  #requests
+    - for request in @requests
+      = render request
+      = will_paginate @requests

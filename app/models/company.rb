@@ -86,7 +86,9 @@ class Company < ActiveRecord::Base
   end
 
   def self.search(query)
-     where("name like ?", "%#{query}%")
+    search = tagged_with(query)
+    search = search + where("name like ?", "%#{query}%")
+    search
   end
 
   def main_address

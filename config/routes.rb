@@ -6,6 +6,9 @@ Flockstreet::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "users/registrations"}
 
   resources :products, :requests, :updates, :settings
+
+  # singular resource definition for search
+  resource :search, :controller => 'search'
   
   resources :companies do
     get :exists, :on => :collection
@@ -29,7 +32,7 @@ Flockstreet::Application.routes.draw do
       get :actionbox
     end
   end
-  
+    
   # twitter
   get "twitter/auth"
   get "twitter/signin"
