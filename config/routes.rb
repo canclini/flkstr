@@ -9,10 +9,11 @@ Flockstreet::Application.routes.draw do
 
   # singular resource definition for search
   resource :search, :controller => 'search'
-  
+    
   resources :companies do
     get :exists, :on => :collection
     get :join, :on => :member    
+    get :autocomplete, :on => :collection
     resources :subscriptions
     resources :associates
   end
@@ -23,6 +24,10 @@ Flockstreet::Application.routes.draw do
       put :decline
       put :accept
     end
+  end
+  
+  resources :tags do
+    get :autocomplete, :on => :collection
   end
   
   resources :messages do

@@ -106,6 +106,14 @@ class Company < ActiveRecord::Base
     requests.this_month.size < plan.requests
   end
   
+  def as_json(options = {})    
+    {
+      :id => id,
+      :name => name,
+      :value => name
+    }.as_json(options)
+  end    
+  
   ############ PRIVATE ###############    
   private
   def set_permalink

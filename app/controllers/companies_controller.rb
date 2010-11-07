@@ -9,6 +9,14 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def autocomplete
+    query = params[:term]
+    @items = Company.where("name like ?","%#{query}%")    
+    respond_to do |format|
+      format.json { render :json => @items.to_json }
+    end
+  end
+  
   def exists
     @companies = Company.search(params[:search]).limit(10)
     respond_to do |format|

@@ -3,9 +3,10 @@
 =form_for @message do |f|
   = f.error_messages  
   %p  
-    = f.label :to, "AN:"
+    = text_field :ac, :companies, :class => "text"
     %br
-    = f.text_field :to, :class => 'text companySuggest'
+    = f.label :to, "AN:"
+    #ac_selection  
   %p
     = f.label :subject, "Betreff"
     %br
@@ -16,3 +17,7 @@
     = f.text_area :body, :cols => 40, :rows => 3
 
   %p= f.submit "senden", :class => "button light"
+  
+  
+  #removeme
+    =link_to "remove", "#", :class => "remove-link"

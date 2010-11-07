@@ -39,5 +39,4 @@ class User < ActiveRecord::Base
       email
     end
   end
-    
 end

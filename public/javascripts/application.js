@@ -16,6 +16,37 @@ jQuery.fn.submitWithAjax = function() {
 
 $(document).ready(function() {  
 
+  $( "#ac_companies" ).autocomplete({
+    source: "/companies/autocomplete",
+  	minLength: 2,
+  	select: function( event, ui ) {
+      var sel = "<div class='recipient' id='recipient_" + ui.item.id + "'> <input id='message_to_' name='message[to][]' type='hidden' value =" + ui.item.id + "> <span>" + ui.item.value + "</span> <a href='#' id='recipient-remove_" + ui.item.id + "' class='recipient-remove'>Remove</a> </div>";
+          
+      $("#ac_selection").html(sel);
+          
+      $(".recipient-remove").click(function() {
+        $(this).parent().remove();
+      });    
+  	}
+  });  		      
+  
+  
+  $( "#ac_tags" ).autocomplete({
+    source: "/tags/autocomplete",
+  	minLength: 2,
+  	select: function( event, ui ) {
+  	  // das muss in eine Funktion ausgelagert werden... falls das Tag existiert wird value übernommen, falls es nicht existiert, muss der eingegebene wert hinzugefügt werden.
+      var sel = "<div id='tag_container_" + ui.item.id + "'> <input id='request_tags_' name='request[tags][]' type='hidden' value =" + ui.item.value + "> <span class = 'tag'>" + ui.item.value + "</span> <a href='#' id='tag-remove_" + ui.item.id + "' class='tag-remove'>Remove</a> </div>";
+          
+      $("#ac_selection").append(sel);
+          
+      $(".tag-remove").click(function() {
+        $(this).parent().remove();
+      });    
+  	}
+  });  		      
+  
+      
 //signin menu on website
   $(".signin").click(function(e) {
     e.preventDefault();
@@ -121,3 +152,4 @@ function updateActionboxMessages() {
 function updateActionboxLeads() {
   $.getScript("/leads/actionbox.js")
 };
+

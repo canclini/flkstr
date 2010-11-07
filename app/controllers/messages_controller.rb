@@ -39,7 +39,7 @@ class MessagesController < ApplicationController
   end  
   
   def create
-    params[:message][:to] = params[:message][:to].gsub(/,$/, "") # get rid of last comma (from tokeninput)
+    params[:message][:to] = params[:message][:to]
     @message = current_company.sent_messages.build(params[:message])
   
     if @message.save
