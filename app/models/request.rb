@@ -15,7 +15,10 @@ class Request < ActiveRecord::Base
   validates_presence_of :name, :description
     
   def self.search(query)
-    search = tagged_with(query)
+    search = []
+    unless query.nil? or query.empty?
+      search = tagged_with(query)
+    end
     search = search + where("name like ?", "%#{query}%")
     search
   end
