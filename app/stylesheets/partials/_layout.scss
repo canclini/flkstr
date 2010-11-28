@@ -15,29 +15,16 @@ html, body {
   margin: 0 auto -3em;
 }
 
-#wrapper #meta  {
-  background: $dark_green;  
-  background-image: -moz-linear-gradient(top, $dark_green, $dark_green + #0F0F0F); /* FF3.6 */
-  float: left;
-  width: 100%;
-  
+#wrapper #meta  {  
   .content {
     @include container();
     position: relative;
     overflow: visible;
-    padding: 5px;
-    
-    .logo {
-      @include column(6);
-    }
-    
-    nav.user { // Top Right User Navigation
-      text-align: right;
-      @include last;
-    }
+    padding: 5px 0px;
+        
     
     aside {  // Actionbox
-      @include column(12);
+      @include column(6);
       position: relative;
       overflow: visible;
       
@@ -49,52 +36,86 @@ html, body {
   }
 }
 
-#wrapper header {
+#wrapper header {  
+  height: 100px;
+  padding-top: 5px;
   background: $light_green;  
-  background-image: -moz-linear-gradient(top, $light_green, $light_green + #080808); /* FF3.6 */
   clear: both;
-  border-bottom: 1px solid $dark_green;
+  border-bottom: 1px solid #CFD6D0;
+  
+     -moz-box-shadow: 0px 0px 4px #CFD6D0; 
+  -webkit-box-shadow: 0px 0px 4px #CFD6D0; 
+          box-shadow: 0px 0px 4px #CFD6D0; 
+
   
   .content {
-    padding: 20px;
+    padding: 20px 0px;
     @include container();
     
     .logo {
-      @include column(8);
+      @include column(4);
     }
-    .tagline1 {
-      text-align: center;
-      @include column(8);
-    }
-    .tagline2 {
-      text-align: center;
-      @include column(8);
-      @include last;
+    .meta {
+      position: relative;
+      overflow: visible;
+      padding: 20px 0px;
+
+      aside {  // Actionbox
+        @include column(6);
+        position: relative;
+        overflow: visible;
+
+        #actionsearch {
+          float: left;
+          padding: 5px 15px 0px 0px;
+        }
+      }
+      .search {
+        @include push(4);
+        @include column(4);
+      }
+      .language {
+        text-align: right;
+        word-spacing: 5px;
+        @include column(1);
+      }
+      nav.user { // Top Right User Navigation
+        text-align: right;
+        @include last;
+      }
     }
   }
 }
 
 #container {
   @include container();
-  padding: 10px;
+  padding: 40px 0px 0px 0px;
   overflow: visible;
   #dashboard {}
-  
+
+  .tagline {
+    @include column(4);
+  }
+  #actionbutton {
+    padding: 25px 0px;
+    text-align: right;
+    @include last;
+  }
   #content {
-    @include column(19);
+    @include column(11);
     @include last;
     padding: 5px 0px;
   }
 }
 
 #content_two-container {
-  background: $light_green;  
   clear: both;
-  border-bottom: 1px solid $dark_green;
-  border-top: 1px solid $dark_green;
+  border-bottom: 2px solid #6F7B80;
+  padding-bottom: 30px;
+  
 }
 #content_two {
-  padding: 20px;
+  padding: 0px 0px;
   @include container();
 }
 
@@ -108,29 +129,34 @@ html, body {
   clear: both;
   
   nav.footer {
-    padding: 10px;
+    padding: 20px 0px 0px 0px;
     @include container();
   }
   
 }
 
 #copyright {
-  background: $dark_green;  
-  
+  background: $dark_grey;    
   footer.copyright {
     @include container();
-    padding: 8px;
-    text-align: right;
+    .ginetta {
+      @include push(17);
+      @include column(2);
+    }
+    .flockstreet {
+      text-align: right;
+      @include last;
+    }
   }
 }
 
 nav.main {
   height: 40px;
-  @include column(24);
+  @include column(12);
   border-bottom: 2px solid black;
   
   #dashboard {
-    @include column(5);
+    @include column(2);
     a {
       font-size: 1.5em;
       color: black;
@@ -138,18 +164,18 @@ nav.main {
   }
 
   #maintopics {
-    @include column(11);
+    @include column(5);
   }
 
   #mainaction {
     text-align: right;
-    @include column(8);
+    @include column(4);
     @include last;
   }
 }
 
 nav.sidebar {
-  @include column(5);
+  @include column(2);
   font-size: 1.2em;
 }
 .filter {
@@ -159,23 +185,26 @@ nav.sidebar {
 
 
 #rightcontent {
-  @include column(9);
+  @include column(4);
   @include last;
 }
 #leftcontent {
-  @include column(10);
+  @include column(5);
 }
 
 .leftmiddle {
-  @include column(16);
+  @include column(8);
+  .byline {
+    padding: 30px 0px;
+  }
 }
 
 .left, .middle, .right {
-  @include column(8);
+  @include column(4);
 }
 
 .first, .second, .third, .fourth {
-  @include column(6);
+  @include column(3);
 }
 
 .fourth, .right {

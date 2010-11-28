@@ -15,7 +15,18 @@ jQuery.fn.submitWithAjax = function() {
 
 
 $(document).ready(function() {    
-      
+	$("#twitter").getTwitter({
+		userName: "flockstreet",
+		numTweets: 5,
+		loaderText: "Loading tweets...",
+		slideIn: true,
+		slideDuration: 750,
+		showHeading: false,
+		headingText: "Latest Tweets",
+		showProfileLink: false,
+		showTimestamp: true
+	});
+			
 //signin menu on website
   $(".signin").click(function(e) {
     e.preventDefault();

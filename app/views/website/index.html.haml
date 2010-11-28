@@ -1,37 +1,47 @@
 - title("Das soziale Netzwerk für Firmen.")
+.tagline
+  %h2= link_to "Was ist flockstreet?", tour_profile_path()
+.tagline
+  %h2= link_to "Abos & Preise", plans_path()
+
+#actionbutton
+  - if $app_state == 'website'
+    =link_to "Für Beta registrieren!", register_path(), :class => "big_button call2action"
+  -else
+    =link_to "Jetzt testen!", register_path(), :class => "big_button call2action"
+ 
+- if show_title?
+  %h1=h yield(:title)
+
 
 .leftmiddle
+  %video{:src => "/images/flockstreet_movie.m4v", :controls => "", :width => "620"}  
   
-  <object width="620" height="385"><param name="movie" value="http://www.youtube.com/v/MzWKaAfuZTU?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MzWKaAfuZTU?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="620" height="385"/></object>
-  
-  %p
+  %h4.byline
     Weit hinten, hinter den
     =link_to "Aufträge erfassen", "#"
-    , fern der Länder
+    fern der Länder
     =link_to "Leads generieren", "#"
     und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in
     =link_to "Kontakte knüpfen", "#"
     an der Küste des Semantik, eines großen Sprachozeans.
-  =link_to "Rundgang machen", tour_profile_path()
+    =link_to "Take a tour.", tour_profile_path()
 .right
-  - if $app_state == 'website'
-    =link_to "Für Beta registrieren!", register_path(), :class => "big_button call2action"
-  -else
-    =link_to "Jetzt kostenlos testen!", register_path(), :class => "big_button call2action"
-
-  = render :partial => 'signedupcompanies'
-    
+  .twitterwall
+    %h3 Twitter Wall
+    #twitter
+    %h4=link_to "Folge uns auf Twitter!", "http://twitter.com/flockstreet"
   
 - content_for :columns do
   .left
-    %h3 Lieferanten
-    %p Mit flockstreet spare ich Zeit, weil ich meinen Auftrag hier einfach publiziere. Dann vergleicht ihn flockstreet automatisch mit den Firmen aus dem Netzwerk und schickt den passenden Firmen eine Info. Die kontaktieren mich dann direkt mit dem richtigen Angebot. Das geht schnell und ich hab weniger zu tun.
-    =link_to "Mehr erfahren", "#"
+    %h3 Partner & Lieferanten
+    %p  Den richtigen Partner oder Lieferanten für die Ausführung eines IT-Auftrags zu finden ist in der heutigen Zeit das A und O. Doch wie erreiche ich schnell und einfach möglichst viele Firmen, welche für die Ausführung geeignet wären? Die Antwort ist ganz einfach: flockstreet ist das Firmennetzwerk für alle Arten von IT Aufträgen.
+    %h4=link_to "Mehr erfahren", "#"
   .middle
-    %h3 mehr Aufträge
-    %p Neue Kunden zu finden ist eine Herausforderung. Mit flockstreet finden wenigstens diejenigen Kunden ohne Aufwand zu uns, welche sich für unsere Dienstleistung interessieren. Das hilft. Ich kann auch mit den Statusmeldungen ganz unkompliziert über meine Dienstleistungen schreiben. Da können plötzlich interessante Kontakte entstehen.
-    =link_to "Mehr erfahren", "#"
+    %h3 Kunden aquirieren
+    %p Neukundengewinnung ist eine grosse Herausforderung. Wie platziere und beschreibe ich meine Dienstleistung oder mein Produkt auf dem Markt? Und noch viel wichtiger, wie finden potentielle Kunden den Weg zu meinem Unternehmen? Flockstreet ebnet für Sie diesen Weg. Finden Sie hier die Möglichkeit, Ihr Unternehmen zu integrieren und Kontakte zu knüpfen.
+    %h4=link_to "Mehr erfahren", "#"
   .right
-    %h3 Netzwerk
-    %p Als Firma hat man immer mit diversen Kunden und Lieferanten zu tun. Mit flockstreet kann ich jetzt diese Firmen in mein Netzwerk aufnehmen. So sehen neue Partner gleich mit wem ich zusammen arbeite. Das fördert das Vertrauen in eine Firma, vorallem wenn sie sogar eine Firma aus meinem Netzwerk kennen. Das Netzwerk wächst übrigens, und dank den Statusmeldungen weiss ich auch immer was bei meinen Partnern so läuft.
-    =link_to "Mehr erfahren", "#"
+    %h3 Sicherheit durch Netzwerk
+    %p Sich austauschen und gemeinsam wachsen – mit flockstreet. Pflegen Sie alle Anspruchsgruppen Ihres betrieblichen Umfeldes mit einem Klick. Durch das Bilden von Netzwerken und Firmengruppen ist es potentiellen Kunden und Partnern Ihrer Unternehmung möglich, Referenzen einzusehen und Vertrauen zu gewinnen.
+    %h4=link_to "Mehr erfahren", "#"

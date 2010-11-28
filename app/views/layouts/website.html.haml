@@ -4,32 +4,19 @@
     %meta{:charset=>"UTF-8"}
     %title= h(yield(:title) || "flockstreet")
     = render :partial => 'layouts/includes'
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "modernizr-1.5.min"
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "modernizr-1.5.min", "jquery.twitter"
     = csrf_meta_tag
 
   %body
     #wrapper
-      #meta
-        .content
-          = render :partial => 'nav/user'
-        
       %header
         .content
           .logo
-            = link_to image_tag("3birds_signet.png"), root_url
-          .tagline1
-            %h2= link_to "Was ist flockstreet?", tour_profile_path()
-            Die Textarbeit für diesen Abschnitt liegt bei Marcel und Caroline
-          .tagline2
-            %h2= link_to "Abos & Preise", plans_path()
-            Hier steht ein Satz, der nicht mehr als 3 Zeilen lang ist.
+            =link_to image_tag("3owls_flockstreet_beta.png"), root_url
+          .meta
+            = render :partial => 'nav/user'
+            
       #container
-        - if show_title?
-          %h2=h yield(:title)
-      
-        - flash.each do |name, msg|
-          = content_tag :div, msg, :id => "flash_#{name}"
-      
         = yield
       #content_two-container
         #content_two
@@ -39,5 +26,7 @@
           = render 'website/footer'
       #copyright
         %footer.copyright
-          =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition"
-          &copy; Flockstreet, 2010
+          .ginetta
+            =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition"
+          .flockstreet
+            &copy; flockstreet 2010

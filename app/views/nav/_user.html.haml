@@ -1,5 +1,8 @@
+.search
+  search box goes here
+.language
+  de fr
 %nav.user
-  de | fr
   -if user_signed_in?
     = current_company.name
     <a id="settings">
@@ -9,7 +12,8 @@
   
   -else
     -unless $app_state == 'website'
-      = link_to "Login", new_user_session_path, :class => "signin dropdown transition"
+      = link_to image_tag("login_dropdown.png"), new_user_session_path, :class => "login transition"
+      
       #signin_menu.transition
         = form_tag new_user_session_path do
           = text_field_tag 'user[email]'

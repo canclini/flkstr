@@ -24,8 +24,12 @@ a.button, button, .button {
     @include fancy-button-colors(lighten($green, 10)); } }
     
 a.big_button, .big_button {
-  @include fancy-button($dark_grey, 25px, 5px);
+  @include fancy-button(#76a6a0, 25px, 3px);
+  font-family: Titillium;
+  font-weight: bold;
   text-align: center;
+  padding: 23px 40px;
+
 }
 
 a.small_button, .small_button {
