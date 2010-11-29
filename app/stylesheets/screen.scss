@@ -27,10 +27,9 @@ body {
   color: #354048;
 }
 
-a { 
+a, a:hover, a:focus, a:visited { 
   color: $orange;
 }
-a:visited { color: $orange; }
 
 h1, h2, h3, h4, h5 {
   font-family: Titillium;
@@ -374,7 +373,16 @@ input:focus, textarea:focus {
       color: $dark_grey;
     }
     li {
-      span {
+      margin-bottom: 5px;
+      .tweet {
+        background: #eef6eb;
+        .status {
+          padding: 5px;
+        }
+      }
+      .bubble {
+        height: 10px;
+        background: url(/images/twitter_bubble.png) no-repeat 0% 100%;  
       }
       a {
         text-decoration: none;

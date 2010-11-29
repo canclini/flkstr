@@ -14,7 +14,8 @@ jQuery.fn.submitWithAjax = function() {
 };
 
 
-$(document).ready(function() {    
+$(document).ready(function() {	
+	
 	$("#twitter").getTwitter({
 		userName: "flockstreet",
 		numTweets: 5,
