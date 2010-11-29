@@ -357,23 +357,23 @@ input:focus, textarea:focus {
 }
 
 .ui-autocomplete-loading { 
-  background: white url("/images/ajax-loader.gif") right center no-repeat;
+  background: white url(/images/ajax-loader.gif) right center no-repeat;
 }
 
 // WEBSITE TWITTER UPDATE LIST
 .twitterwall {
-  h3, h4 { padding-left: 10px; }
+  h3, h4 { padding-left: 20px; }
 
 #twitter {
-  margin: 0px;
   #twitter_update_list {
+    margin: 0px 0px 10px 10px;
     list-style: none;
     padding: 0px;
     a {
       color: $dark_grey;
     }
     li {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       .tweet {
         background: #eef6eb;
         .status {

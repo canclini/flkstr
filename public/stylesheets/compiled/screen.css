@@ -1381,19 +1381,16 @@ input:focus, textarea:focus {
 
 /* line 359, ../../../app/stylesheets/screen.scss */
 .ui-autocomplete-loading {
-  background: white url("/images/ajax-loader.gif") right center no-repeat;
+  background: white url(/images/ajax-loader.gif) right center no-repeat;
 }
 
 /* line 365, ../../../app/stylesheets/screen.scss */
 .twitterwall h3, .twitterwall h4 {
-  padding-left: 10px;
+  padding-left: 20px;
 }
-/* line 367, ../../../app/stylesheets/screen.scss */
-.twitterwall #twitter {
-  margin: 0px;
-}
-/* line 369, ../../../app/stylesheets/screen.scss */
+/* line 368, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list {
+  margin: 0px 0px 10px 10px;
   list-style: none;
   padding: 0px;
 }
@@ -1403,7 +1400,7 @@ input:focus, textarea:focus {
 }
 /* line 375, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 /* line 377, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet {

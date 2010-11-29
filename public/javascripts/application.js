@@ -18,9 +18,9 @@ $(document).ready(function() {
 	
 	$("#twitter").getTwitter({
 		userName: "flockstreet",
-		numTweets: 5,
+		numTweets: 4,
 		loaderText: "Loading tweets...",
-		slideIn: true,
+		slideIn: false,
 		slideDuration: 750,
 		showHeading: false,
 		headingText: "Latest Tweets",
