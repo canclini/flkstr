@@ -1,7 +1,60 @@
 nav.user {
-  
   a.login img{
     margin: 1px 0px;
+  }  
+
+  #login_menu {
+    .handler {
+      padding: 12px 12px;
+      clear: both;
+      text-align: right;
+    }
+    .input_form {
+      padding: 0 10px;
+      fieldset {
+        margin: 0 0 10px 0;
+        input[type="text"], input[type="password"], input[type="email"] {
+          width: 210px;
+          padding: 5px 8px;
+          font-size: 1.2em;
+          color: #666;
+          border: 1px solid #b1b9be;
+          background-color: #FFF;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -o-border-radius: 5px;
+          -border-radius: 5px;
+        }
+      }
+      fieldset:last-child {
+        margin: 0;
+      }
+      legend {
+        display: block;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.4;
+        color: $dark_grey;
+      }
+    }
+       -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px; 
+            border-radius: 2px; 
+      display:none;
+      background-color: white;
+      position:absolute;
+      top: 2px; 
+      right: -13px; 
+      width: 250px;
+      height: 215px;
+      z-index:100;
+      border:1px solid #b1b9be;
+      text-align:left;
+      padding:0px;
+      margin-top:5px;
+      margin-right: 0px;
+      *margin-right: -1px;
+      font-size:11px;
   }
-  
+
 }

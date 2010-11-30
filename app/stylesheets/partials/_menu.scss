@@ -1,37 +1,6 @@
 // signin menu stuff
 //http://aext.net/2009/08/perfect-sign-in-dropdown-box-likes-twitter-with-jquery/
 
-nav.user a.signin {
-    background:$dark_grey;
-    padding:4px 6px 6px;
-    text-decoration:none;
-    font-weight:bold;
-    color:#fff;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-}
-nav.user a.signin:hover {
-    background:$dark_grey;
-}
-nav.user a.signin, nav.user a.signin:hover {
-    *background-position:0 3px!important;
-}
-
-a.signin {
-    position:relative;
-    margin-left:3px;
-}
-a.signin span {
-    background-repeat:no-repeat;
-    background-position:100% 50%;
-    padding:4px 16px 6px 0;
-}
-nav.user a.menu-open {
-    background:#ddeef6!important;
-    color:#666!important;
-    outline:none;
-}
 #small_signup {
     display:inline;
     float:none;
@@ -40,39 +9,6 @@ nav.user a.menu-open {
     width:170px;
 }
 
-#signin_menu {
-    -moz-border-radius-topleft:4px;
-    -moz-border-radius-bottomleft:4px;
-    -moz-border-radius-bottomright:4px;
-    -webkit-border-top-left-radius:4px;
-    -webkit-border-bottom-left-radius:4px;
-    -webkit-border-bottom-right-radius:4px;
-    display:none;
-    background-color:$dark_green;
-    position:absolute;
-    width:210px;
-    z-index:100;
-    border:1px transparent;
-    text-align:left;
-    padding:12px;
-    top: 24.5px; 
-    right: 0px; 
-    margin-top:5px;
-    margin-right: 0px;
-    *margin-right: -1px;
-    font-size:11px;
-}
-
-#signin_menu input[type=text], #signin_menu input[type=email], #signin_menu input[type=password] {
-    display:block;
-    -moz-border-radius:2px;
-    -webkit-border-radius:2px;
-    border:1px solid #ACE;
-    font-size:11px;
-    margin:0 0 5px;
-    padding:5px;
-    width:203px;
-}
 // MESSAGE MENU
 #message_menu {
     right: 10px; 

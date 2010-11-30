@@ -26,14 +26,25 @@ a.button, button, .button {
 a.big_button, .big_button {
   @include fancy-button(#76a6a0, 25px, 3px);
   font-family: Titillium;
-  font-weight: bold;
+  font-weight: 800;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3); 
+  font-size: 30px;
   text-align: center;
   padding: 23px 40px;
-
+}
+a.big_button:active, .big_button:active {
+  font-size: 30px;
+  text-align: center;
+  padding: 22px 39px;  
 }
 
 a.small_button, .small_button {
   @include fancy-button($dark_grey, 10px, 2px);
+  text-align: center;
+}
+
+a.login_button, .login_button {
+  @include fancy-button($orange, 10px, 2px);
   text-align: center;
 }
 

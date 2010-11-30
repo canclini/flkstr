@@ -1,3 +1,6 @@
+@font-face { font-family: Titillium; font-weight: 100; src: url('/fonts/TitilliumText22L001.otf'); }
+@font-face { font-family: Titillium; font-weight: 300; src: url('/fonts/TitilliumText22L002.otf'); }
 @font-face { font-family: Titillium; src: url('/fonts/TitilliumText22L003.otf'); } 
-@font-face { font-family: Titillium; font-weight: bold; src: url('/fonts/TitilliumText22L005.otf'); }
-@font-face { font-family: Titillium; font-weight: 200; src: url('/fonts/TitilliumText22L001.otf'); }
+@font-face { font-family: Titillium; font-weight: bold; src: url('/fonts/TitilliumText22L004.otf'); }
+@font-face { font-family: Titillium; font-weight: 500; src: url('/fonts/TitilliumText22L005.otf'); }
+@font-face { font-family: Titillium; font-weight: 800; src: url('/fonts/TitilliumText22L006.otf'); }

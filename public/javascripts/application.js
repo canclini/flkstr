@@ -29,19 +29,19 @@ $(document).ready(function() {
 	});
 			
 //signin menu on website
-  $(".signin").click(function(e) {
+  $(".login").click(function(e) {
     e.preventDefault();
-    $("#signin_menu").toggle();
-    $(".signin").toggleClass("menu-open");
+    $("#login_menu").toggle();
+    $(".login").toggleClass("menu-open");
   });
 
-  $("#signin_menu").mouseup(function() {
+  $("#login_menu").mouseup(function() {
     return false
   });
   $(document).mouseup(function(e) {
-    if($(e.target).parent("a.signin").length==0) {
-      $(".signin").removeClass("menu-open");
-      $("#signin_menu").hide();
+    if($(e.target).parent("a.login").length==0) {
+      $(".login").removeClass("menu-open");
+      $("#login_menu").hide();
     }
   });
 

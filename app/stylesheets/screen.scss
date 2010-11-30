@@ -22,8 +22,8 @@
 //@include font-face("Titillium", font-files("/fonts/TitilliumText22L002.otf", opentype,"/fonts/TitilliumText22L004.otf", opentype));
 
 body {
-  font-family: Giorga;
-  font-size: 1em;
+  font-family: Georgia;
+  font-size: 15px;
   color: #354048;
 }
 
@@ -34,52 +34,64 @@ a, a:hover, a:focus, a:visited {
 h1, h2, h3, h4, h5 {
   font-family: Titillium;
   color: #435159;
+  margin-bottom: 6px;
+  text-shadow: 0px 0px 0px #FFF; 
+
+  
   line-height: 1.5;
-  a {
+  a, a:visited, a:hover {
     text-decoration: none;
     // create a special underline for the links with more space between text and line.
     background: url(/images/underline_black.png) repeat-x 100% 100%;
-    padding-bottom: 3px;
+    padding-bottom: 2px;
     white-space: nowrap;
   }
 }
-
 h3, h4 {
-  a {
-    background: url(/images/underline_orange.png) repeat-x 100% 100%;
-  }
-  
+  // create a special underline for the links with more space between text and line.
+  a { background: url(/images/underline_orange.png) repeat-x 100% 100%; }
 }
 
-h1 { //BIG Title on Startpage
-  font-size: 2.4em;
+h1  { //BIG Title on Startpage
+  font-weight: 300;
+  color: $dark_grey;
+  font-size: 40px;
+  text-decoration: underline;
 }
 
 h2 { // taglines
-  font-weight: bold;
-  a { color: #435159; }
-  a:visited { color: #435159; }
+  font-weight: 500;
+  color: $dark_grey;
+  font-size: 30px;
+  a, a:visited, a:hover { color: $dark_grey; }
 }
 
 h3 { // 3 column stuff on website
-  font-weight: bold; 
+  font-weight: 500; 
+  color: $dark_grey;
+  font-size: 26px;
 }
 
 h4 { //byline below movie, link "follow on twitter"
-  font-size: 1.25em;
+  font-size: 20px;
+
 }
 
 h5 { // Footer white on grey
   color: white;
-  font-weight: bold;
-  font-size: 1.6em;
-  text-shadow: 1px 1px 3px #222; 
+  font-weight: 800;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px #000; 
   margin: 0px 0px 20px 0px;
 }
 
 nav.footer {
   color: white;
+  font-weight: 500;
+  font-size: 15px;
+  text-shadow: 1px 1px 1px #000; 
   margin: 0px;
+  
   ul {
     @include no-bullets;
     padding: 0px;
@@ -87,25 +99,25 @@ nav.footer {
       margin-top: 5px;
     }
   }
-  a {
+  a {    
     font-family: Titillium;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 0.9em;
     color: white;
     text-decoration: none;
   }
-
 }
 footer.copyright {
   font-family: Titillium;
-  font-size: 0.8em;
+  font-size: 13px;
   color: #cfd6d0;
-  text-shadow: none;
+  text-shadow: 1px 1px 1px #000; 
+  
   a {
-    font-size: 0.9em;
+    font-size: 12px;
     color: #cfd6d0;
+    text-shadow: 1px 1px 1px #000; 
     text-decoration: none;
-    text-shadow: none;
   }
   a:hover {
     color: #fff;
@@ -289,10 +301,10 @@ a.linkblock:hover, .actionbox_entry:hover {
 
 // CSS3 stuff
 .transition {
-  -o-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; 
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; 
 }
 
 .box_shadow {
@@ -369,23 +381,30 @@ input:focus, textarea:focus {
     margin: 0px 0px 10px 10px;
     list-style: none;
     padding: 0px;
+    font-size: 14px;
+    font-family: Titillium;
+//    font-weight: 500;
+    color: $dark_grey;      
     a {
-      color: $dark_grey;
-    }
+      color: #7b8c96;      
+      text-decoration: none;
+      }
     li {
       margin-bottom: 10px;
       .tweet {
         background: #eef6eb;
         .status {
-          padding: 5px;
+          padding: 10px;
+          a {
+            color: $dark_grey;
+            font-weight: 800;
+            text-decoration: underline;
+            }
         }
       }
       .bubble {
         height: 10px;
         background: url(/images/twitter_bubble.png) no-repeat 0% 100%;  
-      }
-      a {
-        text-decoration: none;
       }
     }
   }

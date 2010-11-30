@@ -9,7 +9,7 @@ function twitterCallback2(twitters) {
     }).replace(/\B@([_a-z0-9]+)/ig, function(reply) {
       return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
     });
-    statusHTML.push('<li><div class="tweet"><div class="status">'+status+'</div></div><div class="bubble"></div> <a href="http://twitter.com/'+username+'/statuses/'+twitters[i].id+'">'+nice_datetime(twitters[i].created_at)+'</a></li>');
+    statusHTML.push('<li><div class="tweet"><div class="status">'+status+'</div></div><div class="bubble"></div> <a  href="http://twitter.com/'+username+'/statuses/'+twitters[i].id+'">'+nice_datetime(twitters[i].created_at)+'</a></li>');
   }
   document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
 }
