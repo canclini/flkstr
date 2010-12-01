@@ -448,7 +448,7 @@ a.big_button, .big_button {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   font-size: 30px;
   text-align: center;
-  padding: 23px 40px;
+  padding: 23px 35px;
 }
 /* line 172, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
 a.big_button::-moz-focus-inner, .big_button::-moz-focus-inner {
@@ -527,7 +527,7 @@ a.big_button:active, a.big_button:active:visited, .big_button:active, .big_butto
 a.big_button:active, .big_button:active {
   font-size: 30px;
   text-align: center;
-  padding: 22px 39px;
+  padding: 22px 34px;
 }
 
 /* line 41, ../../../app/stylesheets/buttons.scss */
@@ -558,6 +558,8 @@ a.small_button, .small_button {
   background-image: linear-gradient(top, #96a5b0 0%, #647886 10%, #3d4951 50%, #364148 50%, #4c5b65 100%);
   border-color: #222a2e;
   text-shadow: #071117 0px 1px 1px;
+  text-size: 12px;
+  font-weight: 500;
   text-align: center;
 }
 /* line 172, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
@@ -633,7 +635,7 @@ a.small_button:active, a.small_button:active:visited, .small_button:active, .sma
   color: white;
 }
 
-/* line 46, ../../../app/stylesheets/buttons.scss */
+/* line 48, ../../../app/stylesheets/buttons.scss */
 a.login_button, .login_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
   background: url('/images/button_bg.png?1280252158') repeat-x bottom left;
@@ -645,15 +647,15 @@ a.login_button, .login_button {
   text-decoration: none;
   border-style: solid;
   font-weight: bold;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -o-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  border-radius: 2px;
-  font-size: 10px;
-  line-height: 12px;
-  padding: 2px 8px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 3px 12px;
   border-width: 1px;
   background-color: #ff8e07;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f8dab6), color-stop(10%, #f0af62), color-stop(50%, #e28415), color-stop(50%, #d47c14), color-stop(100%, #eb9530));
@@ -684,12 +686,12 @@ a.login_button.disabled:hover, a.login_button.disabled:focus, a.login_button[dis
 }
 /* line 152, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
 a.login_button:active, .login_button:active {
-  padding: 1px 7px;
+  padding: 2px 11px;
   border-width: 2px;
 }
 /* line 156, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
 a.login_button.disabled:active, a.login_button[disabled], .login_button.disabled:active, .login_button[disabled] {
-  padding: 2px 8px;
+  padding: 3px 12px;
   border-width: 1px;
 }
 /* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
@@ -736,7 +738,7 @@ a.login_button:active, a.login_button:active:visited, .login_button:active, .log
   color: white;
 }
 
-/* line 51, ../../../app/stylesheets/buttons.scss */
+/* line 53, ../../../app/stylesheets/buttons.scss */
 .search_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
   background: url('/images/button_bg.png?1280252158') repeat-x bottom left;

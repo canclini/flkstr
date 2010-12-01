@@ -19,11 +19,12 @@
           = link_to image_tag("login_dropdown.png"), new_user_session_path, :class => "login transition"
         .input_form        
           = form_tag new_user_session_path do
-            = field_set_tag 'Benutzername' do
-              = text_field_tag 'user[email]'
+            = field_set_tag 'E-Mail' do
+              = text_field_tag 'user[email]', nil, :type => 'email'
             = field_set_tag 'Passwort' do
               = password_field_tag 'user[password]'
-            %button.login_button Login
+            .button_form
+              %button.login_button Login
       
   
   - if user_signed_in?    

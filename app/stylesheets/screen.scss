@@ -49,14 +49,13 @@ h1, h2, h3, h4, h5 {
 }
 h3, h4 {
   // create a special underline for the links with more space between text and line.
-  a { background: url(/images/underline_orange.png) repeat-x 100% 100%; }
+  a, a:visited, a:hover { background: url(/images/underline_orange.png) repeat-x 100% 100%; }
 }
 
 h1  { //BIG Title on Startpage
   font-weight: 300;
   color: $dark_grey;
   font-size: 40px;
-  text-decoration: underline;
 }
 
 h2 { // taglines
@@ -121,9 +120,18 @@ footer.copyright {
   }
   a:hover {
     color: #fff;
-  }
-  
+  }  
 }
+
+.green_box {
+  background: #f5fdf2;
+  padding: 10px;
+  width: 630px;
+  margin-bottom: 4px;
+  overflow: visible;
+}
+
+
 // PLANS
 #plans {
   @include column(11);
@@ -311,61 +319,6 @@ a.linkblock:hover, .actionbox_entry:hover {
    -moz-box-shadow: 2px 2px 6px #222222; 
 -webkit-box-shadow: 2px 2px 6px #222222;
         box-shadow: 2px 2px 6px #222222;
-}
-
-input[type="text"], input[type="email"], textarea {
-//  background-color: $light_green;
-}
-
-input:hover, textarea:hover {
-//  background-color: $dark_green;
-}
-input:focus, textarea:focus {
-//  border-color: $dark_green;
-  outline: none;
-}
-
-// SIMPLE_FORM stuff (from railscasts.com)
-.simple_form label {
-  float: left;
-  width: 100px;
-  text-align: right;
-  margin: 2px 10px;
-}
-
-.simple_form div.input {
-  margin-bottom: 10px;
-}
-
-.simple_form div.boolean, .simple_form input[type='submit'] {
-  margin-left: 120px;
-}
-
-.simple_form div.boolean label, .simple_form label.collection_radio {
-  float: none;
-  margin: 0;
-}
-
-.simple_form label.collection_radio {
-  margin-right: 10px;
-  margin-left: 2px;
-}
-
-.simple_form .error {
-  clear: left;
-  margin-left: 120px;
-  font-size: 12px;
-  color: #D00;
-  display: block;
-}
-
-.simple_form .hint {
-  clear: left;
-  margin-left: 120px;
-  font-size: 12px;
-  color: #555;
-  display: block;
-  font-style: italic;
 }
 
 .ui-autocomplete-loading { 

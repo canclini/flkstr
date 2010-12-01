@@ -27,6 +27,11 @@ $(document).ready(function() {
 		showProfileLink: false,
 		showTimestamp: true
 	});
+	
+	$('input').focus(function() {
+	  $(".hint").hide();
+	  $(this).parent().children('.hint').show();
+	});
 			
 //signin menu on website
   $(".login").click(function(e) {

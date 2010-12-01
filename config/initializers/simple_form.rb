@@ -6,7 +6,7 @@ SimpleForm.setup do |config|
   # config.components = [ :label_input, :hint, :error ]
 
   # Default tag used on hints.
-  # config.hint_tag = :span
+  config.hint_tag = :div
 
   # Default tag used on errors.
   # config.error_tag = :span
@@ -18,7 +18,7 @@ SimpleForm.setup do |config|
   # config.error_notification_tag = :p
 
   # You can wrap all inputs in a pre-defined tag.
-  # config.wrapper_tag = :div
+  config.wrapper_tag = :fieldset
 
   # CSS class to add to all wrapper tags.
   # config.wrapper_class = :input
@@ -27,10 +27,11 @@ SimpleForm.setup do |config|
   # config.wrapper_error_class = :field_with_errors
 
   # How the label text should be generated altogether with the required text.
-  # config.label_text = lambda { |label, required| "#{required} #{label}" }
+  #config.label_text = lambda { |label, required| "#{required} #{label}" }
+  config.label_text = lambda { |label, required| "#{label}" }
 
   # Whether attributes are required by default (or not). Default is true.
-  # config.required_by_default = true
+  #config.required_by_default = false
 
   # Series of attemps to detect a default label method for collection.
   # config.collection_label_methods = [ :to_label, :name, :title, :to_s ]

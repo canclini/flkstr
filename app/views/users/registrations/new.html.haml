@@ -1,23 +1,23 @@
-%h2 Kostenlose Anmeldung
-- if $appstate = 'website'
+%h1 Grossartig: Los geht's
+- if $app_state == 'website'
   %p flockstreet ist noch nicht ganz fertig. Bald beginnen wir mit der Beta Phase. Sie können sich bereits jetzt dafür anmelden. Ihre Firma und Ihr persönlicher Benutzer werden dann für sie bereit sein. Sobald die Beta Phase los geht werden wir sie informieren. Besten Dank für das Interesse!
   
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = error_messages_for :company, :header_message => "Hoppla!", :message => "Da gab es Probleme beim erfassen der Firma"
 
-  = f.simple_fields_for :company do |c|
-    = c.input :name, :label => "Firmenname", :input_html => { :class => 'transition' }
-  %hr
-  %h3 Ihre Login-Daten
-  = f.input :email, :hint => 'ist auch gleich der Username', :input_html => {:class => 'transition', :placeholder => 'peter.meier@beispiel.ch' }
-  = f.input :password, :input_html => { :class => 'transition' }
-  = f.input :password_confirmation, :input_html => { :class => 'transition' }
+  .green_box
+    %h3 Wo arbeiten Sie?
+    = f.simple_fields_for :company do |c|
+      = c.input :name, :label => "Firmenname",:hint => 'zu registrierende Firma', :input_html => { :class => 'transition' }
+  .green_box
+    %h3 Ihre Login-Daten
+    = f.input :email, :label => "Mailadresse", :hint => 'ist auch gleich der Username', :input_html => {:class => 'transition', :placeholder => 'peter.meier@beispiel-ag.ch' }
+    = f.input :password, :label => "Password", :input_html => { :class => 'transition' }
+    = f.input :password_confirmation, :label => "Passwortbestätigung", :input_html => { :class => 'transition' }
 
-
-  %p
-    Wenn Sie auf "Konto erstellen" drücken, bestätigen sie, die
-    =link_to "Allgemeinen Geschäftsbestimmungen", terms_path()
-    gelesen und akzeptiert zu haben.
+    %p
+      Ich akzeptiere die Datenschutzbestimmungen und
+      =link_to "AGBs", terms_path()
 
 
   %p= f.submit "Konto erstellen", :class => "button"
