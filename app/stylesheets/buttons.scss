@@ -12,14 +12,6 @@ a.button, button, .button {
   vertical-align: middle;
   &.light {
     @include fancy-button-colors(#bbbbbb); }
-  &.green {
-    @include fancy-button-colors($green); }
-  &.blue {
-    @include fancy-button-colors($blue); }
-  &.red {
-    @include fancy-button-colors($red); }
-  &.yellow {
-    @include fancy-button-colors(darken(desaturate(yellow, 35), 5)); }
   &.edit {
     @include fancy-button-colors(lighten($green, 10)); } }
     
@@ -34,7 +26,6 @@ a.big_button, .big_button {
 }
 a.big_button:active, .big_button:active {
   font-size: 30px;
-  text-align: center;
   padding: 22px 34px;  
 }
 
@@ -48,6 +39,17 @@ a.small_button, .small_button {
 a.login_button, .login_button {
   @include fancy-button($orange, 15px, 3px);
   text-align: center;
+}
+
+a.green_button, .green_button {
+  @include fancy-button(#80b8b3, 15px, 3px);
+  font-family: Titillium;
+  font-weight: 800;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3); 
+  padding: 9px 25px 8px 25px;
+}
+a.green_button:active, .green_button:active {
+  padding: 8px 24px 7px 24px;  
 }
 
 .search_button {

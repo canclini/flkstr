@@ -133,32 +133,49 @@ footer.copyright {
 
 // PLANS
 #plans {
-  @include column(11);
-  @include push(1);
-  @include last;
-}
-#plans .normal {
-	border: 1px solid #999;
-	height: 270px;
-	@include rounded(20px);
-	@include column(3);  
-	text-align: center;
+  padding: 0px;
 }
 
-#plans ul {
-  list-style: none;
-}
+.plan {
+	height: 400px;
+	float: left;
+	font-family: Titillium;
+  font-size: 15px;
+	color: #354048;
+  h1  { //Abo Name
+    font-weight: 800;
+    line-height: 50px;
+  }
 
-.normal h3 {
-	margin: 0 0 15px 0;
-	padding: 0 0 7px 0;
-	font-size: 14px;
-	font-weight: bold;
-	text-transform: uppercase;
-	border-bottom: 1px solid #ccc;
-	color: #73a1c7;
-}
+  h2 { // price
+    font-weight: 100;
+    line-height: 20px;
+  }
 
+  .box {
+    width: 280px;
+	  background: #f5fdf3;
+	  padding: 10px;
+  	margin: 0 20px 4px 0;
+  	ul {
+      @include no-bullets;
+      padding: 0px;
+      line-height: 30px;
+      li {
+	      margin-top: 5px;
+        span {
+          color: #80b8b3;
+        }
+      }
+    }
+  }  
+  .box.last {
+    margin-right: 0px;
+  }
+  .box.distinguish {
+    background: $light_green;
+  } 
+}
 
 // NAVIGATION
 #maintopics {

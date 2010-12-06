@@ -1,8 +1,21 @@
 - title( t('plans.title'))
-%p= t('plans.paragraph')
-= link_to t('plans.try'), register_path, :class => 'big_button'
+.toplinks
+  .tagline
+    %h2= link_to t('startpage.tagline1'), tour_profile_path()
+  .tagline
+    %h2= link_to t('startpage.tagline2'), plans_path()
+
+- if show_title?
+  %h1=h yield(:title)
+  
+  
+%h4.byline
+  Weit hinten, hinter den
+  =link_to "Aufträge erfassen", "#"
+  fern der Länder
+  =link_to "Leads generieren", "#"
+  und Konsonantien leben die Blindtexte.
 
 #plans
   - for plan in [:scale, :connect, :ready] do
-    .normal
-      = render :partial => "#{plan}"
+    = render :partial => "#{plan}"
