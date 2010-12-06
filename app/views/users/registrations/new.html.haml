@@ -14,10 +14,11 @@
     = f.input :email, :label => "Mailadresse", :hint => 'ist auch gleich der Username', :input_html => {:class => 'transition', :placeholder => 'peter.meier@beispiel-ag.ch' }
     = f.input :password, :label => "Password", :input_html => { :class => 'transition' }
     = f.input :password_confirmation, :label => "Passwortbestätigung", :input_html => { :class => 'transition' }
-
-    %p
-      Ich akzeptiere die Datenschutzbestimmungen und
+    = f.label "AGB", :class => "uppercase"
+    = check_box(:user, :terms_of_service)
+    %span
+      Ich akzeptiere die Datenschutz- bestimmungen und
       =link_to "AGBs", terms_path()
 
 
-  %p= f.submit "Konto erstellen", :class => "button"
+  = f.submit "Konto erstellen", :class => "register_button"

@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(:version => 20101012190055) do
     t.datetime "logo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "access_token"
+    t.string   "access_secret"
     t.boolean  "logo_processing",   :default => false
   end
 

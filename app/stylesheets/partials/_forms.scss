@@ -15,22 +15,46 @@ input[type="text"], input[type="password"], input[type="email"] {
   -o-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; 
-  
+  transition: all 0.3s ease-out;
 }
 
-input[type="password"]:focus, input[type="text"]:focus, input[type="email"]:focus {
+input[type="checkbox"]:focus, input[type="password"]:focus,
+input[type="text"]:focus, input[type="email"]:focus {
   border: 1px solid $orange;
   outline: none;
 }
 
-.simple_form label {
-  font-family: Titillium;
-  display: block;
-  font-size: 15px;
-  color: $dark_grey;
+input[type="checkbox"] {
+  margin: 0 0 15px 0;
+  font-size: 1.2em;
+  width: 25px;
 }
 
+.simple_form label, .simple_form span {
+  font-family: Titillium;
+  display: block;
+  font-size: 16px;
+  color: $dark_grey;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.simple_form input[type='submit'] {
+  margin-top: 30px;
+  margin-left: 300px;
+}
+
+.hint {
+  background: url(/images/info_button.png) no-repeat 0% 60%;
+  padding-left: 25px;
+  padding-top: 8px;
+  display: none;
+  margin-left: 650px;
+  color: $dark_grey;
+  font-family: Titillium;
+  width: 250px;
+}
 
 // SIMPLE_FORM stuff (from railscasts.com)
 .simple_form input {
@@ -49,8 +73,8 @@ input[type="password"]:focus, input[type="text"]:focus, input[type="email"]:focu
   margin-bottom: 10px;
 }
 
-.simple_form div.boolean, .simple_form input[type='submit'] {
-  margin-left: 120px;
+.simple_form div.boolean {
+  margin-left: 180px;
 }
 
 .simple_form div.boolean label, .simple_form label.collection_radio {
@@ -69,15 +93,4 @@ input[type="password"]:focus, input[type="text"]:focus, input[type="email"]:focu
   font-size: 12px;
   color: #D00;
   display: block;
-}
-
-.hint {
-  background: url(/images/info_button.png) no-repeat 0% 60%;
-  padding-left: 25px;
-  padding-top: 8px;
-  display: none;
-  margin-left: 650px;
-  color: $dark_grey;
-  font-family: Titillium;
-  width: 250px;
 }
