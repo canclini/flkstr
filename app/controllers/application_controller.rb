@@ -5,9 +5,10 @@ class ApplicationController < ActionController::Base
 
   helper :all
   
-  before_filter :set_user_language, :app_state
+  before_filter :set_locale, :app_state
   
-  helper_method :flockstreet?, :current_company, :no_user!, :needs_company!, :app_state
+  helper_method :flockstreet?, :current_company, :no_user!, :needs_company!, :app_state,
+                :available_locales, :current_locale?, :current_page_path
   
   def after_sign_in_path_for(resource_or_scope)
       dashboard_url
@@ -46,9 +47,27 @@ class ApplicationController < ActionController::Base
       redirect_to root_url
     end
   end
+
+  def set_locale
+    # update session if passed
+    session[:locale] = params[:locale] if params[:locale]
+
+    # set locale based on session or default 
+    I18n.locale = session[:locale] || I18n.default_locale
+    logger.debug "* Locale set to '#{I18n.locale}'"
+  end
   
-  def set_user_language
-    I18n.locale = current_user.language if user_signed_in?
+  def available_locales
+    #I18n.available_locales.map(&:to_s).sort
+    ["de","fr"]
+  end
+
+  def current_locale?(l)
+    l.to_sym == I18n.locale.to_sym
+  end
+  
+  def current_page_path(options={})
+    url_for( {:controller => self.controller_name, :action => self.action_name}.merge(options) )
   end
   
   def app_state

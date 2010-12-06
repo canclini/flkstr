@@ -6,7 +6,7 @@ Flockstreet::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "users/registrations"}
 
   resources :products, :requests, :updates, :settings
-
+  
   # singular resource definition for search
   resource :search, :controller => 'search'
     
@@ -37,7 +37,7 @@ Flockstreet::Application.routes.draw do
       get :actionbox
     end
   end
-    
+  
   # twitter
   get "twitter/auth"
   get "twitter/signin"
@@ -70,5 +70,7 @@ Flockstreet::Application.routes.draw do
   match "plans" => "plans#index", :as => :plans
   
   # the famous root url
-  root :to => "website#index"
+  match "/(:locale)" => "website#index", :as => :root
+#  root :to => "website#index"
+
 end

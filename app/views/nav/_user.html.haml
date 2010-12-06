@@ -1,7 +1,10 @@
 .search
   //search box goes here
 .language
-  de fr
+  - available_locales.each do |locale|
+    = link_to_unless current_locale?(locale), locale, current_page_path(:locale => locale)
+    = '|' unless locale == available_locales.last
+
 %nav.user
   -if user_signed_in?
     = current_company.name

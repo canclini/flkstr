@@ -1,0 +1,28 @@
+# Website localisation stuff.. everything without login
+# 
+
+de:
+  startpage:
+    title: "Das soziale Netzwerk für Firmen."
+    tagline1: "Was ist flockstreet?"
+    tagline2: "Abos & Preise"
+    register_beta: "Für Beta registrieren!"
+    try: "Jetzt testen!"
+    twitter: "Folge uns auf Twitter!"
+
+  teaser:
+    link: "Mehr erfahren"
+    left:
+      title: "Partner & Lieferanten"
+      paragraph: "Den richtigen Partner oder Lieferanten für die Ausführung eines IT-Auftrags zu finden ist in der heutigen Zeit das A und O. Doch wie erreiche ich schnell und einfach möglichst viele Firmen, welche für die Ausführung geeignet wären? Die Antwort ist ganz einfach: flockstreet ist das Firmennetzwerk für alle Arten von IT Aufträgen."
+    middle:
+      title: "Kunden aquirieren"
+      paragraph: "Neukundengewinnung ist eine grosse Herausforderung. Wie platziere und beschreibe ich meine Dienstleistung oder mein Produkt auf dem Markt? Und noch viel wichtiger, wie finden potentielle Kunden den Weg zu meinem Unternehmen? Flockstreet ebnet für Sie diesen Weg. Finden Sie hier die Möglichkeit, Ihr Unternehmen zu integrieren und Kontakte zu knüpfen."
+    right:
+      title: "Sicherheit durch Netzwerk"
+      paragraph: "Sich austauschen und gemeinsam wachsen – mit flockstreet. Pflegen Sie alle Anspruchsgruppen Ihres betrieblichen Umfeldes mit einem Klick. Durch das Bilden von Netzwerken und Firmengruppen ist es potentiellen Kunden und Partnern Ihrer Unternehmung möglich, Referenzen einzusehen und Vertrauen zu gewinnen."
+  
+  plans:
+    title: "Abos & Preise"
+    try: "Jetzt kostenlos mitmachen"
+    paragraph: "Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans."

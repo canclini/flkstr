@@ -1,14 +1,14 @@
-- title("Das soziale Netzwerk für Firmen.")
+- title(t('startpage.title'))
 .tagline
-  %h2= link_to "Was ist flockstreet?", tour_profile_path()
+  %h2= link_to t('startpage.tagline1'), tour_profile_path()
 .tagline
-  %h2= link_to "Abos & Preise", plans_path()
+  %h2= link_to t('startpage.tagline2'), plans_path()
 
 #actionbutton
   - if $app_state == 'website'
-    =link_to "Für Beta registrieren!", register_path(), :class => "big_button call2action"
+    =link_to t('startpage.register_beta'), register_path(), :class => "big_button call2action"
   -else
-    =link_to "Jetzt testen!", register_path(), :class => "big_button call2action"
+    =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
  
 - if show_title?
   %h1=h yield(:title)
@@ -30,20 +30,20 @@
   .twitterwall
     %h3 Twitter Wall
     #twitter
-    %h4=link_to "Folge uns auf Twitter!", "http://twitter.com/flockstreet"
+    %h4=link_to t('startpage.twitter'), "http://twitter.com/flockstreet"
   
 - content_for :columns do
   .left
-    %h3 Partner & Lieferanten
-    %p  Den richtigen Partner oder Lieferanten für die Ausführung eines IT-Auftrags zu finden ist in der heutigen Zeit das A und O. Doch wie erreiche ich schnell und einfach möglichst viele Firmen, welche für die Ausführung geeignet wären? Die Antwort ist ganz einfach: flockstreet ist das Firmennetzwerk für alle Arten von IT Aufträgen.
+    %h3= t('teaser.left.title')
+    %p= t('teaser.left.paragraph')
     %br
-    %h4=link_to "Mehr erfahren", "#"
+    %h4=link_to t('teaser.link'), "#"
   .middle
-    %h3 Kunden aquirieren
-    %p Neukundengewinnung ist eine grosse Herausforderung. Wie platziere und beschreibe ich meine Dienstleistung oder mein Produkt auf dem Markt? Und noch viel wichtiger, wie finden potentielle Kunden den Weg zu meinem Unternehmen? Flockstreet ebnet für Sie diesen Weg. Finden Sie hier die Möglichkeit, Ihr Unternehmen zu integrieren und Kontakte zu knüpfen.
-    %h4=link_to "Mehr erfahren", "#"
+    %h3= t('teaser.middle.title')
+    %p= t('teaser.middle.paragraph')
+    %h4=link_to t('teaser.link'), "#"
   .right
-    %h3 Sicherheit durch Netzwerk
-    %p Sich austauschen und gemeinsam wachsen – mit flockstreet. Pflegen Sie alle Anspruchsgruppen Ihres betrieblichen Umfeldes mit einem Klick. Durch das Bilden von Netzwerken und Firmengruppen ist es potentiellen Kunden und Partnern Ihrer Unternehmung möglich, Referenzen einzusehen und Vertrauen zu gewinnen.
+    %h3= t('teaser.right.title')
+    %p=t('teaser.right.paragraph')
     %br
-    %h4=link_to "Mehr erfahren", "#"
+    %h4=link_to t('teaser.link'), "#"

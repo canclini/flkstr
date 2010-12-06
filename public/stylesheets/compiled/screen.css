@@ -1055,7 +1055,7 @@ footer.copyright a:hover {
   overflow: visible;
 }
 
-/* line 136, ../../../app/stylesheets/screen.scss */
+/* line 135, ../../../app/stylesheets/screen.scss */
 #plans {
   display: inline;
   float: left;
@@ -1072,7 +1072,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 141, ../../../app/stylesheets/screen.scss */
+/* line 140, ../../../app/stylesheets/screen.scss */
 #plans .normal {
   border: 1px solid #999;
   height: 270px;
@@ -1099,12 +1099,12 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 149, ../../../app/stylesheets/screen.scss */
+/* line 148, ../../../app/stylesheets/screen.scss */
 #plans ul {
   list-style: none;
 }
 
-/* line 153, ../../../app/stylesheets/screen.scss */
+/* line 152, ../../../app/stylesheets/screen.scss */
 .normal h3 {
   margin: 0 0 15px 0;
   padding: 0 0 7px 0;
@@ -1115,17 +1115,17 @@ footer.copyright a:hover {
   color: #73a1c7;
 }
 
-/* line 166, ../../../app/stylesheets/screen.scss */
+/* line 165, ../../../app/stylesheets/screen.scss */
 #maintopics a {
   font-size: 1.5em;
   color: black;
 }
-/* line 170, ../../../app/stylesheets/screen.scss */
+/* line 169, ../../../app/stylesheets/screen.scss */
 #maintopics span {
   margin: 0px 10px;
 }
 
-/* line 176, ../../../app/stylesheets/screen.scss */
+/* line 175, ../../../app/stylesheets/screen.scss */
 #active {
   height: 40px;
   width: 190px;
@@ -1141,32 +1141,32 @@ footer.copyright a:hover {
   transition: all 0.3s ease-out;
 }
 
-/* line 191, ../../../app/stylesheets/screen.scss */
+/* line 190, ../../../app/stylesheets/screen.scss */
 #active.menu_create, #active.menu_action {
   top: 200px;
 }
 
-/* line 192, ../../../app/stylesheets/screen.scss */
+/* line 191, ../../../app/stylesheets/screen.scss */
 #active.menu_open, #active.menu_first, #active.menu_new, #active.menu_in {
   top: 250px;
 }
 
-/* line 193, ../../../app/stylesheets/screen.scss */
+/* line 192, ../../../app/stylesheets/screen.scss */
 #active.menu_assigned, #active.menu_second, #active.menu_accepted, #active.menu_out {
   top: 300px;
 }
 
-/* line 194, ../../../app/stylesheets/screen.scss */
+/* line 193, ../../../app/stylesheets/screen.scss */
 #active.menu_archived, #active.menu_third, #active.menu_won {
   top: 350px;
 }
 
-/* line 195, ../../../app/stylesheets/screen.scss */
+/* line 194, ../../../app/stylesheets/screen.scss */
 #active.menu_lost, #active.menu_fourth {
   top: 390px;
 }
 
-/* line 198, ../../../app/stylesheets/screen.scss */
+/* line 197, ../../../app/stylesheets/screen.scss */
 .biglist .entry {
   border-bottom: 1px solid black;
   height: 30px;
@@ -1174,7 +1174,7 @@ footer.copyright a:hover {
   padding-top: 8px;
 }
 
-/* line 204, ../../../app/stylesheets/screen.scss */
+/* line 203, ../../../app/stylesheets/screen.scss */
 .biglist .heading {
   height: 30px;
   font-weight: bold;
@@ -1182,12 +1182,12 @@ footer.copyright a:hover {
   padding-top: 8px;
 }
 
-/* line 211, ../../../app/stylesheets/screen.scss */
+/* line 210, ../../../app/stylesheets/screen.scss */
 .biglist .entry:hover {
   background: #e4f0e0;
 }
 
-/* line 215, ../../../app/stylesheets/screen.scss */
+/* line 214, ../../../app/stylesheets/screen.scss */
 .title {
   display: inline;
   float: left;
@@ -1199,7 +1199,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 218, ../../../app/stylesheets/screen.scss */
+/* line 217, ../../../app/stylesheets/screen.scss */
 .date {
   display: inline;
   float: left;
@@ -1211,7 +1211,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 221, ../../../app/stylesheets/screen.scss */
+/* line 220, ../../../app/stylesheets/screen.scss */
 .from, .tags {
   display: inline;
   float: left;
@@ -1223,14 +1223,14 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 224, ../../../app/stylesheets/screen.scss */
+/* line 223, ../../../app/stylesheets/screen.scss */
 .tags .tag {
   float: left;
   padding: 0px 5px;
   margin: 0px 5px;
 }
 
-/* line 229, ../../../app/stylesheets/screen.scss */
+/* line 228, ../../../app/stylesheets/screen.scss */
 .tag {
   background: #7fb6b1;
   -moz-border-radius: 12px;
@@ -1238,7 +1238,7 @@ footer.copyright a:hover {
   border-radius: 12px;
 }
 
-/* line 237, ../../../app/stylesheets/screen.scss */
+/* line 236, ../../../app/stylesheets/screen.scss */
 .processbox, .businesscard {
   padding: 3px;
   margin: 5px 0px;
@@ -1256,7 +1256,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 246, ../../../app/stylesheets/screen.scss */
+/* line 245, ../../../app/stylesheets/screen.scss */
 .businesscard .logo {
   display: inline;
   float: left;
@@ -1268,7 +1268,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 249, ../../../app/stylesheets/screen.scss */
+/* line 248, ../../../app/stylesheets/screen.scss */
 .businesscard .contact {
   display: inline;
   float: left;
@@ -1281,25 +1281,25 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 255, ../../../app/stylesheets/screen.scss */
+/* line 254, ../../../app/stylesheets/screen.scss */
 .actionbox_header {
   background: #f3f3f3;
   padding: 3px;
   height: 15px;
 }
 
-/* line 262, ../../../app/stylesheets/screen.scss */
+/* line 261, ../../../app/stylesheets/screen.scss */
 .actionbox_title {
   float: left;
   height: 15px;
 }
 
-/* line 266, ../../../app/stylesheets/screen.scss */
+/* line 265, ../../../app/stylesheets/screen.scss */
 .actionbox_top_link {
   text-align: right;
 }
 
-/* line 269, ../../../app/stylesheets/screen.scss */
+/* line 268, ../../../app/stylesheets/screen.scss */
 .actionbox_footer {
   text-align: right;
   background: #f3f3f3;
@@ -1308,36 +1308,36 @@ footer.copyright a:hover {
   height: 18px;
 }
 
-/* line 276, ../../../app/stylesheets/screen.scss */
+/* line 275, ../../../app/stylesheets/screen.scss */
 .actionbox_entry {
   border-bottom: 1px solid black;
   padding: 2px;
 }
 
-/* line 280, ../../../app/stylesheets/screen.scss */
+/* line 279, ../../../app/stylesheets/screen.scss */
 a.linkblock:hover, .actionbox_entry:hover {
   background: #e4f0e0;
 }
 
-/* line 284, ../../../app/stylesheets/screen.scss */
+/* line 283, ../../../app/stylesheets/screen.scss */
 .actionbox_entry .title {
   font-weight: bold;
   text-align: left;
 }
 
-/* line 292, ../../../app/stylesheets/screen.scss */
+/* line 291, ../../../app/stylesheets/screen.scss */
 #flash_notice {
   background: #7fb6b1;
   border: 1px solid #43515a;
 }
 
-/* line 296, ../../../app/stylesheets/screen.scss */
+/* line 295, ../../../app/stylesheets/screen.scss */
 #flash_error {
   background: #e4f0e0;
   border: 1px solid #7fb6b1;
 }
 
-/* line 300, ../../../app/stylesheets/screen.scss */
+/* line 299, ../../../app/stylesheets/screen.scss */
 #errorExplanation {
   margin: 10px;
   padding: 2px;
@@ -1345,12 +1345,12 @@ a.linkblock:hover, .actionbox_entry:hover {
   border: 1px solid red;
 }
 
-/* line 306, ../../../app/stylesheets/screen.scss */
+/* line 305, ../../../app/stylesheets/screen.scss */
 .field_with_errors input {
   border-color: red;
 }
 
-/* line 311, ../../../app/stylesheets/screen.scss */
+/* line 310, ../../../app/stylesheets/screen.scss */
 .transition {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1358,23 +1358,23 @@ a.linkblock:hover, .actionbox_entry:hover {
   transition: all 0.3s ease;
 }
 
-/* line 318, ../../../app/stylesheets/screen.scss */
+/* line 317, ../../../app/stylesheets/screen.scss */
 .box_shadow {
   -moz-box-shadow: 2px 2px 6px #222222;
   -webkit-box-shadow: 2px 2px 6px #222222;
   box-shadow: 2px 2px 6px #222222;
 }
 
-/* line 324, ../../../app/stylesheets/screen.scss */
+/* line 323, ../../../app/stylesheets/screen.scss */
 .ui-autocomplete-loading {
   background: white url(/images/ajax-loader.gif) right center no-repeat;
 }
 
-/* line 330, ../../../app/stylesheets/screen.scss */
+/* line 329, ../../../app/stylesheets/screen.scss */
 .twitterwall h3, .twitterwall h4 {
   padding-left: 20px;
 }
-/* line 333, ../../../app/stylesheets/screen.scss */
+/* line 332, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list {
   margin: 0px 0px 10px 10px;
   list-style: none;
@@ -1383,30 +1383,30 @@ a.linkblock:hover, .actionbox_entry:hover {
   font-family: Titillium;
   color: #43515a;
 }
-/* line 341, ../../../app/stylesheets/screen.scss */
+/* line 340, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list a {
   color: #7b8c96;
   text-decoration: none;
 }
-/* line 345, ../../../app/stylesheets/screen.scss */
+/* line 344, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li {
   margin-bottom: 10px;
 }
-/* line 347, ../../../app/stylesheets/screen.scss */
+/* line 346, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet {
   background: #eef6eb;
 }
-/* line 349, ../../../app/stylesheets/screen.scss */
+/* line 348, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status {
   padding: 10px;
 }
-/* line 351, ../../../app/stylesheets/screen.scss */
+/* line 350, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status a {
   color: #43515a;
   font-weight: 800;
   text-decoration: underline;
 }
-/* line 358, ../../../app/stylesheets/screen.scss */
+/* line 357, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .bubble {
   height: 10px;
   background: url(/images/twitter_bubble.png) no-repeat 0% 100%;

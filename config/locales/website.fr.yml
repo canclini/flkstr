@@ -1,0 +1,12 @@
+# Website localisation stuff.. everything without login
+# 
+
+fr:
+  startpage:
+    title: "Le network social pour enterprise"
+    tagline1: "C'est quoi flockstreet?"
+    tagline2: "Abos & Prix"
+    register_beta: "Für Beta registrieren!"
+    try: "tester!"
+    twitter: "Folge uns auf Twitter!"
+    
