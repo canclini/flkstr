@@ -67,10 +67,10 @@ Flockstreet::Application.routes.draw do
   match "/contact" => "website#contact", :as => :contact
   match "/terms" => "website#terms", :as => :terms
   match "/faq" => "website#faq", :as => :faq  
-  match "plans" => "plans#index", :as => :plans
+  match "(:locale)/plans" => "plans#index", :as => :plans, :locale => /de|fr/
   
   # the famous root url
-  match "/(:locale)" => "website#index", :as => :root
+  match "/(:locale)" => "website#index", :as => :root, :locale => /de|fr/
 #  root :to => "website#index"
 
 end

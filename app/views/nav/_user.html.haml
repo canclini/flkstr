@@ -14,11 +14,13 @@
   
   -else
     -unless $app_state == 'website'
-      = link_to image_tag("login_dropdown.png"), new_user_session_path, :class => "login transition"
+      = link_to "Login", new_user_session_path, :class => "login transition"
+      = link_to image_tag("dropdown.png"), new_user_session_path, :class => "login transition"
       
       #login_menu.transition
         .handler
-          = link_to image_tag("login_dropdown.png"), new_user_session_path, :class => "login transition"
+          = link_to "Login", new_user_session_path, :class => "login transition"
+          = link_to image_tag("dropdown_active.png"), new_user_session_path, :class => "login transition"
         .input_form        
           = form_tag new_user_session_path do
             = field_set_tag 'E-Mail' do

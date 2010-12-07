@@ -1,10 +1,11 @@
 nav.user {
   a.login img{
-    margin: 1px 0px;
+    margin: 0;
   }  
 
   #login_menu {
     .handler {
+      font-size: 15px;
       padding: 12px 12px;
       clear: both;
       text-align: right;
@@ -20,9 +21,6 @@ nav.user {
       }
       .button_form { 
         text-align: right; 
-      }
-      fieldset:last-child {
-//        margin: 0;
       }
       legend {
         font-family: Titillium;
