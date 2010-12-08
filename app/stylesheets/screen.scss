@@ -18,13 +18,9 @@
 
 @include blueprint-typography;
 
-// fonts are now in fonts.css 
-//@include font-face("Titillium", font-files("/fonts/TitilliumText22L002.otf", opentype,"/fonts/TitilliumText22L004.otf", opentype));
-
 body {
   font-family: Georgia;
   font-size: 15px;
-  color: #354048;
 }
 
 a, a:hover, a:focus, a:visited { 
@@ -84,6 +80,12 @@ h5 { // Footer white on grey
   margin: 0px 0px 20px 0px;
 }
 
+.titillium {
+  font-family: Titillium;
+  font-size: 15px;
+  color: #354048;
+}
+
 .meta {
   font-family: Titillium;
   a {
@@ -113,6 +115,7 @@ nav.footer {
     text-decoration: none;
   }
 }
+
 footer.copyright {
   font-family: Titillium;
   font-size: 13px;

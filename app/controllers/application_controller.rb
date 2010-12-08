@@ -23,8 +23,9 @@ class ApplicationController < ActionController::Base
 
   def specify_layout
     specific_layout = case controller_name
-       when 'sessions' then 'website'
-       when 'registrations' then action_name == 'edit' ? 'application' : 'website'
+       when 'sessions' then 'small_footer'
+       when 'passwords' then 'small_footer'
+       when 'registrations' then action_name == 'edit' ? 'application' : 'small_footer'
        else "application"
     end
 

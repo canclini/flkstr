@@ -1,4 +1,3 @@
-
 input[type="text"], input[type="password"], input[type="email"] {
   width: 280px;
   padding: 7px 8px;
@@ -54,6 +53,10 @@ input[type="checkbox"] {
   color: $dark_grey;
   font-family: Titillium;
   width: 250px;
+}
+
+.forgot {
+  margin-left: 290px;
 }
 
 // SIMPLE_FORM stuff (from railscasts.com)

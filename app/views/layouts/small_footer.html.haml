@@ -15,17 +15,12 @@
             =link_to image_tag("3owls_flockstreet_beta.png"), root_url
           .meta
             = render :partial => 'nav/user'
-            
+         
       #container
         = yield
-      #content_two
-        = yield(:columns)
-
-      #footer.big
-        %nav.footer
-          = render 'website/footer'
-        %footer.copyright
-          .ginetta
-            =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition"
-          .flockstreet
-            &copy; flockstreet 2010
+    #footer.small
+      %footer.copyright
+        .ginetta
+          =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition"
+        .flockstreet
+          &copy; flockstreet 2010

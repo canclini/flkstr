@@ -1,4 +1,4 @@
-* { margin: 0; }
+* {margin:0;padding:0;} 
 
 section, header, footer, aside, nav, article{
   display: block;
@@ -10,9 +10,6 @@ html, body {
 
 #wrapper {
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
-//  margin: 0 auto -3em;
 }
 
 #wrapper #meta  {  
@@ -51,7 +48,6 @@ html, body {
   -webkit-box-shadow: 0px 0px 8px #D0D6D0;
           box-shadow: 0px 0px 8px #D0D6D0;
 
-  
   .content {
     padding: 20px 0px;
     @include container();
@@ -63,7 +59,7 @@ html, body {
       position: relative;
       overflow: visible;
       padding: 20px 0px;
-
+      float: left;
       aside {  // Actionbox
         @include column(6);
         position: relative;
@@ -75,16 +71,16 @@ html, body {
         }
       }
       .search {
-        @include push(4);
         @include column(4);
       }
       .language {
         text-align: right;
         word-spacing: 5px;
-        @include column(1);
+        @include column(2);
       }
       nav.user { // Top Right User Navigation
         text-align: right;
+        @include column(2);
         @include last;
       }
     }
@@ -94,8 +90,8 @@ html, body {
 #container {
   @include container();
   padding: 40px 0px 0px 0px;
-  overflow: visible;
-
+  overflow: auto;
+  padding-bottom: 80px; // sticky footer + spacing between content and footer
   .tagline {
     @include column(4);
   }
@@ -111,27 +107,17 @@ html, body {
   }
 }
 
-#content_two-container {
-  clear: both;
-  border-bottom: 1px solid #68747a;
-  padding-bottom: 30px;
-  
-}
 #content_two {
-  padding: 0px 0px;
+  clear: both;
+  padding-bottom: 30px;
   @include container();
 }
 
-#push_footer, #copyright {
-  height: 3em;
-  clear: both;
-}
-
-#footer { // website footer link box
+#footer.big, #footer.small { // website footer link box
   clear: both;
   border-top: 1px solid #6f7b80;
   background: $dark_grey;  
-
+  position: relative;
   background-image: -moz-linear-gradient(top, #43515A, #3a464d); 
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #43515A),color-stop(1, #3a464d)); 
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d'); 
@@ -141,20 +127,21 @@ html, body {
     padding: 20px 0px 0px 0px;
     @include container();
   }
-  
+}
+#footer.small {
+  margin-top: -41px; /* negative value of footer height */
+  height: 40px;
 }
 
-#copyright, #footer {
-  footer.copyright {
-    @include container();
-    .ginetta {
-      @include push(17);
-      @include column(2);
-    }
-    .flockstreet {
-      text-align: right;
-      @include last;
-    }
+footer.copyright {
+  @include container();
+  .ginetta {
+    @include push(17);
+    @include column(2);
+  }
+  .flockstreet {
+    text-align: right;
+    @include last;
   }
 }
 
