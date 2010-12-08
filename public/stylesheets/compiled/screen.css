@@ -114,6 +114,7 @@ html, body {
 
 /* line 35, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header {
+  background: url('/images/grid.png?1281876736');
   height: 100px;
   padding-top: 5px;
   clear: both;
@@ -127,7 +128,7 @@ html, body {
   -webkit-box-shadow: 0px 0px 8px #D0D6D0;
   box-shadow: 0px 0px 8px #D0D6D0;
 }
-/* line 51, ../../../app/stylesheets/partials/_layout.scss */
+/* line 52, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content {
   padding: 20px 0px;
   width: 950px;
@@ -136,7 +137,7 @@ html, body {
   *zoom: 1;
   overflow: visible;
 }
-/* line 55, ../../../app/stylesheets/partials/_layout.scss */
+/* line 56, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content .logo {
   display: inline;
   float: left;
@@ -147,14 +148,14 @@ html, body {
 * html #wrapper header .content .logo {
   overflow-x: hidden;
 }
-/* line 58, ../../../app/stylesheets/partials/_layout.scss */
+/* line 59, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content .meta {
   position: relative;
   overflow: visible;
   padding: 20px 0px;
   float: left;
 }
-/* line 63, ../../../app/stylesheets/partials/_layout.scss */
+/* line 64, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content .meta aside {
   display: inline;
   float: left;
@@ -167,12 +168,12 @@ html, body {
 * html #wrapper header .content .meta aside {
   overflow-x: hidden;
 }
-/* line 68, ../../../app/stylesheets/partials/_layout.scss */
+/* line 69, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content .meta aside #actionsearch {
   float: left;
   padding: 5px 15px 0px 0px;
 }
-/* line 73, ../../../app/stylesheets/partials/_layout.scss */
+/* line 74, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content .meta .search {
   display: inline;
   float: left;
@@ -183,7 +184,7 @@ html, body {
 * html #wrapper header .content .meta .search {
   overflow-x: hidden;
 }
-/* line 76, ../../../app/stylesheets/partials/_layout.scss */
+/* line 77, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content .meta .language {
   text-align: right;
   word-spacing: 5px;
@@ -196,7 +197,7 @@ html, body {
 * html #wrapper header .content .meta .language {
   overflow-x: hidden;
 }
-/* line 81, ../../../app/stylesheets/partials/_layout.scss */
+/* line 82, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content .meta nav.user {
   text-align: right;
   display: inline;
@@ -210,7 +211,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 90, ../../../app/stylesheets/partials/_layout.scss */
+/* line 91, ../../../app/stylesheets/partials/_layout.scss */
 #container {
   width: 950px;
   margin: 0 auto;
@@ -220,7 +221,7 @@ html, body {
   overflow: auto;
   padding-bottom: 80px;
 }
-/* line 95, ../../../app/stylesheets/partials/_layout.scss */
+/* line 96, ../../../app/stylesheets/partials/_layout.scss */
 #container .tagline {
   display: inline;
   float: left;
@@ -231,13 +232,13 @@ html, body {
 * html #container .tagline {
   overflow-x: hidden;
 }
-/* line 98, ../../../app/stylesheets/partials/_layout.scss */
+/* line 99, ../../../app/stylesheets/partials/_layout.scss */
 #container #actionbutton {
   padding: 25px 0px;
   text-align: right;
   margin-right: 0;
 }
-/* line 103, ../../../app/stylesheets/partials/_layout.scss */
+/* line 104, ../../../app/stylesheets/partials/_layout.scss */
 #container #content {
   display: inline;
   float: left;
@@ -251,7 +252,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 110, ../../../app/stylesheets/partials/_layout.scss */
+/* line 111, ../../../app/stylesheets/partials/_layout.scss */
 #content_two {
   clear: both;
   padding-bottom: 30px;
@@ -261,7 +262,7 @@ html, body {
   *zoom: 1;
 }
 
-/* line 116, ../../../app/stylesheets/partials/_layout.scss */
+/* line 117, ../../../app/stylesheets/partials/_layout.scss */
 #footer.big, #footer.small {
   clear: both;
   border-top: 1px solid #6f7b80;
@@ -272,7 +273,7 @@ html, body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d');
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')";
 }
-/* line 126, ../../../app/stylesheets/partials/_layout.scss */
+/* line 127, ../../../app/stylesheets/partials/_layout.scss */
 #footer.big nav.footer, #footer.small nav.footer {
   padding: 20px 0px 0px 0px;
   width: 950px;
@@ -281,21 +282,21 @@ html, body {
   *zoom: 1;
 }
 
-/* line 131, ../../../app/stylesheets/partials/_layout.scss */
+/* line 132, ../../../app/stylesheets/partials/_layout.scss */
 #footer.small {
   margin-top: -41px;
   /* negative value of footer height */
   height: 40px;
 }
 
-/* line 136, ../../../app/stylesheets/partials/_layout.scss */
+/* line 137, ../../../app/stylesheets/partials/_layout.scss */
 footer.copyright {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 138, ../../../app/stylesheets/partials/_layout.scss */
+/* line 139, ../../../app/stylesheets/partials/_layout.scss */
 footer.copyright .ginetta {
   display: inline;
   float: right;
@@ -310,13 +311,13 @@ footer.copyright .ginetta {
 * html footer.copyright .ginetta {
   overflow-x: hidden;
 }
-/* line 142, ../../../app/stylesheets/partials/_layout.scss */
+/* line 143, ../../../app/stylesheets/partials/_layout.scss */
 footer.copyright .flockstreet {
   text-align: right;
   margin-right: 0;
 }
 
-/* line 148, ../../../app/stylesheets/partials/_layout.scss */
+/* line 149, ../../../app/stylesheets/partials/_layout.scss */
 nav.main {
   height: 40px;
   display: inline;
@@ -329,7 +330,7 @@ nav.main {
 * html nav.main {
   overflow-x: hidden;
 }
-/* line 153, ../../../app/stylesheets/partials/_layout.scss */
+/* line 154, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #dashboard {
   display: inline;
   float: left;
@@ -340,12 +341,12 @@ nav.main #dashboard {
 * html nav.main #dashboard {
   overflow-x: hidden;
 }
-/* line 155, ../../../app/stylesheets/partials/_layout.scss */
+/* line 156, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #dashboard a {
   font-size: 1.5em;
   color: black;
 }
-/* line 161, ../../../app/stylesheets/partials/_layout.scss */
+/* line 162, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #maintopics {
   display: inline;
   float: left;
@@ -356,7 +357,7 @@ nav.main #maintopics {
 * html nav.main #maintopics {
   overflow-x: hidden;
 }
-/* line 165, ../../../app/stylesheets/partials/_layout.scss */
+/* line 166, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #mainaction {
   text-align: right;
   display: inline;
@@ -370,7 +371,7 @@ nav.main #mainaction {
   overflow-x: hidden;
 }
 
-/* line 172, ../../../app/stylesheets/partials/_layout.scss */
+/* line 173, ../../../app/stylesheets/partials/_layout.scss */
 nav.sidebar {
   display: inline;
   float: left;
@@ -383,13 +384,13 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 176, ../../../app/stylesheets/partials/_layout.scss */
+/* line 177, ../../../app/stylesheets/partials/_layout.scss */
 .filter {
   height: 40px;
   padding: 5px 0px;
 }
 
-/* line 182, ../../../app/stylesheets/partials/_layout.scss */
+/* line 183, ../../../app/stylesheets/partials/_layout.scss */
 #rightcontent {
   display: inline;
   float: left;
@@ -402,7 +403,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 186, ../../../app/stylesheets/partials/_layout.scss */
+/* line 187, ../../../app/stylesheets/partials/_layout.scss */
 #leftcontent {
   display: inline;
   float: left;
@@ -414,13 +415,13 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 189, ../../../app/stylesheets/partials/_layout.scss */
+/* line 190, ../../../app/stylesheets/partials/_layout.scss */
 .byline {
   padding: 30px 0px;
   width: 630px;
 }
 
-/* line 193, ../../../app/stylesheets/partials/_layout.scss */
+/* line 194, ../../../app/stylesheets/partials/_layout.scss */
 .toplinks {
   display: inline;
   float: left;
@@ -433,7 +434,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 197, ../../../app/stylesheets/partials/_layout.scss */
+/* line 198, ../../../app/stylesheets/partials/_layout.scss */
 .leftmiddle {
   display: inline;
   float: left;
@@ -445,7 +446,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 201, ../../../app/stylesheets/partials/_layout.scss */
+/* line 202, ../../../app/stylesheets/partials/_layout.scss */
 .left, .middle, .right {
   display: inline;
   float: left;
@@ -457,7 +458,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 205, ../../../app/stylesheets/partials/_layout.scss */
+/* line 206, ../../../app/stylesheets/partials/_layout.scss */
 .first, .second, .third, .fourth {
   display: inline;
   float: left;
@@ -469,7 +470,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 209, ../../../app/stylesheets/partials/_layout.scss */
+/* line 210, ../../../app/stylesheets/partials/_layout.scss */
 .fourth, .right {
   margin-right: 0;
 }

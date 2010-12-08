@@ -33,6 +33,7 @@ html, body {
 }
 
 #wrapper header {  
+  @include showgrid();
   height: 100px;
   padding-top: 5px;
   clear: both;  

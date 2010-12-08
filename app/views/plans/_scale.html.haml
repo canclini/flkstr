@@ -21,4 +21,10 @@
         %span unlimitiert
       %li
         %span Benachrichtigungs E-Mails
-    = link_to "anmelden", root_url, :class => 'green_button'
+    
+    - if $app_state == 'website'
+      //= link_to t('startpage.register_beta'), register_path(:plan => 'scale'), :class => 'green_button'
+      noch nicht verfügbar
+    -else
+      = link_to "anmelden", register_path(:plan => 'scale'), :class => 'green_button'
+    

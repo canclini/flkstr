@@ -49,7 +49,7 @@ Flockstreet::Application.routes.draw do
   match "leads/filter/:status" => "leads#index", :as => :leads_filter, :via => "get"
 
   devise_for :users do
-    match "/signup" => "users/registrations#new", :as => :register
+    match "/(:plan)/signup" => "users/registrations#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
   end
   
   # static tour pages
@@ -63,6 +63,7 @@ Flockstreet::Application.routes.draw do
   get "tour/updates", :as => :tour_updates
 
   # more static pages on the website
+  match "/(:locale)/flockstreet" => "website#flockstreet", :as => :flockstreet, :locale => /de|fr/
   match "/about" => "website#about", :as => :about
   match "/contact" => "website#contact", :as => :contact
   match "/terms" => "website#terms", :as => :terms
