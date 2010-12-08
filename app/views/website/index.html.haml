@@ -15,7 +15,9 @@
 
 
 .leftmiddle
-  %video{:src => "http://s3.amazonaws.com/flkstr/movies/flockstreet_schulterblick.m4v", :controls => "", :width => "620"}  
+  %video{ :controls => "", :width => "620"}  
+    %source{:src => "http://s3.amazonaws.com/flkstr/movies/flockstreet_schulterblick.m4v", :type=> "video/mp4"}
+    %source{:src=>"http://s3.amazonaws.com/flkstr/movies/flockstreet_schulterblick.ogv", :type=> "video/ogg" }
   
   %h4.byline
     Weit hinten, hinter den
