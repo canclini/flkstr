@@ -1,2 +1,24 @@
-%h1 Website#contact
-siehe http://www.memonic.com/page/de/kontakt
+- title('Kontakt')
+.tagline_wide
+  - if show_title?
+    %h1=h yield(:title)
+
+.left
+
+  %h3 flockstreet GmbH
+  %p
+    Katharina Sulzer Platz 2
+    %br/
+    8400 Winterthur
+    %br/
+    Schweiz
+  %p
+    email: contact@flockstreet.com
+  
+.middle
+  %h3 Social 
+  %ul.titillium 
+    %li= link_to "Twitter", "http://twitter.com/flockstreet"
+    %li= link_to "Facebook", "http://twitter.com/flockstreet"
+    %li= link_to "Amazee", "http://www.amazee.com/flockstreet-where-business-meets-your-company"
+    %li= link_to "Flickr", "http://www.flickr.com/photos/flockstreet"
