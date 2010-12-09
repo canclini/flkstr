@@ -60,7 +60,8 @@ class ApplicationController < ActionController::Base
   
   def available_locales
     #I18n.available_locales.map(&:to_s).sort
-    ["de","fr"]
+    #["de","fr"]
+    ["de"]
   end
 
   def current_locale?(l)
@@ -72,7 +73,8 @@ class ApplicationController < ActionController::Base
   end
   
   def app_state
-    @app_state = ENV['APP_STATE']
+    #@app_state = ENV['APP_STATE']
+    @app_state = 'website'
   end
   
   def flockstreet?

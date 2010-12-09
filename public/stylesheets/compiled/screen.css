@@ -114,7 +114,7 @@ html, body {
 
 /* line 35, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header {
-  background: url('/images/grid.png?1283238970');
+  background: url('/images/grid.png?1281876736');
   height: 100px;
   padding-top: 5px;
   clear: both;
@@ -178,32 +178,33 @@ html, body {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 310px;
+  width: 470px;
+  text-align: right;
 }
 /* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #wrapper header .content .meta .search {
   overflow-x: hidden;
 }
-/* line 77, ../../../app/stylesheets/partials/_layout.scss */
+/* line 78, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content .meta .language {
   text-align: right;
   word-spacing: 5px;
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 150px;
+  width: 70px;
 }
 /* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #wrapper header .content .meta .language {
   overflow-x: hidden;
 }
-/* line 82, ../../../app/stylesheets/partials/_layout.scss */
+/* line 83, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header .content .meta nav.user {
   text-align: right;
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 150px;
+  width: 70px;
   margin-right: 0;
 }
 /* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -211,7 +212,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 91, ../../../app/stylesheets/partials/_layout.scss */
+/* line 92, ../../../app/stylesheets/partials/_layout.scss */
 #container {
   width: 950px;
   margin: 0 auto;
@@ -221,7 +222,7 @@ html, body {
   overflow: auto;
   padding-bottom: 80px;
 }
-/* line 96, ../../../app/stylesheets/partials/_layout.scss */
+/* line 97, ../../../app/stylesheets/partials/_layout.scss */
 #container .tagline {
   display: inline;
   float: left;
@@ -232,7 +233,7 @@ html, body {
 * html #container .tagline {
   overflow-x: hidden;
 }
-/* line 99, ../../../app/stylesheets/partials/_layout.scss */
+/* line 100, ../../../app/stylesheets/partials/_layout.scss */
 #container .tagline_wide {
   display: inline;
   float: left;
@@ -243,13 +244,13 @@ html, body {
 * html #container .tagline_wide {
   overflow-x: hidden;
 }
-/* line 102, ../../../app/stylesheets/partials/_layout.scss */
+/* line 103, ../../../app/stylesheets/partials/_layout.scss */
 #container #actionbutton {
   padding: 25px 0px;
   text-align: right;
   margin-right: 0;
 }
-/* line 107, ../../../app/stylesheets/partials/_layout.scss */
+/* line 108, ../../../app/stylesheets/partials/_layout.scss */
 #container #content {
   display: inline;
   float: left;
@@ -263,7 +264,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 114, ../../../app/stylesheets/partials/_layout.scss */
+/* line 115, ../../../app/stylesheets/partials/_layout.scss */
 .explanation {
   padding: 20px 0px;
   display: inline;
@@ -275,7 +276,7 @@ html, body {
 * html .explanation {
   overflow-x: hidden;
 }
-/* line 117, ../../../app/stylesheets/partials/_layout.scss */
+/* line 118, ../../../app/stylesheets/partials/_layout.scss */
 .explanation .paragraph {
   display: inline;
   float: left;
@@ -286,7 +287,7 @@ html, body {
 * html .explanation .paragraph {
   overflow-x: hidden;
 }
-/* line 120, ../../../app/stylesheets/partials/_layout.scss */
+/* line 121, ../../../app/stylesheets/partials/_layout.scss */
 .explanation .picture {
   width: 450px;
   height: 254px;
@@ -302,7 +303,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* line 129, ../../../app/stylesheets/partials/_layout.scss */
+/* line 130, ../../../app/stylesheets/partials/_layout.scss */
 #content_two {
   clear: both;
   padding-bottom: 30px;
@@ -312,7 +313,7 @@ html, body {
   *zoom: 1;
 }
 
-/* line 135, ../../../app/stylesheets/partials/_layout.scss */
+/* line 136, ../../../app/stylesheets/partials/_layout.scss */
 #footer.big, #footer.small {
   clear: both;
   border-top: 1px solid #6f7b80;
@@ -323,7 +324,7 @@ html, body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d');
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')";
 }
-/* line 145, ../../../app/stylesheets/partials/_layout.scss */
+/* line 146, ../../../app/stylesheets/partials/_layout.scss */
 #footer.big nav.footer, #footer.small nav.footer {
   padding: 20px 0px 0px 0px;
   width: 950px;
@@ -332,21 +333,22 @@ html, body {
   *zoom: 1;
 }
 
-/* line 150, ../../../app/stylesheets/partials/_layout.scss */
+/* line 151, ../../../app/stylesheets/partials/_layout.scss */
 #footer.small {
   margin-top: -41px;
   /* negative value of footer height */
   height: 40px;
+  padding-top: 8px;
 }
 
-/* line 155, ../../../app/stylesheets/partials/_layout.scss */
+/* line 157, ../../../app/stylesheets/partials/_layout.scss */
 footer.copyright {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 157, ../../../app/stylesheets/partials/_layout.scss */
+/* line 159, ../../../app/stylesheets/partials/_layout.scss */
 footer.copyright .ginetta {
   display: inline;
   float: right;
@@ -361,13 +363,13 @@ footer.copyright .ginetta {
 * html footer.copyright .ginetta {
   overflow-x: hidden;
 }
-/* line 161, ../../../app/stylesheets/partials/_layout.scss */
+/* line 163, ../../../app/stylesheets/partials/_layout.scss */
 footer.copyright .flockstreet {
   text-align: right;
   margin-right: 0;
 }
 
-/* line 167, ../../../app/stylesheets/partials/_layout.scss */
+/* line 169, ../../../app/stylesheets/partials/_layout.scss */
 nav.main {
   height: 40px;
   display: inline;
@@ -380,7 +382,7 @@ nav.main {
 * html nav.main {
   overflow-x: hidden;
 }
-/* line 172, ../../../app/stylesheets/partials/_layout.scss */
+/* line 174, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #dashboard {
   display: inline;
   float: left;
@@ -391,12 +393,12 @@ nav.main #dashboard {
 * html nav.main #dashboard {
   overflow-x: hidden;
 }
-/* line 174, ../../../app/stylesheets/partials/_layout.scss */
+/* line 176, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #dashboard a {
   font-size: 1.5em;
   color: black;
 }
-/* line 180, ../../../app/stylesheets/partials/_layout.scss */
+/* line 182, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #maintopics {
   display: inline;
   float: left;
@@ -407,7 +409,7 @@ nav.main #maintopics {
 * html nav.main #maintopics {
   overflow-x: hidden;
 }
-/* line 184, ../../../app/stylesheets/partials/_layout.scss */
+/* line 186, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #mainaction {
   text-align: right;
   display: inline;
@@ -421,7 +423,7 @@ nav.main #mainaction {
   overflow-x: hidden;
 }
 
-/* line 191, ../../../app/stylesheets/partials/_layout.scss */
+/* line 193, ../../../app/stylesheets/partials/_layout.scss */
 nav.sidebar {
   display: inline;
   float: left;
@@ -434,13 +436,13 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 195, ../../../app/stylesheets/partials/_layout.scss */
+/* line 197, ../../../app/stylesheets/partials/_layout.scss */
 .filter {
   height: 40px;
   padding: 5px 0px;
 }
 
-/* line 201, ../../../app/stylesheets/partials/_layout.scss */
+/* line 203, ../../../app/stylesheets/partials/_layout.scss */
 #rightcontent {
   display: inline;
   float: left;
@@ -453,7 +455,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 205, ../../../app/stylesheets/partials/_layout.scss */
+/* line 207, ../../../app/stylesheets/partials/_layout.scss */
 #leftcontent {
   display: inline;
   float: left;
@@ -465,13 +467,13 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 208, ../../../app/stylesheets/partials/_layout.scss */
+/* line 210, ../../../app/stylesheets/partials/_layout.scss */
 .byline {
   padding: 30px 0px;
   width: 630px;
 }
 
-/* line 212, ../../../app/stylesheets/partials/_layout.scss */
+/* line 214, ../../../app/stylesheets/partials/_layout.scss */
 .toplinks {
   display: inline;
   float: left;
@@ -484,7 +486,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 216, ../../../app/stylesheets/partials/_layout.scss */
+/* line 218, ../../../app/stylesheets/partials/_layout.scss */
 .leftmiddle {
   display: inline;
   float: left;
@@ -496,7 +498,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 220, ../../../app/stylesheets/partials/_layout.scss */
+/* line 222, ../../../app/stylesheets/partials/_layout.scss */
 .left, .middle, .right {
   display: inline;
   float: left;
@@ -508,7 +510,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 224, ../../../app/stylesheets/partials/_layout.scss */
+/* line 226, ../../../app/stylesheets/partials/_layout.scss */
 .first, .second, .third, .fourth {
   display: inline;
   float: left;
@@ -520,7 +522,7 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 228, ../../../app/stylesheets/partials/_layout.scss */
+/* line 230, ../../../app/stylesheets/partials/_layout.scss */
 .fourth, .right {
   margin-right: 0;
 }
@@ -1413,18 +1415,26 @@ a.linkblock:hover, .actionbox_entry:hover {
 }
 
 /* line 319, ../../../app/stylesheets/screen.scss */
-#flash_notice {
-  background: #7fb6b1;
-  border: 1px solid #43515a;
+#flash_container {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
 }
 
-/* line 323, ../../../app/stylesheets/screen.scss */
+/* line 322, ../../../app/stylesheets/screen.scss */
+#flash_notice {
+  background: #7fb6b1;
+  border: 1px solid #aaaaaa;
+}
+
+/* line 326, ../../../app/stylesheets/screen.scss */
 #flash_error {
   background: #e4f0e0;
   border: 1px solid #7fb6b1;
 }
 
-/* line 327, ../../../app/stylesheets/screen.scss */
+/* line 330, ../../../app/stylesheets/screen.scss */
 #errorExplanation {
   margin: 10px;
   padding: 2px;
@@ -1432,12 +1442,12 @@ a.linkblock:hover, .actionbox_entry:hover {
   border: 1px solid red;
 }
 
-/* line 333, ../../../app/stylesheets/screen.scss */
+/* line 336, ../../../app/stylesheets/screen.scss */
 .field_with_errors input {
   border-color: red;
 }
 
-/* line 338, ../../../app/stylesheets/screen.scss */
+/* line 341, ../../../app/stylesheets/screen.scss */
 .transition {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1445,23 +1455,23 @@ a.linkblock:hover, .actionbox_entry:hover {
   transition: all 0.3s ease;
 }
 
-/* line 345, ../../../app/stylesheets/screen.scss */
+/* line 348, ../../../app/stylesheets/screen.scss */
 .box_shadow {
   -moz-box-shadow: 2px 2px 6px #222222;
   -webkit-box-shadow: 2px 2px 6px #222222;
   box-shadow: 2px 2px 6px #222222;
 }
 
-/* line 351, ../../../app/stylesheets/screen.scss */
+/* line 354, ../../../app/stylesheets/screen.scss */
 .ui-autocomplete-loading {
   background: white url(/images/ajax-loader.gif) right center no-repeat;
 }
 
-/* line 357, ../../../app/stylesheets/screen.scss */
+/* line 360, ../../../app/stylesheets/screen.scss */
 .twitterwall h3, .twitterwall h4 {
   padding-left: 20px;
 }
-/* line 360, ../../../app/stylesheets/screen.scss */
+/* line 363, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list {
   margin: 0px 0px 10px 10px;
   list-style: none;
@@ -1470,30 +1480,30 @@ a.linkblock:hover, .actionbox_entry:hover {
   font-family: Titillium;
   color: #43515a;
 }
-/* line 368, ../../../app/stylesheets/screen.scss */
+/* line 371, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list a {
   color: #7b8c96;
   text-decoration: none;
 }
-/* line 372, ../../../app/stylesheets/screen.scss */
+/* line 375, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li {
   margin-bottom: 10px;
 }
-/* line 374, ../../../app/stylesheets/screen.scss */
+/* line 377, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet {
   background: #eef6eb;
 }
-/* line 376, ../../../app/stylesheets/screen.scss */
+/* line 379, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status {
   padding: 10px;
 }
-/* line 378, ../../../app/stylesheets/screen.scss */
+/* line 381, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status a {
   color: #43515a;
   font-weight: 800;
   text-decoration: underline;
 }
-/* line 385, ../../../app/stylesheets/screen.scss */
+/* line 388, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .bubble {
   height: 10px;
   background: url(/images/twitter_bubble.png) no-repeat 0% 100%;

@@ -1,7 +1,7 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
   
-  # users/sign_in redirected to website as long as we are not ready for logins. 
+  # comment for website phase
   match "users/sign_in" => 'website#index' if $app_state == 'website'
   devise_for :users, :controllers => { :registrations => "users/registrations"}
 
@@ -63,15 +63,15 @@ Flockstreet::Application.routes.draw do
   get "tour/updates", :as => :tour_updates
 
   # more static pages on the website
-  match "/(:locale)/flockstreet" => "website#flockstreet", :as => :flockstreet, :locale => /de|fr/
+  match "/(:locale)/flockstreet" => "website#flockstreet", :as => :flockstreet, :locale => /de/
   match "/about" => "website#about", :as => :about
   match "/contact" => "website#contact", :as => :contact
   match "/terms" => "website#terms", :as => :terms
   match "/faq" => "website#faq", :as => :faq  
-  match "(:locale)/plans" => "plans#index", :as => :plans, :locale => /de|fr/
+  match "(:locale)/plans" => "plans#index", :as => :plans, :locale => /de/
   
   # the famous root url
-  match "/(:locale)" => "website#index", :as => :root, :locale => /de|fr/
+  match "/(:locale)" => "website#index", :as => :root, :locale => /de/
 #  root :to => "website#index"
 
 end

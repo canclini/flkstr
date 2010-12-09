@@ -36,8 +36,9 @@ $(document).ready(function() {
 //signin menu on website
   $(".login").click(function(e) {
     e.preventDefault();
-    $("#login_menu").toggle();
-    $(".login").toggleClass("menu-open");
+// following 2 lines are commented for website phase
+//    $("#login_menu").toggle();
+//    $(".login").toggleClass("menu-open");
   });
 
   $("#login_menu").mouseup(function() {

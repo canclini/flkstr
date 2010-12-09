@@ -1,5 +1,5 @@
 .search
-  search box goes here
+  \&nbsp;
 .language
   - available_locales.each do |locale|
     = link_to_unless current_locale?(locale), locale, current_page_path(:locale => locale)
@@ -13,22 +13,24 @@
     = link_to "Abmelden", destroy_user_session_path
   
   -else
-    -unless $app_state == 'website'
-      = link_to "Login", new_user_session_path, :class => "login transition"
-      = link_to image_tag("dropdown.png"), new_user_session_path, :class => "login transition"
-      
-      #login_menu.transition
-        .handler
-          = link_to "Login", new_user_session_path, :class => "login transition"
-          = link_to image_tag("dropdown_active.png"), new_user_session_path, :class => "login transition"
-        .input_form        
-          = form_tag new_user_session_path do
-            = field_set_tag 'E-Mail' do
-              = text_field_tag 'user[email]', nil, :type => 'email'
-            = field_set_tag 'Passwort' do
-              = password_field_tag 'user[password]'
-            .button_form
-              %button.login_button Login
+    // comment for website phase
+    //= link_to "Login", new_user_session_path, :class => "login transition"
+    //= link_to image_tag("dropdown.png"), new_user_session_path, :class => "login transition"
+    = link_to "Login", "#", :class => "login transition"
+    = link_to image_tag("dropdown.png"), "#", :class => "login transition"
+    
+    #login_menu.transition
+      .handler
+        = link_to "Login", new_user_session_path, :class => "login transition"
+        = link_to image_tag("dropdown_active.png"), new_user_session_path, :class => "login transition"
+      .input_form        
+        = form_tag new_user_session_path do
+          = field_set_tag 'E-Mail' do
+            = text_field_tag 'user[email]', nil, :type => 'email'
+          = field_set_tag 'Passwort' do
+            = password_field_tag 'user[password]'
+          .button_form
+            %button.login_button Login
       
   
   - if user_signed_in?    

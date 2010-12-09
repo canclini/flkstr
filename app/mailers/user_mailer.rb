@@ -7,7 +7,7 @@ class UserMailer < ActionMailer::Base
     mail(:to => user.email, :subject => "Erfolgreich registriert!")
   end
   
-  def website_registration_confirmation(user)
+  def beta_registration_confirmation(user)
     @user = user
     @company = @user.company
     mail(:to => user.email, :subject => "Erfolgreich fuer die Beta Phase registriert!")

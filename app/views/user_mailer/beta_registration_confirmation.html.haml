@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+%html
+  %head
+    %meta{:charset=>"UTF-8"}
+  %body
+    %h2 Willkommen bei flockstreet!
+    %p 
+      Sie haben sich soeben erfolgreich bei flockstreet mit der Firma
+      %strong= @company.name
+      registriert.
+    %p= "Ihr Benutzername lautet: #{@user.email}"
+
+    %p flockstreet ist noch nicht ganz fertig. Die Beta Phase geht aber bald los. Ihre Firma und Ihr Benutzer sind aber bereits registriert. Sobald wir soweit sind werden wir sie informieren.
+
+    %p
+      Liebe Grüsse,
+      %br/
+      Ihr flockstreet Team

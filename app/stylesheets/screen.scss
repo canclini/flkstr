@@ -316,8 +316,11 @@ a.linkblock:hover, .actionbox_entry:hover {
   
 }
 // FLASH MESSAGES, NOTICE MESSAGES, ERROR IN FORMS
+#flash_container {
+  @include container();
+}
 #flash_notice {
-  @include boxed($dark_green, $dark_grey);
+  @include boxed($dark_green);
 }
 
 #flash_error {

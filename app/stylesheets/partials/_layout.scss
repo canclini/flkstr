@@ -72,16 +72,17 @@ html, body {
         }
       }
       .search {
-        @include column(4);
+        @include column(6);
+        text-align: right;
       }
       .language {
         text-align: right;
         word-spacing: 5px;
-        @include column(2);
+        @include column(1);
       }
       nav.user { // Top Right User Navigation
         text-align: right;
-        @include column(2);
+        @include column(1);
         @include last;
       }
     }
@@ -150,6 +151,7 @@ html, body {
 #footer.small {
   margin-top: -41px; /* negative value of footer height */
   height: 40px;
+  padding-top: 8px; // puts text in the vertical middle
 }
 
 footer.copyright {
