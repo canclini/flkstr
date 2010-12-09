@@ -43,13 +43,13 @@
     %h3= t('teaser.left.title')
     %p= t('teaser.left.paragraph')
     %br
-    %h4=link_to t('teaser.link'), "#"
+    %h4=link_to t('teaser.link'), flockstreet_path(:anchor => "relations")
   .middle
     %h3= t('teaser.middle.title')
     %p= t('teaser.middle.paragraph')
-    %h4=link_to t('teaser.link'), "#"
+    %h4=link_to t('teaser.link'), flockstreet_path(:anchor => "customers")
   .right
     %h3= t('teaser.right.title')
     %p=t('teaser.right.paragraph')
     %br
-    %h4=link_to t('teaser.link'), "#"
+    %h4=link_to t('teaser.link'), flockstreet_path(:anchor => "network")
