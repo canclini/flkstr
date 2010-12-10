@@ -8,14 +8,9 @@
 - if show_title?
   %h1=h yield(:title)
   
+  %h4 flockstreet startet bald mit der Beta Phase. Sie können sich bereits jetzt dafür anmelden. Ihre Firma und Ihr persönlicher Benutzer werden dann für sie bereit sein. Wir freuen uns auf Ihre Mitgliedschaft!
+  %br/
   
-%h4.byline
-  Weit hinten, hinter den
-  =link_to "Aufträge erfassen", "#"
-  fern der Länder
-  =link_to "Leads generieren", "#"
-  und Konsonantien leben die Blindtexte.
-
-#plans
+  #plans
   - for plan in [:scale, :connect, :ready] do
     = render :partial => "#{plan}"

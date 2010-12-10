@@ -1,6 +1,7 @@
 %h1 Grossartig: Los geht's
 - if $app_state == 'website'
-  %p flockstreet ist noch nicht ganz fertig. Bald beginnen wir mit der Beta Phase. Sie können sich bereits jetzt dafür anmelden. Ihre Firma und Ihr persönlicher Benutzer werden dann für sie bereit sein. Sobald die Beta Phase los geht werden wir sie informieren. Besten Dank für Ihr Interesse!
+  %p flockstreet startet bald mit der Beta Phase. Sie können sich bereits jetzt dafür anmelden. Ihre Firma und Ihr persönlicher Benutzer werden dann für sie bereit sein. Wir freuen uns auf Ihre Mitgliedschaft!
+  %br/
   
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = error_messages_for :company, :header_message => "Hoppla!", :message => "Da gab es Probleme beim erfassen der Firma"
