@@ -65,7 +65,7 @@ Flockstreet::Application.routes.draw do
   # more static pages on the website
   match "/(:locale)/flockstreet" => "website#flockstreet", :as => :flockstreet, :locale => /de/
   match "/about" => "website#about", :as => :about
-  match "/contact" => "website#contact", :as => :contact
+  match "/impressum" => "website#impressum", :as => :impressum
   match "/terms" => "website#terms", :as => :terms
   match "/faq" => "website#faq", :as => :faq  
   match "(:locale)/plans" => "plans#index", :as => :plans, :locale => /de/

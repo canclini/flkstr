@@ -1,0 +1,30 @@
+- title('Impressum')
+.tagline_wide
+  - if show_title?
+    %h1=h yield(:title)
+
+.left
+  .flockstreet_map.box_shadow
+
+.middle.titillium
+  %h3 flockstreet GmbH
+  %p
+    Katharina Sulzer Platz 2
+    %br/
+    8400 Winterthur
+    %br/
+    Schweiz
+  %p
+    phone: +41 (0) 79 470 21 40
+    %br/
+    email: contact@flockstreet.com
+
+.right.titillium
+  %h3 Design
+  %strong GINETTA™ WEB/DESIGN
+  %br/
+  =link_to "www.ginetta.ch", "http://www.ginetta.ch"
+  %h3 Animationsvideo
+  %strong Sebastian Benjamin Riepe
+  %br/
+  =link_to "www.optical-longings.de", "http://www.optical-longings.de"

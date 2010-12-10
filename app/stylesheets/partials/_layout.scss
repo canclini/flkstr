@@ -157,8 +157,9 @@ html, body {
 footer.copyright {
   @include container();
   .ginetta {
-    @include push(17);
-    @include column(2);
+//    @include push(15);
+    text-align: right;
+    @include column(6);
   }
   .flockstreet {
     text-align: right;
@@ -215,7 +216,7 @@ nav.sidebar {
   @include column(12);
   margin: 0 0 20px 0;
 }
-.leftmiddle {
+.leftmiddle, .middleright {
   @include column(8);
 }
 
@@ -227,6 +228,6 @@ nav.sidebar {
   @include column(3);
 }
 
-.fourth, .right {
+.fourth, .right, .middleright {
   @include last;
 }
