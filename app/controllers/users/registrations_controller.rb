@@ -23,8 +23,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       resource.save
       @company.plan = Plan.find_by_name('ready')    
       @company.users << resource
-     if $app_state != 'website'
-       logger.debug "GAGA"
+     if @app_state != 'website'
        set_flash_message :notice, :signed_up
        sign_in(resource_name, resource)
        UserMailer.registration_confirmation(resource).deliver

@@ -2,7 +2,7 @@
   .box
     %h1 Scale
     %h2 CHF 99.- / Monat
-  .box
+  .box.plan_content
     %ul
       %li 
         Anzahl Mitarbeiter
@@ -22,8 +22,7 @@
       %li
         %span Benachrichtigungs E-Mails
     
-    - if $app_state == 'website'
-      //= link_to t('startpage.register_beta'), register_path(:plan => 'scale'), :class => 'green_button'
+    - if @app_state == 'website'
       noch nicht verfügbar
     -else
       = link_to "anmelden", register_path(:plan => 'scale'), :class => 'green_button'
