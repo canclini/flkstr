@@ -2,7 +2,7 @@
   .box.distinguish
     %h1 Connect
     %h2 CHF 49.- / Monat
-  .box.distinguish
+  .box.plan_content.distinguish
     %ul
       %li 
         Anzahl Mitarbeiter
@@ -21,4 +21,7 @@
         %span 1
       %li
         %span Benachrichtigungs E-Mails
-    = link_to "anmelden", register_path(:plan => 'connect'), :class => 'green_button'
+    - if @app_state == 'website'
+      noch nicht verfügbar
+    -else
+      = link_to "anmelden", register_path(:plan => 'connect'), :class => 'green_button'

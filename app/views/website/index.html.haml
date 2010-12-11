@@ -5,7 +5,7 @@
   %h2= link_to t('startpage.tagline2'), plans_path()
 
 #actionbutton
-  - if $app_state == 'website'
+  - if @app_state == 'website'
     =link_to t('startpage.register_beta'), register_path(), :class => "big_button call2action"
   -else
     =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
