@@ -1,0 +1,7 @@
+de:
+  activerecord:
+    models:
+      company: "Firma"
+    attributes:
+      company:
+        name: "Firmenname"

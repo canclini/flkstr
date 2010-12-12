@@ -93,7 +93,6 @@ html, body {
   @include container();
   padding: 40px 0px 0px 0px;
   overflow: auto;
-  padding-bottom: 80px; // sticky footer + spacing between content and footer
   .tagline {
     @include column(4);
   }
@@ -110,6 +109,9 @@ html, body {
     @include last;
     padding: 5px 0px;
   }
+}
+#container.small_footer {
+  padding-bottom: 80px; // sticky footer + spacing between content and footer
 }
 
 .explanation {  
@@ -136,7 +138,7 @@ html, body {
 #footer.big, #footer.small { // website footer link box
   clear: both;
   border-top: 1px solid #6f7b80;
-  background: $dark_grey;  
+  background: $grey;  
   position: relative;
   background-image: -moz-linear-gradient(top, #43515A, #3a464d); 
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #43515A),color-stop(1, #3a464d)); 
@@ -147,20 +149,28 @@ html, body {
     padding: 20px 0px 0px 0px;
     @include container();
   }
+  .ginetta {
+      text-align: right;
+      @include column(10);
+    }
+}
+
+#footer.big {
+  padding-bottom: 20px;
 }
 #footer.small {
-  margin-top: -41px; /* negative value of footer height */
+  margin-top: -51px; /* negative value of footer height */
   height: 40px;
-  padding-top: 8px; // puts text in the vertical middle
+  padding-top: 10px; // puts text in the vertical middle
+    .ginetta {
+      text-align: right;
+      @include column(6);
+    }
+  
 }
 
 footer.copyright {
   @include container();
-  .ginetta {
-//    @include push(15);
-    text-align: right;
-    @include column(6);
-  }
   .flockstreet {
     text-align: right;
     @include last;

@@ -23,8 +23,11 @@ body {
   font-size: 15px;
 }
 
-a, a:hover, a:focus, a:visited { 
+a, a:visited { 
   color: $orange;
+}
+a:hover, a:focus {
+  color: $orange_hover;
 }
 
 ul {
@@ -37,41 +40,50 @@ ul {
 
 h1, h2, h3, h4, h5 {
   font-family: Titillium;
-  color: #435159;
+  color: $grey;
   margin-bottom: 6px;
-  text-shadow: 0px 0px 0px #FFF; 
-
-  
+  text-shadow: 0px 0px 1px rgba(0,0,0,0.4); 
   line-height: 1.5;
-  a, a:visited, a:hover {
+  }
+  a, a:visited, a:hover, a:focus {
     text-decoration: none;
+  }
+h2 {
+  a, a:visited, a:hover, a:focus {
+    color: $grey;
+
     // create a special underline for the links with more space between text and line.
     background: url(/images/underline_black.png) repeat-x 100% 100%;
     padding-bottom: 2px;
     white-space: nowrap;
   }
+  a:hover, a:focus {
+    color: $grey_hover;
+    background: url(/images/underline_black_hover.png) repeat-x 100% 100%;    
+  }
 }
 h3, h4 {
   // create a special underline for the links with more space between text and line.
-  a, a:visited, a:hover { background: url(/images/underline_orange.png) repeat-x 100% 100%; }
+  a, a:visited { background: url(/images/underline_orange.png) repeat-x 100% 100%; }
+  a:hover, a:focus { background: url(/images/underline_orange_hover.png) repeat-x 100% 100%; }
 }
 
 h1  { //BIG Title on Startpage
   font-weight: 300;
-  color: $dark_grey;
+  color: $grey;
   font-size: 40px;
 }
 
 h2 { // taglines
   font-weight: 500;
-  color: $dark_grey;
+  color: $grey;
   font-size: 30px;
-  a, a:visited, a:hover { color: $dark_grey; }
 }
 
 h3 { // 3 column stuff on website
   font-weight: 500; 
-  color: $dark_grey;
+  padding-bottom: 5px;
+  color: $grey;
   font-size: 26px;
 }
 
@@ -103,8 +115,8 @@ h5 { // Footer white on grey
 
 .flockstreet_map {
   border: 1px solid #222;
-  width: 282px;
-  height: 284px;
+  width: 250px;
+  height: 250px;
   background: url(/images/map.png) no-repeat;
      -moz-border-radius: 12px; 
   -webkit-border-radius: 12px; 
@@ -386,7 +398,7 @@ a.linkblock:hover, .actionbox_entry:hover {
     font-size: 14px;
     font-family: Titillium;
 //    font-weight: 500;
-    color: $dark_grey;      
+    color: $grey;      
     a {
       color: #7b8c96;      
       text-decoration: none;
@@ -397,11 +409,14 @@ a.linkblock:hover, .actionbox_entry:hover {
         background: #eef6eb;
         .status {
           padding: 10px;
-          a {
-            color: $dark_grey;
+          a, a:hover {
+            color: $grey;
             font-weight: 800;
             text-decoration: underline;
             }
+          a:hover {
+            color: $dark_grey; 
+          }
         }
       }
       .bubble {
