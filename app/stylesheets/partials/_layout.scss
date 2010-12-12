@@ -88,7 +88,21 @@ html, body {
     }
   }
 }
-
+#links {
+  h1 {
+    color: green;
+  }
+  .tagline.last {
+    margin-right: 0px;
+  }
+}
+#site_title {
+  margin-top: 60px;
+  padding-bottom: 20px;
+  h1 {
+    line-height: 1.05;
+  }
+}
 #container {
   @include container();
   padding: 40px 0px 0px 0px;
@@ -239,5 +253,9 @@ nav.sidebar {
 }
 
 .fourth, .right, .middleright {
+  @include last;
+}
+
+.last {
   @include last;
 }
