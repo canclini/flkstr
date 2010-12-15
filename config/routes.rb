@@ -1,7 +1,7 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
   
-  match "users/sign_in" => 'website#index' # only for website phase
+#  match "users/sign_in" => 'website#index' # only for website phase
   devise_for :users, :controllers => { :registrations => "users/registrations"}
 
   resources :products, :requests, :updates, :settings

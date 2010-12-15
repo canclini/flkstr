@@ -37,8 +37,8 @@ $(document).ready(function() {
   $(".login").click(function(e) {
     e.preventDefault();
 // following 2 lines are commented for website phase
-//    $("#login_menu").toggle();
-//    $(".login").toggleClass("menu-open");
+    $("#login_menu").toggle();
+    $(".login").toggleClass("menu-open");
   });
 
   $("#login_menu").mouseup(function() {
