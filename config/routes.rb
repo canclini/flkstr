@@ -11,7 +11,8 @@ Flockstreet::Application.routes.draw do
     
   resources :companies do
     get :exists, :on => :collection
-    get :join, :on => :member    
+    get :join, :on => :member
+    get :tags, :on => :member
     get :autocomplete, :on => :collection
     resources :subscriptions
     resources :associates
@@ -26,7 +27,11 @@ Flockstreet::Application.routes.draw do
   end
   
   resources :tags do
-    get :autocomplete, :on => :collection
+    collection do
+      get :autocomplete
+      put :add
+      put :remove
+    end
   end
   
   resources :messages do

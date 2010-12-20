@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   before_filter :authenticate_user!, :except => [:new, :create, :exists, :join]
+  layout 'small_footer', :only => [:tags]
   
   def index
     @companies = Company.search(params[:query]).paginate :per_page => 10, :page => params[:page]
@@ -7,6 +8,11 @@ class CompaniesController < ApplicationController
       format.html
       format.js
     end
+  end
+  
+  def tags
+    # only for initial signup during website phase
+    @company = Company.find(params[:id])
   end
 
   def autocomplete

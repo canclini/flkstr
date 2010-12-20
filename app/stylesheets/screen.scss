@@ -20,6 +20,8 @@
 
 body {
   font-family: Georgia;
+//  color: #354048;
+  color: #414f57;
   font-size: 15px;
 }
 
@@ -55,13 +57,13 @@ h2 {
     color: $grey;
 
     // create a special underline for the links with more space between text and line.
-    background: url(/images/underline_black.png) repeat-x 100% 100%;
+    background: url(/images/underline_black_hover.png) repeat-x 100% 100%;
     padding-bottom: 2px;
     white-space: nowrap;
   }
   a:hover, a:focus {
     color: $grey_hover;
-    background: url(/images/underline_black_hover.png) repeat-x 100% 100%;    
+    background: url(/images/underline_black.png) repeat-x 100% 100%;    
   }
 }
 h3, h4 {
@@ -90,7 +92,8 @@ h3 { // 3 column stuff on website
 }
 
 h4 { //byline below movie, link "follow on twitter"
-  font-size: 20px;
+  font-size: 19px;
+  text-shadow: 0px 0px 0px;
 
 }
 

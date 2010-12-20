@@ -5,38 +5,30 @@
     = link_to_unless current_locale?(locale), locale, current_page_path(:locale => locale)
 
 %nav.user
-  -if user_signed_in?
-    = current_company.name
-    <a id="settings">
-    Einstellungen &#9660;
-    </a>
-    = link_to "Abmelden", destroy_user_session_path
+  // comment for website phase
+  //= link_to "Login", new_user_session_path, :class => "login transition"
+  //= link_to image_tag("dropdown.png"), new_user_session_path, :class => "login transition"
+  = link_to "Login", "#", :class => "login transition"
+  = link_to image_tag("dropdown.png"), "#", :class => "login transition"
   
-  -else
-    // comment for website phase
-    //= link_to "Login", new_user_session_path, :class => "login transition"
-    //= link_to image_tag("dropdown.png"), new_user_session_path, :class => "login transition"
-    = link_to "Login", "#", :class => "login transition"
-    = link_to image_tag("dropdown.png"), "#", :class => "login transition"
+  #login_menu.transition
+    .handler
+      = link_to "Login", new_user_session_path, :class => "login transition"
+      = link_to image_tag("dropdown_active.png"), new_user_session_path, :class => "login transition"
+    .input_form        
+      = form_tag new_user_session_path do
+        = field_set_tag 'E-Mail' do
+          = text_field_tag 'user[email]', nil, :type => 'email'
+        = field_set_tag 'Passwort' do
+          = password_field_tag 'user[password]'
+        .button_form
+          %button.login_button Login
     
-    #login_menu.transition
-      .handler
-        = link_to "Login", new_user_session_path, :class => "login transition"
-        = link_to image_tag("dropdown_active.png"), new_user_session_path, :class => "login transition"
-      .input_form        
-        = form_tag new_user_session_path do
-          = field_set_tag 'E-Mail' do
-            = text_field_tag 'user[email]', nil, :type => 'email'
-          = field_set_tag 'Passwort' do
-            = password_field_tag 'user[password]'
-          .button_form
-            %button.login_button Login
-      
   
-  - if user_signed_in?    
-    #settings-menu.transition
-      = link_to "Firmenprofil", company_path(current_company)
-      %br
-      = link_to "Firmeneinstellungen", settings_path
-      %br
-      = link_to "Benutzereinstellungen", edit_user_registration_path
+//  - if user_signed_in?    
+//    #settings-menu.transition
+//      = link_to "Firmenprofil", company_path(current_company)
+//      %br
+//      = link_to "Firmeneinstellungen", settings_path
+//      %br
+//      = link_to "Benutzereinstellungen", edit_user_registration_path

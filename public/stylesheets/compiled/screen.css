@@ -340,7 +340,7 @@ html, body {
 #footer.big, #footer.small {
   clear: both;
   border-top: 1px solid #6f7b80;
-  background: #42515a;
+  background: #414f57;
   position: relative;
   background-image: -moz-linear-gradient(top, #43515a, #3a464d);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #43515a), color-stop(1, #3a464d));
@@ -608,7 +608,7 @@ input[type="checkbox"] {
   font-family: Titillium;
   display: block;
   font-size: 16px;
-  color: #42515a;
+  color: #414f57;
 }
 
 /* line 38, ../../../app/stylesheets/partials/_forms.scss */
@@ -629,7 +629,7 @@ input[type="checkbox"] {
   padding-top: 8px;
   display: none;
   margin-left: 650px;
-  color: #42515a;
+  color: #414f57;
   font-family: Titillium;
   width: 250px;
 }
@@ -800,7 +800,7 @@ nav.user #login_menu .input_form legend {
   font-family: Titillium;
   display: block;
   font-size: 15px;
-  color: #42515a;
+  color: #414f57;
 }
 
 /* line 39, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
@@ -1042,20 +1042,21 @@ caption {
 /* line 21, ../../../app/stylesheets/screen.scss */
 body {
   font-family: Georgia;
+  color: #414f57;
   font-size: 15px;
 }
 
-/* line 26, ../../../app/stylesheets/screen.scss */
+/* line 28, ../../../app/stylesheets/screen.scss */
 a, a:visited {
   color: #e78b2c;
 }
 
-/* line 29, ../../../app/stylesheets/screen.scss */
+/* line 31, ../../../app/stylesheets/screen.scss */
 a:hover, a:focus {
   color: #c97a27;
 }
 
-/* line 33, ../../../app/stylesheets/screen.scss */
+/* line 35, ../../../app/stylesheets/screen.scss */
 ul {
   list-style: none;
   padding: 0px;
@@ -1066,80 +1067,81 @@ ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 36, ../../../app/stylesheets/screen.scss */
+/* line 38, ../../../app/stylesheets/screen.scss */
 ul li {
   margin-top: 5px;
 }
 
-/* line 40, ../../../app/stylesheets/screen.scss */
+/* line 42, ../../../app/stylesheets/screen.scss */
 p {
   line-height: 1.7;
 }
 
-/* line 43, ../../../app/stylesheets/screen.scss */
+/* line 45, ../../../app/stylesheets/screen.scss */
 h1, h2, h3, h4, h5 {
   font-family: Titillium;
-  color: #42515a;
+  color: #414f57;
   margin-bottom: 6px;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
   line-height: 1.5;
 }
 
-/* line 50, ../../../app/stylesheets/screen.scss */
+/* line 52, ../../../app/stylesheets/screen.scss */
 a, a:visited, a:hover, a:focus {
   text-decoration: none;
 }
 
-/* line 54, ../../../app/stylesheets/screen.scss */
+/* line 56, ../../../app/stylesheets/screen.scss */
 h2 a, h2 a:visited, h2 a:hover, h2 a:focus {
-  color: #42515a;
-  background: url(/images/underline_black.png) repeat-x 100% 100%;
+  color: #414f57;
+  background: url(/images/underline_black_hover.png) repeat-x 100% 100%;
   padding-bottom: 2px;
   white-space: nowrap;
 }
-/* line 62, ../../../app/stylesheets/screen.scss */
+/* line 64, ../../../app/stylesheets/screen.scss */
 h2 a:hover, h2 a:focus {
   color: #354047;
-  background: url(/images/underline_black_hover.png) repeat-x 100% 100%;
+  background: url(/images/underline_black.png) repeat-x 100% 100%;
 }
 
-/* line 69, ../../../app/stylesheets/screen.scss */
+/* line 71, ../../../app/stylesheets/screen.scss */
 h3 a, h3 a:visited, h4 a, h4 a:visited {
   background: url(/images/underline_orange.png) repeat-x 100% 100%;
 }
-/* line 70, ../../../app/stylesheets/screen.scss */
+/* line 72, ../../../app/stylesheets/screen.scss */
 h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus {
   background: url(/images/underline_orange_hover.png) repeat-x 100% 100%;
 }
 
-/* line 73, ../../../app/stylesheets/screen.scss */
+/* line 75, ../../../app/stylesheets/screen.scss */
 h1 {
   font-weight: 300;
-  color: #42515a;
+  color: #414f57;
   font-size: 40px;
 }
 
-/* line 79, ../../../app/stylesheets/screen.scss */
+/* line 81, ../../../app/stylesheets/screen.scss */
 h2 {
   font-weight: 500;
-  color: #42515a;
+  color: #414f57;
   font-size: 30px;
 }
 
-/* line 85, ../../../app/stylesheets/screen.scss */
+/* line 87, ../../../app/stylesheets/screen.scss */
 h3 {
   font-weight: 500;
   padding-bottom: 5px;
-  color: #42515a;
+  color: #414f57;
   font-size: 26px;
 }
 
-/* line 92, ../../../app/stylesheets/screen.scss */
+/* line 94, ../../../app/stylesheets/screen.scss */
 h4 {
-  font-size: 20px;
+  font-size: 19px;
+  text-shadow: 0px 0px 0px;
 }
 
-/* line 97, ../../../app/stylesheets/screen.scss */
+/* line 100, ../../../app/stylesheets/screen.scss */
 h5 {
   color: white;
   font-weight: 800;
@@ -1148,23 +1150,23 @@ h5 {
   margin: 0px 0px 20px 0px;
 }
 
-/* line 105, ../../../app/stylesheets/screen.scss */
+/* line 108, ../../../app/stylesheets/screen.scss */
 .titillium {
   font-family: Titillium;
   font-size: 15px;
   color: #354048;
 }
 
-/* line 111, ../../../app/stylesheets/screen.scss */
+/* line 114, ../../../app/stylesheets/screen.scss */
 .meta {
   font-family: Titillium;
 }
-/* line 113, ../../../app/stylesheets/screen.scss */
+/* line 116, ../../../app/stylesheets/screen.scss */
 .meta a {
   text-decoration: none;
 }
 
-/* line 118, ../../../app/stylesheets/screen.scss */
+/* line 121, ../../../app/stylesheets/screen.scss */
 .flockstreet_map {
   border: 1px solid #222;
   width: 250px;
@@ -1174,12 +1176,12 @@ h5 {
   -webkit-border-radius: 12px;
   border-radius: 12px;
 }
-/* line 127, ../../../app/stylesheets/screen.scss */
+/* line 130, ../../../app/stylesheets/screen.scss */
 .flockstreet_map .address {
   padding: 20px 0px;
 }
 
-/* line 133, ../../../app/stylesheets/screen.scss */
+/* line 136, ../../../app/stylesheets/screen.scss */
 nav.footer {
   color: white;
   font-weight: 500;
@@ -1187,7 +1189,7 @@ nav.footer {
   text-shadow: 1px 1px 1px #000;
   margin: 0px;
 }
-/* line 140, ../../../app/stylesheets/screen.scss */
+/* line 143, ../../../app/stylesheets/screen.scss */
 nav.footer a {
   font-family: Titillium;
   font-weight: 100;
@@ -1196,26 +1198,26 @@ nav.footer a {
   text-decoration: none;
 }
 
-/* line 149, ../../../app/stylesheets/screen.scss */
+/* line 152, ../../../app/stylesheets/screen.scss */
 footer.copyright {
   font-family: Titillium;
   font-size: 13px;
   color: #cfd6d0;
   text-shadow: 1px 1px 1px #000;
 }
-/* line 155, ../../../app/stylesheets/screen.scss */
+/* line 158, ../../../app/stylesheets/screen.scss */
 footer.copyright a {
   font-size: 12px;
   color: #cfd6d0;
   text-shadow: 1px 1px 1px #000;
   text-decoration: none;
 }
-/* line 161, ../../../app/stylesheets/screen.scss */
+/* line 164, ../../../app/stylesheets/screen.scss */
 footer.copyright a:hover {
   color: #fff;
 }
 
-/* line 166, ../../../app/stylesheets/screen.scss */
+/* line 169, ../../../app/stylesheets/screen.scss */
 .green_box {
   background: #f5fdf2;
   padding: 10px;
@@ -1224,12 +1226,12 @@ footer.copyright a:hover {
   overflow: visible;
 }
 
-/* line 175, ../../../app/stylesheets/screen.scss */
+/* line 178, ../../../app/stylesheets/screen.scss */
 #plans {
   padding: 0px;
 }
 
-/* line 179, ../../../app/stylesheets/screen.scss */
+/* line 182, ../../../app/stylesheets/screen.scss */
 .plan {
   height: 400px;
   float: left;
@@ -1237,24 +1239,24 @@ footer.copyright a:hover {
   font-size: 15px;
   color: #354048;
 }
-/* line 185, ../../../app/stylesheets/screen.scss */
+/* line 188, ../../../app/stylesheets/screen.scss */
 .plan h1 {
   font-weight: 800;
   line-height: 50px;
 }
-/* line 190, ../../../app/stylesheets/screen.scss */
+/* line 193, ../../../app/stylesheets/screen.scss */
 .plan h2 {
   font-weight: 100;
   line-height: 20px;
 }
-/* line 195, ../../../app/stylesheets/screen.scss */
+/* line 198, ../../../app/stylesheets/screen.scss */
 .plan .box {
   width: 280px;
   background: #f5fdf3;
   padding: 10px;
   margin: 0 20px 4px 0;
 }
-/* line 200, ../../../app/stylesheets/screen.scss */
+/* line 203, ../../../app/stylesheets/screen.scss */
 .plan .box ul {
   list-style: none;
   padding: 0px;
@@ -1266,39 +1268,39 @@ footer.copyright a:hover {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 204, ../../../app/stylesheets/screen.scss */
+/* line 207, ../../../app/stylesheets/screen.scss */
 .plan .box ul li {
   margin-top: 5px;
 }
-/* line 206, ../../../app/stylesheets/screen.scss */
+/* line 209, ../../../app/stylesheets/screen.scss */
 .plan .box ul li span {
   color: #80b8b3;
 }
-/* line 212, ../../../app/stylesheets/screen.scss */
+/* line 215, ../../../app/stylesheets/screen.scss */
 .plan .box.last {
   margin-right: 0px;
 }
-/* line 215, ../../../app/stylesheets/screen.scss */
+/* line 218, ../../../app/stylesheets/screen.scss */
 .plan .box.distinguish {
   background: #e4f0e0;
 }
 
-/* line 220, ../../../app/stylesheets/screen.scss */
+/* line 223, ../../../app/stylesheets/screen.scss */
 .plan_content {
   height: 270px;
 }
 
-/* line 226, ../../../app/stylesheets/screen.scss */
+/* line 229, ../../../app/stylesheets/screen.scss */
 #maintopics a {
   font-size: 1.5em;
   color: black;
 }
-/* line 230, ../../../app/stylesheets/screen.scss */
+/* line 233, ../../../app/stylesheets/screen.scss */
 #maintopics span {
   margin: 0px 10px;
 }
 
-/* line 236, ../../../app/stylesheets/screen.scss */
+/* line 239, ../../../app/stylesheets/screen.scss */
 #active {
   height: 40px;
   width: 190px;
@@ -1314,32 +1316,32 @@ footer.copyright a:hover {
   transition: all 0.3s ease-out;
 }
 
-/* line 251, ../../../app/stylesheets/screen.scss */
+/* line 254, ../../../app/stylesheets/screen.scss */
 #active.menu_create, #active.menu_action {
   top: 200px;
 }
 
-/* line 252, ../../../app/stylesheets/screen.scss */
+/* line 255, ../../../app/stylesheets/screen.scss */
 #active.menu_open, #active.menu_first, #active.menu_new, #active.menu_in {
   top: 250px;
 }
 
-/* line 253, ../../../app/stylesheets/screen.scss */
+/* line 256, ../../../app/stylesheets/screen.scss */
 #active.menu_assigned, #active.menu_second, #active.menu_accepted, #active.menu_out {
   top: 300px;
 }
 
-/* line 254, ../../../app/stylesheets/screen.scss */
+/* line 257, ../../../app/stylesheets/screen.scss */
 #active.menu_archived, #active.menu_third, #active.menu_won {
   top: 350px;
 }
 
-/* line 255, ../../../app/stylesheets/screen.scss */
+/* line 258, ../../../app/stylesheets/screen.scss */
 #active.menu_lost, #active.menu_fourth {
   top: 390px;
 }
 
-/* line 258, ../../../app/stylesheets/screen.scss */
+/* line 261, ../../../app/stylesheets/screen.scss */
 .biglist .entry {
   border-bottom: 1px solid black;
   height: 30px;
@@ -1347,7 +1349,7 @@ footer.copyright a:hover {
   padding-top: 8px;
 }
 
-/* line 264, ../../../app/stylesheets/screen.scss */
+/* line 267, ../../../app/stylesheets/screen.scss */
 .biglist .heading {
   height: 30px;
   font-weight: bold;
@@ -1355,12 +1357,12 @@ footer.copyright a:hover {
   padding-top: 8px;
 }
 
-/* line 271, ../../../app/stylesheets/screen.scss */
+/* line 274, ../../../app/stylesheets/screen.scss */
 .biglist .entry:hover {
   background: #e4f0e0;
 }
 
-/* line 275, ../../../app/stylesheets/screen.scss */
+/* line 278, ../../../app/stylesheets/screen.scss */
 .title {
   display: inline;
   float: left;
@@ -1372,7 +1374,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 278, ../../../app/stylesheets/screen.scss */
+/* line 281, ../../../app/stylesheets/screen.scss */
 .date {
   display: inline;
   float: left;
@@ -1384,7 +1386,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 281, ../../../app/stylesheets/screen.scss */
+/* line 284, ../../../app/stylesheets/screen.scss */
 .from, .tags {
   display: inline;
   float: left;
@@ -1396,14 +1398,14 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 284, ../../../app/stylesheets/screen.scss */
+/* line 287, ../../../app/stylesheets/screen.scss */
 .tags .tag {
   float: left;
   padding: 0px 5px;
   margin: 0px 5px;
 }
 
-/* line 289, ../../../app/stylesheets/screen.scss */
+/* line 292, ../../../app/stylesheets/screen.scss */
 .tag {
   background: #7fb6b1;
   -moz-border-radius: 12px;
@@ -1411,7 +1413,7 @@ footer.copyright a:hover {
   border-radius: 12px;
 }
 
-/* line 297, ../../../app/stylesheets/screen.scss */
+/* line 300, ../../../app/stylesheets/screen.scss */
 .processbox, .businesscard {
   padding: 3px;
   margin: 5px 0px;
@@ -1429,7 +1431,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 306, ../../../app/stylesheets/screen.scss */
+/* line 309, ../../../app/stylesheets/screen.scss */
 .businesscard .logo {
   display: inline;
   float: left;
@@ -1441,7 +1443,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 309, ../../../app/stylesheets/screen.scss */
+/* line 312, ../../../app/stylesheets/screen.scss */
 .businesscard .contact {
   display: inline;
   float: left;
@@ -1454,25 +1456,25 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 315, ../../../app/stylesheets/screen.scss */
+/* line 318, ../../../app/stylesheets/screen.scss */
 .actionbox_header {
   background: #f3f3f3;
   padding: 3px;
   height: 15px;
 }
 
-/* line 322, ../../../app/stylesheets/screen.scss */
+/* line 325, ../../../app/stylesheets/screen.scss */
 .actionbox_title {
   float: left;
   height: 15px;
 }
 
-/* line 326, ../../../app/stylesheets/screen.scss */
+/* line 329, ../../../app/stylesheets/screen.scss */
 .actionbox_top_link {
   text-align: right;
 }
 
-/* line 329, ../../../app/stylesheets/screen.scss */
+/* line 332, ../../../app/stylesheets/screen.scss */
 .actionbox_footer {
   text-align: right;
   background: #f3f3f3;
@@ -1481,24 +1483,24 @@ footer.copyright a:hover {
   height: 18px;
 }
 
-/* line 336, ../../../app/stylesheets/screen.scss */
+/* line 339, ../../../app/stylesheets/screen.scss */
 .actionbox_entry {
   border-bottom: 1px solid black;
   padding: 2px;
 }
 
-/* line 340, ../../../app/stylesheets/screen.scss */
+/* line 343, ../../../app/stylesheets/screen.scss */
 a.linkblock:hover, .actionbox_entry:hover {
   background: #e4f0e0;
 }
 
-/* line 344, ../../../app/stylesheets/screen.scss */
+/* line 347, ../../../app/stylesheets/screen.scss */
 .actionbox_entry .title {
   font-weight: bold;
   text-align: left;
 }
 
-/* line 352, ../../../app/stylesheets/screen.scss */
+/* line 355, ../../../app/stylesheets/screen.scss */
 #flash_container {
   width: 950px;
   margin: 0 auto;
@@ -1506,19 +1508,19 @@ a.linkblock:hover, .actionbox_entry:hover {
   *zoom: 1;
 }
 
-/* line 355, ../../../app/stylesheets/screen.scss */
+/* line 358, ../../../app/stylesheets/screen.scss */
 #flash_notice {
   background: #7fb6b1;
   border: 1px solid #aaaaaa;
 }
 
-/* line 359, ../../../app/stylesheets/screen.scss */
+/* line 362, ../../../app/stylesheets/screen.scss */
 #flash_error {
   background: #e4f0e0;
   border: 1px solid #7fb6b1;
 }
 
-/* line 363, ../../../app/stylesheets/screen.scss */
+/* line 366, ../../../app/stylesheets/screen.scss */
 #errorExplanation {
   margin: 10px;
   padding: 2px;
@@ -1526,12 +1528,12 @@ a.linkblock:hover, .actionbox_entry:hover {
   border: 1px solid red;
 }
 
-/* line 369, ../../../app/stylesheets/screen.scss */
+/* line 372, ../../../app/stylesheets/screen.scss */
 .field_with_errors input {
   border-color: red;
 }
 
-/* line 374, ../../../app/stylesheets/screen.scss */
+/* line 377, ../../../app/stylesheets/screen.scss */
 .transition {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1539,59 +1541,59 @@ a.linkblock:hover, .actionbox_entry:hover {
   transition: all 0.3s ease;
 }
 
-/* line 381, ../../../app/stylesheets/screen.scss */
+/* line 384, ../../../app/stylesheets/screen.scss */
 .box_shadow {
   -moz-box-shadow: 2px 2px 6px #222222;
   -webkit-box-shadow: 2px 2px 6px #222222;
   box-shadow: 2px 2px 6px #222222;
 }
 
-/* line 387, ../../../app/stylesheets/screen.scss */
+/* line 390, ../../../app/stylesheets/screen.scss */
 .ui-autocomplete-loading {
   background: white url(/images/ajax-loader.gif) right center no-repeat;
 }
 
-/* line 393, ../../../app/stylesheets/screen.scss */
+/* line 396, ../../../app/stylesheets/screen.scss */
 .twitterwall h3, .twitterwall h4 {
   padding-left: 20px;
 }
-/* line 396, ../../../app/stylesheets/screen.scss */
+/* line 399, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list {
   margin: 0px 0px 10px 10px;
   list-style: none;
   padding: 0px;
   font-size: 14px;
   font-family: Titillium;
-  color: #42515a;
+  color: #414f57;
 }
-/* line 404, ../../../app/stylesheets/screen.scss */
+/* line 407, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list a {
   color: #7b8c96;
   text-decoration: none;
 }
-/* line 408, ../../../app/stylesheets/screen.scss */
+/* line 411, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li {
   margin-bottom: 10px;
 }
-/* line 410, ../../../app/stylesheets/screen.scss */
+/* line 413, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet {
   background: #eef6eb;
 }
-/* line 412, ../../../app/stylesheets/screen.scss */
+/* line 415, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status {
   padding: 10px;
 }
-/* line 414, ../../../app/stylesheets/screen.scss */
+/* line 417, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status a, .twitterwall #twitter #twitter_update_list li .tweet .status a:hover {
-  color: #42515a;
+  color: #414f57;
   font-weight: 800;
   text-decoration: underline;
 }
-/* line 419, ../../../app/stylesheets/screen.scss */
+/* line 422, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status a:hover {
   color: #2c353b;
 }
-/* line 424, ../../../app/stylesheets/screen.scss */
+/* line 427, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .bubble {
   height: 10px;
   background: url(/images/twitter_bubble.png) no-repeat 0% 100%;
