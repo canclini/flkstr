@@ -171,7 +171,7 @@ footer.copyright {
   padding: 10px;
   width: 630px;
   margin-bottom: 4px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 // PLANS
@@ -281,19 +281,30 @@ footer.copyright {
 .date {
   @include column(3);
 }
-.from, .tags {
-  @include column(4);
-}
-.tags .tag {
-  float: left;
-  padding: 0px 5px;
-  margin: 0px 5px;
-}
+
 .tag {
   background: $dark_green;
-       -moz-border-radius: 12px; 
-    -webkit-border-radius: 12px; 
-            border-radius: 12px; 
+  float: left;
+       -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+            border-radius: 5px; 
+            margin: 5px;
+            padding: 2px 10px;
+  .tagname {
+    padding: 0 5px;
+    font-family: Titillium;
+    text-transform: uppercase;
+    float: left;
+  }
+  .tagdestroy {
+    padding: 0 0 0 5px;
+    float: left;
+    border-left: 1px solid #414f57;
+    a {
+      font-family: Titillium;
+      color: #414f57;
+    }
+  }
 }
 
 // RIGHT SIDE

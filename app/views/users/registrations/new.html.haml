@@ -11,7 +11,7 @@
   .green_box{:style => "clear:both;"}
     %h3 Wo arbeiten Sie?
     = f.simple_fields_for :company do |c|
-      = c.input :name, :label => "Firmenname",:hint => 'zu registrierende Firma', :input_html => { :class => 'transition' }
+      = c.input :name, :label => "Firmenname",:hint => 'zu registrierende Firma', :input_html => { :class => 'transition', :value => @company_name }
   .green_box
     %h3 Ihre Login-Daten
     = f.input :email, :label => "Mailadresse", :hint => 'ist auch gleich der Username', :input_html => {:class => 'transition' }

@@ -56,6 +56,7 @@ Flockstreet::Application.routes.draw do
   
   # tag list update of the company (special during website phase)
   match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put
+  match "/companies/:id/tags/:tag/remove" => "companies#remove_tag", :as => :remove_tag_company, :via => :delete
   
   
   # static tour pages

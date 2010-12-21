@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_filter :authenticate_user!, :except => [:new, :create, :exists, :join]
-  layout 'small_footer', :only => [:tags, :add_tag]
+  layout 'small_footer', :only => [:tags, :add_tag, :remove_tag]
   
   def index
     @companies = Company.search(params[:query]).paginate :per_page => 10, :page => params[:page]
@@ -31,9 +31,12 @@ class CompaniesController < ApplicationController
   
   def remove_tag
     # remove from input list (tags_company)
-    respond_to do |format|
-      format.js
-    end
+    @company = Company.find(params[:id])
+    tag = params[:tag]
+    @company.tag_list.remove(tag)
+    @company.save
+    @tag_list = @company.tag_list
+    render :tags
   end
   
 

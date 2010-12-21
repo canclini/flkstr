@@ -1,6 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   
   def new
+    company_name = ""
     super
   end
   
@@ -38,6 +39,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         
     else
       clean_up_passwords(resource)
+      @company_name = @company.name if @company.name.present?
       render_with_scope :new
     end
   end

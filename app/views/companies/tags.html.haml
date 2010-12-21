@@ -10,9 +10,8 @@
     //=f.input :tag_list
     = field_set_tag do
       = label :tags, "Tags"
-      = text_field :tags, :tag, :class => "text near"
-      //= link_to 'add', add_tag_company_path(:id => @company), :remote => :true, :class => "near_button"
-    #ac_selection  
-    
-  
-  = f.submit "add", :remote => :true, :class => "near_button"
+      = text_field :tags, :tag, :class => "text near focus"
+      = f.submit "add", :remote => :true, :class => "near_button"
+    - for tag in @tag_list do
+      = tag_flag(tag, remove_tag_company_path(@company, tag))
+  = link_to 'Fertig', destroy_user_session_path(), :class => "register_button"

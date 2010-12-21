@@ -114,7 +114,7 @@ html, body {
 
 /* line 35, ../../../app/stylesheets/partials/_layout.scss */
 #wrapper header {
-  background: url('/images/grid.png?1283238970');
+  background: url('/images/grid.png?1281876736');
   height: 100px;
   padding-top: 5px;
   clear: both;
@@ -591,28 +591,28 @@ input[type="text"], input[type="password"], input[type="email"] {
 
 /* line 20, ../../../app/stylesheets/partials/_forms.scss */
 input[type="text"].near, input[type="password"].near, input[type="email"].near {
-  width: 240px;
+  width: 200px;
   -webkit-border-radius: 5px 1px 1px 5px;
   -moz-border-radius: 5px 1px 1px 5px;
   -o-border-radius: 5px 1px 1px 5px;
   -border-radius: 5px 1px 1px 5px;
 }
 
-/* line 30, ../../../app/stylesheets/partials/_forms.scss */
+/* line 29, ../../../app/stylesheets/partials/_forms.scss */
 input[type="checkbox"]:focus, input[type="password"]:focus,
 input[type="text"]:focus, input[type="email"]:focus {
   border: 1px solid #e78b2c;
   outline: none;
 }
 
-/* line 35, ../../../app/stylesheets/partials/_forms.scss */
+/* line 34, ../../../app/stylesheets/partials/_forms.scss */
 input[type="checkbox"] {
   margin: 0 0 15px 0;
   font-size: 1.2em;
   width: 25px;
 }
 
-/* line 41, ../../../app/stylesheets/partials/_forms.scss */
+/* line 40, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form label, .simple_form span {
   font-family: Titillium;
   display: block;
@@ -620,18 +620,7 @@ input[type="checkbox"] {
   color: #414f57;
 }
 
-/* line 47, ../../../app/stylesheets/partials/_forms.scss */
-.uppercase {
-  text-transform: uppercase;
-}
-
-/* line 51, ../../../app/stylesheets/partials/_forms.scss */
-.simple_form input[type='submit'] {
-  margin-top: 30px;
-  margin-left: 300px;
-}
-
-/* line 56, ../../../app/stylesheets/partials/_forms.scss */
+/* line 52, ../../../app/stylesheets/partials/_forms.scss */
 .hint {
   background: url(/images/info_button.png) no-repeat 0% 60%;
   padding-left: 25px;
@@ -643,17 +632,17 @@ input[type="checkbox"] {
   width: 250px;
 }
 
-/* line 67, ../../../app/stylesheets/partials/_forms.scss */
+/* line 63, ../../../app/stylesheets/partials/_forms.scss */
 .forgot {
   margin-left: 290px;
 }
 
-/* line 72, ../../../app/stylesheets/partials/_forms.scss */
+/* line 68, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form input {
   float: left;
 }
 
-/* line 75, ../../../app/stylesheets/partials/_forms.scss */
+/* line 71, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form label {
   float: left;
   width: 290px;
@@ -662,29 +651,35 @@ input[type="checkbox"] {
   margin: 2px 0px;
 }
 
-/* line 84, ../../../app/stylesheets/partials/_forms.scss */
+/* line 80, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form .register_button {
+  margin-top: 10px;
+  margin-left: 300px;
+}
+
+/* line 85, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form fieldset {
   margin-bottom: 10px;
 }
 
-/* line 88, ../../../app/stylesheets/partials/_forms.scss */
+/* line 89, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form div.boolean {
   margin-left: 180px;
 }
 
-/* line 92, ../../../app/stylesheets/partials/_forms.scss */
+/* line 93, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form div.boolean label, .simple_form label.collection_radio {
   float: none;
   margin: 0;
 }
 
-/* line 97, ../../../app/stylesheets/partials/_forms.scss */
+/* line 98, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form label.collection_radio {
   margin-right: 10px;
   margin-left: 2px;
 }
 
-/* line 102, ../../../app/stylesheets/partials/_forms.scss */
+/* line 103, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form .error {
   clear: left;
   margin-left: 120px;
@@ -1232,7 +1227,7 @@ footer.copyright a:hover {
   padding: 10px;
   width: 630px;
   margin-bottom: 4px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* line 178, ../../../app/stylesheets/screen.scss */
@@ -1395,34 +1390,36 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 284, ../../../app/stylesheets/screen.scss */
-.from, .tags {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 310px;
-}
-/* line 139, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .from, * html .tags {
-  overflow-x: hidden;
-}
-
-/* line 287, ../../../app/stylesheets/screen.scss */
-.tags .tag {
-  float: left;
-  padding: 0px 5px;
-  margin: 0px 5px;
-}
-
-/* line 292, ../../../app/stylesheets/screen.scss */
+/* line 285, ../../../app/stylesheets/screen.scss */
 .tag {
   background: #7fb6b1;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  border-radius: 12px;
+  float: left;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 2px 10px;
+}
+/* line 293, ../../../app/stylesheets/screen.scss */
+.tag .tagname {
+  padding: 0 5px;
+  font-family: Titillium;
+  text-transform: uppercase;
+  float: left;
+}
+/* line 299, ../../../app/stylesheets/screen.scss */
+.tag .tagdestroy {
+  padding: 0 0 0 5px;
+  float: left;
+  border-left: 1px solid #414f57;
+}
+/* line 303, ../../../app/stylesheets/screen.scss */
+.tag .tagdestroy a {
+  font-family: Titillium;
+  color: #414f57;
 }
 
-/* line 300, ../../../app/stylesheets/screen.scss */
+/* line 311, ../../../app/stylesheets/screen.scss */
 .processbox, .businesscard {
   padding: 3px;
   margin: 5px 0px;
@@ -1440,7 +1437,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 309, ../../../app/stylesheets/screen.scss */
+/* line 320, ../../../app/stylesheets/screen.scss */
 .businesscard .logo {
   display: inline;
   float: left;
@@ -1452,7 +1449,7 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 312, ../../../app/stylesheets/screen.scss */
+/* line 323, ../../../app/stylesheets/screen.scss */
 .businesscard .contact {
   display: inline;
   float: left;
@@ -1465,25 +1462,25 @@ footer.copyright a:hover {
   overflow-x: hidden;
 }
 
-/* line 318, ../../../app/stylesheets/screen.scss */
+/* line 329, ../../../app/stylesheets/screen.scss */
 .actionbox_header {
   background: #f3f3f3;
   padding: 3px;
   height: 15px;
 }
 
-/* line 325, ../../../app/stylesheets/screen.scss */
+/* line 336, ../../../app/stylesheets/screen.scss */
 .actionbox_title {
   float: left;
   height: 15px;
 }
 
-/* line 329, ../../../app/stylesheets/screen.scss */
+/* line 340, ../../../app/stylesheets/screen.scss */
 .actionbox_top_link {
   text-align: right;
 }
 
-/* line 332, ../../../app/stylesheets/screen.scss */
+/* line 343, ../../../app/stylesheets/screen.scss */
 .actionbox_footer {
   text-align: right;
   background: #f3f3f3;
@@ -1492,24 +1489,24 @@ footer.copyright a:hover {
   height: 18px;
 }
 
-/* line 339, ../../../app/stylesheets/screen.scss */
+/* line 350, ../../../app/stylesheets/screen.scss */
 .actionbox_entry {
   border-bottom: 1px solid black;
   padding: 2px;
 }
 
-/* line 343, ../../../app/stylesheets/screen.scss */
+/* line 354, ../../../app/stylesheets/screen.scss */
 a.linkblock:hover, .actionbox_entry:hover {
   background: #e4f0e0;
 }
 
-/* line 347, ../../../app/stylesheets/screen.scss */
+/* line 358, ../../../app/stylesheets/screen.scss */
 .actionbox_entry .title {
   font-weight: bold;
   text-align: left;
 }
 
-/* line 355, ../../../app/stylesheets/screen.scss */
+/* line 366, ../../../app/stylesheets/screen.scss */
 #flash_container {
   width: 950px;
   margin: 0 auto;
@@ -1517,19 +1514,19 @@ a.linkblock:hover, .actionbox_entry:hover {
   *zoom: 1;
 }
 
-/* line 358, ../../../app/stylesheets/screen.scss */
+/* line 369, ../../../app/stylesheets/screen.scss */
 #flash_notice {
   background: #7fb6b1;
   border: 1px solid #aaaaaa;
 }
 
-/* line 362, ../../../app/stylesheets/screen.scss */
+/* line 373, ../../../app/stylesheets/screen.scss */
 #flash_error {
   background: #e4f0e0;
   border: 1px solid #7fb6b1;
 }
 
-/* line 366, ../../../app/stylesheets/screen.scss */
+/* line 377, ../../../app/stylesheets/screen.scss */
 #errorExplanation {
   margin: 10px;
   padding: 2px;
@@ -1537,12 +1534,12 @@ a.linkblock:hover, .actionbox_entry:hover {
   border: 1px solid red;
 }
 
-/* line 372, ../../../app/stylesheets/screen.scss */
+/* line 383, ../../../app/stylesheets/screen.scss */
 .field_with_errors input {
   border-color: red;
 }
 
-/* line 377, ../../../app/stylesheets/screen.scss */
+/* line 388, ../../../app/stylesheets/screen.scss */
 .transition {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1550,23 +1547,23 @@ a.linkblock:hover, .actionbox_entry:hover {
   transition: all 0.3s ease;
 }
 
-/* line 384, ../../../app/stylesheets/screen.scss */
+/* line 395, ../../../app/stylesheets/screen.scss */
 .box_shadow {
   -moz-box-shadow: 2px 2px 6px #222222;
   -webkit-box-shadow: 2px 2px 6px #222222;
   box-shadow: 2px 2px 6px #222222;
 }
 
-/* line 390, ../../../app/stylesheets/screen.scss */
+/* line 401, ../../../app/stylesheets/screen.scss */
 .ui-autocomplete-loading {
   background: white url(/images/ajax-loader.gif) right center no-repeat;
 }
 
-/* line 396, ../../../app/stylesheets/screen.scss */
+/* line 407, ../../../app/stylesheets/screen.scss */
 .twitterwall h3, .twitterwall h4 {
   padding-left: 20px;
 }
-/* line 399, ../../../app/stylesheets/screen.scss */
+/* line 410, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list {
   margin: 0px 0px 10px 10px;
   list-style: none;
@@ -1575,34 +1572,34 @@ a.linkblock:hover, .actionbox_entry:hover {
   font-family: Titillium;
   color: #414f57;
 }
-/* line 407, ../../../app/stylesheets/screen.scss */
+/* line 418, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list a {
   color: #7b8c96;
   text-decoration: none;
 }
-/* line 411, ../../../app/stylesheets/screen.scss */
+/* line 422, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li {
   margin-bottom: 10px;
 }
-/* line 413, ../../../app/stylesheets/screen.scss */
+/* line 424, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet {
   background: #eef6eb;
 }
-/* line 415, ../../../app/stylesheets/screen.scss */
+/* line 426, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status {
   padding: 10px;
 }
-/* line 417, ../../../app/stylesheets/screen.scss */
+/* line 428, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status a, .twitterwall #twitter #twitter_update_list li .tweet .status a:hover {
   color: #414f57;
   font-weight: 800;
   text-decoration: underline;
 }
-/* line 422, ../../../app/stylesheets/screen.scss */
+/* line 433, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .tweet .status a:hover {
   color: #2c353b;
 }
-/* line 427, ../../../app/stylesheets/screen.scss */
+/* line 438, ../../../app/stylesheets/screen.scss */
 .twitterwall #twitter #twitter_update_list li .bubble {
   height: 10px;
   background: url(/images/twitter_bubble.png) no-repeat 0% 100%;

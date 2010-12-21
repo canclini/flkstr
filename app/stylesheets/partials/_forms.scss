@@ -18,13 +18,12 @@ input[type="text"], input[type="password"], input[type="email"] {
 }
 
 input[type="text"].near, input[type="password"].near, input[type="email"].near {
-  width: 240px;
+  width: 200px;
   -webkit-border-radius: 5px 1px 1px 5px;
   -moz-border-radius: 5px 1px 1px 5px;
   -o-border-radius: 5px 1px 1px 5px;
   -border-radius: 5px 1px 1px 5px;
 }
-
 
 input[type="checkbox"]:focus, input[type="password"]:focus,
 input[type="text"]:focus, input[type="email"]:focus {
@@ -44,14 +43,11 @@ input[type="checkbox"] {
   font-size: 16px;
   color: $grey;
 }
-.uppercase {
-  text-transform: uppercase;
-}
 
-.simple_form input[type='submit'] {
-  margin-top: 30px;
-  margin-left: 300px;
-}
+//.simple_form input[type='submit'] {
+//  margin-top: 30px;
+//  margin-left: 300px;
+//}
 
 .hint {
   background: url(/images/info_button.png) no-repeat 0% 60%;
@@ -79,6 +75,11 @@ input[type="checkbox"] {
   text-align: left;
   font-size: 20px;
   margin: 2px 0px;
+}
+
+.simple_form .register_button {
+  margin-top: 10px;
+  margin-left: 300px;
 }
 
 .simple_form fieldset {
