@@ -8,11 +8,4 @@ class TagsController < ApplicationController
     end
   end
   
-  def add
-    # add to input list (tags_company)
-  end
-  
-  def remove
-    # remove from input list (tags_company)
-  end
 end

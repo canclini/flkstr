@@ -2,17 +2,17 @@
 %p Wunderbar! Sie haben erfolgreich ihre Firma registriert. Wenn sie sich jetzt noch kurz Zeit nehmen und ihre Firma mit 3 - 5 Tags bestücken, sind sie vom ersten Tag der Beta Phase bereit um potentielle Neue Aufträge zu bekommen!
 %p Tags sind ...
 
-=simple_form_for @company do |f|
+=simple_form_for @company, :url => add_tag_company_path do |f|
   = f.error_messages  
   
   .green_box
     %h3 Tags erfassen
     //=f.input :tag_list
-    =button_to 'add', :controller => 'tags', :action => 'add'
     = field_set_tag do
       = label :tags, "Tags"
-      = text_field :ac, :tags, :class => "text"
+      = text_field :tags, :tag, :class => "text near"
+      //= link_to 'add', add_tag_company_path(:id => @company), :remote => :true, :class => "near_button"
     #ac_selection  
     
   
-  = f.submit "Speichern", :class => "register_button"
+  = f.submit "add", :remote => :true, :class => "near_button"

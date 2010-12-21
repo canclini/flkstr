@@ -29,8 +29,6 @@ Flockstreet::Application.routes.draw do
   resources :tags do
     collection do
       get :autocomplete
-      put :add
-      put :remove
     end
   end
   
@@ -55,6 +53,10 @@ Flockstreet::Application.routes.draw do
   devise_for :users do
     match "/(:plan)/signup" => "users/registrations#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
   end
+  
+  # tag list update of the company (special during website phase)
+  match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put
+  
   
   # static tour pages
   get "tour/profile", :as => :tour_profile

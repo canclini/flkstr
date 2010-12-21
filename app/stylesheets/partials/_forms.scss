@@ -17,6 +17,15 @@ input[type="text"], input[type="password"], input[type="email"] {
   transition: all 0.3s ease-out;
 }
 
+input[type="text"].near, input[type="password"].near, input[type="email"].near {
+  width: 240px;
+  -webkit-border-radius: 5px 1px 1px 5px;
+  -moz-border-radius: 5px 1px 1px 5px;
+  -o-border-radius: 5px 1px 1px 5px;
+  -border-radius: 5px 1px 1px 5px;
+}
+
+
 input[type="checkbox"]:focus, input[type="password"]:focus,
 input[type="text"]:focus, input[type="email"]:focus {
   border: 1px solid $orange;

@@ -68,3 +68,30 @@ a.register_button:active, .register_button:active {
   @include fancy-button($grey, 13px, 2px);
   text-align: center;
 }
+
+
+.near_button, .near_button:active, .near_button:hover, .near_button:focus {
+//  background: #222 url(/images/alert-overlay.png) repeat-x;
+  font-family: Titillium;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.2em;
+  height: 23px;
+  background-image: -moz-linear-gradient(top, #43515A, #3a464d); 
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #43515A),color-stop(1, #3a464d)); 
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d'); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')"; 
+  background: $grey;  
+  display: inline-block;
+  padding: 7px 20px 7px;
+  text-decoration: none;
+  line-height: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 1px 5px 5px 1px;
+  -moz-box-shadow: 0 1px 3px #999;
+  -webkit-box-shadow: 0 1px 3px #999;
+//  text-shadow: 0 -1px 1px #222;
+//  border-bottom: 1px solid #222;
+  position: relative;
+  cursor: pointer;
+}
