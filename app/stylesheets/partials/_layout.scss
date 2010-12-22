@@ -33,6 +33,7 @@ html, body {
 }
 
 #wrapper header {  
+  font-size: 14px;
   @include showgrid();
   height: 100px;
   padding-top: 5px;

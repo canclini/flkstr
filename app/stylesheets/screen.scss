@@ -291,8 +291,8 @@ footer.copyright {
           background: $dark_green;
           background-image: -moz-linear-gradient(top, $dark_green, $dark_green - #111); 
           background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $dark_green),color-stop(1, $dark_green - #111)); 
-          filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='$dark_green', EndColorStr='$dark_green - #111'); 
-          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$dark_green', EndColorStr='$dark_green - #111')"; 
+          filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#7fb6b1', EndColorStr='#6ea5a0'); 
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7fb6b1', EndColorStr='#6ea5a0')"; 
           
   
        -moz-border-radius: 5px; 
