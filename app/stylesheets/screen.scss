@@ -167,11 +167,15 @@ footer.copyright {
 }
 
 .green_box {
+  @include column(8);
   background: #f5fdf2;
   padding: 10px;
-  width: 630px;
   margin-bottom: 4px;
   overflow: hidden;
+}
+
+.green_box.visible {
+  overflow: visible;
 }
 
 // PLANS
