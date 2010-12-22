@@ -2,6 +2,7 @@
 %html
   %head
     %meta{:charset=>"UTF-8"}
+    %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}/
     %title= h(yield(:title) || "flockstreet")
     = render :partial => 'layouts/includes'
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",  "jquery.rails", "modernizr-1.6.min", "jquery.twitter", "application"
