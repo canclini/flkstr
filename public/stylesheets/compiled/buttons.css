@@ -2,7 +2,7 @@
 /* line 8, ../../../app/stylesheets/buttons.scss */
 a.button, button, .button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1280252158') repeat-x bottom left;
+  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -210,7 +210,7 @@ a.button.edit:active, a.button.edit:active:visited, button.edit:active, button.e
 /* line 18, ../../../app/stylesheets/buttons.scss */
 a.big_button, .big_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1280252158') repeat-x bottom left;
+  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -324,7 +324,7 @@ a.big_button:active, .big_button:active {
 /* line 32, ../../../app/stylesheets/buttons.scss */
 a.small_button, .small_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1280252158') repeat-x bottom left;
+  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -429,7 +429,7 @@ a.small_button:active, a.small_button:active:visited, .small_button:active, .sma
 /* line 39, ../../../app/stylesheets/buttons.scss */
 a.login_button, .login_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1280252158') repeat-x bottom left;
+  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -532,7 +532,7 @@ a.login_button:active, a.login_button:active:visited, .login_button:active, .log
 /* line 44, ../../../app/stylesheets/buttons.scss */
 a.green_button, .green_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1280252158') repeat-x bottom left;
+  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -643,7 +643,7 @@ a.green_button:active, .green_button:active {
 /* line 55, ../../../app/stylesheets/buttons.scss */
 a.register_button, .register_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1280252158') repeat-x bottom left;
+  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -754,7 +754,7 @@ a.register_button:active, .register_button:active {
 /* line 67, ../../../app/stylesheets/buttons.scss */
 .search_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1280252158') repeat-x bottom left;
+  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -877,8 +877,9 @@ a.near_button {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #43515a), color-stop(1, #3a464d));
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d');
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')";
-  -moz-border-radius: 5px;
+  -moz-border-radius: 1px 5px 5px 1px;
   -webkit-border-radius: 1px 5px 5px 1px;
+  border-radius: 1px 5px 5px 1px;
   -moz-box-shadow: 0 1px 3px #999;
   -webkit-box-shadow: 0 1px 3px #999;
   position: relative;

@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
       redirect_to root_url
     end
   end
-    
+
   def needs_company!
     unless user_signed_in? && current_company?
       flash[:notice] = "Du bist nicht Mitglied einer Firma"
@@ -76,7 +76,7 @@ class ApplicationController < ActionController::Base
     #@app_state = ENV['APP_STATE']
     @app_state = 'website'
     allowed_controllers = %w[website companies registrations sessions plans]
-    allowed_actions = %w[tags update_tags update]
+    allowed_actions = %w[tags update]
     logger.debug controller_name
     if allowed_controllers.include?(controller_name)
       #continue

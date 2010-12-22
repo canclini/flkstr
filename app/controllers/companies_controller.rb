@@ -23,10 +23,10 @@ class CompaniesController < ApplicationController
     @company.tag_list.add(tag)
     @company.save
     @tag_list = @company.tag_list
-#    respond_to do |format|
-#      format.js
-#    end
-    render :tags
+    respond_to do |format|
+      format.js { render 'tags/update_tag_list' }
+      format.html { render :tags }
+    end
   end
   
   def remove_tag
@@ -36,7 +36,10 @@ class CompaniesController < ApplicationController
     @company.tag_list.remove(tag)
     @company.save
     @tag_list = @company.tag_list
-    render :tags
+    respond_to do |format|
+      format.js { render 'tags/update_tag_list' }
+      format.html { render :tags }
+    end
   end
   
 

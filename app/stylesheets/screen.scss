@@ -285,6 +285,16 @@ footer.copyright {
 .tag {
   background: $dark_green;
   float: left;
+     -moz-box-shadow: 1px 1px 2px #333; 
+  -webkit-box-shadow: 1px 1px 2px #333;
+          box-shadow: 1px 1px 2px #333;
+          background: $dark_green;
+          background-image: -moz-linear-gradient(top, $dark_green, $dark_green - #111); 
+          background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $dark_green),color-stop(1, $dark_green - #111)); 
+          filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='$dark_green', EndColorStr='$dark_green - #111'); 
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$dark_green', EndColorStr='$dark_green - #111')"; 
+          
+  
        -moz-border-radius: 5px; 
     -webkit-border-radius: 5px; 
             border-radius: 5px; 
@@ -300,6 +310,23 @@ footer.copyright {
     padding: 0 0 0 5px;
     float: left;
     border-left: 1px solid #414f57;
+    background: rgba(255,255,255,0);
+    input[type="submit"] {
+      background: $dark_green;
+      background: rgba(255,255,255,0);
+      font-family: Titillium;
+      color: #414f57;
+      border: none;
+      font-size: 1em;
+      padding: 3px 0px;
+      margin: 0;
+      display: inline-block;
+      text-decoration: none;      
+      line-height: 1;
+      position: relative;
+      cursor: pointer;
+            
+    }
     a {
       font-family: Titillium;
       color: #414f57;
@@ -372,16 +399,6 @@ a.linkblock:hover, .actionbox_entry:hover {
 
 #flash_error {
   @include boxed($light_green, $dark_green);
-}
-
-#errorExplanation {
-  margin: 10px;
-  padding: 2px;
-  @include boxed($light_grey, red);
-}
-
-.field_with_errors input { 
-  border-color: red;
 }
 
 // CSS3 stuff

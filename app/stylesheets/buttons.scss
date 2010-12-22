@@ -94,8 +94,9 @@ a.near_button {
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #43515A),color-stop(1, #3a464d)); 
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d'); 
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')"; 
-  -moz-border-radius: 5px;
+  -moz-border-radius: 1px 5px 5px 1px;
   -webkit-border-radius: 1px 5px 5px 1px;
+  border-radius: 1px 5px 5px 1px;
   -moz-box-shadow: 0 1px 3px #999;
   -webkit-box-shadow: 0 1px 3px #999;
   position: relative;
