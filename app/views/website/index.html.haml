@@ -6,19 +6,21 @@
       %h2= link_to t('startpage.tagline2'), plans_path()
       
   #site_title 
-    %h1 Flockstreet
-    %h1 Auftragsplatform mit Netzwerk
+    %h1 
+      Flockstreet
+      %br/
+      Auftragsplatform mit Netzwerk
     
 .right
-  #actionbutton
-    - if @app_state == 'website'
-      =link_to t('startpage.register_beta'), register_path(), :class => "big_button call2action"
-    -else
-      =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
+
+  - if @app_state == 'website'
+    =link_to t('startpage.register_beta'), register_path(), :class => "big_button call2action"
+  -else
+    =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
   
 
 .leftmiddle
-  %video{ :controls => "", :width => "620"}  
+  %video{ :controls => "", :width => "620", :height => "360"}  
     %source{:src => "http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.m4v", :type=> "video/mp4"}/
     %source{:src=>"http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.ogv", :type=> "video/ogg"}/
 
@@ -42,16 +44,15 @@
     %h4=link_to t('startpage.twitter'), "http://twitter.com/flockstreet"
   
 - content_for :columns do
-  .left
+  %article.slim
     %h3= t('teaser.left.title')
     %p= t('teaser.left.paragraph')
-    %br
     %h4=link_to t('teaser.link'), flockstreet_path(:anchor => "relations")
-  .middle
+  %article.slim
     %h3= t('teaser.middle.title')
     %p= t('teaser.middle.paragraph')
     %h4=link_to t('teaser.link'), flockstreet_path(:anchor => "customers")
-  .right
+  %article.slim.last
     %h3= t('teaser.right.title')
     %p=t('teaser.right.paragraph')
     %br

@@ -16,23 +16,39 @@ a.button, button, .button {
     @include fancy-button-colors(lighten($green, 10)); } }
     
 a.big_button, .big_button {
-  @include fancy-button(#76a6a0, 25px, 3px);
-  font-family: Titillium;
-  font-weight: 800;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.3); 
+  font-family: Titillium-XBold;
   font-size: 30px;
   text-align: center;
-  padding: 23px 35px;
+  padding: 18px 35px;
+  border: 1px solid #66928c;
+  /*css*/
+  background-color: #81b9b4;
+  background-image: -moz-linear-gradient(top, #81b9b4, #68948f); /* FF3.6 */                                      
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #81b9b4),color-stop(1, #68948f)); 
+      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f'); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
+          border-radius: 3px;
+     -moz-border-radius: 3px; 
+  -webkit-border-radius: 3px;
+          box-shadow: 0 0 4px rgba(0,0,0,.4), 0 1px 1px rgba(255,255,255,.5) inset;
+     -moz-box-shadow: 0 0 4px rgba(0,0,0,.4), 0 1px 1px rgba(255,255,255,.5) inset;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,.4), 0 1px 1px rgba(255,255,255,.5) inset;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  color: #fff;
 }
+
+.call2action {
+  float: right;
+  margin-top: 20px;
+}
+    
 a.big_button:active, .big_button:active {
-  font-size: 30px;
-  padding: 22px 34px;  
 }
 
 a.small_button, .small_button {
   @include fancy-button($grey, 10px, 2px);
   text-size: 12px;
-  font-weight: 500;
+  font-family: Titillium-Medium;
   text-align: center;
 }
 
@@ -43,8 +59,7 @@ a.login_button, .login_button {
 
 a.green_button, .green_button {
   @include fancy-button(#80b8b3, 15px, 3px);
-  font-family: Titillium;
-  font-weight: 800;
+  font-family: Titillium-XBold;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.3); 
   padding: 9px 25px 8px 25px;
 }
@@ -54,8 +69,7 @@ a.green_button:active, .green_button:active {
 
 a.register_button, .register_button {
   @include fancy-button(#80b8b3, 20px, 3px);
-  font-family: Titillium;
-  font-weight: 800;
+  font-family: Titillium-XBold;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.3); 
   padding: 13px 25px 8px 25px;
 }
@@ -78,8 +92,7 @@ a.near_button {
 }
 
 .near_button, .near_button:active, .near_button:hover, .near_button:focus {
-  font-family: Titillium;
-  font-weight: 800;
+  font-family: Titillium-XBold;
   color: #fff;
   border: 1px solid $grey;
   font-size: 1.3em;

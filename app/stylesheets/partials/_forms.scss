@@ -38,7 +38,7 @@ input[type="checkbox"] {
 }
 
 .simple_form label, .simple_form span {
-  font-family: Titillium;
+  font-family: Titillium-Medium;
   display: block;
   font-size: 16px;
   color: $grey;
@@ -56,7 +56,7 @@ input[type="checkbox"] {
   display: none;
   margin-left: 650px;
   color: $grey;
-  font-family: Titillium;
+  font-family: Titillium-Medium;
   width: 250px;
 }
 
@@ -65,18 +65,17 @@ input[type="checkbox"] {
 }
 
 // ERRORS
-
 .field_with_errors input {
   border-color: #d47b17;
-  -webkit-border-radius: 5px 5px 1px 1px;
-  -moz-border-radius: 5px 5px 1px 1px;
-  -o-border-radius: 5px 5px 1px 1px;
-  -border-radius: 5px 5px 1px 1px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+     -moz-border-radius: 5px 5px 0px 0px;
+       -o-border-radius: 5px 5px 0px 0px;
+         -border-radius: 5px 5px 0px 0px;
 }
 
 .errorExplanation {
   h2, h3 { color: #fff; }
-  font-family: Titilium;
+  font-family: Titilium-Medium;
   color: #fff;
   float: left;
   width: 628px;
@@ -85,27 +84,34 @@ input[type="checkbox"] {
   background: $dark_orange;
   border: 1px solid #d47b17;
   -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -o-border-radius: 5px;
-  -border-radius: 5px;
+     -moz-border-radius: 5px;
+       -o-border-radius: 5px;
+         -border-radius: 5px;
+
   .title {
+    h2 {
+    font-family: Titillium-XBold;
+    line-height: 1.2;
+    }
     float: left;
-    width: 280px;
+    width: 300px;
   }
   .content {
     h3 {
+      font-family: Titillium-XBold;
       font-size: 20px;
     }
     float: left;
     ul {
+      font-family: Titillium-Light;
+      letter-spacing: 0.03em;
       line-height: 1;
     }
   }
 }
 
 .simple_form span.error {
-  font-family: Titillium;
-  font-weight: 500;
+  font-family: Titillium-Medium;
   color: #fff;
   background: $dark_orange;
   clear: left;
@@ -113,12 +119,13 @@ input[type="checkbox"] {
   padding: 2px 10px;
   width: 276px;
   font-size: 14px;
-  display: block;
+//  display: block;
   border: 1px solid #d47b17;
-  -webkit-border-radius: 1px 1px 5px 5px;
-  -moz-border-radius: 1px 1px 5px 5px;
-  -o-border-radius: 1px 1px 5px 5px;
-  -border-radius: 1px 1px 5px 5px;
+  border-top: none;
+  -webkit-border-radius: 0px 0px 5px 5px;
+     -moz-border-radius: 0px 0px 5px 5px;
+       -o-border-radius: 0px 0px 5px 5px;
+         -border-radius: 0px 0px 5px 5px;
 }
 
 
@@ -130,7 +137,6 @@ input[type="checkbox"] {
 .simple_form label {
 //  width: 290px;
 @include column(4);
-//  font-weight: bold;
   text-align: left;
   font-size: 20px;
   margin: 2px 0px;

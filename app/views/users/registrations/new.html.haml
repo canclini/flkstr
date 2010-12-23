@@ -6,7 +6,6 @@
   
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   =errors_for(@user, "Registration fehlgeschlagen!", "Bitte prüfen sie folgende Felder:").html_safe
-  =errors_for(@company, "Registration fehlgeschlagen!", "Bitte prüfen sie folgende Felder:").html_safe
       
   .green_box.visible{:style => "clear:both;"}
     %h3 Wo arbeiten Sie?

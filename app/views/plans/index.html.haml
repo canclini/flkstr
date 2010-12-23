@@ -3,7 +3,7 @@
   .tagline
     %h2= link_to t('startpage.tagline1'), tour_profile_path()
   .tagline
-    %h2= link_to t('startpage.tagline2'), plans_path()
+    %h2.active= link_to t('startpage.tagline2'), plans_path()
 
 - if show_title?
   %h1=h yield(:title)
@@ -12,5 +12,5 @@
     %br/
   
   #plans
-  - for plan in [:scale, :connect, :ready] do
-    = render :partial => "#{plan}"
+    - for plan in [:scale, :connect, :ready] do
+      = render :partial => "#{plan}"
