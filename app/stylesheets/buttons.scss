@@ -43,6 +43,11 @@ a.big_button, .big_button {
 }
     
 a.big_button:active, .big_button:active {
+  background-image: -moz-linear-gradient(top, #68948f, #81b9b4); /* FF3.6 */                                      
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #68948f),color-stop(1,#81b9b4)); 
+      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4'); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
+  
 }
 
 a.small_button, .small_button {

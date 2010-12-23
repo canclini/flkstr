@@ -52,19 +52,6 @@ h1, h2, h3, h4, h5 {
     text-decoration: none;
   }
 h2 {
-  a, a:visited, a:hover, a:focus {
-    color: $grey;
-
-    // create a special underline for the links with more space between text and line.
-    //background: url(/images/underline_black_hover.png) repeat-x 100% 100%;
-    border-bottom: 1px solid $grey;
-    padding-bottom: 2px;
-    white-space: nowrap;
-  }
-  a:hover, a:focus {
-    color: #313131;
-    border-bottom: 1px solid #313131;
-  }
 }
 
 h3, h4 {

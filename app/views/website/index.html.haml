@@ -1,23 +1,20 @@
-.leftmiddle
-  #links
-    .tagline
-      %h2= link_to t('startpage.tagline1'), flockstreet_path()
-    .tagline.last
-      %h2= link_to t('startpage.tagline2'), plans_path()
+%nav.topnav
+  %ul
+    %li
+      = link_to t('startpage.tagline1'), flockstreet_path()
+    %li.last
+      = link_to t('startpage.tagline2'), plans_path()
       
-  #site_title 
-    %h1 
-      Flockstreet
-      %br/
-      Auftragsplatform mit Netzwerk
+  %h1 
+    Flockstreet
+    %br/
+    Auftragsplatform mit Netzwerk
     
 .right
-
   - if @app_state == 'website'
     =link_to t('startpage.register_beta'), register_path(), :class => "big_button call2action"
   -else
     =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
-  
 
 .leftmiddle
   %video{ :controls => "", :width => "620", :height => "360"}  

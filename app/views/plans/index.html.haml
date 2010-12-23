@@ -1,16 +1,17 @@
-- title( t('plans.title'))
-.toplinks
-  .tagline
-    %h2= link_to t('startpage.tagline1'), tour_profile_path()
-  .tagline
-    %h2.active= link_to t('startpage.tagline2'), plans_path()
+%nav.topnav
+  %ul
+    %li
+      = link_to t('startpage.tagline1'), flockstreet_path()
+    %li.last.active
+      = link_to t('startpage.tagline2'), plans_path()
+      
+  %h1= t('plans.title')
+    
 
-- if show_title?
-  %h1=h yield(:title)
-  .leftmiddle
-    %h4 flockstreet startet bald mit der Beta Phase. Sie können sich bereits jetzt dafür anmelden. Ihre Firma und Ihr persönlicher Benutzer werden dann für sie bereit sein. Wir freuen uns auf Ihre Mitgliedschaft!
-    %br/
+.leftmiddle
+  %h4 flockstreet startet bald mit der Beta Phase. Sie können sich bereits jetzt dafür anmelden. Ihre Firma und Ihr persönlicher Benutzer werden dann für sie bereit sein. Wir freuen uns auf Ihre Mitgliedschaft!
+  %br/
   
-  #plans
-    - for plan in [:scale, :connect, :ready] do
-      = render :partial => "#{plan}"
+#plans
+  - for plan in [:scale, :connect, :ready] do
+    = render :partial => "#{plan}"

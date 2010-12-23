@@ -237,7 +237,16 @@ a.big_button, .big_button {
   margin-top: 20px;
 }
 
-/* line 48, ../../../app/stylesheets/buttons.scss */
+/* line 45, ../../../app/stylesheets/buttons.scss */
+a.big_button:active, .big_button:active {
+  background-image: -moz-linear-gradient(top, #68948f, #81b9b4);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68948f), color-stop(1, #81b9b4));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
+}
+
+/* line 53, ../../../app/stylesheets/buttons.scss */
 a.small_button, .small_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
   background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
@@ -342,7 +351,7 @@ a.small_button:active, a.small_button:active:visited, .small_button:active, .sma
   color: white;
 }
 
-/* line 55, ../../../app/stylesheets/buttons.scss */
+/* line 60, ../../../app/stylesheets/buttons.scss */
 a.login_button, .login_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
   background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
@@ -445,7 +454,7 @@ a.login_button:active, a.login_button:active:visited, .login_button:active, .log
   color: white;
 }
 
-/* line 60, ../../../app/stylesheets/buttons.scss */
+/* line 65, ../../../app/stylesheets/buttons.scss */
 a.green_button, .green_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
   background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
@@ -550,12 +559,12 @@ a.green_button:active, a.green_button:active:visited, .green_button:active, .gre
   color: white;
 }
 
-/* line 66, ../../../app/stylesheets/buttons.scss */
+/* line 71, ../../../app/stylesheets/buttons.scss */
 a.green_button:active, .green_button:active {
   padding: 8px 24px 7px 24px;
 }
 
-/* line 70, ../../../app/stylesheets/buttons.scss */
+/* line 75, ../../../app/stylesheets/buttons.scss */
 a.register_button, .register_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
   background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
@@ -660,12 +669,12 @@ a.register_button:active, a.register_button:active:visited, .register_button:act
   color: white;
 }
 
-/* line 76, ../../../app/stylesheets/buttons.scss */
+/* line 81, ../../../app/stylesheets/buttons.scss */
 a.register_button:active, .register_button:active {
   padding: 12px 24px 7px 24px;
 }
 
-/* line 81, ../../../app/stylesheets/buttons.scss */
+/* line 86, ../../../app/stylesheets/buttons.scss */
 .search_button {
   font-family: "Lucida Grande", Lucida, Arial, sans_serif;
   background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
@@ -768,12 +777,12 @@ a.register_button:active, .register_button:active {
   color: white;
 }
 
-/* line 90, ../../../app/stylesheets/buttons.scss */
+/* line 95, ../../../app/stylesheets/buttons.scss */
 a.near_button {
   height: 23px;
 }
 
-/* line 94, ../../../app/stylesheets/buttons.scss */
+/* line 99, ../../../app/stylesheets/buttons.scss */
 .near_button, .near_button:active, .near_button:hover, .near_button:focus {
   font-family: Titillium-XBold;
   color: #fff;
