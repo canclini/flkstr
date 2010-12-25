@@ -313,6 +313,12 @@ nav.topnav ul li a:hover, nav.topnav ul li a:focus {
 }
 
 /* line 148, ../../../app/stylesheets/partials/_layout.scss */
+#container.big_footer, #content_two.big_footer {
+  padding-bottom: 250px;
+  overflow: auto;
+}
+
+/* line 153, ../../../app/stylesheets/partials/_layout.scss */
 .explanation {
   padding: 20px 0px;
   display: inline;
@@ -324,7 +330,7 @@ nav.topnav ul li a:hover, nav.topnav ul li a:focus {
 * html .explanation {
   overflow-x: hidden;
 }
-/* line 151, ../../../app/stylesheets/partials/_layout.scss */
+/* line 156, ../../../app/stylesheets/partials/_layout.scss */
 .explanation .paragraph {
   display: inline;
   float: left;
@@ -335,7 +341,7 @@ nav.topnav ul li a:hover, nav.topnav ul li a:focus {
 * html .explanation .paragraph {
   overflow-x: hidden;
 }
-/* line 154, ../../../app/stylesheets/partials/_layout.scss */
+/* line 159, ../../../app/stylesheets/partials/_layout.scss */
 .explanation .picture {
   width: 450px;
   height: 254px;
@@ -351,7 +357,7 @@ nav.topnav ul li a:hover, nav.topnav ul li a:focus {
   overflow-x: hidden;
 }
 
-/* line 163, ../../../app/stylesheets/partials/_layout.scss */
+/* line 168, ../../../app/stylesheets/partials/_layout.scss */
 #content_two {
   clear: both;
   padding-bottom: 30px;
@@ -361,7 +367,7 @@ nav.topnav ul li a:hover, nav.topnav ul li a:focus {
   *zoom: 1;
 }
 
-/* line 169, ../../../app/stylesheets/partials/_layout.scss */
+/* line 174, ../../../app/stylesheets/partials/_layout.scss */
 #footer.big, #footer.small {
   clear: both;
   border-top: 1px solid #42515a;
@@ -375,7 +381,7 @@ nav.topnav ul li a:hover, nav.topnav ul li a:focus {
   -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
   -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
 }
-/* line 183, ../../../app/stylesheets/partials/_layout.scss */
+/* line 188, ../../../app/stylesheets/partials/_layout.scss */
 #footer.big nav.footer, #footer.small nav.footer {
   padding: 20px 0px 0px 0px;
   width: 950px;
@@ -383,7 +389,7 @@ nav.topnav ul li a:hover, nav.topnav ul li a:focus {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 187, ../../../app/stylesheets/partials/_layout.scss */
+/* line 192, ../../../app/stylesheets/partials/_layout.scss */
 #footer.big .ginetta, #footer.small .ginetta {
   text-align: right;
   display: inline;
@@ -396,19 +402,20 @@ nav.topnav ul li a:hover, nav.topnav ul li a:focus {
   overflow-x: hidden;
 }
 
-/* line 193, ../../../app/stylesheets/partials/_layout.scss */
+/* line 198, ../../../app/stylesheets/partials/_layout.scss */
 #footer.big {
-  padding-bottom: 20px;
+  margin-top: -241px;
+  height: 240px;
 }
 
-/* line 196, ../../../app/stylesheets/partials/_layout.scss */
+/* line 203, ../../../app/stylesheets/partials/_layout.scss */
 #footer.small {
   margin-top: -51px;
   /* negative value of footer height */
   height: 40px;
   padding-top: 10px;
 }
-/* line 200, ../../../app/stylesheets/partials/_layout.scss */
+/* line 207, ../../../app/stylesheets/partials/_layout.scss */
 #footer.small .ginetta {
   text-align: right;
   display: inline;
@@ -421,20 +428,20 @@ nav.topnav ul li a:hover, nav.topnav ul li a:focus {
   overflow-x: hidden;
 }
 
-/* line 207, ../../../app/stylesheets/partials/_layout.scss */
+/* line 214, ../../../app/stylesheets/partials/_layout.scss */
 footer.copyright {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 209, ../../../app/stylesheets/partials/_layout.scss */
+/* line 216, ../../../app/stylesheets/partials/_layout.scss */
 footer.copyright .flockstreet {
   text-align: right;
   margin-right: 0;
 }
 
-/* line 215, ../../../app/stylesheets/partials/_layout.scss */
+/* line 222, ../../../app/stylesheets/partials/_layout.scss */
 nav.main {
   height: 40px;
   display: inline;
@@ -447,7 +454,7 @@ nav.main {
 * html nav.main {
   overflow-x: hidden;
 }
-/* line 220, ../../../app/stylesheets/partials/_layout.scss */
+/* line 227, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #dashboard {
   display: inline;
   float: left;
@@ -458,12 +465,12 @@ nav.main #dashboard {
 * html nav.main #dashboard {
   overflow-x: hidden;
 }
-/* line 222, ../../../app/stylesheets/partials/_layout.scss */
+/* line 229, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #dashboard a {
   font-size: 1.5em;
   color: black;
 }
-/* line 228, ../../../app/stylesheets/partials/_layout.scss */
+/* line 235, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #maintopics {
   display: inline;
   float: left;
@@ -474,7 +481,7 @@ nav.main #maintopics {
 * html nav.main #maintopics {
   overflow-x: hidden;
 }
-/* line 232, ../../../app/stylesheets/partials/_layout.scss */
+/* line 239, ../../../app/stylesheets/partials/_layout.scss */
 nav.main #mainaction {
   text-align: right;
   display: inline;
@@ -488,7 +495,7 @@ nav.main #mainaction {
   overflow-x: hidden;
 }
 
-/* line 239, ../../../app/stylesheets/partials/_layout.scss */
+/* line 246, ../../../app/stylesheets/partials/_layout.scss */
 nav.sidebar {
   display: inline;
   float: left;
@@ -501,25 +508,25 @@ nav.sidebar {
   overflow-x: hidden;
 }
 
-/* line 243, ../../../app/stylesheets/partials/_layout.scss */
+/* line 250, ../../../app/stylesheets/partials/_layout.scss */
 .filter {
   height: 40px;
   padding: 5px 0px;
 }
 
-/* line 248, ../../../app/stylesheets/partials/_layout.scss */
+/* line 255, ../../../app/stylesheets/partials/_layout.scss */
 article.slim {
   float: left;
   margin-right: 20px;
   width: 300px;
 }
 
-/* line 254, ../../../app/stylesheets/partials/_layout.scss */
+/* line 261, ../../../app/stylesheets/partials/_layout.scss */
 article.last {
   margin-right: 0px;
 }
 
-/* line 258, ../../../app/stylesheets/partials/_layout.scss */
+/* line 265, ../../../app/stylesheets/partials/_layout.scss */
 #rightcontent {
   display: inline;
   float: left;
@@ -532,7 +539,7 @@ article.last {
   overflow-x: hidden;
 }
 
-/* line 262, ../../../app/stylesheets/partials/_layout.scss */
+/* line 269, ../../../app/stylesheets/partials/_layout.scss */
 #leftcontent {
   display: inline;
   float: left;
@@ -544,14 +551,14 @@ article.last {
   overflow-x: hidden;
 }
 
-/* line 266, ../../../app/stylesheets/partials/_layout.scss */
+/* line 273, ../../../app/stylesheets/partials/_layout.scss */
 .byline {
   padding: 30px 0px;
   line-height: 29px;
   width: 630px;
 }
 
-/* line 271, ../../../app/stylesheets/partials/_layout.scss */
+/* line 278, ../../../app/stylesheets/partials/_layout.scss */
 .toplinks {
   display: inline;
   float: left;
@@ -564,7 +571,7 @@ article.last {
   overflow-x: hidden;
 }
 
-/* line 275, ../../../app/stylesheets/partials/_layout.scss */
+/* line 282, ../../../app/stylesheets/partials/_layout.scss */
 .leftmiddle, .middleright {
   display: inline;
   float: left;
@@ -576,7 +583,7 @@ article.last {
   overflow-x: hidden;
 }
 
-/* line 279, ../../../app/stylesheets/partials/_layout.scss */
+/* line 286, ../../../app/stylesheets/partials/_layout.scss */
 .left, .middle, .right {
   display: inline;
   float: left;
@@ -588,7 +595,7 @@ article.last {
   overflow-x: hidden;
 }
 
-/* line 283, ../../../app/stylesheets/partials/_layout.scss */
+/* line 290, ../../../app/stylesheets/partials/_layout.scss */
 .first, .second, .third, .fourth {
   display: inline;
   float: left;
@@ -600,12 +607,12 @@ article.last {
   overflow-x: hidden;
 }
 
-/* line 287, ../../../app/stylesheets/partials/_layout.scss */
+/* line 294, ../../../app/stylesheets/partials/_layout.scss */
 .fourth, .right, .middleright {
   margin-right: 0;
 }
 
-/* line 291, ../../../app/stylesheets/partials/_layout.scss */
+/* line 298, ../../../app/stylesheets/partials/_layout.scss */
 .last {
   margin-right: 0;
 }

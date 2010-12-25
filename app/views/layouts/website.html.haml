@@ -22,15 +22,15 @@
           = content_tag :div, msg, :id => "flash_#{name}"
       #container
         = yield
-      #content_two
+      #content_two.big_footer
         = yield(:columns)
 
-      #footer.big
-        %nav.footer
-          = render 'website/footer'
-        %footer.copyright
-          .ginetta
-            =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition"
-          .flockstreet
-            &copy; flockstreet 2011
+    #footer.big
+      %nav.footer
+        = render 'website/footer'
+      %footer.copyright
+        .ginetta
+          =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition"
+        .flockstreet
+          &copy; flockstreet 2011
     = render :partial => 'website/feedback'

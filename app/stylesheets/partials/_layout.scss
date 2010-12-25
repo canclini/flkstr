@@ -145,6 +145,11 @@ nav.topnav {
   padding-bottom: 80px; // sticky footer + spacing between content and footer
 }
 
+#container.big_footer, #content_two.big_footer {
+  padding-bottom: 250px; // sticky footer + spacing between content and footer
+  overflow: auto;
+}
+
 .explanation {  
   padding: 20px 0px;
   @include column(12);    
@@ -191,7 +196,9 @@ nav.topnav {
 }
 
 #footer.big {
-  padding-bottom: 20px;
+  margin-top: -241px;
+//  padding-bottom: 20px;
+  height: 240px;
 }
 #footer.small {
   margin-top: -51px; /* negative value of footer height */
