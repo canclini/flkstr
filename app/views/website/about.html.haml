@@ -3,37 +3,40 @@
   - if show_title?
     %h1=h yield(:title)
 
-.explanation
-  .paragraph 
-    %h3 Wieso flockstreet?
-    %p
-      Wir fanden die Suche nach neuen Lieferanten immer echt Mühsam: im Internet etliche Homepages von Anbietern studieren und dann doch nicht schlauer zu sein... "Geld ausgeben muss doch einfacher gehen!". flocksteet soll Lieferanten und Kunden einfacher zusammenbringen. 
-    %br/
-    %br/
+.left
+  %h3 Wieso flockstreet?
+.middleright
+  %p
+    Wir fanden die Suche nach neuen Lieferanten immer echt Mühsam: im Internet etliche Homepages von Anbietern studieren und dann doch nicht schlauer zu sein... "Geld ausgeben muss doch einfacher gehen!". flocksteet soll Lieferanten und Kunden einfacher zusammenbringen. 
+
+.left  
+  %h3 Wieso ein soziales Netzwerk?
+
+.middleright
+  %p 
+    Firmen sollten mit den Menschen/Firmen sprechen, zu denen Sie eine Beziehung haben oder aufbauen wollen. flockstreet will die Schweizer KMUs dabei unterstützen in einen offenen, regen Dialog miteinander zu kommen. Wir sind überzeugt, dass darin viel Potential steckt. Wir haben unsere Partner übrigens auch in sozialen Netzwerken gefunden.  
+
+.left
+  %h3 Caroline Schnell
   
-    %h3 Wieso ein soziales Netzwerk?
-    %p 
-      Firmen sollten mit den Menschen/Firmen sprechen, zu denen Sie eine Beziehung haben oder aufbauen wollen. flockstreet will die Schweizer KMUs dabei unterstützen in einen offenen, regen Dialog miteinander zu kommen. Wir sind überzeugt, dass darin viel Potential steckt. Wir haben unsere Partner übrigens auch in sozialen Netzwerken gefunden.
-  
-  .picture
-    =image_tag("kunde_lieferant.png")
-  
-.explanation
-  .paragraph
-    %h3 Caroline
-    =link_to 'Caroline bei Xing', "http://xing.com/profile/Caroline_Schnell"
-    %br/
-    Von Anfang an bei flockstreet dabei
-    %br/
-    Zuständig für Admin, Texte und Strategie
+.middle
+  %ul
+  %li= link_to 'Caroline bei Xing', "http://xing.com/profile/Caroline_Schnell"
+  %li Von Anfang an bei flockstreet dabei
+  %li Chefin
     
-  .picture
-    =image_tag("kunde_lieferant.png")
-.explanation
-  .paragraph
-    %h3 Marcel
-    =link_to 'Marcel bei Xing', "http://xing.com/profile/Marcel_Canclini"
-    %br/
-    Von Anfang an bei flockstreet dabei
-    %br/
-    Zuständig für IT und Strategie
+.right
+  =image_tag("kunde_lieferant.png")
+
+.left
+  %h3 Marcel Canclini
+  
+.middle
+  %ul
+  %li Von Anfang an bei flockstreet dabei
+  %li Chef
+  %li= link_to 'Xing', "http://xing.com/profile/Marcel_Canclini"
+  %li= link_to 'Twitter', "http://twitter.com/canclini"  
+  
+.right
+  =image_tag("kunde_lieferant.png")

@@ -4,30 +4,34 @@
     %h1=h yield(:title)
 
 .left
-  .flockstreet_map.box_shadow
+  <iframe width="250" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Katharina+Sulzer-Platz,+Winterthur,+Schweiz&amp;sll=37.0625,-95.677068&amp;sspn=73.420101,84.990234&amp;ie=UTF8&amp;hq=&amp;hnear=Katharina+Sulzer-Platz,+8400+Winterthur,+Z%C3%BCrich,+Switzerland&amp;z=14&amp;ll=47.496152,8.718688&amp;output=embed"></iframe>
 
-.middle.titillium
-  %p
-    %h3 flockstreet GmbH
-    %p
-      Katharina Sulzer Platz 2
-      %br/
-      8400 Winterthur
-      %br/
-      Schweiz
-    %p
-      phone: +41 (0) 79 470 21 40
-      %br/
-      email: contact@flockstreet.com
+
+%address.middle.titillium
+  .vcard
+    = image_tag("flockstreet_3mal_weiss.jpg", :class => 'company logo', :style => "display:none;")
+    %h3.fn.org flockstreet GmbH
+    .adr
+      .street-address Katharina Sulzer-Platz 2
+      %div
+        %span.postal-code 8400
+        %span.locality Winterthur
+      .country-name Switzerland
+    %div
+      Phone: 
+      %span.tel +41 79 479 21 40
+    %div 
+      Email: 
+      %span.email contact@flockstreet.com
+  %br/
+  = link_to "download vcard", "http://h2vx.com/vcf/flockstreet.com/impressum"
 
 .right.titillium
-  %p
-    %h3 Design
-    %strong GINETTA™ WEB/DESIGN
-    %br/
-    =link_to "www.ginetta.ch", "http://www.ginetta.ch"
-  %p
-    %h3 Animationsvideo
-    %strong Sebastian Benjamin Riepe
-    %br/
-    =link_to "www.optical-longings.de", "http://www.optical-longings.de"
+  %h3 Design
+  %strong GINETTA™ WEB/DESIGN
+  %br/
+  =link_to "www.ginetta.ch", "http://www.ginetta.ch"
+  %h3 Animationsvideo
+  %strong Sebastian Benjamin Riepe
+  %br/
+  =link_to "www.optical-longings.de", "http://www.optical-longings.de"
