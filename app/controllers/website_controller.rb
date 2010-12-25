@@ -1,6 +1,6 @@
 class WebsiteController < ApplicationController
   def index
-    @signedupcompanies = Company.with_logo
+    #@signedupcompanies = Company.with_logo
   end
   
   def flockstreet

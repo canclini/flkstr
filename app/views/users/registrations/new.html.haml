@@ -7,11 +7,11 @@
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   =errors_for(@user, "Registration fehlgeschlagen!", "Bitte prüfen sie folgende Felder:").html_safe
       
-  .green_box{:style => "clear:both;"}
+  .green_box.visible{:style => "clear:both;"}
     %h3 Wo arbeiten Sie?
     = f.simple_fields_for :company do |c|
       = c.input :name, :label => "Firmenname",:hint => 'zu registrierende Firma', :input_html => { :class => 'transition', :value => @company_name }
-  .green_box
+  .green_box.visible
     %h3 Ihre Login-Daten
     = f.input :email, :label => "Mailadresse", :hint => 'ist auch gleich der Username', :input_html => {:class => 'transition' }
     = f.input :password, :label => "Password", :input_html => { :class => 'transition' }

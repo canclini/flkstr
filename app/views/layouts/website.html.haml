@@ -2,6 +2,7 @@
 %html
   %head
     %meta{:charset=>"UTF-8"}
+    %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}/
     %title= h(yield(:title) || "flockstreet")
     = render :partial => 'layouts/includes'
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",  "jquery.rails", "modernizr-1.6.min", "jquery.twitter", "application"
@@ -15,6 +16,7 @@
             =link_to image_tag("3owls_flockstreet_beta.png"), root_url
           .meta
             = render :partial => 'nav/user'
+      #hass_shadow
       #flash_container.titillium
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}"
