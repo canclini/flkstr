@@ -8,29 +8,32 @@
 
 
 .middle.titillium
-  .vcard
-    %h3.fn.org flockstreet GmbH
-    .adr
-      .street-address Katharina Sulzer-Platz 2
+  %address
+    .vcard
+      %h3.fn.org flockstreet GmbH
+      .adr
+        .street-address Katharina Sulzer-Platz 2
+        %div
+          %span.postal-code 8400
+          %span.locality Winterthur
+        .country-name Switzerland
       %div
-        %span.postal-code 8400
-        %span.locality Winterthur
-      .country-name Switzerland
-    %div
-      Phone: 
-      %span.tel +41 79 479 21 40
-    %div 
-      Email: 
-      %span.email contact@flockstreet.com
+        Phone: 
+        %span.tel +41 79 479 21 40
+      %div 
+        Email: 
+        %span.email contact@flockstreet.com
   %br/
   = link_to "download vcard", "http://h2vx.com/vcf/flockstreet.com/impressum"
 
 .right.titillium
-  %h3 Design
-  %strong GINETTA™ WEB/DESIGN
-  %br/
-  =link_to "www.ginetta.ch", "http://www.ginetta.ch"
-  %h3 Animationsvideo
-  %strong Sebastian Benjamin Riepe
-  %br/
-  =link_to "www.optical-longings.de", "http://www.optical-longings.de"
+  %article
+    %h3 Design
+    GINETTA™ WEB/DESIGN
+    %br/
+    =link_to "www.ginetta.ch", "http://www.ginetta.ch"
+  %article
+    %h3 Animationsvideo
+    Sebastian Benjamin Riepe
+    %br/
+    =link_to "www.optical-longings.de", "http://www.optical-longings.de"
