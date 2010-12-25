@@ -6,9 +6,7 @@
       = link_to t('startpage.tagline2'), plans_path()
       
   %h1 
-    Flockstreet
-    %br/
-    Auftragsplatform mit Netzwerk
+    Firmen-Netzwerk mit Auftragsplattform
     
 .right
   - if @app_state == 'website'
@@ -26,14 +24,8 @@
       %param{:name=>"flashvars", :value=>'controlbar=over&amp;file=http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.m4v'}
   
   %h4.byline
-    Weit hinten, hinter den
-    =link_to "Aufträge erfassen", "#"
-    fern der Länder
-    =link_to "Leads generieren", "#"
-    und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in
-    =link_to "Kontakte knüpfen", "#"
-    an der Küste des Semantik, eines großen Sprachozeans.
-    =link_to "Take a tour.", tour_profile_path()
+    Sie sind Auftraggeber oder Dienstleister im B2B-Bereich? flockstreet ist das Netzwerk mit Auftragsplattform. Sie finden geeignete Dienstleister, neue Aufträge, profitieren von einer kostenlosen Kommunikation und von einfacher Kontaktaufnahme in einem Netzwerk speziell für Firmen.
+    =link_to "Probieren Sie es kostenlos", register_path()
 .right
   .twitterwall
     %h3 Twitter Wall
