@@ -1,809 +1,187 @@
-/* incase an inverted custom gradient isn't specified */
-/* line 8, ../../../app/stylesheets/buttons.scss */
-a.button, button, .button {
-  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
-  margin: 0;
-  width: auto;
-  overflow: visible;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-style: solid;
-  font-weight: bold;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  font-size: 15px;
-  line-height: 18px;
-  padding: 3px 12px;
-  border-width: 1px;
-  background-color: #444444;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #989898), color-stop(10%, #6a6a6a), color-stop(50%, #3d3d3d), color-stop(50%, #353535), color-stop(100%, #4f4f4f));
-  background-image: -moz-linear-gradient(top, #989898 0%, #6a6a6a 10%, #3d3d3d 50%, #353535 50%, #4f4f4f 100%);
-  background-image: linear-gradient(top, #989898 0%, #6a6a6a 10%, #3d3d3d 50%, #353535 50%, #4f4f4f 100%);
-  border-color: #1e1e1e;
-  text-shadow: #040404 0px 1px 1px;
-  margin: 0 1px;
-  vertical-align: middle;
-}
-/* line 172, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button::-moz-focus-inner, button::-moz-focus-inner, .button::-moz-focus-inner {
-  border: none;
-  padding: 0;
-}
-/* line 175, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button:focus, button:focus, .button:focus {
-  outline: none;
-}
-/* line 178, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.disabled, a.button[disabled], button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  opacity: 0.7;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-}
-/* line 183, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.disabled:hover, a.button.disabled:focus, a.button[disabled]:hover, a.button[disabled]:focus, button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  cursor: default;
-}
-/* line 152, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button:active, button:active, .button:active {
-  padding: 2px 11px;
-  border-width: 2px;
-}
-/* line 156, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.disabled:active, a.button[disabled], button.disabled:active, button[disabled], .button.disabled:active, .button[disabled] {
-  padding: 3px 12px;
-  border-width: 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button, a.button:visited, button, button:visited, .button, .button:visited {
-  color: white;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.disabled:active, a.button.disabled:hover, a.button[disabled]:active, a.button[disabled]:hover, button.disabled:active, button.disabled:hover, button[disabled]:active, button[disabled]:hover, .button.disabled:active, .button.disabled:hover, .button[disabled]:active, .button[disabled]:hover {
-  background-color: #444444;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #989898), color-stop(10%, #6a6a6a), color-stop(50%, #3d3d3d), color-stop(50%, #353535), color-stop(100%, #4f4f4f));
-  background-image: -moz-linear-gradient(top, #989898 0%, #6a6a6a 10%, #3d3d3d 50%, #353535 50%, #4f4f4f 100%);
-  background-image: linear-gradient(top, #989898 0%, #6a6a6a 10%, #3d3d3d 50%, #353535 50%, #4f4f4f 100%);
-  border-color: #1e1e1e;
-  text-shadow: #040404 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.disabled:active, a.button.disabled:active:visited, a.button.disabled:hover, a.button.disabled:hover:visited, a.button[disabled]:active, a.button[disabled]:active:visited, a.button[disabled]:hover, a.button[disabled]:hover:visited, button.disabled:active, button.disabled:active:visited, button.disabled:hover, button.disabled:hover:visited, button[disabled]:active, button[disabled]:active:visited, button[disabled]:hover, button[disabled]:hover:visited, .button.disabled:active, .button.disabled:active:visited, .button.disabled:hover, .button.disabled:hover:visited, .button[disabled]:active, .button[disabled]:active:visited, .button[disabled]:hover, .button[disabled]:hover:visited {
-  color: white;
-}
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button:hover, a.button:focus, button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #3c3c3c;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #909090), color-stop(10%, #626262), color-stop(50%, #353535), color-stop(50%, #2d2d2d), color-stop(100%, #474747));
-  background-image: -moz-linear-gradient(top, #909090 0%, #626262 10%, #353535 50%, #2d2d2d 50%, #474747 100%);
-  background-image: linear-gradient(top, #909090 0%, #626262 10%, #353535 50%, #2d2d2d 50%, #474747 100%);
-  border-color: #161616;
-  text-shadow: black 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button:hover, a.button:hover:visited, a.button:focus, a.button:focus:visited, button:hover, button:hover:visited, button:focus, button:focus:visited, .button:hover, .button:hover:visited, .button:focus, .button:focus:visited {
-  color: white;
-}
-/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button:active, button:active, .button:active {
-  background-color: #353535;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #353535), color-stop(30%, #3a3a3a), color-stop(50%, #303030), color-stop(50%, #292929), color-stop(100%, #4a4a4a));
-  background-image: -moz-linear-gradient(top, #353535 0%, #3a3a3a 30%, #303030 50%, #292929 50%, #4a4a4a 100%);
-  background-image: linear-gradient(top, #353535 0%, #3a3a3a 30%, #303030 50%, #292929 50%, #4a4a4a 100%);
-  border-color: #0f0f0f;
-  text-shadow: black 0px -1px -1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button:active, a.button:active:visited, button:active, button:active:visited, .button:active, .button:active:visited {
-  color: white;
-}
-/* line 13, ../../../app/stylesheets/buttons.scss */
-a.button.light, button.light, .button.light {
-  background-color: #eeeeee;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(10%, #e1e1e1), color-stop(50%, #b4b4b4), color-stop(50%, #acacac), color-stop(100%, #c6c6c6));
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #e1e1e1 10%, #b4b4b4 50%, #acacac 50%, #c6c6c6 100%);
-  background-image: linear-gradient(top, #ffffff 0%, #e1e1e1 10%, #b4b4b4 50%, #acacac 50%, #c6c6c6 100%);
-  border-color: #959595;
-  text-shadow: white 0px 1px 1px;
-}
-/* line 102, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.light, a.button.light:visited, button.light, button.light:visited, .button.light, .button.light:visited {
-  color: #222222;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.light.disabled:active, a.button.light.disabled:hover, a.button.light[disabled]:active, a.button.light[disabled]:hover, button.light.disabled:active, button.light.disabled:hover, button.light[disabled]:active, button.light[disabled]:hover, .button.light.disabled:active, .button.light.disabled:hover, .button.light[disabled]:active, .button.light[disabled]:hover {
-  background-color: #eeeeee;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(10%, #e1e1e1), color-stop(50%, #b4b4b4), color-stop(50%, #acacac), color-stop(100%, #c6c6c6));
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #e1e1e1 10%, #b4b4b4 50%, #acacac 50%, #c6c6c6 100%);
-  background-image: linear-gradient(top, #ffffff 0%, #e1e1e1 10%, #b4b4b4 50%, #acacac 50%, #c6c6c6 100%);
-  border-color: #959595;
-  text-shadow: white 0px 1px 1px;
-}
-/* line 102, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.light.disabled:active, a.button.light.disabled:active:visited, a.button.light.disabled:hover, a.button.light.disabled:hover:visited, a.button.light[disabled]:active, a.button.light[disabled]:active:visited, a.button.light[disabled]:hover, a.button.light[disabled]:hover:visited, button.light.disabled:active, button.light.disabled:active:visited, button.light.disabled:hover, button.light.disabled:hover:visited, button.light[disabled]:active, button.light[disabled]:active:visited, button.light[disabled]:hover, button.light[disabled]:hover:visited, .button.light.disabled:active, .button.light.disabled:active:visited, .button.light.disabled:hover, .button.light.disabled:hover:visited, .button.light[disabled]:active, .button.light[disabled]:active:visited, .button.light[disabled]:hover, .button.light[disabled]:hover:visited {
-  color: #222222;
-}
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.light:hover, a.button.light:focus, button.light:hover, button.light:focus, .button.light:hover, .button.light:focus {
-  background-color: #e6e6e6;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(10%, #d9d9d9), color-stop(50%, #acacac), color-stop(50%, #a4a4a4), color-stop(100%, #bebebe));
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #d9d9d9 10%, #acacac 50%, #a4a4a4 50%, #bebebe 100%);
-  background-image: linear-gradient(top, #ffffff 0%, #d9d9d9 10%, #acacac 50%, #a4a4a4 50%, #bebebe 100%);
-  border-color: #8d8d8d;
-  text-shadow: white 0px 1px 1px;
-}
-/* line 102, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.light:hover, a.button.light:hover:visited, a.button.light:focus, a.button.light:focus:visited, button.light:hover, button.light:hover:visited, button.light:focus, button.light:focus:visited, .button.light:hover, .button.light:hover:visited, .button.light:focus, .button.light:focus:visited {
-  color: #222222;
-}
-/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.light:active, button.light:active, .button.light:active {
-  background-color: #dfdfdf;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #acacac), color-stop(30%, #b1b1b1), color-stop(50%, #a7a7a7), color-stop(50%, #a0a0a0), color-stop(100%, #c1c1c1));
-  background-image: -moz-linear-gradient(top, #acacac 0%, #b1b1b1 30%, #a7a7a7 50%, #a0a0a0 50%, #c1c1c1 100%);
-  background-image: linear-gradient(top, #acacac 0%, #b1b1b1 30%, #a7a7a7 50%, #a0a0a0 50%, #c1c1c1 100%);
-  border-color: #868686;
-  text-shadow: white 0px -1px -1px;
-}
-/* line 102, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.light:active, a.button.light:active:visited, button.light:active, button.light:active:visited, .button.light:active, .button.light:active:visited {
-  color: #222222;
-}
-/* line 15, ../../../app/stylesheets/buttons.scss */
-a.button.edit, button.edit, .button.edit {
-  background-color: #4aea00;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #bdeaa9), color-stop(10%, #85d85f), color-stop(50%, #55af2b), color-stop(50%, #4fa328), color-stop(100%, #63cc32));
-  background-image: -moz-linear-gradient(top, #bdeaa9 0%, #85d85f 10%, #55af2b 50%, #4fa328 50%, #63cc32 100%);
-  background-image: linear-gradient(top, #bdeaa9 0%, #85d85f 10%, #55af2b 50%, #4fa328 50%, #63cc32 100%);
-  border-color: #3d7f1f;
-  text-shadow: #226a00 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.edit, a.button.edit:visited, button.edit, button.edit:visited, .button.edit, .button.edit:visited {
-  color: white;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.edit.disabled:active, a.button.edit.disabled:hover, a.button.edit[disabled]:active, a.button.edit[disabled]:hover, button.edit.disabled:active, button.edit.disabled:hover, button.edit[disabled]:active, button.edit[disabled]:hover, .button.edit.disabled:active, .button.edit.disabled:hover, .button.edit[disabled]:active, .button.edit[disabled]:hover {
-  background-color: #4aea00;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #bdeaa9), color-stop(10%, #85d85f), color-stop(50%, #55af2b), color-stop(50%, #4fa328), color-stop(100%, #63cc32));
-  background-image: -moz-linear-gradient(top, #bdeaa9 0%, #85d85f 10%, #55af2b 50%, #4fa328 50%, #63cc32 100%);
-  background-image: linear-gradient(top, #bdeaa9 0%, #85d85f 10%, #55af2b 50%, #4fa328 50%, #63cc32 100%);
-  border-color: #3d7f1f;
-  text-shadow: #226a00 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.edit.disabled:active, a.button.edit.disabled:active:visited, a.button.edit.disabled:hover, a.button.edit.disabled:hover:visited, a.button.edit[disabled]:active, a.button.edit[disabled]:active:visited, a.button.edit[disabled]:hover, a.button.edit[disabled]:hover:visited, button.edit.disabled:active, button.edit.disabled:active:visited, button.edit.disabled:hover, button.edit.disabled:hover:visited, button.edit[disabled]:active, button.edit[disabled]:active:visited, button.edit[disabled]:hover, button.edit[disabled]:hover:visited, .button.edit.disabled:active, .button.edit.disabled:active:visited, .button.edit.disabled:hover, .button.edit.disabled:hover:visited, .button.edit[disabled]:active, .button.edit[disabled]:active:visited, .button.edit[disabled]:hover, .button.edit[disabled]:hover:visited {
-  color: white;
-}
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.edit:hover, a.button.edit:focus, button.edit:hover, button.edit:focus, .button.edit:hover, .button.edit:focus {
-  background-color: #45db00;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #b4e79d), color-stop(10%, #7cd553), color-stop(50%, #4fa328), color-stop(50%, #499725), color-stop(100%, #5dc02f));
-  background-image: -moz-linear-gradient(top, #b4e79d 0%, #7cd553 10%, #4fa328 50%, #499725 50%, #5dc02f 100%);
-  background-image: linear-gradient(top, #b4e79d 0%, #7cd553 10%, #4fa328 50%, #499725 50%, #5dc02f 100%);
-  border-color: #37731c;
-  text-shadow: #1d5b00 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.edit:hover, a.button.edit:hover:visited, a.button.edit:focus, a.button.edit:focus:visited, button.edit:hover, button.edit:hover:visited, button.edit:focus, button.edit:focus:visited, .button.edit:hover, .button.edit:hover:visited, .button.edit:focus, .button.edit:focus:visited {
-  color: white;
-}
-/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.edit:active, button.edit:active, .button.edit:active {
-  background-color: #40cb00;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #4fa328), color-stop(30%, #53ab2a), color-stop(50%, #4b9a26), color-stop(50%, #458e23), color-stop(100%, #5fc330));
-  background-image: -moz-linear-gradient(top, #4fa328 0%, #53ab2a 30%, #4b9a26 50%, #458e23 50%, #5fc330 100%);
-  background-image: linear-gradient(top, #4fa328 0%, #53ab2a 30%, #4b9a26 50%, #458e23 50%, #5fc330 100%);
-  border-color: #316619;
-  text-shadow: #184b00 0px -1px -1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.button.edit:active, a.button.edit:active:visited, button.edit:active, button.edit:active:visited, .button.edit:active, .button.edit:active:visited {
-  color: white;
-}
-
-/* line 18, ../../../app/stylesheets/buttons.scss */
-a.big_button, .big_button {
+/* line 37, ../../../app/stylesheets/buttons.scss */
+a.green_button, .green_button {
   font-family: Titillium-XBold;
-  font-size: 30px;
+  font-size: 15px;
   text-align: center;
-  padding: 18px 35px;
+  padding: 7px 30px;
   border: 1px solid #66928c;
   /*css*/
   background-color: #81b9b4;
   background-image: -moz-linear-gradient(top, #81b9b4, #68948f);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81b9b4), color-stop(1, #68948f));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
-  border-radius: 3px;
-  -moz-border-radius: 3px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
   -webkit-border-radius: 3px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
-  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
   color: #fff;
 }
 
 /* line 40, ../../../app/stylesheets/buttons.scss */
+a.green_button:active, .green_button:active {
+  background-image: -moz-linear-gradient(top, #68948f, #81b9b4);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68948f), color-stop(1, #81b9b4));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 44, ../../../app/stylesheets/buttons.scss */
+a.big_button, .big_button {
+  font-family: Titillium-XBold;
+  font-size: 15px;
+  text-align: center;
+  padding: 7px 30px;
+  border: 1px solid #66928c;
+  /*css*/
+  background-color: #81b9b4;
+  background-image: -moz-linear-gradient(top, #81b9b4, #68948f);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81b9b4), color-stop(1, #68948f));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 30px;
+  padding: 18px 35px;
+}
+
+/* line 50, ../../../app/stylesheets/buttons.scss */
 .call2action {
   float: right;
   margin-top: 20px;
 }
 
-/* line 45, ../../../app/stylesheets/buttons.scss */
+/* line 55, ../../../app/stylesheets/buttons.scss */
 a.big_button:active, .big_button:active {
   background-image: -moz-linear-gradient(top, #68948f, #81b9b4);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68948f), color-stop(1, #81b9b4));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
-/* line 53, ../../../app/stylesheets/buttons.scss */
-a.small_button, .small_button {
-  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
-  margin: 0;
-  width: auto;
-  overflow: visible;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-style: solid;
-  font-weight: bold;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -o-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  border-radius: 2px;
-  font-size: 10px;
-  line-height: 12px;
-  padding: 2px 8px;
-  border-width: 1px;
-  background-color: #235775;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #93a4ae), color-stop(10%, #627783), color-stop(50%, #3b474e), color-stop(50%, #343f45), color-stop(100%, #4a5a62));
-  background-image: -moz-linear-gradient(top, #93a4ae 0%, #627783 10%, #3b474e 50%, #343f45 50%, #4a5a62 100%);
-  background-image: linear-gradient(top, #93a4ae 0%, #627783 10%, #3b474e 50%, #343f45 50%, #4a5a62 100%);
-  border-color: #20272b;
-  text-shadow: #060e13 0px 1px 1px;
-  text-size: 12px;
-  font-family: Titillium-Medium;
-  text-align: center;
-}
-/* line 172, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button::-moz-focus-inner, .small_button::-moz-focus-inner {
-  border: none;
-  padding: 0;
-}
-/* line 175, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button:focus, .small_button:focus {
-  outline: none;
-}
-/* line 178, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button.disabled, a.small_button[disabled], .small_button.disabled, .small_button[disabled] {
-  opacity: 0.7;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-}
-/* line 183, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button.disabled:hover, a.small_button.disabled:focus, a.small_button[disabled]:hover, a.small_button[disabled]:focus, .small_button.disabled:hover, .small_button.disabled:focus, .small_button[disabled]:hover, .small_button[disabled]:focus {
-  cursor: default;
-}
-/* line 152, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button:active, .small_button:active {
-  padding: 1px 7px;
-  border-width: 2px;
-}
-/* line 156, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button.disabled:active, a.small_button[disabled], .small_button.disabled:active, .small_button[disabled] {
-  padding: 2px 8px;
-  border-width: 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button, a.small_button:visited, .small_button, .small_button:visited {
-  color: white;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button.disabled:active, a.small_button.disabled:hover, a.small_button[disabled]:active, a.small_button[disabled]:hover, .small_button.disabled:active, .small_button.disabled:hover, .small_button[disabled]:active, .small_button[disabled]:hover {
-  background-color: #235775;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #93a4ae), color-stop(10%, #627783), color-stop(50%, #3b474e), color-stop(50%, #343f45), color-stop(100%, #4a5a62));
-  background-image: -moz-linear-gradient(top, #93a4ae 0%, #627783 10%, #3b474e 50%, #343f45 50%, #4a5a62 100%);
-  background-image: linear-gradient(top, #93a4ae 0%, #627783 10%, #3b474e 50%, #343f45 50%, #4a5a62 100%);
-  border-color: #20272b;
-  text-shadow: #060e13 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button.disabled:active, a.small_button.disabled:active:visited, a.small_button.disabled:hover, a.small_button.disabled:hover:visited, a.small_button[disabled]:active, a.small_button[disabled]:active:visited, a.small_button[disabled]:hover, a.small_button[disabled]:hover:visited, .small_button.disabled:active, .small_button.disabled:active:visited, .small_button.disabled:hover, .small_button.disabled:hover:visited, .small_button[disabled]:active, .small_button[disabled]:active:visited, .small_button[disabled]:hover, .small_button[disabled]:hover:visited {
-  color: white;
-}
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button:hover, a.small_button:focus, .small_button:hover, .small_button:focus {
-  background-color: #1f4f69;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #899da7), color-stop(10%, #5b6f7a), color-stop(50%, #343f45), color-stop(50%, #2d373c), color-stop(100%, #435259));
-  background-image: -moz-linear-gradient(top, #899da7 0%, #5b6f7a 10%, #343f45 50%, #2d373c 50%, #435259 100%);
-  background-image: linear-gradient(top, #899da7 0%, #5b6f7a 10%, #343f45 50%, #2d373c 50%, #435259 100%);
-  border-color: #191f22;
-  text-shadow: #020507 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button:hover, a.small_button:hover:visited, a.small_button:focus, a.small_button:focus:visited, .small_button:hover, .small_button:hover:visited, .small_button:focus, .small_button:focus:visited {
-  color: white;
-}
-/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button:active, .small_button:active {
-  background-color: #1c465d;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #343f45), color-stop(30%, #38444b), color-stop(50%, #303a40), color-stop(50%, #293237), color-stop(100%, #46545d));
-  background-image: -moz-linear-gradient(top, #343f45 0%, #38444b 30%, #303a40 50%, #293237 50%, #46545d 100%);
-  background-image: linear-gradient(top, #343f45 0%, #38444b 30%, #303a40 50%, #293237 50%, #46545d 100%);
-  border-color: #131719;
-  text-shadow: black 0px -1px -1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.small_button:active, a.small_button:active:visited, .small_button:active, .small_button:active:visited {
-  color: white;
-}
-
-/* line 60, ../../../app/stylesheets/buttons.scss */
+/* line 59, ../../../app/stylesheets/buttons.scss */
 a.login_button, .login_button {
-  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
-  margin: 0;
-  width: auto;
-  overflow: visible;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-style: solid;
-  font-weight: bold;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
+  font-family: Titillium-XBold;
   font-size: 15px;
-  line-height: 18px;
-  padding: 3px 12px;
-  border-width: 1px;
-  background-color: #ff8b14;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f8dec4), color-stop(10%, #efb171), color-stop(50%, #e5841e), color-stop(50%, #db7c19), color-stop(100%, #e9953e));
-  background-image: -moz-linear-gradient(top, #f8dec4 0%, #efb171 10%, #e5841e 50%, #db7c19 50%, #e9953e 100%);
-  background-image: linear-gradient(top, #f8dec4 0%, #efb171 10%, #e5841e 50%, #db7c19 50%, #e9953e 100%);
-  border-color: #b26514;
-  text-shadow: #934b00 0px 1px 1px;
   text-align: center;
-}
-/* line 172, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button::-moz-focus-inner, .login_button::-moz-focus-inner {
-  border: none;
-  padding: 0;
-}
-/* line 175, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button:focus, .login_button:focus {
-  outline: none;
-}
-/* line 178, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button.disabled, a.login_button[disabled], .login_button.disabled, .login_button[disabled] {
-  opacity: 0.7;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-}
-/* line 183, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button.disabled:hover, a.login_button.disabled:focus, a.login_button[disabled]:hover, a.login_button[disabled]:focus, .login_button.disabled:hover, .login_button.disabled:focus, .login_button[disabled]:hover, .login_button[disabled]:focus {
-  cursor: default;
-}
-/* line 152, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button:active, .login_button:active {
-  padding: 2px 11px;
-  border-width: 2px;
-}
-/* line 156, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button.disabled:active, a.login_button[disabled], .login_button.disabled:active, .login_button[disabled] {
-  padding: 3px 12px;
-  border-width: 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button, a.login_button:visited, .login_button, .login_button:visited {
-  color: white;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button.disabled:active, a.login_button.disabled:hover, a.login_button[disabled]:active, a.login_button[disabled]:hover, .login_button.disabled:active, .login_button.disabled:hover, .login_button[disabled]:active, .login_button[disabled]:hover {
-  background-color: #ff8b14;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f8dec4), color-stop(10%, #efb171), color-stop(50%, #e5841e), color-stop(50%, #db7c19), color-stop(100%, #e9953e));
-  background-image: -moz-linear-gradient(top, #f8dec4 0%, #efb171 10%, #e5841e 50%, #db7c19 50%, #e9953e 100%);
-  background-image: linear-gradient(top, #f8dec4 0%, #efb171 10%, #e5841e 50%, #db7c19 50%, #e9953e 100%);
-  border-color: #b26514;
-  text-shadow: #934b00 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button.disabled:active, a.login_button.disabled:active:visited, a.login_button.disabled:hover, a.login_button.disabled:hover:visited, a.login_button[disabled]:active, a.login_button[disabled]:active:visited, a.login_button[disabled]:hover, a.login_button[disabled]:hover:visited, .login_button.disabled:active, .login_button.disabled:active:visited, .login_button.disabled:hover, .login_button.disabled:hover:visited, .login_button[disabled]:active, .login_button[disabled]:active:visited, .login_button[disabled]:hover, .login_button[disabled]:hover:visited {
-  color: white;
-}
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button:hover, a.login_button:focus, .login_button:hover, .login_button:focus {
-  background-color: #ff8304;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f6d6b5), color-stop(10%, #eda963), color-stop(50%, #db7c1a), color-stop(50%, #cd7418), color-stop(100%, #e78e31));
-  background-image: -moz-linear-gradient(top, #f6d6b5 0%, #eda963 10%, #db7c1a 50%, #cd7418 50%, #e78e31 100%);
-  background-image: linear-gradient(top, #f6d6b5 0%, #eda963 10%, #db7c1a 50%, #cd7418 50%, #e78e31 100%);
-  border-color: #a45c13;
-  text-shadow: #844300 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button:hover, a.login_button:hover:visited, a.login_button:focus, a.login_button:focus:visited, .login_button:hover, .login_button:hover:visited, .login_button:focus, .login_button:focus:visited {
-  color: white;
-}
-/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button:active, .login_button:active {
-  background-color: #f47d00;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #db7b19), color-stop(30%, #e5811a), color-stop(50%, #d27618), color-stop(50%, #c56f17), color-stop(100%, #e89035));
-  background-image: -moz-linear-gradient(top, #db7b19 0%, #e5811a 30%, #d27618 50%, #c56f17 50%, #e89035 100%);
-  background-image: linear-gradient(top, #db7b19 0%, #e5811a 30%, #d27618 50%, #c56f17 50%, #e89035 100%);
-  border-color: #965511;
-  text-shadow: #753c00 0px -1px -1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.login_button:active, a.login_button:active:visited, .login_button:active, .login_button:active:visited {
-  color: white;
+  padding: 7px 30px;
+  border: 1px solid #c5690a;
+  /*css*/
+  background-color: #e68a2c;
+  background-image: -moz-linear-gradient(top, #e68a2c, #c67929);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e68a2c), color-stop(1, #c67929));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 2px 12px;
 }
 
 /* line 65, ../../../app/stylesheets/buttons.scss */
-a.green_button, .green_button {
-  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
-  margin: 0;
-  width: auto;
-  overflow: visible;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-style: solid;
-  font-weight: bold;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-  font-size: 15px;
-  line-height: 18px;
-  padding: 3px 12px;
-  border-width: 1px;
-  background-color: #58e0d4;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ecf4f3), color-stop(10%, #b1d3d0), color-stop(50%, #76b2ad), color-stop(50%, #6cada7), color-stop(100%, #8dbfbb));
-  background-image: -moz-linear-gradient(top, #ecf4f3 0%, #b1d3d0 10%, #76b2ad 50%, #6cada7 50%, #8dbfbb 100%);
-  background-image: linear-gradient(top, #ecf4f3 0%, #b1d3d0 10%, #76b2ad 50%, #6cada7 50%, #8dbfbb 100%);
-  border-color: #549791;
-  text-shadow: #1d9c90 0px 1px 1px;
-  font-family: Titillium-XBold;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  padding: 9px 25px 8px 25px;
-}
-/* line 172, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button::-moz-focus-inner, .green_button::-moz-focus-inner {
-  border: none;
-  padding: 0;
-}
-/* line 175, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button:focus, .green_button:focus {
-  outline: none;
-}
-/* line 178, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button.disabled, a.green_button[disabled], .green_button.disabled, .green_button[disabled] {
-  opacity: 0.7;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-}
-/* line 183, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button.disabled:hover, a.green_button.disabled:focus, a.green_button[disabled]:hover, a.green_button[disabled]:focus, .green_button.disabled:hover, .green_button.disabled:focus, .green_button[disabled]:hover, .green_button[disabled]:focus {
-  cursor: default;
-}
-/* line 152, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button:active, .green_button:active {
-  padding: 2px 11px;
-  border-width: 2px;
-}
-/* line 156, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button.disabled:active, a.green_button[disabled], .green_button.disabled:active, .green_button[disabled] {
-  padding: 3px 12px;
-  border-width: 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button, a.green_button:visited, .green_button, .green_button:visited {
-  color: white;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button.disabled:active, a.green_button.disabled:hover, a.green_button[disabled]:active, a.green_button[disabled]:hover, .green_button.disabled:active, .green_button.disabled:hover, .green_button[disabled]:active, .green_button[disabled]:hover {
-  background-color: #58e0d4;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ecf4f3), color-stop(10%, #b1d3d0), color-stop(50%, #76b2ad), color-stop(50%, #6cada7), color-stop(100%, #8dbfbb));
-  background-image: -moz-linear-gradient(top, #ecf4f3 0%, #b1d3d0 10%, #76b2ad 50%, #6cada7 50%, #8dbfbb 100%);
-  background-image: linear-gradient(top, #ecf4f3 0%, #b1d3d0 10%, #76b2ad 50%, #6cada7 50%, #8dbfbb 100%);
-  border-color: #549791;
-  text-shadow: #1d9c90 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button.disabled:active, a.green_button.disabled:active:visited, a.green_button.disabled:hover, a.green_button.disabled:hover:visited, a.green_button[disabled]:active, a.green_button[disabled]:active:visited, a.green_button[disabled]:hover, a.green_button[disabled]:hover:visited, .green_button.disabled:active, .green_button.disabled:active:visited, .green_button.disabled:hover, .green_button.disabled:hover:visited, .green_button[disabled]:active, .green_button[disabled]:active:visited, .green_button[disabled]:hover, .green_button[disabled]:hover:visited {
-  color: white;
-}
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button:hover, a.green_button:focus, .green_button:hover, .green_button:focus {
-  background-color: #4bdecf;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e2efee), color-stop(10%, #a7ceca), color-stop(50%, #6cada7), color-stop(50%, #62a8a1), color-stop(100%, #83bab5));
-  background-image: -moz-linear-gradient(top, #e2efee 0%, #a7ceca 10%, #6cada7 50%, #62a8a1 50%, #83bab5 100%);
-  background-image: linear-gradient(top, #e2efee 0%, #a7ceca 10%, #6cada7 50%, #62a8a1 50%, #83bab5 100%);
-  border-color: #4f8e88;
-  text-shadow: #1a8f83 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button:hover, a.green_button:hover:visited, a.green_button:focus, a.green_button:focus:visited, .green_button:hover, .green_button:hover:visited, .green_button:focus, .green_button:focus:visited {
-  color: white;
-}
-/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button:active, .green_button:active {
-  background-color: #3edbcc;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #6cada7), color-stop(30%, #73b1ab), color-stop(50%, #66a9a3), color-stop(50%, #5ca49d), color-stop(100%, #87bcb7));
-  background-image: -moz-linear-gradient(top, #6cada7 0%, #73b1ab 30%, #66a9a3 50%, #5ca49d 50%, #87bcb7 100%);
-  background-image: linear-gradient(top, #6cada7 0%, #73b1ab 30%, #66a9a3 50%, #5ca49d 50%, #87bcb7 100%);
-  border-color: #49837e;
-  text-shadow: #188177 0px -1px -1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.green_button:active, a.green_button:active:visited, .green_button:active, .green_button:active:visited {
-  color: white;
+a.login_button:active, .login_button:active {
+  background-image: -moz-linear-gradient(top, #c77929, #e68a2c);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c77929), color-stop(1, #e68a2c));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
-/* line 71, ../../../app/stylesheets/buttons.scss */
-a.green_button:active, .green_button:active {
-  padding: 8px 24px 7px 24px;
-}
-
-/* line 75, ../../../app/stylesheets/buttons.scss */
-a.register_button, .register_button {
-  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
-  margin: 0;
-  width: auto;
-  overflow: visible;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-style: solid;
-  font-weight: bold;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-  font-size: 20px;
-  line-height: 24px;
-  padding: 5px 20px;
-  border-width: 1px;
-  background-color: #58e0d4;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ecf4f3), color-stop(10%, #b1d3d0), color-stop(50%, #76b2ad), color-stop(50%, #6cada7), color-stop(100%, #8dbfbb));
-  background-image: -moz-linear-gradient(top, #ecf4f3 0%, #b1d3d0 10%, #76b2ad 50%, #6cada7 50%, #8dbfbb 100%);
-  background-image: linear-gradient(top, #ecf4f3 0%, #b1d3d0 10%, #76b2ad 50%, #6cada7 50%, #8dbfbb 100%);
-  border-color: #549791;
-  text-shadow: #1d9c90 0px 1px 1px;
-  font-family: Titillium-XBold;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  padding: 13px 25px 8px 25px;
-}
-/* line 172, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button::-moz-focus-inner, .register_button::-moz-focus-inner {
-  border: none;
-  padding: 0;
-}
-/* line 175, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button:focus, .register_button:focus {
-  outline: none;
-}
-/* line 178, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button.disabled, a.register_button[disabled], .register_button.disabled, .register_button[disabled] {
-  opacity: 0.7;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-}
-/* line 183, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button.disabled:hover, a.register_button.disabled:focus, a.register_button[disabled]:hover, a.register_button[disabled]:focus, .register_button.disabled:hover, .register_button.disabled:focus, .register_button[disabled]:hover, .register_button[disabled]:focus {
-  cursor: default;
-}
-/* line 152, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button:active, .register_button:active {
-  padding: 4px 19px;
-  border-width: 2px;
-}
-/* line 156, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button.disabled:active, a.register_button[disabled], .register_button.disabled:active, .register_button[disabled] {
-  padding: 5px 20px;
-  border-width: 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button, a.register_button:visited, .register_button, .register_button:visited {
-  color: white;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button.disabled:active, a.register_button.disabled:hover, a.register_button[disabled]:active, a.register_button[disabled]:hover, .register_button.disabled:active, .register_button.disabled:hover, .register_button[disabled]:active, .register_button[disabled]:hover {
-  background-color: #58e0d4;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ecf4f3), color-stop(10%, #b1d3d0), color-stop(50%, #76b2ad), color-stop(50%, #6cada7), color-stop(100%, #8dbfbb));
-  background-image: -moz-linear-gradient(top, #ecf4f3 0%, #b1d3d0 10%, #76b2ad 50%, #6cada7 50%, #8dbfbb 100%);
-  background-image: linear-gradient(top, #ecf4f3 0%, #b1d3d0 10%, #76b2ad 50%, #6cada7 50%, #8dbfbb 100%);
-  border-color: #549791;
-  text-shadow: #1d9c90 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button.disabled:active, a.register_button.disabled:active:visited, a.register_button.disabled:hover, a.register_button.disabled:hover:visited, a.register_button[disabled]:active, a.register_button[disabled]:active:visited, a.register_button[disabled]:hover, a.register_button[disabled]:hover:visited, .register_button.disabled:active, .register_button.disabled:active:visited, .register_button.disabled:hover, .register_button.disabled:hover:visited, .register_button[disabled]:active, .register_button[disabled]:active:visited, .register_button[disabled]:hover, .register_button[disabled]:hover:visited {
-  color: white;
-}
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button:hover, a.register_button:focus, .register_button:hover, .register_button:focus {
-  background-color: #4bdecf;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e2efee), color-stop(10%, #a7ceca), color-stop(50%, #6cada7), color-stop(50%, #62a8a1), color-stop(100%, #83bab5));
-  background-image: -moz-linear-gradient(top, #e2efee 0%, #a7ceca 10%, #6cada7 50%, #62a8a1 50%, #83bab5 100%);
-  background-image: linear-gradient(top, #e2efee 0%, #a7ceca 10%, #6cada7 50%, #62a8a1 50%, #83bab5 100%);
-  border-color: #4f8e88;
-  text-shadow: #1a8f83 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button:hover, a.register_button:hover:visited, a.register_button:focus, a.register_button:focus:visited, .register_button:hover, .register_button:hover:visited, .register_button:focus, .register_button:focus:visited {
-  color: white;
-}
-/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button:active, .register_button:active {
-  background-color: #3edbcc;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #6cada7), color-stop(30%, #73b1ab), color-stop(50%, #66a9a3), color-stop(50%, #5ca49d), color-stop(100%, #87bcb7));
-  background-image: -moz-linear-gradient(top, #6cada7 0%, #73b1ab 30%, #66a9a3 50%, #5ca49d 50%, #87bcb7 100%);
-  background-image: linear-gradient(top, #6cada7 0%, #73b1ab 30%, #66a9a3 50%, #5ca49d 50%, #87bcb7 100%);
-  border-color: #49837e;
-  text-shadow: #188177 0px -1px -1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-a.register_button:active, a.register_button:active:visited, .register_button:active, .register_button:active:visited {
-  color: white;
-}
-
-/* line 81, ../../../app/stylesheets/buttons.scss */
-a.register_button:active, .register_button:active {
-  padding: 12px 24px 7px 24px;
-}
-
-/* line 86, ../../../app/stylesheets/buttons.scss */
+/* line 69, ../../../app/stylesheets/buttons.scss */
 .search_button {
-  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('/images/button_bg.png?1283238970') repeat-x bottom left;
-  margin: 0;
-  width: auto;
-  overflow: visible;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-style: solid;
-  font-weight: bold;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -o-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -khtml-border-radius: 2px;
-  border-radius: 2px;
-  font-size: 13px;
-  line-height: 15.6px;
-  padding: 2px 10px;
-  border-width: 1px;
-  background-color: #235775;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #93a4ae), color-stop(10%, #627783), color-stop(50%, #3b474e), color-stop(50%, #343f45), color-stop(100%, #4a5a62));
-  background-image: -moz-linear-gradient(top, #93a4ae 0%, #627783 10%, #3b474e 50%, #343f45 50%, #4a5a62 100%);
-  background-image: linear-gradient(top, #93a4ae 0%, #627783 10%, #3b474e 50%, #343f45 50%, #4a5a62 100%);
-  border-color: #20272b;
-  text-shadow: #060e13 0px 1px 1px;
+  font-family: Titillium-XBold;
+  font-size: 15px;
   text-align: center;
-}
-/* line 172, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button::-moz-focus-inner {
-  border: none;
-  padding: 0;
-}
-/* line 175, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button:focus {
-  outline: none;
-}
-/* line 178, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button.disabled, .search_button[disabled] {
-  opacity: 0.7;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-}
-/* line 183, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button.disabled:hover, .search_button.disabled:focus, .search_button[disabled]:hover, .search_button[disabled]:focus {
-  cursor: default;
-}
-/* line 152, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button:active {
-  padding: 1px 9px;
-  border-width: 2px;
-}
-/* line 156, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button.disabled:active, .search_button[disabled] {
-  padding: 2px 10px;
-  border-width: 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button, .search_button:visited {
-  color: white;
-}
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button.disabled:active, .search_button.disabled:hover, .search_button[disabled]:active, .search_button[disabled]:hover {
-  background-color: #235775;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #93a4ae), color-stop(10%, #627783), color-stop(50%, #3b474e), color-stop(50%, #343f45), color-stop(100%, #4a5a62));
-  background-image: -moz-linear-gradient(top, #93a4ae 0%, #627783 10%, #3b474e 50%, #343f45 50%, #4a5a62 100%);
-  background-image: linear-gradient(top, #93a4ae 0%, #627783 10%, #3b474e 50%, #343f45 50%, #4a5a62 100%);
-  border-color: #20272b;
-  text-shadow: #060e13 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button.disabled:active, .search_button.disabled:active:visited, .search_button.disabled:hover, .search_button.disabled:hover:visited, .search_button[disabled]:active, .search_button[disabled]:active:visited, .search_button[disabled]:hover, .search_button[disabled]:hover:visited {
-  color: white;
-}
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button:hover, .search_button:focus {
-  background-color: #1f4f69;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #899da7), color-stop(10%, #5b6f7a), color-stop(50%, #343f45), color-stop(50%, #2d373c), color-stop(100%, #435259));
-  background-image: -moz-linear-gradient(top, #899da7 0%, #5b6f7a 10%, #343f45 50%, #2d373c 50%, #435259 100%);
-  background-image: linear-gradient(top, #899da7 0%, #5b6f7a 10%, #343f45 50%, #2d373c 50%, #435259 100%);
-  border-color: #191f22;
-  text-shadow: #020507 0px 1px 1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button:hover, .search_button:hover:visited, .search_button:focus, .search_button:focus:visited {
-  color: white;
-}
-/* line 33, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button:active {
-  background-color: #1c465d;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #343f45), color-stop(30%, #38444b), color-stop(50%, #303a40), color-stop(50%, #293237), color-stop(100%, #46545d));
-  background-image: -moz-linear-gradient(top, #343f45 0%, #38444b 30%, #303a40 50%, #293237 50%, #46545d 100%);
-  background-image: linear-gradient(top, #343f45 0%, #38444b 30%, #303a40 50%, #293237 50%, #46545d 100%);
-  border-color: #131719;
-  text-shadow: black 0px -1px -1px;
-}
-/* line 98, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/fancy-buttons-0.5.5/lib/stylesheets/_fancy-buttons.sass */
-.search_button:active, .search_button:active:visited {
-  color: white;
+  padding: 7px 30px;
+  border: 1px solid #1f2d35;
+  /*css*/
+  background-color: #414f57;
+  background-image: -moz-linear-gradient(top, #414f57, #1f2d35);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #414f57), color-stop(1, #1f2d35));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  color: #fff;
 }
 
-/* line 95, ../../../app/stylesheets/buttons.scss */
+/* line 73, ../../../app/stylesheets/buttons.scss */
 a.near_button {
   height: 23px;
 }
 
-/* line 99, ../../../app/stylesheets/buttons.scss */
-.near_button, .near_button:active, .near_button:hover, .near_button:focus {
+/* line 77, ../../../app/stylesheets/buttons.scss */
+.near_button, .near_button:hover, .near_button:focus {
   font-family: Titillium-XBold;
-  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  padding: 7px 30px;
   border: 1px solid #414f57;
-  font-size: 1.3em;
-  margin: 0;
-  display: inline-block;
-  padding: 8px 20px 7px;
-  margin-right: 1px;
-  text-decoration: none;
-  line-height: 1;
-  background: #414f57;
+  /*css*/
+  background-color: #43515a;
   background-image: -moz-linear-gradient(top, #43515a, #3a464d);
+  /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #43515a), color-stop(1, #3a464d));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')";
-  -moz-border-radius: 1px 5px 5px 1px;
-  -webkit-border-radius: 1px 5px 5px 1px;
-  border-radius: 1px 5px 5px 1px;
-  -moz-box-shadow: 0 1px 3px #999;
-  -webkit-box-shadow: 0 1px 3px #999;
-  position: relative;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  margin: 2px 0;
+  padding: 8px 20px;
   cursor: pointer;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+/* line 86, ../../../app/stylesheets/buttons.scss */
+.near_button:active {
+  background-image: -moz-linear-gradient(top, #3a464d, #43515a);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3a464d), color-stop(1, #43515a));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }

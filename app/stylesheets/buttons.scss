@@ -1,40 +1,50 @@
-@import "fancy_buttons.sass";
 @import "partials/base";
 
-$green: darken(#57b42c, 8);
-$blue: adjust_hue($green, 110);
-$red: adjust_hue($green, -100);
-
-a.button, button, .button {
-  @include fancy-button-structure(15px);
-  @include fancy-button-colors;
-  margin: 0 1px;
-  vertical-align: middle;
-  &.light {
-    @include fancy-button-colors(#bbbbbb); }
-  &.edit {
-    @include fancy-button-colors(lighten($green, 10)); } }
-    
-a.big_button, .big_button {
+@mixin standard_button($startcolor: #81b9b4, $endcolor: #68948f, $bordercolor: #66928c) {
   font-family: Titillium-XBold;
-  font-size: 30px;
+  font-size: 15px;
   text-align: center;
-  padding: 18px 35px;
-  border: 1px solid #66928c;
+  padding: 7px 30px;
+  border: 1px solid $bordercolor;
   /*css*/
-  background-color: #81b9b4;
-  background-image: -moz-linear-gradient(top, #81b9b4, #68948f); /* FF3.6 */                                      
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #81b9b4),color-stop(1, #68948f)); 
-      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f'); 
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
-          border-radius: 3px;
-     -moz-border-radius: 3px; 
+  background-color: $startcolor;
+  background-image: -moz-linear-gradient(top, $startcolor, $endcolor); /* FF3.6 */                                      
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $startcolor),color-stop(1, $endcolor)); 
+      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor'); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
   -webkit-border-radius: 3px;
-          box-shadow: 0 0 4px rgba(0,0,0,.4), 0 1px 1px rgba(255,255,255,.5) inset;
-     -moz-box-shadow: 0 0 4px rgba(0,0,0,.4), 0 1px 1px rgba(255,255,255,.5) inset;
+     -moz-border-radius: 3px; 
+          border-radius: 3px;
   -webkit-box-shadow: 0 0 4px rgba(0,0,0,.4), 0 1px 1px rgba(255,255,255,.5) inset;
+     -moz-box-shadow: 0 0 4px rgba(0,0,0,.4), 0 1px 1px rgba(255,255,255,.5) inset;
+          box-shadow: 0 0 4px rgba(0,0,0,.4), 0 1px 1px rgba(255,255,255,.5) inset;
+  
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
-  color: #fff;
+  color: #fff;  
+}
+
+@mixin standard_button_active($startcolor: #81b9b4, $endcolor: #68948f) {
+  background-image: -moz-linear-gradient(top, $endcolor, $startcolor); /* FF3.6 */                                      
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $endcolor),color-stop(1,$startcolor)); 
+      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor'); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+a.green_button, .green_button {
+  @include standard_button();
+}
+a.green_button:active, .green_button:active {
+  @include standard_button_active();
+}
+
+a.big_button, .big_button {
+  @include standard_button();
+  font-size: 30px;
+  padding: 18px 35px;
 }
 
 .call2action {
@@ -42,81 +52,37 @@ a.big_button, .big_button {
   margin-top: 20px;
 }
     
-a.big_button:active, .big_button:active {
-  background-image: -moz-linear-gradient(top, #68948f, #81b9b4); /* FF3.6 */                                      
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #68948f),color-stop(1,#81b9b4)); 
-      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4'); 
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
-  
-}
-
-a.small_button, .small_button {
-  @include fancy-button($grey, 10px, 2px);
-  text-size: 12px;
-  font-family: Titillium-Medium;
-  text-align: center;
+a.big_button:active, .big_button:active {  
+  @include standard_button_active();
 }
 
 a.login_button, .login_button {
-  @include fancy-button($orange, 15px, 3px);
-  text-align: center;
+  @include standard_button(#e68a2c,#c67929, $orange - #222);
+  padding: 2px 12px;
 }
 
-a.green_button, .green_button {
-  @include fancy-button(#80b8b3, 15px, 3px);
-  font-family: Titillium-XBold;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.3); 
-  padding: 9px 25px 8px 25px;
-}
-a.green_button:active, .green_button:active {
-  padding: 8px 24px 7px 24px;  
-}
 
-a.register_button, .register_button {
-  @include fancy-button(#80b8b3, 20px, 3px);
-  font-family: Titillium-XBold;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.3); 
-  padding: 13px 25px 8px 25px;
+a.login_button:active, .login_button:active {
+  @include standard_button_active(#e68a2c, #c77929);
 }
-a.register_button:active, .register_button:active {
-  padding: 12px 24px 7px 24px;  
-}
-
 
 .search_button {
-  @include fancy-button($grey, 13px, 2px);
-  text-align: center;
-}
-
-button.near_button {
-//  height: 33px;
+  @include standard_button($grey, $grey - #222, $grey - #222);
 }
 
 a.near_button {
   height: 23px;
 }
 
-.near_button, .near_button:active, .near_button:hover, .near_button:focus {
-  font-family: Titillium-XBold;
-  color: #fff;
-  border: 1px solid $grey;
-  font-size: 1.3em;
-  margin: 0;
-  display: inline-block;
-  padding: 8px 20px 7px;
-  margin-right: 1px;
-  text-decoration: none;
-  line-height: 1;
-  background: $grey;  
-  background-image: -moz-linear-gradient(top, #43515A, #3a464d); 
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #43515A),color-stop(1, #3a464d)); 
-  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d'); 
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')"; 
-  -moz-border-radius: 1px 5px 5px 1px;
-  -webkit-border-radius: 1px 5px 5px 1px;
-  border-radius: 1px 5px 5px 1px;
-  -moz-box-shadow: 0 1px 3px #999;
-  -webkit-box-shadow: 0 1px 3px #999;
-  position: relative;
+.near_button, .near_button:hover, .near_button:focus {
+  @include standard_button(#43515A, #3a464d, $grey);
+  margin: 2px 0;
+  padding: 8px 20px;
   cursor: pointer;
+  -webkit-border-radius: 0px 5px 5px 0px;
+     -moz-border-radius: 0px 5px 5px 0px;
+          border-radius: 0px 5px 5px 0px;
+}
+.near_button:active {
+  @include standard_button_active(#43515A, #3a464d);
 }

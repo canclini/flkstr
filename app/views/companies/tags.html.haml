@@ -1,6 +1,7 @@
-%h1 Beschreiben Sie ihre Firma mit Tags
-%p Wunderbar! Sie haben erfolgreich ihre Firma registriert. Wenn sie sich jetzt noch kurz Zeit nehmen und ihre Firma mit 3 - 5 Tags bestücken, sind sie vom ersten Tag der Beta Phase bereit um potentielle Neue Aufträge zu bekommen!
-%p Tags sind ...
+.leftmiddle 
+  %h1 Beschreiben Sie ihre Firma mit Tags
+  %p Wunderbar! Sie haben erfolgreich ihre Firma registriert. Wenn sie sich jetzt noch kurz Zeit nehmen und ihre Firma mit 3 - 5 Tags bestücken, sind sie vom ersten Tag der Beta Phase bereit um potentielle Neue Aufträge zu bekommen!
+  %p Tags sind ...
 
 =simple_form_for @company, :remote => :true, :url => add_tag_company_path do |f|
   = f.error_messages  
@@ -12,6 +13,7 @@
       = label :tags, "Tags"
       = text_field :tags, :tag, :class => "text near focus"
       = f.submit "add", :class => "near_button"
-.green_box
-  = render :partial => 'tags/tag_list'
-= link_to 'Fertig', destroy_user_session_path(), :class => "register_button"
+
+.green_box.last
+  #tag_list= render :partial => 'tags/tag_list'
+= link_to 'Fertig', destroy_user_session_path(), :class => "green_button form_button"
