@@ -1,16 +1,26 @@
+.login_link {
+  background: green;
+  background: url(/images/dropdown.png) 100% 100% no-repeat;  
+  height: 17px;
+  width: 50px;
+  float: right;
+}
+
 nav.user {
-  a.login img{
-    margin: 0;
-  }  
 
   #login_menu {    
-    .handler {
-      font-size: 15px;
-      padding: 12px 12px;
-      clear: both;
-      text-align: right;
+    .login_link {
+      margin: 12px 9px;
+      font-size: 14px;
+      background: green;
+      background: url(/images/dropdown.png) 100% 100% no-repeat;  
+      height: 17px;
+      width: 50px;
+      float: right;
     }
+    
     .input_form {
+      margin-top: 50px;
       text-align: left;
       padding: 0 10px 10px 10px;
       fieldset {

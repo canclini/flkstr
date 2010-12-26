@@ -80,7 +80,7 @@ html, body {
         @include column(1);
       }
       nav.user { // Top Right User Navigation
-        text-align: right;
+        text-align: left;
         @include column(1);
         @include last;
       }

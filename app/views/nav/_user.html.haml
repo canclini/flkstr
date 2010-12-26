@@ -6,15 +6,14 @@
 
 %nav.user
   // comment for website phase
-  //= link_to "Login", new_user_session_path, :class => "login transition"
-  //= link_to image_tag("dropdown.png"), new_user_session_path, :class => "login transition"
-  = link_to "Login", "#", :class => "login transition"
-  = link_to image_tag("dropdown.png"), "#", :class => "login transition"
-  
-  #login_menu.transition
-    .handler
-      = link_to "Login", new_user_session_path, :class => "login transition"
-      = link_to image_tag("dropdown_active.png"), new_user_session_path, :class => "login transition"
+  %a{ :href => new_user_session_path, :class => "login", :title => "Login"}
+    .login_link
+      Login  
+      
+  #login_menu.transition  
+    %a{ :href => new_user_session_path, :class => "login", :title => "Login"}
+      .login_link
+        Login  
     .input_form        
       = form_tag new_user_session_path do
         = field_set_tag 'E-Mail' do
@@ -23,12 +22,3 @@
           = password_field_tag 'user[password]'
         .button_form
           %button.login_button Login
-    
-  
-//  - if user_signed_in?    
-//    #settings-menu.transition
-//      = link_to "Firmenprofil", company_path(current_company)
-//      %br
-//      = link_to "Firmeneinstellungen", settings_path
-//      %br
-//      = link_to "Benutzereinstellungen", edit_user_registration_path

@@ -99,11 +99,6 @@ $(document).ready(function() {
     }
   });
 
-// settings-menu
-  $('a#settings').click(function(){
-    $('#settings-menu').toggle();
-  });
-
 /*  $("#company_name").keydown(function(){
        updateExistingCompanies();
   });
