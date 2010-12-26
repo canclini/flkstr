@@ -15,6 +15,8 @@ jQuery.fn.submitWithAjax = function() {
 
 
 $(document).ready(function() {	
+  
+  VideoJS.setupAllWhenReady();
 	
 	$("#twitter").getTwitter({
 		userName: "flockstreet",

@@ -15,13 +15,15 @@
     =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
 
 .leftmiddle
-  %video{ :controls => "", :width => "620", :height => "360"}  
-    %source{:src => "http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.m4v", :type=> "video/mp4"}/
-    %source{:src=>"http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.ogv", :type=> "video/ogg"}/
-
-    %object{:width=>"640", :height=>"360", :type=>"application/x-shockwave-flash", :data=>"/player.swf" }
-      %param{:name=>"movie", :value=>"/player.swf"}	
-      %param{:name=>"flashvars", :value=>'controlbar=over&amp;file=http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.m4v'}
+  .video-js-box
+    %video.video-js{ :controls => "", :preload => "", :width => "620", :height => "360"}  
+      %source{:src => "http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.m4v", :type=> "video/mp4"}/
+      %source{:src=>"http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.ogv", :type=> "video/ogg"}/
+    
+      %object.vjs-flash-fallback{:width=>"640", :height=>"360", :type=>"application/x-shockwave-flash", :data=>"http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" }
+        %param{:name=>"movie", :value=>"http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"}	
+        %param{:name=>"allowfullscreen", :value=>"true"}	
+        %param{:name=>"flashvars", :value=>'config={"playlist":[{"url": "http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.m4v","autoPlay":false,"autoBuffering":true}]}'}
   
   %h4.byline
     Sie sind Auftraggeber oder Dienstleister im B2B-Bereich? flockstreet ist das Netzwerk mit Auftragsplattform. Sie finden geeignete Dienstleister, neue Aufträge, profitieren von einer kostenlosen Kommunikation und von einfacher Kontaktaufnahme in einem Netzwerk speziell für Firmen.

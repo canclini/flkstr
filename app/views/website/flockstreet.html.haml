@@ -5,7 +5,7 @@
     %li.last
       = link_to t('startpage.tagline2'), plans_path()
       
-  %h1 Was ist flockstreet?
+  %h1 &nbsp;
   
 .right
   - if @app_state == 'website'
@@ -13,38 +13,32 @@
   -else
     =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
  
-#relation.explanation
-  .paragraph
-    %h4 Dienstleister finden - schnell und einfach
-    Im Internet suchen, für Offerten telefonieren und mehrmals erklären was Ihr Auftrag ist - das ersparen Sie sich mit flockstreet. Erfassen Sie einfach Ihren Auftrag. Wir ermitteln und informieren für Sie automatisch passende Dienstleister. Von diesen erhalten Sie direkt Angebote und wählen dann aus einigen Offerten den richtigen Partner aus.
-    %br/
-    %h4 Dienstleister auswählen - mit Sicherheit
-    Für die Auswahl des passenden Dienstleisters unterstützen wir Sie mit Informationen. Basis für eine Zusammenarbeit ist Vertrauen und das entsteht durch Kennenlernen. Dank flockstreet erhalten Sie zusätzliche Informationen über allfällige Geschäftspartner und lernen diese besser kennen. Das fördert eine sichere Wahl.
+.left
+  %h3 Dienstleister finden - schnell und einfach
+.middleright
+  %p Im Internet suchen, für Offerten telefonieren und mehrmals erklären was Ihr Auftrag ist - das ersparen Sie sich mit flockstreet. Erfassen Sie einfach Ihren Auftrag. Wir ermitteln und informieren für Sie automatisch passende Dienstleister. Von diesen erhalten Sie direkt Angebote und wählen dann aus einigen Offerten den richtigen Partner aus.
+//.right= image_tag("kunde_lieferant.png")
     
-  .picture
-    =image_tag("kunde_lieferant.png")
-#customers.explanation
-  .paragraph
-    %h3 Für Dienstleister:
-    %h4 Aufträge gewinnen
-    Auf flockstreet sind Kunden und Dienstleister registriert. Um von den Vorteilen dieses Firemnetzwerks zu profitieren können Sie mit einem einfachen Webformular ein aussagekräftiges Profil Ihrer Unternehmung erfassen. flockstreet findet mit Ihren Informationen alle passenden Aufträge die von Kunden erfasst wurden und sendet Ihnen entsprechende Leads (anonymisiert).
-    %br/
-    %h4 Einfache Kommunikation
-    Für die Kommunikation in Ihrem Geschäftsumfeld unterstützen wir Sie mit einem wirkungsvollen Tool: Statusmeldungen sind kurze Mitteilungen welche Ihnen eine einfache, günstige Kommunikation an Ihr Netzwerk ermöglicht.
-    %br/
-    %h4 Unkomplizierte Kontaktaufnahme
-    Die Kontaktaufnahme ist in einem Netzwerk viel einfacher und sehr unkompliziert. Sie können zum Beispiel im Netzwerk nach Tags oder Firmennamen suchen. Wenn Sie eine Firma, deren Produkte oder einfach deren Statusmeldungen interessieren, können Sie mit einem Klick eine Verbindung erstellen und erhalten somit in Zukunft deren Statusmeldungen. So wächst Ihr Netzwerk ganz automatisch.
-    %br/
-    %h4 B2B Kontakt behalten
-    Mitarbeitende knüpfen teilweise Kontakte zu externen Firmen - zum Beispiel im Marketing zum Papierlieferanten. Diese bleiben Ihrer Firma einfach erhalten, wenn sie sich in flockstreet mit ihnen verbinden - selbst wenn die Mitarbeitende Ihre Firma verlassen sollte.
-    
+.left
+  %h3 Dienstleister auswählen - mit Sicherheit
+.middleright
+  %p Für die Auswahl des passenden Dienstleisters unterstützen wir Sie mit Informationen. Basis für eine Zusammenarbeit ist Vertrauen und das entsteht durch Kennenlernen. Dank flockstreet erhalten Sie zusätzliche Informationen über allfällige Geschäftspartner und lernen diese besser kennen. Das fördert eine sichere Wahl.
 
+.left
+  %h3 Aufträge gewinnen
+.middleright
+  %p Auf flockstreet sind Kunden und Dienstleister registriert. Um von den Vorteilen dieses Firemnetzwerks zu profitieren können Sie mit einem einfachen Webformular ein aussagekräftiges Profil Ihrer Unternehmung erfassen. flockstreet findet mit Ihren Informationen alle passenden Aufträge die von Kunden erfasst wurden und sendet Ihnen entsprechende Leads (anonymisiert).
 
-  .picture
-    =image_tag("network.png")
-#tags.explanation
-  .paragraph
-    %h3  Beschreibende Tags
-    Text
-  .picture
-    =image_tag("tags.png")
+.left
+  %h3 Einfache Kommunikation
+.middleright
+  %p Für die Kommunikation in Ihrem Geschäftsumfeld unterstützen wir Sie mit einem wirkungsvollen Tool: Statusmeldungen sind kurze Mitteilungen welche Ihnen eine einfache, günstige Kommunikation an Ihr Netzwerk ermöglicht.
+.left
+  %h3 Unkomplizierte Kontaktaufnahme
+.middleright
+  %p Die Kontaktaufnahme ist in einem Netzwerk viel einfacher und sehr unkompliziert. Sie können zum Beispiel im Netzwerk nach Tags oder Firmennamen suchen. Wenn Sie eine Firma, deren Produkte oder einfach deren Statusmeldungen interessieren, können Sie mit einem Klick eine Verbindung erstellen und erhalten somit in Zukunft deren Statusmeldungen. So wächst Ihr Netzwerk ganz automatisch.
+.left
+  %h3 B2B Kontakt behalten
+.middleright
+  %p Mitarbeitende knüpfen teilweise Kontakte zu externen Firmen - zum Beispiel im Marketing zum Papierlieferanten. Diese bleiben Ihrer Firma einfach erhalten, wenn sie sich in flockstreet mit ihnen verbinden - selbst wenn die Mitarbeitende Ihre Firma verlassen sollte.
+//.right= image_tag("network.png")
