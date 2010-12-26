@@ -4,11 +4,9 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "blueprint";
-@import "blueprint/typography";
+//@import "blueprint/typography";
 @import "compass/reset";
 @import "compass/utilities";
-//@import "compass/css3";
-//@import "compass/css3/gradient";
 
 @import "partials/base";
 @import "partials/layout";
@@ -117,6 +115,16 @@ h5 { // Footer white on grey
   color: #354048;
 }
 
+.byline {  
+  font-family: Titillium-Medium;
+  color: $grey;
+  font-size: 19px;
+  text-shadow: 0px 0px 0px;
+  padding: 30px 0px 0px;
+  line-height: 29px;
+  width: 630px;
+}
+
 .meta {
   font-family: Titillium-Medium;
 }
@@ -141,7 +149,7 @@ nav.footer {
   
 }
 
-footer.copyright {
+.copyright {
   font-family: Titillium-Medium;
   font-size: 13px;
   color: #cfd6d0;
@@ -422,45 +430,55 @@ a.linkblock:hover, .actionbox_entry:hover {
 }
 
 // WEBSITE TWITTER UPDATE LIST
-.twitterwall {
-  h3, h4 { padding-left: 20px; }
 
-#twitter {
-  .preLoader {
-    margin-left: 22px;
-  }
-  #twitter_update_list {
-    margin: 0px 0px 10px 10px;
-    list-style: none;
-    padding: 0px;
-    font-size: 14px;
+section.twitterwall {
+  h3, h4 { padding-left: 20px; }  
+  
+  footer a.follow, footer a.follow:visited {
     font-family: Titillium-Medium;
-    color: $grey;      
-    a {
-      color: #7b8c96;      
-      text-decoration: none;
-      }
-    li {
-      margin-bottom: 10px;
-      .tweet {
-        background: #eef6eb;
+    font-size: 19px;
+    text-shadow: 0px 0px 0px;
+    border-bottom: 1px solid $orange;
+
+  }
+  footer a.follow:hover, footer a.follow:focus { 
+    border-bottom: 1px solid $orange_hover;
+  }
+  
+  #twitter {
+    .preLoader {
+      margin-left: 22px;
+    }
+    #twitter_update_list {
+      margin: 0px 0px 10px 10px;
+      list-style: none;
+      padding: 0px;
+      font-size: 14px;
+      font-family: Titillium-Medium;
+      color: $grey;      
+      a {
+        color: #7b8c96;      
+        text-decoration: none;
+        }
+      article {
+        margin-bottom: 10px;
         .status {
+          background: #eef6eb;
           padding: 10px;
           a, a:hover {
             color: $grey;
             font-family: Titillium-XBold;
             text-decoration: underline;
-            }
+          }
           a:hover {
             color: $dark_grey; 
           }
         }
-      }
-      .bubble {
-        height: 10px;
-        background: url(/images/twitter_bubble.png) no-repeat 0% 100%;  
+        .bubble {
+          height: 10px;
+          background: url(/images/twitter_bubble.png) no-repeat 0% 100%;  
+        }
       }
     }
-  }
 }
 }

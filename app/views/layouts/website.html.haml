@@ -18,7 +18,7 @@
           .meta
             = render :partial => 'nav/user'
       #hass_shadow
-      #flash_container.titillium
+      #flash_container
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}"
       #container
@@ -26,10 +26,10 @@
       #content_two.big_footer
         = yield(:columns)
 
-    #footer.big
+    %footer.big
       %nav.footer
         = render 'website/footer'
-      %footer.copyright
+      .copyright
         .ginetta
           =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition"
         .flockstreet
