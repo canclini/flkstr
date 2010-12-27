@@ -194,6 +194,7 @@ article {
       nav.user { // Top Right User Navigation
         text-align: left;
         @include single_column_right();
+        margin: 0px;
       }
     }
   }
