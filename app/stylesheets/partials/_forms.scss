@@ -16,6 +16,14 @@ input[type="text"], input[type="password"], input[type="email"] {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+input[type="text"].search {
+  padding: 2px 0px;
+  font-size: 15px;
+  -webkit-border-radius: 5px 1px 1px 5px;
+  -moz-border-radius: 5px 1px 1px 5px;
+  -o-border-radius: 5px 1px 1px 5px;
+  -border-radius: 5px 1px 1px 5px;
+}
 
 input[type="text"].near, input[type="password"].near, input[type="email"].near {
   width: 200px;

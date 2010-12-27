@@ -74,20 +74,7 @@ class ApplicationController < ActionController::Base
   end
   
   def app_state
-    #@app_state = ENV['APP_STATE']
-    @app_state = 'website'
-    allowed_controllers = %w[website companies registrations sessions plans]
-    allowed_actions = %w[tags update]
-    logger.debug controller_name
-    if allowed_controllers.include?(controller_name)
-      #continue
-    else
-      if controller_name == 'companies' and allowed_actions.include?(action_name)
-        #continue
-      else
-        redirect_to root_url
-      end
-    end
+    @app_state = 'beta'
   end
   
   def flockstreet?

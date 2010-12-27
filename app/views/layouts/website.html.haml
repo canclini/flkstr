@@ -4,6 +4,7 @@
     %meta{:charset=>"UTF-8"}
     %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}/
     %title= h(yield(:title) || "flockstreet")
+    = stylesheet_link_tag 'compiled/styles'
     = render :partial => 'layouts/includes'
     = stylesheet_link_tag 'video-js'
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",  "jquery.rails", "modernizr-1.6.min", "jquery.twitter", "video", "application"
@@ -16,6 +17,11 @@
           %a{ :href => root_url}
             .logo
           .meta
+            .search
+              \&nbsp;
+            .language
+              - available_locales.each do |locale|
+                = link_to_unless current_locale?(locale), locale, current_page_path(:locale => locale)
             = render :partial => 'nav/user'
       #hass_shadow
       #flash

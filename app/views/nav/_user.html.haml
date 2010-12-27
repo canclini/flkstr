@@ -1,14 +1,12 @@
-.search
-  \&nbsp;
-.language
-  - available_locales.each do |locale|
-    = link_to_unless current_locale?(locale), locale, current_page_path(:locale => locale)
-
 %nav.user
-  // comment for website phase
-  %a{ :href => new_user_session_path, :class => "login", :title => "Login"}
-    .login_link
-      Login  
+  - if current_user
+    %a{ :href => destroy_user_session_path, :class => "logout", :title => "logout"}
+      .logout_link
+        Logout
+  - else
+    %a{ :href => new_user_session_path, :class => "login", :title => "Login"}
+      .login_link
+        Login  
       
   #login_menu.transition  
     %a{ :href => new_user_session_path, :class => "login", :title => "Login"}

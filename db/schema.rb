@@ -144,9 +144,9 @@ ActiveRecord::Schema.define(:version => 20101012190055) do
     t.string   "area_filter", :default => "everywhere"
     t.string   "distance",    :default => "0"
     t.string   "language",    :default => "DE"
+    t.string   "status",      :default => "open"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "status",      :default => "open"
   end
 
   create_table "settings", :force => true do |t|

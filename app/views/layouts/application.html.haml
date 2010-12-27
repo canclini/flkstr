@@ -5,39 +5,34 @@
     %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}/
     %title= "flockstreet"
     = render :partial => 'layouts/includes'
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "modernizr-1.6.min", "jquery-ui-1.8.6.custom.min"
+    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "modernizr-1.6.min", "video"
     = csrf_meta_tag
 
   %body
     #wrapper
-      #meta
-        .content
-          .logo
-            = link_to image_tag("3birds_signet.png"), dashboard_url
-          %aside.actionbox
-            = render :partial => 'actionbox/actionbox'
-          = render :partial => 'nav/user'
       %header
         .content
-          .logo
-              
-      - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
+          %a{ :href => dashboard_url}
+            .logo
+          = render :partial => 'nav/user'
+      #bar
+        .content
+          = render :partial => 'actionbox/actionbox'
+          .profile
+            flockstreet
+      #hass_shadow  
+      #flash
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}"
 
       #container
-        %nav.main
-          #dashboard
-            =link_to "Dashboard", dashboard_path()
-          #maintopics
-            = render :partial => 'layouts/maintopics'
-          #mainaction
-            =link_to "Neuer Auftrag", new_request_path, :class => 'button'
-        %nav.sidebar
-          =render :partial => 'sidebar'
-        %section{:id => 'content'}
-          = yield
-      #push_footer
-    #copyright
-      %footer.copyright
-        =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition"
-        &copy; Flockstreet, 2011
+        %nav.main.full= render :partial => 'layouts/maintopics'
+        %nav.sidebar=render :partial => 'sidebar'
+        %section.content= yield
+    %footer.small
+      .copyright
+        .ginetta
+          =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition", :target => 'blank'
+        .flockstreet
+          &copy; flockstreet 2011

@@ -1,16 +1,20 @@
 .login_link {
-  background: green;
-  background: url(/images/dropdown.png) 100% 100% no-repeat;  
+  background: url(/images/dropdown.png) 100% 100% no-repeat;
   height: 17px;
   width: 50px;
   float: right;
 }
-
+.logout_link {
+  text-align: right;
+  height: 17px;
+  width: 50px;
+  float: right;  
+}
 nav.user {
 
   #login_menu {    
     .login_link {
-      margin: 12px 19px;
+      margin: 12px 9px;
       font-size: 14px;
       background: green;
       background: url(/images/dropdown.png) 100% 100% no-repeat;  

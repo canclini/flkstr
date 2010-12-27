@@ -86,3 +86,18 @@ a.near_button {
 .near_button:active {
   @include standard_button_active(#43515A, #3a464d);
 }
+
+.search_button, .search_button:hover, .search_button:focus {
+  @include standard_button(#fefefe, #dee6e5, #fbfcfc);
+  color: #42515a;
+  font-family: Titillium-Light;
+  margin: 2px 0;
+  padding: 2px 10px;
+  cursor: pointer;
+  -webkit-border-radius: 0px 5px 5px 0px;
+     -moz-border-radius: 0px 5px 5px 0px;
+          border-radius: 0px 5px 5px 0px;
+}
+.search_button:active {
+  @include standard_button_active(#fefefe, #dee6e5);
+}

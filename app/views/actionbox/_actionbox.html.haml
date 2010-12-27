@@ -1,6 +1,6 @@
 #actionsearch
   = form_tag search_path do |f|
-    = text_field_tag :query, params[:query] = "Suche nach Firma oder Tag", :size => 35, :class => "clearme", :type => "search"
+    = text_field_tag :query, params[:query] = "Suche nach Firma oder Tag", :class => "search clearme"
     = submit_tag "suchen", :class => "search_button"
 %nav.actionbuttons
   =link_to image_tag("message.png"), messages_path(), :class => "message dropdown"  

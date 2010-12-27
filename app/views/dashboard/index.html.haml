@@ -1,6 +1,4 @@
-.leftmiddle
-  %h3 Was gibt es Neues?
-    
+.wide    
   = form_tag updates_path do
     %p
       = text_field_tag :update, params[:update], :size=>80
@@ -11,26 +9,3 @@
   #feed
     - for feed in @feeds do
       .item= render :partial => "feed_items/#{feed.partial}", :locals => {:feed_item =>  feed.item}
-    
-.right
-  %section.box
-    %h3 LINKS (temp)
-    %ul
-      %li= link_to "Firmenverzeichnis", companies_path()
-      %li= link_to "Mein Netzwerk", company_associates_path(current_company)
-  %section.box
-    %h3 Leads
-    %ul
-      - for lead in @leads do
-        %li
-          = l lead.created_at, :format => :short
-          = link_to lead.request.name, lead
-    = link_to ">> Alle Leads anzeigen", leads_path()
-  %section.box
-    %h3 Nachrichten
-    = link_to ">> Alle Nachrichten anzeigen", messages_path()
-  %section.box
-    %h3 Netzwerk erweitern
-    = form_tag companies_path, :method => :get do
-      %p
-        = text_field_tag :search, params[:search] = "mail adresse",:size=>30, :class => "text clearme"  
