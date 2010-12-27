@@ -30,4 +30,6 @@ Flockstreet::Application.configure do
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
+
+  #disable SSL redirect in development
 end

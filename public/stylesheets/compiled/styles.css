@@ -111,7 +111,7 @@ input[type="checkbox"] {
 
 /* line 47, ../../../app/stylesheets/partials/_forms.scss */
 .hint {
-  background: url(/images/info_button.png) no-repeat 0% 60%;
+  background: url(/images/info_button.png) no-repeat 0% 80%;
   padding-left: 25px;
   padding-top: 10px;
   display: none;

@@ -17,3 +17,5 @@ GoogleMap::Map::GOOGLE_APPLICATION_ID = ENV['GOOGLE_API_KEY'] ||= "ABQIAAAASgmYF
 # 'full'
 # 'beta': Every function is there. But no plans yet available and no restrictions on requests or leads. Just one single user.
 # 'website': The Application is not yet available. Only the Website is visible plus a signup for the beta phase. No Logins allowed.
+
+SslRequirement.disable_ssl_check = true if Rails.env == 'development'

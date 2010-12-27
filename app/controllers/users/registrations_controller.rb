@@ -1,4 +1,5 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  ssl_required :new, :create
 
   def new
     company_name = ""
