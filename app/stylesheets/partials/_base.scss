@@ -1,14 +1,3 @@
-// Here is where you can define your constants for your application and to configure the blueprint framework.
-// Feel free to delete these if you want keep the defaults:
-
-$blueprint_grid_columns: 12;
-$blueprint_container_size: 950px;
-$blueprint_grid_margin: 10px;
-
-// Use this to calculate the width based on the total width.
-// Or you can set !blueprint_grid_width to a fixed value and unset !blueprint_container_size -- it will be calculated for you.
-$blueprint_grid_width: ($blueprint_container_size + $blueprint_grid_margin) / $blueprint_grid_columns - $blueprint_grid_margin;
-
 // flockstreet colors
 $dark_green: #7FB6B1;
 $light_green: #E4F0E0;
@@ -16,38 +5,37 @@ $dark_grey: #43515A;
 $orange: #E78B2C;
 $dark_orange: #EA8C1C;
 $orange_hover: $orange - #111;
-//$orange_hover: #C97A27;
 
-$grey_hover: #354047; // header grey?
-$grey: #414f57; // header grey?
-//$grey: #42515A; // header grey?
-//$grey_hover: #354047; // header grey?
+$grey_hover: #354047;
+$grey: #414f57;
 $dark_grey: #2C353B;
-
 $light_grey: #f3f3f3;
 
 // mixins
-@mixin bordered($width: 2px) {
-  border: $width solid #777777; }
+@mixin centered() {
+  margin: 0px auto;
+  width: 960px;
+}
 
-@mixin boxed($bkgrnd: $light_grey, $bordercolor: #aaaaaa) {
-  background: $bkgrnd;
-  border: 1px solid $bordercolor; }
+@mixin slim() {
+  float: left;
+  margin: 0px 10px;
+  width: 300px;
+}
+@mixin wide() {
+  width: 620px;
+  margin: 0 10px;
+  float: left;
+}
 
-@mixin rounded($radius: 10px) {
-  border-top-left-radius: $radius; 
-  border-top-right-radius: $radius; 
-  border-bottom-left-radius: $radius; 
-  border-bottom-right-radius: $radius; 
+@mixin single_column() {
+  float: left;
+  width: 60px;
+  margin: 0px 10px;
+}
 
-  -webkit-border-top-left-radius: $radius; 
-  -webkit-border-top-right-radius: $radius; 
-  -webkit-border-bottom-left-radius: $radius; 
-  -webkit-border-bottom-right-radius: $radius; 
-  
-  -moz-border-radius-topleft: $radius; 
-  -moz-border-radius-topright: $radius; 
-  -moz-border-radius-bottomleft: $radius; 
-  -moz-border-radius-bottomright: $radius; 
-  
+@mixin single_column_right() {
+  float: right;
+  width: 60px;
+  margin: 0px 10px;
 }

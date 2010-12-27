@@ -1,41 +1,42 @@
-- title('Über uns')
-.toplinks
-  - if show_title?
-    %h1=h yield(:title)
-
-.left
+.full
+  - title('Über uns')
+  .toplinks
+    - if show_title?
+      %h1=h yield(:title)
+  
+.slim
   %h3 Wieso flockstreet?
-.middleright
+.wide
   %p
     Wir fanden die Suche nach neuen Lieferanten immer echt Mühsam: im Internet etliche Homepages von Anbietern studieren und dann doch nicht schlauer zu sein... "Geld ausgeben muss doch einfacher gehen!". flocksteet soll Lieferanten und Kunden einfacher zusammenbringen. 
 
-.left  
+.slim  
   %h3 Wieso ein soziales Netzwerk?
 
-.middleright
+.wide
   %p 
     Firmen sollten mit den Menschen/Firmen sprechen, zu denen Sie eine Beziehung haben oder aufbauen wollen. flockstreet will die Schweizer KMUs dabei unterstützen in einen offenen, regen Dialog miteinander zu kommen. Wir sind überzeugt, dass darin viel Potential steckt. Wir haben unsere Partner übrigens auch in sozialen Netzwerken gefunden.  
 
-.left
+.slim
   %h3 Caroline Schnell
   
-.middle
+.slim
   %ul
     %li Inhaberin
     %li= link_to 'Caroline bei Xing', "http://xing.com/profile/Caroline_Schnell"
 
     
-.right
+.wide
   //=image_tag("kunde_lieferant.png")
 
-.left
+.slim
   %h3 Marcel Canclini
   
-.middle
+.slim
   %ul
-    %li Inhaberin
+    %li Inhaber
     %li= link_to 'Xing', "http://xing.com/profile/Marcel_Canclini"
     %li= link_to 'Twitter', "http://twitter.com/canclini"  
   
-.right
+.wide
   //=image_tag("kunde_lieferant.png")

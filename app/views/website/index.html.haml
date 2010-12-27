@@ -8,13 +8,13 @@
   %h1 
     Firmen-Netzwerk mit Auftragsplattform
     
-.right
+.slim
   - if @app_state == 'website'
     =link_to t('startpage.register_beta'), register_path(), :class => "big_button call2action"
   -else
     =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
 
-.leftmiddle
+.wide
   .video-js-box
     %video.video-js{ :controls => "", :preload => "", :width => "620", :height => "360"}  
       %source{:src => "http://s3.amazonaws.com/flkstr/movies/flockstreet_movie.m4v", :type=> "video/mp4"}/
@@ -28,7 +28,7 @@
   %p.byline
     Sie sind Auftraggeber oder Dienstleister im B2B-Bereich? flockstreet ist das Netzwerk mit Auftragsplattform. Sie finden geeignete Dienstleister, neue Aufträge, profitieren von einer kostenlosen Kommunikation und von einfacher Kontaktaufnahme in einem Netzwerk speziell für Firmen.
     =link_to "Probieren Sie es kostenlos", register_path()
-.right
+.slim
   %section.twitterwall
     %h3 Twitter Wall
     #twitter

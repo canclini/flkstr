@@ -3,5 +3,5 @@
     %h3 Anmelden
     = f.input :email, :label => "Mailadresse", :input_html => { :class => 'transition' }
     = f.input :password, :label => "Password", :input_html => { :class => 'transition' }
-    = link_to "Forgot your password?", new_password_path(resource_name), :class => "titillium forgot"
+    = link_to "Forgot your password?", new_password_path(resource_name), :class => "forgot"
   = f.submit "Anmelden", :class => "green_button"

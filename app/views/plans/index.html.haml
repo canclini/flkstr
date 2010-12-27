@@ -1,16 +1,16 @@
-%nav.topnav
-  %ul
-    %li
-      = link_to t('startpage.tagline1'), flockstreet_path()
-    %li.last.active
-      = link_to t('startpage.tagline2'), plans_path()
+.full
+  %nav.topnav
+    %ul
+      %li
+        = link_to t('startpage.tagline1'), flockstreet_path()
+      %li.last.active
+        = link_to t('startpage.tagline2'), plans_path()
+        
+    %h1=t('plans.title')
       
-  %h1=t('plans.title')
-    
 
-.leftmiddle
-  %h4 flockstreet startet bald mit der Beta Phase. Sie können sich bereits jetzt dafür anmelden. Ihre Firma und Ihr persönlicher Benutzer werden dann für sie bereit sein. Wir freuen uns auf Ihre Mitgliedschaft!
-  %br/
+.wide
+  %p.lead flockstreet startet bald mit der Beta Phase. Sie können sich bereits jetzt dafür anmelden. Ihre Firma und Ihr persönlicher Benutzer werden dann für sie bereit sein. Wir freuen uns auf Ihre Mitgliedschaft!
   
 #plans
   - for plan in [:scale, :connect, :ready] do
