@@ -1,0 +1,389 @@
+@import "blueprint";
+@import "compass/reset";
+@import "compass/utilities";
+
+@import "partials/base";
+@import "partials/forms";
+@import "partials/menu";
+@import "partials/login";
+
+section, header, footer, aside, nav, article{
+  display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Georgia;
+  color: #414f57;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a, a:visited { 
+  color: $orange;
+}
+a:hover, a:focus {
+  color: $orange_hover;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  li {
+    margin-top: 5px;
+  }
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+h1, h2, h3, h4, h5 {
+  color: $grey;
+  margin-bottom: 6px;
+  text-shadow: 0px 0px 1px rgba(0,0,0,0.4); 
+  line-height: 1.5;
+  }
+  a, a:visited, a:hover, a:focus {
+    text-decoration: none;
+  }
+h2 {
+}
+
+h3, h4 {
+  // create a special underline for the links with more space between text and line.
+  a, a:visited { 
+    border-bottom: 1px solid $orange;
+  }
+  a:hover, a:focus { 
+    border-bottom: 1px solid $orange_hover;
+  }
+}
+
+h1  { //BIG Title on Startpage
+  font-family: Titillium-Light;
+  color: $grey;
+  line-height: 1.2;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h2 { // taglines
+  font-family: Titillium-Medium;
+  color: $grey;
+  font-size: 30px;
+}
+
+h3 { // 3 column stuff on website
+  font-family: Titillium-Medium;
+  padding-bottom: 5px;
+  color: $grey;
+  font-size: 26px;
+}
+
+h4 { //byline below movie, link "follow on twitter"
+  font-family: Titillium-Medium;
+  font-size: 19px;
+  text-shadow: 0px 0px 0px;
+}
+
+h5 { // Footer white on grey
+  color: white;
+  font-family: Titillium-Medium;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px #000; 
+  margin: 0px 0px 20px 0px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+.titillium {
+  font-family: Titillium-Medium;
+  font-size: 15px;
+  color: #354048;
+}
+
+#wrapper {
+  min-height: 100%;
+}
+
+
+#wrapper header {  
+  font-size: 14px;
+  height: 50px;
+  clear: both;  
+  border-bottom: 1px solid #fff;  
+
+  background: $light_green;  
+  background-image: -moz-linear-gradient(top, #E4F0E0, #E0ebdc); 
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #E4F0E0),color-stop(1, #E0ebdc)); 
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#E4F0E0', EndColorStr='#E0ebdc'); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#E4F0E0', EndColorStr='#E0ebdc')"; 
+
+  .content {
+    padding: 20px 0px;
+    @include centered();
+    overflow: visible;
+    .logo {
+      @include slim();
+      width: 160px;
+      height: 24px;
+      background: url(/images/flockstreet-beta.png) no-repeat 100% 100%;
+    }
+    nav.user { // Top Right User Navigation
+      text-align: left;
+      @include single_column_right();
+      margin: 0px;
+    }
+  }
+}
+
+#bar {
+  font-size: 15px;
+  height: 50px;
+  clear: both;  
+  border-bottom: 1px solid #D0D6D0;
+  background: $grey;    
+  .content {
+    padding: 5px 0px;
+    @include centered();
+    overflow: visible;
+    #actionsearch {
+      float: left;
+      width: 380px;
+      margin: 0px 10px;
+    }
+    nav.actionbuttons {
+      float: left;
+      width: 300px;
+      margin: 0px 10px;
+    }
+    .profile {
+      font-family: Titillium-Medium;
+      text-align: right;
+      padding-top: 10px;
+      float: right;
+      width: 220px;
+      margin: 0px 0px;
+      color: #fff;
+    }
+  }
+}
+// fix for the shadow beneath the header. otherwise it is not nice in firefox
+#hass_shadow {
+  height: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15) inset;
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15) inset;
+          box-shadow: 0 1px 2px rgba(0,0,0,.15) inset;
+}
+
+#flash {
+  @include centered();
+  min-height: 20px;
+}
+
+#flash_notice {
+  background: $dark_green;
+  border: 1px solid #aaa;  
+}
+
+#flash_error {
+  background: $orange;
+  border: 1px solid $dark_orange;
+}
+
+// the 2 Main Links
+nav.main {
+  ul {
+    @include horizontal-list;
+    margin-bottom: 20px;
+    li.active  a  {
+      border-bottom: 3px solid $grey;
+    }
+    li.active  a:hover { 
+        border-bottom: 3px solid #313131;
+      }
+    li {
+      margin-right: 25px;
+        a, a:visited, a:hover, a:focus {
+          font-family: Titillium-Medium;
+          font-size: 20px;
+          color: $grey;
+          border-bottom: 1px solid $grey;
+          padding-bottom: 2px;
+          white-space: nowrap;
+        }
+        a:hover, a:focus {
+          color: #313131;
+          border-bottom: 1px solid #313131;
+        }
+    }
+  }
+}
+
+// CONTAINER
+#container {
+  @include centered();
+  padding-top: 40px;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+#actionbutton {
+  @include slim();
+  text-align: right;
+}
+
+nav.sidebar {
+  margin: 0 10px;
+  float: left;
+  width: 140px;
+}
+section.content {
+  float: left;
+  margin: 0 10px;
+  width: 780px;
+}
+// COLUMNS
+.full {
+  clear:both;
+  width: 960px;
+  float: left;
+}
+.wide {
+  @include wide();
+  marign-bottom: 20px;
+}
+
+.slim {
+  @include slim();
+  margin-bottom: 20px;
+}
+
+// FOOTER Stuff
+footer.small { // website footer link box
+  clear: both;
+  border-top: 1px solid #42515a;
+  background: $grey;  
+  position: relative;
+  margin-top: -51px; /* negative value of footer height */
+  height: 40px;
+  padding-top: 10px; // puts text in the vertical middle  
+  background-image: -moz-linear-gradient(top, #42515a, #39464d); 
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #42515A),color-stop(1, #39464d)); 
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#42515A', EndColorStr='#39464d'); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#42515A', EndColorStr='#39464d')"; 
+  
+          box-shadow: 0 1px 1px rgba(255,255,255,.4) inset;
+     -moz-box-shadow: 0 1px 1px rgba(255,255,255,.4) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(255,255,255,.4) inset;
+  
+  nav.footer {
+    min-height: 185px;
+    @include centered();
+    padding: 20px 0px 0px 0px;
+    overflow:hidden;
+    text-shadow: 1px 1px 1px #000; 
+    a {    
+      font-family: Titillium-Medium;
+      font-size: 0.9em;
+      letter-spacing: 0.03em;
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #fff;
+    }
+  }
+}
+
+footer .copyright {
+  @include centered();
+  overflow: hidden;
+  font-family: Titillium-Medium;
+  font-size: 13px;
+  color: #cfd6d0;
+  text-shadow: 1px 1px 1px #000; 
+  a {
+    font-size: 12px;
+    color: #cfd6d0;
+    text-shadow: 1px 1px 1px #000; 
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+  }  
+  .ginetta {
+    text-align: right;
+    float: left;
+    width: 780px;
+    margin: 0px 10px;
+  }
+  .flockstreet {
+    text-align: right;
+    margin-right: 10px;
+  }
+}
+
+// TAGS
+.tag {
+  float: left;
+     -moz-box-shadow: 1px 1px 2px #333; 
+  -webkit-box-shadow: 1px 1px 2px #333;
+          box-shadow: 1px 1px 2px #333;
+          background-color: #43515A;
+          background-image: -moz-linear-gradient(top, #43515A, #3a464d); /* FF3.6 */                                      
+          background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #43515A),color-stop(1, #3a464d)); 
+              filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d'); 
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')";
+  
+       -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+            border-radius: 4px; 
+            margin: 5px;
+            padding: 2px 10px;
+  .tagname {
+    padding: 0 5px;
+    color: #fff;
+    font-family: Titillium-Light;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    float: left;
+  }
+  .tagdestroy {
+    padding: 0 0 0 5px;
+    float: left;
+    border-left: 1px solid #414f57;
+    background: rgba(255,255,255,0);
+    input[type="submit"] {
+      background: $dark_green;
+      background: rgba(255,255,255,0);
+      font-family: Titillium-Light;
+      color: #fff;
+      border: none;
+      font-size: 1em;
+      padding: 3px 0px;
+      margin: 0;
+      display: inline-block;
+      text-decoration: none;      
+      line-height: 1;
+      position: relative;
+      cursor: pointer;
+            
+    }
+    a {
+      font-family: Titillium-Medium;
+      color: #414f57;
+    }
+  }
+}

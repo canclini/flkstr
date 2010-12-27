@@ -1,0 +1,827 @@
+/* line 14, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_forms.scss */
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 280px;
+  padding: 7px 8px;
+  font-size: 1.2em;
+  color: #666;
+  border: 1px solid #b1b9be;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -border-radius: 5px;
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 12%, from(#eeeeee), to(white));
+  background-image: -moz-linear-gradient(0% 12% 90deg, white, #eeeeee);
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* line 20, ../../../app/stylesheets/partials/_forms.scss */
+input[type="text"].near, input[type="password"].near, input[type="email"].near {
+  width: 200px;
+  -webkit-border-radius: 5px 1px 1px 5px;
+  -moz-border-radius: 5px 1px 1px 5px;
+  -o-border-radius: 5px 1px 1px 5px;
+  -border-radius: 5px 1px 1px 5px;
+}
+
+/* line 29, ../../../app/stylesheets/partials/_forms.scss */
+input[type="checkbox"]:focus, input[type="password"]:focus,
+input[type="text"]:focus, input[type="email"]:focus {
+  border: 1px solid #e78b2c;
+  outline: none;
+}
+
+/* line 34, ../../../app/stylesheets/partials/_forms.scss */
+input[type="checkbox"] {
+  margin: 0 0 15px 0;
+  font-size: 1.2em;
+  width: 25px;
+}
+
+/* line 40, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form label, .simple_form span {
+  font-family: Titillium-Medium;
+  display: block;
+  font-size: 16px;
+  color: #414f57;
+}
+
+/* line 47, ../../../app/stylesheets/partials/_forms.scss */
+.hint {
+  background: url(/images/info_button.png) no-repeat 0% 80%;
+  padding-left: 25px;
+  padding-top: 10px;
+  display: none;
+  margin-left: 650px;
+  color: #414f57;
+  font-family: Titillium-Medium;
+  width: 250px;
+}
+
+/* line 58, ../../../app/stylesheets/partials/_forms.scss */
+.forgot {
+  margin-left: 300px;
+  font-family: Titillium-Medium;
+}
+
+/* line 64, ../../../app/stylesheets/partials/_forms.scss */
+.field_with_errors input {
+  border-color: #d47b17;
+  margin-bottom: 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -o-border-radius: 5px 5px 0px 0px;
+  -border-radius: 5px 5px 0px 0px;
+}
+
+/* line 73, ../../../app/stylesheets/partials/_forms.scss */
+.errorExplanation {
+  font-family: Titilium-Medium;
+  color: #fff;
+  float: left;
+  width: 618px;
+  margin: 0px 10px;
+  padding: 10px;
+  margin-bottom: 4px;
+  background: #ea8c1c;
+  border: 1px solid #d47b17;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -border-radius: 5px;
+}
+/* line 74, ../../../app/stylesheets/partials/_forms.scss */
+.errorExplanation h2, .errorExplanation h3 {
+  color: #fff;
+}
+/* line 89, ../../../app/stylesheets/partials/_forms.scss */
+.errorExplanation .title {
+  float: left;
+  width: 300px;
+}
+/* line 92, ../../../app/stylesheets/partials/_forms.scss */
+.errorExplanation .title h2 {
+  font-family: Titillium-XBold;
+  line-height: 1.2;
+}
+/* line 97, ../../../app/stylesheets/partials/_forms.scss */
+.errorExplanation .content {
+  float: left;
+}
+/* line 99, ../../../app/stylesheets/partials/_forms.scss */
+.errorExplanation .content h3 {
+  font-family: Titillium-XBold;
+  font-size: 20px;
+}
+/* line 103, ../../../app/stylesheets/partials/_forms.scss */
+.errorExplanation .content ul {
+  font-family: Titillium-Light;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  width: 290px;
+}
+
+/* line 112, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form span.error {
+  font-family: Titillium-Medium;
+  color: #fff;
+  background: #ea8c1c;
+  clear: left;
+  margin-left: 300px;
+  padding: 2px 10px;
+  width: 276px;
+  font-size: 14px;
+  border: 1px solid #d47b17;
+  border-top: none;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -o-border-radius: 0px 0px 5px 5px;
+  -border-radius: 0px 0px 5px 5px;
+}
+
+/* line 132, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form input {
+  float: left;
+}
+
+/* line 136, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form label {
+  width: 300px;
+  margin: 0px 10px;
+  float: left;
+  text-align: left;
+  font-size: 20px;
+  margin: 2px 0px;
+}
+
+/* line 146, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form .green_button, a.form_button {
+  margin-top: 10px;
+  margin-left: 320px;
+}
+
+/* line 151, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form fieldset {
+  margin-bottom: 15px;
+}
+
+/* line 155, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form div.boolean {
+  margin-left: 180px;
+}
+
+/* line 159, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form div.boolean label, .simple_form label.collection_radio {
+  float: none;
+  margin: 0;
+}
+
+/* line 164, ../../../app/stylesheets/partials/_forms.scss */
+.simple_form label.collection_radio {
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+/* line 4, ../../../app/stylesheets/partials/_menu.scss */
+#small_signup {
+  display: inline;
+  float: none;
+  line-height: 23px;
+  margin: 25px 0 0;
+  width: 170px;
+}
+
+/* line 13, ../../../app/stylesheets/partials/_menu.scss */
+#message_menu {
+  right: 10px;
+  z-index: 2;
+}
+
+/* line 17, ../../../app/stylesheets/partials/_menu.scss */
+#contact_menu {
+  right: -30px;
+  z-index: 3;
+}
+
+/* line 22, ../../../app/stylesheets/partials/_menu.scss */
+#lead_menu {
+  right: -60px;
+  z-index: 1;
+}
+
+/* line 28, ../../../app/stylesheets/partials/_menu.scss */
+.dropdownmenu {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: none;
+  background-color: white;
+  position: absolute;
+  width: 210px;
+  border: 2px solid black;
+  text-align: left;
+  top: 40px;
+  margin-right: 0px;
+  *margin-right: -1px;
+  font-size: 11px;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_login.scss */
+.login_link {
+  background: green;
+  background: url(/images/dropdown.png) 100% 100% no-repeat;
+  height: 17px;
+  width: 50px;
+  float: right;
+}
+
+/* line 10, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  right: -10px;
+  width: 250px;
+  z-index: 100;
+  border: 1px solid #b1b9be;
+  text-align: left;
+  padding: 0px;
+  margin-top: 5px;
+  margin-right: 0px;
+  *margin-right: -1px;
+  font-size: 11px;
+  -webkit-box-shadow: 0px 0px 1px #000;
+  -moz-box-shadow: 0px 0px 1px #000;
+  box-shadow: 0px 0px 1px #000;
+}
+/* line 11, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu .login_link {
+  margin: 12px 9px;
+  font-size: 14px;
+  background: green;
+  background: url(/images/dropdown.png) 100% 100% no-repeat;
+  height: 17px;
+  width: 50px;
+  float: right;
+}
+/* line 21, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu .input_form {
+  margin-top: 50px;
+  text-align: left;
+  padding: 0 10px 10px 10px;
+}
+/* line 25, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu .input_form fieldset {
+  margin: 0 0 10px 0;
+}
+/* line 27, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu .input_form fieldset input[type="text"], nav.user #login_menu .input_form fieldset input[type="password"], nav.user #login_menu .input_form fieldset input[type="email"] {
+  width: 210px;
+}
+/* line 31, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu .input_form .button_form {
+  text-align: right;
+}
+/* line 34, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu .input_form legend {
+  font-family: Titillium-Medium;
+  display: block;
+  font-size: 15px;
+  color: #414f57;
+}
+
+/* line 10, ../../../app/stylesheets/application.scss */
+section, header, footer, aside, nav, article {
+  display: block;
+}
+
+/* line 14, ../../../app/stylesheets/application.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 18, ../../../app/stylesheets/application.scss */
+body {
+  font-family: Georgia;
+  color: #414f57;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* line 25, ../../../app/stylesheets/application.scss */
+a, a:visited {
+  color: #e78b2c;
+}
+
+/* line 28, ../../../app/stylesheets/application.scss */
+a:hover, a:focus {
+  color: #d67a1b;
+}
+
+/* line 32, ../../../app/stylesheets/application.scss */
+ul {
+  list-style: none;
+  padding: 0px;
+}
+/* line 35, ../../../app/stylesheets/application.scss */
+ul li {
+  margin-top: 5px;
+}
+
+/* line 40, ../../../app/stylesheets/application.scss */
+p {
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* line 45, ../../../app/stylesheets/application.scss */
+h1, h2, h3, h4, h5 {
+  color: #414f57;
+  margin-bottom: 6px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+  line-height: 1.5;
+}
+
+/* line 51, ../../../app/stylesheets/application.scss */
+a, a:visited, a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* line 59, ../../../app/stylesheets/application.scss */
+h3 a, h3 a:visited, h4 a, h4 a:visited {
+  border-bottom: 1px solid #e78b2c;
+}
+/* line 62, ../../../app/stylesheets/application.scss */
+h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus {
+  border-bottom: 1px solid #d67a1b;
+}
+
+/* line 67, ../../../app/stylesheets/application.scss */
+h1 {
+  font-family: Titillium-Light;
+  color: #414f57;
+  line-height: 1.2;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+/* line 75, ../../../app/stylesheets/application.scss */
+h2 {
+  font-family: Titillium-Medium;
+  color: #414f57;
+  font-size: 30px;
+}
+
+/* line 81, ../../../app/stylesheets/application.scss */
+h3 {
+  font-family: Titillium-Medium;
+  padding-bottom: 5px;
+  color: #414f57;
+  font-size: 26px;
+}
+
+/* line 88, ../../../app/stylesheets/application.scss */
+h4 {
+  font-family: Titillium-Medium;
+  font-size: 19px;
+  text-shadow: 0px 0px 0px;
+}
+
+/* line 94, ../../../app/stylesheets/application.scss */
+h5 {
+  color: white;
+  font-family: Titillium-Medium;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px #000;
+  margin: 0px 0px 20px 0px;
+}
+
+/* line 102, ../../../app/stylesheets/application.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 106, ../../../app/stylesheets/application.scss */
+article {
+  margin-bottom: 20px;
+}
+
+/* line 110, ../../../app/stylesheets/application.scss */
+.titillium {
+  font-family: Titillium-Medium;
+  font-size: 15px;
+  color: #354048;
+}
+
+/* line 116, ../../../app/stylesheets/application.scss */
+#wrapper {
+  min-height: 100%;
+}
+
+/* line 121, ../../../app/stylesheets/application.scss */
+#wrapper header {
+  font-size: 14px;
+  height: 50px;
+  clear: both;
+  border-bottom: 1px solid #fff;
+  background: #e4f0e0;
+  background-image: -moz-linear-gradient(top, #e4f0e0, #e0ebdc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e4f0e0), color-stop(1, #e0ebdc));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#E4F0E0', EndColorStr='#E0ebdc');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#E4F0E0', EndColorStr='#E0ebdc')";
+}
+/* line 133, ../../../app/stylesheets/application.scss */
+#wrapper header .content {
+  padding: 20px 0px;
+  margin: 0px auto;
+  width: 960px;
+  overflow: visible;
+}
+/* line 137, ../../../app/stylesheets/application.scss */
+#wrapper header .content .logo {
+  float: left;
+  margin: 0px 10px;
+  width: 300px;
+  width: 160px;
+  height: 24px;
+  background: url(/images/flockstreet-beta.png) no-repeat 100% 100%;
+}
+/* line 143, ../../../app/stylesheets/application.scss */
+#wrapper header .content nav.user {
+  text-align: left;
+  float: right;
+  width: 60px;
+  margin: 0px 10px;
+  margin: 0px;
+}
+
+/* line 151, ../../../app/stylesheets/application.scss */
+#bar {
+  font-size: 15px;
+  height: 50px;
+  clear: both;
+  border-bottom: 1px solid #D0D6D0;
+  background: #414f57;
+}
+/* line 157, ../../../app/stylesheets/application.scss */
+#bar .content {
+  padding: 5px 0px;
+  margin: 0px auto;
+  width: 960px;
+  overflow: visible;
+}
+/* line 161, ../../../app/stylesheets/application.scss */
+#bar .content #actionsearch {
+  float: left;
+  width: 380px;
+  margin: 0px 10px;
+}
+/* line 166, ../../../app/stylesheets/application.scss */
+#bar .content nav.actionbuttons {
+  float: left;
+  width: 300px;
+  margin: 0px 10px;
+}
+/* line 171, ../../../app/stylesheets/application.scss */
+#bar .content .profile {
+  font-family: Titillium-Medium;
+  text-align: right;
+  padding-top: 10px;
+  float: right;
+  width: 220px;
+  margin: 0px 0px;
+  color: #fff;
+}
+
+/* line 183, ../../../app/stylesheets/application.scss */
+#hass_shadow {
+  height: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
+}
+
+/* line 190, ../../../app/stylesheets/application.scss */
+#flash {
+  margin: 0px auto;
+  width: 960px;
+  min-height: 20px;
+}
+
+/* line 195, ../../../app/stylesheets/application.scss */
+#flash_notice {
+  background: #7fb6b1;
+  border: 1px solid #aaa;
+}
+
+/* line 200, ../../../app/stylesheets/application.scss */
+#flash_error {
+  background: #e78b2c;
+  border: 1px solid #ea8c1c;
+}
+
+/* line 207, ../../../app/stylesheets/application.scss */
+nav.main ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 20px;
+}
+/* line 51, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+nav.main ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 43, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+nav.main ul li:first-child, nav.main ul li.first {
+  padding-left: 0px;
+}
+/* line 44, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+nav.main ul li:last-child, nav.main ul li.last {
+  padding-right: 0px;
+}
+/* line 210, ../../../app/stylesheets/application.scss */
+nav.main ul li.active a {
+  border-bottom: 3px solid #414f57;
+}
+/* line 213, ../../../app/stylesheets/application.scss */
+nav.main ul li.active a:hover {
+  border-bottom: 3px solid #313131;
+}
+/* line 216, ../../../app/stylesheets/application.scss */
+nav.main ul li {
+  margin-right: 25px;
+}
+/* line 218, ../../../app/stylesheets/application.scss */
+nav.main ul li a, nav.main ul li a:visited, nav.main ul li a:hover, nav.main ul li a:focus {
+  font-family: Titillium-Medium;
+  font-size: 20px;
+  color: #414f57;
+  border-bottom: 1px solid #414f57;
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+/* line 226, ../../../app/stylesheets/application.scss */
+nav.main ul li a:hover, nav.main ul li a:focus {
+  color: #313131;
+  border-bottom: 1px solid #313131;
+}
+
+/* line 235, ../../../app/stylesheets/application.scss */
+#container {
+  margin: 0px auto;
+  width: 960px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+/* line 242, ../../../app/stylesheets/application.scss */
+#actionbutton {
+  float: left;
+  margin: 0px 10px;
+  width: 300px;
+  text-align: right;
+}
+
+/* line 247, ../../../app/stylesheets/application.scss */
+nav.sidebar {
+  margin: 0 10px;
+  float: left;
+  width: 140px;
+}
+
+/* line 252, ../../../app/stylesheets/application.scss */
+section.content {
+  float: left;
+  margin: 0 10px;
+  width: 780px;
+}
+
+/* line 258, ../../../app/stylesheets/application.scss */
+.full {
+  clear: both;
+  width: 960px;
+  float: left;
+}
+
+/* line 263, ../../../app/stylesheets/application.scss */
+.wide {
+  width: 620px;
+  margin: 0 10px;
+  float: left;
+  marign-bottom: 20px;
+}
+
+/* line 268, ../../../app/stylesheets/application.scss */
+.slim {
+  float: left;
+  margin: 0px 10px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+/* line 274, ../../../app/stylesheets/application.scss */
+footer.small {
+  clear: both;
+  border-top: 1px solid #42515a;
+  background: #414f57;
+  position: relative;
+  margin-top: -51px;
+  /* negative value of footer height */
+  height: 40px;
+  padding-top: 10px;
+  background-image: -moz-linear-gradient(top, #42515a, #39464d);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #42515a), color-stop(1, #39464d));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#42515A', EndColorStr='#39464d');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#42515A', EndColorStr='#39464d')";
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
+  -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
+}
+/* line 291, ../../../app/stylesheets/application.scss */
+footer.small nav.footer {
+  min-height: 185px;
+  margin: 0px auto;
+  width: 960px;
+  padding: 20px 0px 0px 0px;
+  overflow: hidden;
+  text-shadow: 1px 1px 1px #000;
+}
+/* line 297, ../../../app/stylesheets/application.scss */
+footer.small nav.footer a {
+  font-family: Titillium-Medium;
+  font-size: 0.9em;
+  letter-spacing: 0.03em;
+  color: white;
+  text-decoration: none;
+}
+/* line 304, ../../../app/stylesheets/application.scss */
+footer.small nav.footer a:hover {
+  color: #fff;
+}
+
+/* line 310, ../../../app/stylesheets/application.scss */
+footer .copyright {
+  margin: 0px auto;
+  width: 960px;
+  overflow: hidden;
+  font-family: Titillium-Medium;
+  font-size: 13px;
+  color: #cfd6d0;
+  text-shadow: 1px 1px 1px #000;
+}
+/* line 317, ../../../app/stylesheets/application.scss */
+footer .copyright a {
+  font-size: 12px;
+  color: #cfd6d0;
+  text-shadow: 1px 1px 1px #000;
+  text-decoration: none;
+}
+/* line 323, ../../../app/stylesheets/application.scss */
+footer .copyright a:hover {
+  color: #fff;
+}
+/* line 326, ../../../app/stylesheets/application.scss */
+footer .copyright .ginetta {
+  text-align: right;
+  float: left;
+  width: 780px;
+  margin: 0px 10px;
+}
+/* line 332, ../../../app/stylesheets/application.scss */
+footer .copyright .flockstreet {
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* line 339, ../../../app/stylesheets/application.scss */
+.tag {
+  float: left;
+  -moz-box-shadow: 1px 1px 2px #333;
+  -webkit-box-shadow: 1px 1px 2px #333;
+  box-shadow: 1px 1px 2px #333;
+  background-color: #43515A;
+  background-image: -moz-linear-gradient(top, #43515a, #3a464d);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #43515a), color-stop(1, #3a464d));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')";
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 2px 10px;
+}
+/* line 355, ../../../app/stylesheets/application.scss */
+.tag .tagname {
+  padding: 0 5px;
+  color: #fff;
+  font-family: Titillium-Light;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  float: left;
+}
+/* line 363, ../../../app/stylesheets/application.scss */
+.tag .tagdestroy {
+  padding: 0 0 0 5px;
+  float: left;
+  border-left: 1px solid #414f57;
+  background: rgba(255, 255, 255, 0);
+}
+/* line 368, ../../../app/stylesheets/application.scss */
+.tag .tagdestroy input[type="submit"] {
+  background: #7fb6b1;
+  background: rgba(255, 255, 255, 0);
+  font-family: Titillium-Light;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  padding: 3px 0px;
+  margin: 0;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1;
+  position: relative;
+  cursor: pointer;
+}
+/* line 384, ../../../app/stylesheets/application.scss */
+.tag .tagdestroy a {
+  font-family: Titillium-Medium;
+  color: #414f57;
+}
