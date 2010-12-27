@@ -10,9 +10,9 @@
     
 .slim
   - if @app_state == 'website'
-    =link_to t('startpage.register_beta'), register_path(), :class => "big_button call2action"
+    =link_to t('startpage.register_beta'), register_path(:secure => true), :class => "big_button call2action"
   -else
-    =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
+    =link_to t('startpage.try'), register_path(:secure => true), :class => "big_button call2action"
 
 .wide
   .video-js-box
