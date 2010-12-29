@@ -78,7 +78,17 @@ input[type="text"], input[type="password"], input[type="email"] {
   transition: all 0.3s ease-out;
 }
 
-/* line 20, ../../../app/stylesheets/partials/_forms.scss */
+/* line 19, ../../../app/stylesheets/partials/_forms.scss */
+input[type="text"].search {
+  padding: 2px 0px;
+  font-size: 15px;
+  -webkit-border-radius: 5px 1px 1px 5px;
+  -moz-border-radius: 5px 1px 1px 5px;
+  -o-border-radius: 5px 1px 1px 5px;
+  -border-radius: 5px 1px 1px 5px;
+}
+
+/* line 28, ../../../app/stylesheets/partials/_forms.scss */
 input[type="text"].near, input[type="password"].near, input[type="email"].near {
   width: 200px;
   -webkit-border-radius: 5px 1px 1px 5px;
@@ -87,21 +97,21 @@ input[type="text"].near, input[type="password"].near, input[type="email"].near {
   -border-radius: 5px 1px 1px 5px;
 }
 
-/* line 29, ../../../app/stylesheets/partials/_forms.scss */
+/* line 37, ../../../app/stylesheets/partials/_forms.scss */
 input[type="checkbox"]:focus, input[type="password"]:focus,
 input[type="text"]:focus, input[type="email"]:focus {
   border: 1px solid #e78b2c;
   outline: none;
 }
 
-/* line 34, ../../../app/stylesheets/partials/_forms.scss */
+/* line 42, ../../../app/stylesheets/partials/_forms.scss */
 input[type="checkbox"] {
   margin: 0 0 15px 0;
   font-size: 1.2em;
   width: 25px;
 }
 
-/* line 40, ../../../app/stylesheets/partials/_forms.scss */
+/* line 48, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form label, .simple_form span {
   font-family: Titillium-Medium;
   display: block;
@@ -109,7 +119,7 @@ input[type="checkbox"] {
   color: #414f57;
 }
 
-/* line 47, ../../../app/stylesheets/partials/_forms.scss */
+/* line 55, ../../../app/stylesheets/partials/_forms.scss */
 .hint {
   background: url(/images/info_button.png) no-repeat 0% 80%;
   padding-left: 25px;
@@ -121,13 +131,13 @@ input[type="checkbox"] {
   width: 250px;
 }
 
-/* line 58, ../../../app/stylesheets/partials/_forms.scss */
+/* line 66, ../../../app/stylesheets/partials/_forms.scss */
 .forgot {
   margin-left: 300px;
   font-family: Titillium-Medium;
 }
 
-/* line 64, ../../../app/stylesheets/partials/_forms.scss */
+/* line 72, ../../../app/stylesheets/partials/_forms.scss */
 .field_with_errors input {
   border-color: #d47b17;
   margin-bottom: 0px;
@@ -137,7 +147,7 @@ input[type="checkbox"] {
   -border-radius: 5px 5px 0px 0px;
 }
 
-/* line 73, ../../../app/stylesheets/partials/_forms.scss */
+/* line 81, ../../../app/stylesheets/partials/_forms.scss */
 .errorExplanation {
   font-family: Titilium-Medium;
   color: #fff;
@@ -153,30 +163,30 @@ input[type="checkbox"] {
   -o-border-radius: 5px;
   -border-radius: 5px;
 }
-/* line 74, ../../../app/stylesheets/partials/_forms.scss */
+/* line 82, ../../../app/stylesheets/partials/_forms.scss */
 .errorExplanation h2, .errorExplanation h3 {
   color: #fff;
 }
-/* line 89, ../../../app/stylesheets/partials/_forms.scss */
+/* line 97, ../../../app/stylesheets/partials/_forms.scss */
 .errorExplanation .title {
   float: left;
   width: 300px;
 }
-/* line 92, ../../../app/stylesheets/partials/_forms.scss */
+/* line 100, ../../../app/stylesheets/partials/_forms.scss */
 .errorExplanation .title h2 {
   font-family: Titillium-XBold;
   line-height: 1.2;
 }
-/* line 97, ../../../app/stylesheets/partials/_forms.scss */
+/* line 105, ../../../app/stylesheets/partials/_forms.scss */
 .errorExplanation .content {
   float: left;
 }
-/* line 99, ../../../app/stylesheets/partials/_forms.scss */
+/* line 107, ../../../app/stylesheets/partials/_forms.scss */
 .errorExplanation .content h3 {
   font-family: Titillium-XBold;
   font-size: 20px;
 }
-/* line 103, ../../../app/stylesheets/partials/_forms.scss */
+/* line 111, ../../../app/stylesheets/partials/_forms.scss */
 .errorExplanation .content ul {
   font-family: Titillium-Light;
   letter-spacing: 0.03em;
@@ -184,7 +194,7 @@ input[type="checkbox"] {
   width: 290px;
 }
 
-/* line 112, ../../../app/stylesheets/partials/_forms.scss */
+/* line 120, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form span.error {
   font-family: Titillium-Medium;
   color: #fff;
@@ -202,12 +212,12 @@ input[type="checkbox"] {
   -border-radius: 0px 0px 5px 5px;
 }
 
-/* line 132, ../../../app/stylesheets/partials/_forms.scss */
+/* line 140, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form input {
   float: left;
 }
 
-/* line 136, ../../../app/stylesheets/partials/_forms.scss */
+/* line 144, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form label {
   width: 300px;
   margin: 0px 10px;
@@ -217,29 +227,29 @@ input[type="checkbox"] {
   margin: 2px 0px;
 }
 
-/* line 146, ../../../app/stylesheets/partials/_forms.scss */
+/* line 154, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form .green_button, a.form_button {
   margin-top: 10px;
   margin-left: 320px;
 }
 
-/* line 151, ../../../app/stylesheets/partials/_forms.scss */
+/* line 159, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form fieldset {
   margin-bottom: 15px;
 }
 
-/* line 155, ../../../app/stylesheets/partials/_forms.scss */
+/* line 163, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form div.boolean {
   margin-left: 180px;
 }
 
-/* line 159, ../../../app/stylesheets/partials/_forms.scss */
+/* line 167, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form div.boolean label, .simple_form label.collection_radio {
   float: none;
   margin: 0;
 }
 
-/* line 164, ../../../app/stylesheets/partials/_forms.scss */
+/* line 172, ../../../app/stylesheets/partials/_forms.scss */
 .simple_form label.collection_radio {
   margin-right: 10px;
   margin-left: 2px;
@@ -290,14 +300,21 @@ input[type="checkbox"] {
 
 /* line 1, ../../../app/stylesheets/partials/_login.scss */
 .login_link {
-  background: green;
   background: url(/images/dropdown.png) 100% 100% no-repeat;
   height: 17px;
   width: 50px;
   float: right;
 }
 
-/* line 10, ../../../app/stylesheets/partials/_login.scss */
+/* line 7, ../../../app/stylesheets/partials/_login.scss */
+.logout_link {
+  text-align: right;
+  height: 17px;
+  width: 50px;
+  float: right;
+}
+
+/* line 15, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -320,7 +337,7 @@ nav.user #login_menu {
   -moz-box-shadow: 0px 0px 1px #000;
   box-shadow: 0px 0px 1px #000;
 }
-/* line 11, ../../../app/stylesheets/partials/_login.scss */
+/* line 16, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .login_link {
   margin: 12px 9px;
   font-size: 14px;
@@ -330,25 +347,25 @@ nav.user #login_menu .login_link {
   width: 50px;
   float: right;
 }
-/* line 21, ../../../app/stylesheets/partials/_login.scss */
+/* line 26, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form {
   margin-top: 50px;
   text-align: left;
   padding: 0 10px 10px 10px;
 }
-/* line 25, ../../../app/stylesheets/partials/_login.scss */
+/* line 30, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form fieldset {
   margin: 0 0 10px 0;
 }
-/* line 27, ../../../app/stylesheets/partials/_login.scss */
+/* line 32, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form fieldset input[type="text"], nav.user #login_menu .input_form fieldset input[type="password"], nav.user #login_menu .input_form fieldset input[type="email"] {
   width: 210px;
 }
-/* line 31, ../../../app/stylesheets/partials/_login.scss */
+/* line 36, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form .button_form {
   text-align: right;
 }
-/* line 34, ../../../app/stylesheets/partials/_login.scss */
+/* line 39, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form legend {
   font-family: Titillium-Medium;
   display: block;
@@ -653,42 +670,41 @@ nav.main ul li a:hover, nav.main ul li a:focus {
 
 /* line 242, ../../../app/stylesheets/application.scss */
 #actionbutton {
-  float: left;
-  margin: 0px 10px;
-  width: 300px;
-  text-align: right;
+  float: right;
+  margin: 0px 0px;
 }
 
 /* line 247, ../../../app/stylesheets/application.scss */
-nav.sidebar {
-  margin: 0 10px;
-  float: left;
-  width: 140px;
-}
-
-/* line 252, ../../../app/stylesheets/application.scss */
 section.content {
   float: left;
   margin: 0 10px;
   width: 780px;
 }
 
-/* line 258, ../../../app/stylesheets/application.scss */
+/* line 253, ../../../app/stylesheets/application.scss */
 .full {
   clear: both;
   width: 960px;
   float: left;
+  margin: 0px 10px;
 }
 
-/* line 263, ../../../app/stylesheets/application.scss */
-.wide {
+/* line 259, ../../../app/stylesheets/application.scss */
+#dashboard, .wide {
   width: 620px;
   margin: 0 10px;
   float: left;
   marign-bottom: 20px;
 }
 
-/* line 268, ../../../app/stylesheets/application.scss */
+/* line 264, ../../../app/stylesheets/application.scss */
+#content {
+  width: 620px;
+  margin: 0 10px;
+  float: left;
+}
+
+/* line 267, ../../../app/stylesheets/application.scss */
 .slim {
   float: left;
   margin: 0px 10px;
@@ -696,7 +712,25 @@ section.content {
   margin-bottom: 20px;
 }
 
-/* line 274, ../../../app/stylesheets/application.scss */
+/* line 273, ../../../app/stylesheets/application.scss */
+nav.sidebar {
+  margin: 0 10px;
+  float: left;
+  width: 140px;
+}
+/* line 278, ../../../app/stylesheets/application.scss */
+nav.sidebar ul a {
+  font-family: Titillium-XBold;
+  color: #414f57;
+}
+/* line 282, ../../../app/stylesheets/application.scss */
+nav.sidebar ul li {
+  background: #e2eede;
+  padding: 10px;
+  margin-bottom: 4px;
+}
+
+/* line 292, ../../../app/stylesheets/application.scss */
 footer.small {
   clear: both;
   border-top: 1px solid #42515a;
@@ -714,7 +748,7 @@ footer.small {
   -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
   -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
 }
-/* line 291, ../../../app/stylesheets/application.scss */
+/* line 309, ../../../app/stylesheets/application.scss */
 footer.small nav.footer {
   min-height: 185px;
   margin: 0px auto;
@@ -723,7 +757,7 @@ footer.small nav.footer {
   overflow: hidden;
   text-shadow: 1px 1px 1px #000;
 }
-/* line 297, ../../../app/stylesheets/application.scss */
+/* line 315, ../../../app/stylesheets/application.scss */
 footer.small nav.footer a {
   font-family: Titillium-Medium;
   font-size: 0.9em;
@@ -731,12 +765,12 @@ footer.small nav.footer a {
   color: white;
   text-decoration: none;
 }
-/* line 304, ../../../app/stylesheets/application.scss */
+/* line 322, ../../../app/stylesheets/application.scss */
 footer.small nav.footer a:hover {
   color: #fff;
 }
 
-/* line 310, ../../../app/stylesheets/application.scss */
+/* line 328, ../../../app/stylesheets/application.scss */
 footer .copyright {
   margin: 0px auto;
   width: 960px;
@@ -746,31 +780,31 @@ footer .copyright {
   color: #cfd6d0;
   text-shadow: 1px 1px 1px #000;
 }
-/* line 317, ../../../app/stylesheets/application.scss */
+/* line 335, ../../../app/stylesheets/application.scss */
 footer .copyright a {
   font-size: 12px;
   color: #cfd6d0;
   text-shadow: 1px 1px 1px #000;
   text-decoration: none;
 }
-/* line 323, ../../../app/stylesheets/application.scss */
+/* line 341, ../../../app/stylesheets/application.scss */
 footer .copyright a:hover {
   color: #fff;
 }
-/* line 326, ../../../app/stylesheets/application.scss */
+/* line 344, ../../../app/stylesheets/application.scss */
 footer .copyright .ginetta {
   text-align: right;
   float: left;
   width: 780px;
   margin: 0px 10px;
 }
-/* line 332, ../../../app/stylesheets/application.scss */
+/* line 350, ../../../app/stylesheets/application.scss */
 footer .copyright .flockstreet {
   text-align: right;
   margin-right: 10px;
 }
 
-/* line 339, ../../../app/stylesheets/application.scss */
+/* line 357, ../../../app/stylesheets/application.scss */
 .tag {
   float: left;
   -moz-box-shadow: 1px 1px 2px #333;
@@ -788,7 +822,7 @@ footer .copyright .flockstreet {
   margin: 5px;
   padding: 2px 10px;
 }
-/* line 355, ../../../app/stylesheets/application.scss */
+/* line 373, ../../../app/stylesheets/application.scss */
 .tag .tagname {
   padding: 0 5px;
   color: #fff;
@@ -797,14 +831,14 @@ footer .copyright .flockstreet {
   text-transform: uppercase;
   float: left;
 }
-/* line 363, ../../../app/stylesheets/application.scss */
+/* line 381, ../../../app/stylesheets/application.scss */
 .tag .tagdestroy {
   padding: 0 0 0 5px;
   float: left;
   border-left: 1px solid #414f57;
   background: rgba(255, 255, 255, 0);
 }
-/* line 368, ../../../app/stylesheets/application.scss */
+/* line 386, ../../../app/stylesheets/application.scss */
 .tag .tagdestroy input[type="submit"] {
   background: #7fb6b1;
   background: rgba(255, 255, 255, 0);
@@ -820,8 +854,47 @@ footer .copyright .flockstreet {
   position: relative;
   cursor: pointer;
 }
-/* line 384, ../../../app/stylesheets/application.scss */
+/* line 402, ../../../app/stylesheets/application.scss */
 .tag .tagdestroy a {
   font-family: Titillium-Medium;
   color: #414f57;
+}
+
+/* line 410, ../../../app/stylesheets/application.scss */
+input[type="text"].statusupdate {
+  margin: 0px;
+  width: 602px;
+}
+
+/* line 416, ../../../app/stylesheets/application.scss */
+form.update input[type="checkbox"] {
+  margin-top: 20px;
+}
+/* line 419, ../../../app/stylesheets/application.scss */
+form.update label {
+  margin-top: 12px;
+}
+/* line 422, ../../../app/stylesheets/application.scss */
+form.update input[type="submit"] {
+  float: right;
+  margin: 10px 0px;
+}
+
+/* line 428, ../../../app/stylesheets/application.scss */
+#feed {
+  margin-top: 30px;
+}
+/* line 432, ../../../app/stylesheets/application.scss */
+#feed ul li article {
+  background: #f5fdf2;
+  padding: 10px;
+  margin-bottom: 4px;
+}
+
+/* line 443, ../../../app/stylesheets/application.scss */
+.icon_statusupdate, .icon_request, .icon_message, .icon_lead {
+  background: url(/images/icon_statusupdate.png);
+  float: left;
+  width: 25px;
+  height: 25px;
 }

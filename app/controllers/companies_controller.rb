@@ -1,6 +1,7 @@
 class CompaniesController < ApplicationController
   before_filter :authenticate_user!, :except => [:new, :create, :exists, :join]
   layout 'small_footer', :only => [:tags, :add_tag, :remove_tag]
+  layout 'application'
   
   def index
     @companies = Company.search(params[:query]).paginate :per_page => 10, :page => params[:page]

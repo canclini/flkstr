@@ -2,6 +2,7 @@ class Update < ActiveRecord::Base
   belongs_to :company
   after_create :add2feeds
   
+  validates :message , :length => { :within => 5..140 }
     
   def send2twitter(company)
      begin

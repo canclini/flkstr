@@ -6,7 +6,7 @@
     %title= "flockstreet"
     = render :partial => 'layouts/includes'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "modernizr-1.6.min", "video"
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "modernizr-1.6.min", "video", "jquery.twitter"
     = csrf_meta_tag
 
   %body
@@ -28,8 +28,7 @@
 
       #container
         %nav.main.full= render :partial => 'layouts/maintopics'
-        .wide
-          #dashboard= yield
+        #dashboard= yield
         #actionbutton=link_to "Neuer Auftrag", new_request_path, :class => 'green_button'
     %footer.small
       .copyright

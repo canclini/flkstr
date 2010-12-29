@@ -1,4 +1,7 @@
-=link_to feed_item.company.name, feed_item.company
-hat einen neuen Auftrag veröffentlicht: 
-=link_to feed_item.name, feed_item
-= "#{distance_of_time_in_words(feed_item.created_at, Time.now)} ago"
+%article
+  .icon_request
+  =link_to feed_item.company.name, feed_item.company
+  hat einen neuen Auftrag veröffentlicht: 
+  =link_to feed_item.name, feed_item
+  %time{ :datetime => feed_item.created_at, :pubdate => ""}
+    = "#{distance_of_time_in_words(feed_item.created_at, Time.now)} ago"

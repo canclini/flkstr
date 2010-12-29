@@ -1,6 +1,11 @@
-.filter= link_to "Auftrag erfassen", new_request_path()
-.filter= link_to "offen", requests_filter_path(:open), :remote => true
-.filter= link_to "vergeben", requests_filter_path(:assigned), :remote => true
-.filter= link_to "archiviert", requests_filter_path(:archived), :remote => true
+%a{ :href => new_request_path()}
+  %li Auftrag erfassen
+%a{ :href => requests_filter_path(:open)}
+  %li offen
+%a{ :href => requests_filter_path(:assigned)}  
+  %li vergeben
+%a{ :href => requests_filter_path(:archived)}
+  %li archiviert
 
+// maybe not needed anymore?
 #active{:class => "menu_#{@active}"}

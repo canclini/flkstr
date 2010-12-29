@@ -3,7 +3,7 @@ class CreateUpdates < ActiveRecord::Migration
     create_table :updates do |t|
       t.references :company
       t.string :message
-      t.timestamps
+      t.timestamps      
     end
   end
 

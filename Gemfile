@@ -5,7 +5,7 @@ gem 'rails3-generators'
 
 gem 'haml'
 gem 'compass', '>= 0.10.5'
-gem 'simple_form'
+gem 'simple_form', '>=1.3.0'
 gem 'will_paginate', '3.0.pre2'
 gem 'acts-as-taggable-on'
 gem 'devise'

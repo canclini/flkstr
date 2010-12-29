@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
         
     @leads = current_company.leads.new_or_accepted
     @company = current_company
+    @update = Update.new(:twitter => @company.setting.default_twitter_send)
     @latest_update = @company.updates.last
     
     @feeds = @company.feed_items.limit(10)

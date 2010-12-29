@@ -1,7 +1,10 @@
-Ihr habt einen neuen Lead für
-= link_to feed_item.request.name, feed_item
-- if feed_item.accepted?
-  von 
-  = link_to feed_item.source.name, company_path(feed_item.source)
-= "#{distance_of_time_in_words(feed_item.created_at, Time.now)} ago"
+%article
+  .icon_lead
+  Ihr habt einen neuen Lead für
+  = link_to feed_item.request.name, feed_item
+  - if feed_item.accepted?
+    von 
+    = link_to feed_item.source.name, company_path(feed_item.source)
+  %time{ :datetime => feed_item.created_at, :pubdate => ""}
+    = "#{distance_of_time_in_words(feed_item.created_at, Time.now)} ago"
   

@@ -240,15 +240,10 @@ nav.main {
 }
 
 #actionbutton {
-  @include slim();
-  text-align: right;
+  float: right;
+  margin: 0px 0px;
 }
 
-nav.sidebar {
-  margin: 0 10px;
-  float: left;
-  width: 140px;
-}
 section.content {
   float: left;
   margin: 0 10px;
@@ -259,16 +254,39 @@ section.content {
   clear:both;
   width: 960px;
   float: left;
+  margin: 0px 10px;
 }
-.wide {
+#dashboard, .wide {
   @include wide();
   marign-bottom: 20px;
 }
 
+#content {
+  @include wide();
+}
 .slim {
   @include slim();
   margin-bottom: 20px;
 }
+
+// LEFT SIDEBAR NAVIGATION
+nav.sidebar {
+  margin: 0 10px;
+  float: left;
+  width: 140px;
+  ul {
+    a {
+      font-family: Titillium-XBold;
+      color: $grey;
+    }
+    li {
+      background: #e2eede;
+      padding: 10px;
+      margin-bottom: 4px;
+    }
+  }
+}
+
 
 // FOOTER Stuff
 footer.small { // website footer link box
@@ -386,4 +404,45 @@ footer .copyright {
       color: #414f57;
     }
   }
+}
+
+// STATUS UPDATE FORM
+input[type="text"].statusupdate {
+  margin:0px;
+  width: 602px;
+}
+
+form.update {
+  input[type="checkbox"] {
+    margin-top: 20px;
+  }
+  label {
+    margin-top: 12px;
+  }
+  input[type="submit"] {
+    float: right;
+    margin: 10px 0px;
+  }
+}
+
+#feed {
+  margin-top: 30px;
+  ul {
+    li {
+      article {
+        background: #f5fdf2;
+        padding: 10px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+
+// ICONS
+.icon_statusupdate, .icon_request, .icon_message, .icon_lead {
+  background: url(/images/icon_statusupdate.png);
+  float: left;
+  width: 25px;
+  height: 25px;
 }

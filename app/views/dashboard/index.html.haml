@@ -1,11 +1,11 @@
-.wide    
-  = form_tag updates_path do
-    %p
-      = text_field_tag :update, params[:update], :size=>80
-      = submit_tag "Send", :name => nil, :class => "button light"
-  .latestupdate= "#{@latest_update.message} - sent #{distance_of_time_in_words(@latest_update.created_at, Time.now)} ago" unless @latest_update.nil?
-  
-  %h3 Neues aus meinem Netzwerk
-  #feed
+= simple_form_for @update do |f|
+  = f.text_field :message, :class => 'statusupdate'
+  = f.check_box :twitter
+  = f.label "Twitter"
+  = f.submit "Aktualisieren", :class => "green_button"
+.latestupdate= "#{@latest_update.message} - sent #{distance_of_time_in_words(@latest_update.created_at, Time.now)} ago" unless @latest_update.nil?
+
+#feed
+  %ul
     - for feed in @feeds do
-      .item= render :partial => "feed_items/#{feed.partial}", :locals => {:feed_item =>  feed.item}
+      %li.item= render :partial => "feed_items/#{feed.partial}", :locals => {:feed_item =>  feed.item}

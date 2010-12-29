@@ -6,8 +6,8 @@ class UpdatesController < ApplicationController
     @update = @company.updates.build(:message => params[:update])
 
     if @update.save
-      if @company.setting.default_twitter_send
-        Delayed::Job.enqueue(TweetJob.new(@company.id, params[:update]))  
+      if @update.twitter
+        Delayed::Job.enqueue(TweetJob.new(@company.id, params[:update]))
       end
       flash[:notice] = "Das Update wurde veroeffentlicht"  
     else

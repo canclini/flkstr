@@ -1,4 +1,8 @@
-= link_to feed_item.author.name, company_path(feed_item.author)
-hat euch eine 
-= link_to "Nachricht", message_path(feed_item)
-gesendet
+%article
+  .icon_message
+  = link_to feed_item.author.name, company_path(feed_item.author)
+  hat euch eine 
+  = link_to "Nachricht", message_path(feed_item)
+  gesendet
+  %time{ :datetime => feed_item.created_at, :pubdate => ""}
+    = "#{distance_of_time_in_words(feed_item.created_at, Time.now)} ago"
