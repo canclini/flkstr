@@ -14,6 +14,7 @@ jQuery.fn.submitWithAjax = function() {
 };
 
 
+
 $(document).ready(function() {	
 
   VideoJS.setupAllWhenReady();
@@ -30,6 +31,11 @@ $(document).ready(function() {
 		showTimestamp: true
 	});
 	
+  $('.show_price_suggestion').click(function() {
+    $(this).hide();
+    $(this).parent().parent().children('.new_price_suggestion').show();
+  });
+
 	$('input').focus(function() {
 	  $(".hint").hide();
 	  $(this).parent().children('.hint').show();
@@ -39,8 +45,8 @@ $(document).ready(function() {
   $(".login").click(function(e) {
     e.preventDefault();
 // following 2 lines are commented for website phase
-    $("#login_menu").toggle();
-    $(".login").toggleClass("menu-open");
+//    $("#login_menu").toggle();
+//    $(".login").toggleClass("menu-open");
   });
 
   $("#login_menu").mouseup(function() {

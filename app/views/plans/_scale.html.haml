@@ -1,14 +1,18 @@
 .plan
   .box
     %h1 Scale
-    %h2 CHF 99.- / Monat
+    #scale_price_suggestion
+      %h2=link_to "Ihr Preis?", "#", :class => "show_price_suggestion"
+      =form_for @price_scale  do |f|
+        = f.label :price, "Was ist Ihnen dieses Abo/Mt. wert?"
+        %br
+        = f.text_field :price, :class => 'text'
+        = f.hidden_field :plan
+        = f.submit "senden", :class => "green_button light"
   .box.plan_content
     %ul
       %li 
-        Anzahl Mitarbeiter
-        %span unlimitiert
-      %li 
-        Anzahl Tags
+        Anzahl Logins
         %span 5
       %li
         Anzahl Leads/Mt.
@@ -18,7 +22,7 @@
         %span unlimitiert
       %li
         Anzahl Standorte
-        %span unlimitiert
+        %span 5
       %li
         %span Benachrichtigungs E-Mails
     

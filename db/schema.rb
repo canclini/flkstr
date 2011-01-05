@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101012190055) do
+ActiveRecord::Schema.define(:version => 20110105205408) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "company_id"
@@ -135,6 +135,13 @@ ActiveRecord::Schema.define(:version => 20101012190055) do
     t.datetime "updated_at"
   end
 
+  create_table "price_suggestions", :force => true do |t|
+    t.string   "price"
+    t.string   "plan"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "requests", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -144,9 +151,9 @@ ActiveRecord::Schema.define(:version => 20101012190055) do
     t.string   "area_filter", :default => "everywhere"
     t.string   "distance",    :default => "0"
     t.string   "language",    :default => "DE"
+    t.string   "status",      :default => "open"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "status",      :default => "open"
   end
 
   create_table "settings", :force => true do |t|
@@ -213,6 +220,7 @@ ActiveRecord::Schema.define(:version => 20101012190055) do
     t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "twitter",    :default => false
   end
 
   create_table "users", :force => true do |t|
