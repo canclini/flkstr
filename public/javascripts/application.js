@@ -31,9 +31,11 @@ $(document).ready(function() {
 		showTimestamp: true
 	});
 	
-  $('.show_price_suggestion').click(function() {
+  $('.show_price_suggestion').click(function(e) {
+    e.preventDefault();
     $(this).hide();
     $(this).parent().parent().children('.new_price_suggestion').show();
+    $(this).parent().parent().children('.new_price_suggestion').children('#price_suggestion_price').focus();
   });
 
 	$('input').focus(function() {

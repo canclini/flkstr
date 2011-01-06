@@ -1,9 +1,9 @@
 .plan
   .box.distinguish
     %h1 Connect
-    #connect_price_suggestion
+    #connect_price_suggestion.transition
       %h2=link_to "Ihr Preis?", "#", :class => "show_price_suggestion"
-      =form_for @price_connect  do |f|
+      =form_for @price_connect, :remote => true  do |f|
         = f.label :price, "Was ist Ihnen dieses Abo/Mt. wert?"
         %br
         = f.text_field :price, :class => 'text'
