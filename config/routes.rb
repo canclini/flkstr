@@ -27,9 +27,7 @@ Flockstreet::Application.routes.draw do
   end
   
   resources :tags do
-    collection do
-      get :autocomplete
-    end
+      get :autocomplete, :on => :collection
   end
   
   resources :messages do
@@ -58,7 +56,6 @@ Flockstreet::Application.routes.draw do
   match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put
   match "/companies/:id/tags/:tag/remove" => "companies#remove_tag", :as => :remove_tag_company, :via => :delete
   
-  
   # static tour pages
   get "tour/profile", :as => :tour_profile
   get "tour/leads", :as => :tour_leads
@@ -79,6 +76,4 @@ Flockstreet::Application.routes.draw do
   
   # the famous root url
   match "/(:locale)" => "website#index", :as => :root, :locale => /de/
-#  root :to => "website#index"
-
 end

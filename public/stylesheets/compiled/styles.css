@@ -355,6 +355,10 @@ nav.user #login_menu .input_form legend {
   font-size: 15px;
   color: #414f57;
 }
+/* line 40, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu .input_form p {
+  font-size: 15px;
+}
 
 /* line 10, ../../../app/stylesheets/styles.scss */
 section, header, footer, aside, nav, article {

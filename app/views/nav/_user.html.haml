@@ -1,8 +1,9 @@
 .search
   \&nbsp;
 .language
-  - available_locales.each do |locale|
-    = link_to_unless current_locale?(locale), locale, current_page_path(:locale => locale)
+  =link_to "Feedback", "#", :onclick => "feedback_widget.show()"
+  //- available_locales.each do |locale|
+  //  = link_to_unless current_locale?(locale), locale, current_page_path(:locale => locale)
 
 %nav.user
   // comment for website phase
@@ -15,10 +16,11 @@
       .login_link
         Login  
     .input_form        
-      = form_tag new_user_session_path do
-        = field_set_tag 'E-Mail' do
-          = text_field_tag 'user[email]', nil, :type => 'email'
-        = field_set_tag 'Passwort' do
-          = password_field_tag 'user[password]'
-        .button_form
-          %button.login_button Login
+      %p Die Beta startet diesen Frühling. Falls Sie bereits ein Konto eröffnet haben werden wir Sie rechtzeitig informieren.
+    //  = form_tag new_user_session_path do
+    //    = field_set_tag 'E-Mail' do
+    //      = text_field_tag 'user[email]', nil, :type => 'email'
+    //    = field_set_tag 'Passwort' do
+    //      = password_field_tag 'user[password]'
+    //    .button_form
+    //      %button.login_button Login
