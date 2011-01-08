@@ -26,3 +26,5 @@
           =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition", :target => 'blank'
         .flockstreet
           &copy; flockstreet 2011
+    -if APP_CONFIG['include_analytics']
+      = render :partial => 'website/analytics'

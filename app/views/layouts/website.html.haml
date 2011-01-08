@@ -36,3 +36,6 @@
         .flockstreet
           &copy; flockstreet 2011
     = render :partial => 'website/feedback'
+    -if APP_CONFIG['include_analytics']
+      = render :partial => 'website/analytics'
+      

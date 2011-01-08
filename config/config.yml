@@ -1,0 +1,11 @@
+development:
+  include_analytics: false
+
+test:
+  include_analytics: false
+
+staging:
+  include_analytics: false
+
+production:
+  include_analytics: true
