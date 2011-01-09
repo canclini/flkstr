@@ -4,7 +4,7 @@
     #scale_price_suggestion.transition
       %h2=link_to "Ihr Preis?", "#", :class => "show_price_suggestion"
       =form_for @price_scale, :remote => true  do |f|
-        = f.label :price, "Was ist Ihnen dieses Abo/Mt. wert?"
+        = f.label :price, "Was wäre Ihnen dieses Abo/Mt. wert?"
         %br
         = f.text_field :price, :class => 'text'
         = f.hidden_field :plan

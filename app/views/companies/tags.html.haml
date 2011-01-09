@@ -1,7 +1,12 @@
-.wide 
-  %h1 Beschreiben Sie ihre Firma mit Tags
-  %p.lead Wunderbar! Sie haben erfolgreich ihre Firma registriert. Wenn sie sich jetzt noch kurz Zeit nehmen und ihre Firma mit 3 - 5 Tags bestücken, sind sie vom ersten Tag der Beta Phase bereit um potentielle Neue Aufträge zu bekommen!
-  %p Tags sind ...
+.wide{:style => "padding-bottom: 30px;"}
+  %h1 Beschreiben Sie ihre Dienstleistungen mit Tags
+  %p.lead Gratulation! Sie haben soeben erfolgreich Ihre Firma registriert. Wenn Sie sich jetzt kurz Zeit nehmen und die Dienstleistung Ihres Unternehmens mit 3 - 5 Tags beschreiben, sind sie vom ersten Tag der Beta-Phase bereit, um neue Aufträge zu bekommen!
+  %p{:style => "margin-bottom: 0px;"}
+    Tags sind  zum Beispiel: 
+  = tag_flag("Web Design", nil)
+  = tag_flag("IT Betrieb", nil)
+  = tag_flag("HTML5", nil)
+  = tag_flag("Telefonanlage", nil)
 
 =simple_form_for @company, :remote => :true, :url => add_tag_company_path do |f|
   = f.error_messages  
