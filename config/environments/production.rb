@@ -48,6 +48,7 @@ Flockstreet::Application.configure do
   config.active_support.deprecation = :notify
   config.after_initialize do
      SslRequirement.ssl_host = 'secure.flockstreet.com'
+     SslRequirement.non_ssl_host = 'flockstreet.com'
   end
   
 end
