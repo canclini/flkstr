@@ -7,8 +7,8 @@ constraints(:host => /www.localhost/ ) do
 end
   
   match "users/sign_in" => 'website#index' # only for website phase
-#  scope :protocol => 'https', :subdomain => 'secure', :constraints => { :protocol => 'https', :subdomain => 'secure'} do
-  scope :subdomain => 'secure', :constraints => { :subdomain => 'secure'} do
+  scope :protocol => 'https', :subdomain => 'secure', :constraints => { :protocol => 'https', :subdomain => 'secure'} do
+#  scope :subdomain => 'secure', :constraints => { :subdomain => 'secure'} do
     devise_for :users, :controllers => { :registrations => "users/registrations"}
     
     devise_for :users do
