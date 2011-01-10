@@ -3,7 +3,7 @@
   %head
     %meta{:charset=>"UTF-8"}
     %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}/
-    %title= h(yield(:title) || "flockstreet")
+    %title flockstreet - Auftragsplattform und Netwerk
     = stylesheet_link_tag 'compiled/styles.css', :media => 'screen, projection'
     = render :partial => 'layouts/includes'
     = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",  "jquery.rails", "modernizr-1.6.min", "jquery.twitter", "video", "application"
@@ -26,3 +26,5 @@
           =link_to "GINETTA™ WEB/DESIGN", "http://www.ginetta.ch", :class => "transition", :target => 'blank'
         .flockstreet
           &copy; flockstreet 2011
+    -if APP_CONFIG['include_analytics']
+      = render :partial => 'website/analytics'

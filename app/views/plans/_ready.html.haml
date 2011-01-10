@@ -7,15 +7,15 @@
       %li 
         Anzahl Logins
         %span 1
-      %li
+      %li.lead_qtip
         Anzahl Leads/Mt.
         %span 0
       %li
         Anzahl Aufträge/Mt.
         %span 0
       %li
-        Anzahl Standorte
+        Anzahl Firmenadressen
         %span 1
       %li
-        %span 1 Sammel E-Mail / Woche
-    = link_to "anmelden", register_path(:plan => 'ready'), :class => 'green_button'
+        %span 1 Sammel-E-Mail / Woche
+    = link_to "anmelden", register_path(:secure => true, :plan => 'ready'), :class => 'green_button'

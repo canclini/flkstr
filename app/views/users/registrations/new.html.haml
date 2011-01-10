@@ -1,7 +1,7 @@
 %h1 Grossartig: Los geht's
 - if @app_state == 'website'
   .wide
-    %h4 flockstreet startet bald mit der Beta Phase. Sie können sich bereits jetzt dafür anmelden. Ihre Firma und Ihr persönlicher Benutzer werden dann für sie bereit sein. Wir freuen uns auf Ihre Mitgliedschaft!
+    %h4 flockstreet startet bald die kostenlose Beta-Phase. Sie können sich bereits jetzt dafür anmelden. Ihr Firmenprofil und Ihr persönliches Benutzerkonto werden dann für sie bereit sein. Wir freuen uns auf Sie.
     %br/
   
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
@@ -13,8 +13,8 @@
       = c.input :name, :label => "Firmenname",:hint => 'zu registrierende Firma', :input_html => { :class => 'transition', :value => @company_name }
   .green_box.visible.last
     %h3 Ihre Login-Daten
-    = f.input :email, :label => "Mailadresse", :hint => 'ist auch gleich der Username', :input_html => {:class => 'transition' }
-    = f.input :password, :label => "Password",:hint => 'mindestens 6 Zeichen', :input_html => { :class => 'transition' }
+    = f.input :email, :label => "Mailadresse", :hint => 'ist auch gleich der Benutzername', :input_html => {:class => 'transition' }
+    = f.input :password, :label => "Passwort",:hint => 'mindestens 6 Zeichen', :input_html => { :class => 'transition' }
     = f.input :password_confirmation, :label => "Passwortbestätigung", :input_html => { :class => 'transition' }
     = f.label "AGB", :class => "uppercase"
     = check_box(:user, :terms_of_service)
@@ -23,4 +23,4 @@
       =link_to "AGBs", terms_path(), :class => "uppercase"
 
 
-  = f.submit "Konto erstellen", :class => "green_button"
+  = f.submit "Konto erstellen", :class => "green_button spin"

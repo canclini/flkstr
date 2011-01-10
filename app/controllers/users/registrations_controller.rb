@@ -32,9 +32,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
        UserMailer.registration_confirmation(resource).deliver
        redirect_to dashboard_url
       else # application is not yet available
-        set_flash_message :notice, 'besten Dank fuer ihr Interesse! Sobald die Beta Phase von flockstreet losgeht werden wir sie informieren!'
-#        UserMailer.beta_registration_confirmation(resource).deliver
-#        redirect_to root_url
+        set_flash_message :notice, 'besten Dank fuer ihr Interesse! Sobald die Beta-Phase von flockstreet losgeht werden wir sie informieren!'
+        UserMailer.beta_registration_confirmation(resource).deliver
         sign_in(resource_name, resource)
         redirect_to tags_company_path(@company)
       end

@@ -13,7 +13,14 @@ jQuery.fn.submitWithAjax = function() {
   return this;
 };
 
-
+jQuery.fn.preventDoubleSubmit = function() {
+  jQuery(this).submit(function() {
+    if (this.beenSubmitted)
+      return false;
+    else
+      this.beenSubmitted = true;
+  });
+};
 
 $(document).ready(function() {	
 
@@ -21,7 +28,7 @@ $(document).ready(function() {
 	
 	$("#twitter").getTwitter({
 		userName: "flockstreet",
-		numTweets: 4,
+		numTweets: 5,
 		loaderText: "Loading tweets...",
 		slideIn: false,
 		slideDuration: 750,
@@ -31,24 +38,30 @@ $(document).ready(function() {
 		showTimestamp: true
 	});
 	
+	jQuery('#user_new').preventDoubleSubmit();
+	
   $('.show_price_suggestion').click(function(e) {
     e.preventDefault();
     $(this).hide();
     $(this).parent().parent().children('.new_price_suggestion').show();
     $(this).parent().parent().children('.new_price_suggestion').children('#price_suggestion_price').focus();
-  });
+  });  
 
 	$('input').focus(function() {
 	  $(".hint").hide();
 	  $(this).parent().children('.hint').show();
 	});
-			
+
+  $('.spin').click(function() {
+      $(this).button('disable');
+  });
+    			
 //signin menu on website
   $(".login").click(function(e) {
     e.preventDefault();
 // following 2 lines are commented for website phase
-//    $("#login_menu").toggle();
-//    $(".login").toggleClass("menu-open");
+    $("#login_menu").toggle();
+    $(".login").toggleClass("menu-open");
   });
 
   $("#login_menu").mouseup(function() {

@@ -355,6 +355,10 @@ nav.user #login_menu .input_form legend {
   font-size: 15px;
   color: #414f57;
 }
+/* line 40, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu .input_form p {
+  font-size: 15px;
+}
 
 /* line 10, ../../../app/stylesheets/styles.scss */
 section, header, footer, aside, nav, article {
@@ -894,9 +898,11 @@ section.twitterwall #twitter #twitter_update_list article .bubble {
 /* line 441, ../../../app/stylesheets/styles.scss */
 #plans {
   clear: both;
+  min-height: 400px;
+  padding-bottom: 20px;
 }
 
-/* line 445, ../../../app/stylesheets/styles.scss */
+/* line 447, ../../../app/stylesheets/styles.scss */
 .plan {
   font-family: Titillium-Medium;
   font-size: 15px;
@@ -905,53 +911,53 @@ section.twitterwall #twitter #twitter_update_list article .bubble {
   margin: 0px 10px;
   width: 300px;
 }
-/* line 450, ../../../app/stylesheets/styles.scss */
+/* line 452, ../../../app/stylesheets/styles.scss */
 .plan h1 {
   font-family: Titillium-XBold;
   line-height: 50px;
   margin-bottom: 10px;
 }
-/* line 456, ../../../app/stylesheets/styles.scss */
+/* line 458, ../../../app/stylesheets/styles.scss */
 .plan h2 {
   font-family: Titillium-Light;
   line-height: 20px;
 }
-/* line 460, ../../../app/stylesheets/styles.scss */
+/* line 462, ../../../app/stylesheets/styles.scss */
 .plan .box {
   background: #f5fdf3;
   padding: 5px 18px 15px;
   margin-bottom: 4px;
 }
-/* line 464, ../../../app/stylesheets/styles.scss */
+/* line 466, ../../../app/stylesheets/styles.scss */
 .plan .box ul {
   list-style: none;
   padding: 0px 0px 20px;
   margin-bottom: 25px;
   line-height: 30px;
 }
-/* line 469, ../../../app/stylesheets/styles.scss */
+/* line 471, ../../../app/stylesheets/styles.scss */
 .plan .box ul li {
   margin-top: 5px;
 }
-/* line 471, ../../../app/stylesheets/styles.scss */
+/* line 473, ../../../app/stylesheets/styles.scss */
 .plan .box ul li span {
   color: #80b8b3;
 }
-/* line 477, ../../../app/stylesheets/styles.scss */
+/* line 479, ../../../app/stylesheets/styles.scss */
 .plan .box.distinguish {
   background: #e4f0e0;
 }
 
-/* line 482, ../../../app/stylesheets/styles.scss */
+/* line 484, ../../../app/stylesheets/styles.scss */
 .plan_content {
   min-height: 250px;
 }
 
-/* line 486, ../../../app/stylesheets/styles.scss */
+/* line 488, ../../../app/stylesheets/styles.scss */
 .new_price_suggestion {
   display: none;
 }
-/* line 488, ../../../app/stylesheets/styles.scss */
+/* line 490, ../../../app/stylesheets/styles.scss */
 .new_price_suggestion input[type="text"] {
   font-size: 1em;
   -webkit-border-radius: 2px;
@@ -961,7 +967,7 @@ section.twitterwall #twitter #twitter_update_list article .bubble {
   width: 100px;
 }
 
-/* line 499, ../../../app/stylesheets/styles.scss */
+/* line 501, ../../../app/stylesheets/styles.scss */
 .tag {
   float: left;
   -moz-box-shadow: 1px 1px 2px #333;
@@ -979,7 +985,7 @@ section.twitterwall #twitter #twitter_update_list article .bubble {
   margin: 5px;
   padding: 2px 10px;
 }
-/* line 515, ../../../app/stylesheets/styles.scss */
+/* line 517, ../../../app/stylesheets/styles.scss */
 .tag .tagname {
   padding: 0 5px;
   color: #fff;
@@ -988,14 +994,14 @@ section.twitterwall #twitter #twitter_update_list article .bubble {
   text-transform: uppercase;
   float: left;
 }
-/* line 523, ../../../app/stylesheets/styles.scss */
+/* line 525, ../../../app/stylesheets/styles.scss */
 .tag .tagdestroy {
   padding: 0 0 0 5px;
   float: left;
   border-left: 1px solid #414f57;
   background: rgba(255, 255, 255, 0);
 }
-/* line 528, ../../../app/stylesheets/styles.scss */
+/* line 530, ../../../app/stylesheets/styles.scss */
 .tag .tagdestroy input[type="submit"] {
   background: #7fb6b1;
   background: rgba(255, 255, 255, 0);
@@ -1011,7 +1017,7 @@ section.twitterwall #twitter #twitter_update_list article .bubble {
   position: relative;
   cursor: pointer;
 }
-/* line 544, ../../../app/stylesheets/styles.scss */
+/* line 546, ../../../app/stylesheets/styles.scss */
 .tag .tagdestroy a {
   font-family: Titillium-Medium;
   color: #414f57;
