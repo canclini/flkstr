@@ -16,6 +16,11 @@ end
     end
   end
   
+  constraints(:host => /secure.flockstreet.com/ ) do
+    root :to => redirect("http://flockstreet.com")
+    match '/*path', :to => redirect {|params| "http://flockstreet.com/#{params[:path]}"}
+  end
+  
   resources :products, :requests, :updates, :settings, :price_suggestions
   
   # singular resource definition for search
