@@ -2,8 +2,15 @@ Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
   
   match "users/sign_in" => 'website#index' # only for website phase
-  devise_for :users, :controllers => { :registrations => "users/registrations"}
-
+  scope :protocol => 'https', :subdomain => 'secure', :constraints => { :protocol => 'https', :subdomain => 'secure'} do
+    devise_for :users, :controllers => { :registrations => "users/registrations"}
+    
+    devise_for :users do
+      match "/(:plan)/signup" => "users/registrations#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
+    end
+    
+  end
+  
   resources :products, :requests, :updates, :settings, :price_suggestions
   
   # singular resource definition for search
@@ -49,10 +56,6 @@ Flockstreet::Application.routes.draw do
 
   match "requests/filter/:status" => "requests#index", :as => :requests_filter, :via => "get"
   match "leads/filter/:status" => "leads#index", :as => :leads_filter, :via => "get"
-
-  devise_for :users do
-    match "/(:plan)/signup" => "users/registrations#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
-  end
   
   # tag list update of the company (special during website phase)
   match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put

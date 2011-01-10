@@ -10,9 +10,9 @@
     
 .slim
   - if @app_state == 'website'
-    =link_to t('startpage.register_beta'), register_path(:secure => true), :class => "big_button call2action"
+    =link_to t('startpage.register_beta'), register_url(), :class => "big_button call2action"
   -else
-    =link_to t('startpage.try'), register_path(:secure => true), :class => "big_button call2action"
+    =link_to t('startpage.try'), register_url(), :class => "big_button call2action"
 
 .wide
   .video-js-box
@@ -27,7 +27,7 @@
   
   %p.byline
     Sie sind Auftraggeber oder Dienstleister im B2B-Bereich? flockstreet ist das Netzwerk mit Auftragsplattform. Sie finden geeignete Dienstleister, neue Aufträge, profitieren von einer kostenlosen Kommunikation und von einfacher Kontaktaufnahme in einem Netzwerk speziell für Firmen.
-    =link_to "Probieren Sie es kostenlos", register_path()
+    =link_to "Probieren Sie es kostenlos", register_url()
 .slim
   %section.twitterwall
     %h3 Twitter Wall
