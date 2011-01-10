@@ -1,14 +1,13 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
 
-constraints(:host => /www.flockstreet.com/ ) do
-  root :to => redirect("http://flockstreet.com")
-  match '/*path', :to => redirect {|params| "http://flockstreet.com/#{params[:path]}"}
+constraints(:host => /APP_CONFIG['host']/ ) do
+  root :to => redirect(APP_CONFIG['host'])
+  match '/*path', :to => redirect {|params| APP_CONFIG['host'] + "/#{params[:path]}"}
 end
   
   match "users/sign_in" => 'website#index' # only for website phase
   scope :protocol => 'https', :subdomain => 'secure', :constraints => { :protocol => 'https', :subdomain => 'secure'} do
-#  scope :subdomain => 'secure', :constraints => { :subdomain => 'secure'} do
     devise_for :users, :controllers => { :registrations => "users/registrations"}
     
     devise_for :users do
@@ -16,9 +15,9 @@ end
     end
   end
   
-  constraints(:host => /secure.flockstreet.com/ ) do
-    root :to => redirect("http://flockstreet.com")
-    match '/*path', :to => redirect {|params| "http://flockstreet.com/#{params[:path]}"}
+  constraints(:host => /APP_CONFIG['secure_host']/ ) do
+    root :to => redirect(APP_CONFIG['host'])
+    match '/*path', :to => redirect {|params| APP_CONFIG['host'] + "/#{params[:path]}"}
   end
   
   resources :products, :requests, :updates, :settings, :price_suggestions

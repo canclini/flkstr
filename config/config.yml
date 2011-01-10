@@ -1,11 +1,23 @@
 development:
   include_analytics: false
+  redirect_host: www.localhost:3000
+  host: http://localhost:3000
+  secure_host: secure.localhost:3000
 
 test:
   include_analytics: false
+  redirect_host: www.localhost:3000
+  host: http://localhost:3000
+  secure_host: secure.localhost:3000
 
 staging:
   include_analytics: false
+  redirect_host: www.flockstreet.heroku.com
+  host: http://flockstreet.heroku.com
+  secure_host: secure.flockstreet.heroku.com
 
 production:
   include_analytics: true
+  redirect_host: www.flockstreet.com
+  host: http://flockstreet.com
+  secure_host: secure.flockstreet.com
