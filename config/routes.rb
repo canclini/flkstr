@@ -1,9 +1,13 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
 
-constraints(:host => /APP_CONFIG['host']/ ) do
-  root :to => redirect(APP_CONFIG['host'])
-  match '/*path', :to => redirect {|params| APP_CONFIG['host'] + "/#{params[:path]}"}
+constraints(:host => /www.flockstreet.com/ ) do
+  root :to => redirect("http://flockstreet.com")
+  match '/*path', :to => redirect {|params| "http://flockstreet.com/#{params[:path]}"}
+end
+constraints(:host => /www.localhost/ ) do
+  root :to => redirect("http://localhost:3000")
+  match '/*path', :to => redirect {|params| "http://localhost:3000/#{params[:path]}"}
 end
   
   match "users/sign_in" => 'website#index' # only for website phase
@@ -15,9 +19,14 @@ end
     end
   end
   
-  constraints(:host => /APP_CONFIG['secure_host']/ ) do
-    root :to => redirect(APP_CONFIG['host'])
-    match '/*path', :to => redirect {|params| APP_CONFIG['host'] + "/#{params[:path]}"}
+  constraints(:host => /secure.flockstreet.com/ ) do
+    root :to => redirect("http://flockstreet.com")
+    match '/*path', :to => redirect {|params| "http://flockstreet.com/#{params[:path]}"}
+  end
+  
+  constraints(:host => /secure.localhost:3000/ ) do
+    root :to => redirect("http://localhost:3000")
+    match '/*path', :to => redirect {|params| "http://localhost:3000/#{params[:path]}"}
   end
   
   resources :products, :requests, :updates, :settings, :price_suggestions
