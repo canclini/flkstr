@@ -17,6 +17,10 @@ end
     devise_for :users do
       match "/(:plan)/signup" => "users/registrations#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
     end
+    resources :companies do
+      get :tags, :on => :member
+    end
+    
   end
   
   constraints(:host => /secure.flockstreet.com/ ) do
@@ -37,7 +41,7 @@ end
   resources :companies do
     get :exists, :on => :collection
     get :join, :on => :member
-    get :tags, :on => :member
+#    get :tags, :on => :member
     get :autocomplete, :on => :collection
     resources :subscriptions
     resources :associates
