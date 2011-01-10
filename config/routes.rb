@@ -1,9 +1,9 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
 
-constraints(:host => /www.localhost/ ) do
-  root :to => redirect("http://localhost:3000")
-  match '/*path', :to => redirect {|params| "http://localhost:3000/#{params[:path]}"}
+constraints(:host => /www.flockstreet.com/ ) do
+  root :to => redirect("http://flockstreet.com")
+  match '/*path', :to => redirect {|params| "http://flockstreet.com/#{params[:path]}"}
 end
   
   match "users/sign_in" => 'website#index' # only for website phase
