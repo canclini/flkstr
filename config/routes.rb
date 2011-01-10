@@ -1,14 +1,19 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
+
+constraints(:host => /www.localhost/ ) do
+  root :to => redirect("http://localhost:3000")
+  match '/*path', :to => redirect {|params| "http://localhost:3000/#{params[:path]}"}
+end
   
   match "users/sign_in" => 'website#index' # only for website phase
-  scope :protocol => 'https', :subdomain => 'secure', :constraints => { :protocol => 'https', :subdomain => 'secure'} do
+#  scope :protocol => 'https', :subdomain => 'secure', :constraints => { :protocol => 'https', :subdomain => 'secure'} do
+  scope :subdomain => 'secure', :constraints => { :subdomain => 'secure'} do
     devise_for :users, :controllers => { :registrations => "users/registrations"}
     
     devise_for :users do
       match "/(:plan)/signup" => "users/registrations#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
     end
-    
   end
   
   resources :products, :requests, :updates, :settings, :price_suggestions

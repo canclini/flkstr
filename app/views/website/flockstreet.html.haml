@@ -2,17 +2,17 @@
   %nav.topnav
     %ul
       %li.active
-        = link_to t('startpage.tagline1'), flockstreet_path()
+        = link_to t('startpage.tagline1'), flockstreet_url()
       %li.last
-        = link_to t('startpage.tagline2'), plans_path()
+        = link_to t('startpage.tagline2'), plans_url()
         
     %h1 &nbsp;
     
   .slim
     - if @app_state == 'website'
-      =link_to t('startpage.register_beta'), register_path(), :class => "big_button call2action"
+      =link_to t('startpage.register_beta'), register_url(), :class => "big_button call2action"
     -else
-      =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
+      =link_to t('startpage.try'), register_url(), :class => "big_button call2action"
    
 .slim
   %h3 Dienstleister finden - schnell und einfach
