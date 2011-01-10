@@ -8,7 +8,7 @@
   = tag_flag("HTML5", nil)
   = tag_flag("Telefonanlage", nil)
 
-=simple_form_for @company, :remote => :true, :url => add_tag_company_path do |f|
+=simple_form_for @company, :remote => :true, :url => add_tag_company_url do |f|
   = f.error_messages  
   
   .green_box
@@ -21,4 +21,4 @@
 
 .green_box.last
   #tag_list= render :partial => 'tags/tag_list'
-= link_to 'Fertig', destroy_user_session_path(), :class => "green_button form_button"
+= link_to 'Fertig', destroy_user_session_url(), :class => "green_button form_button"

@@ -20,6 +20,10 @@ end
     resources :companies do
       get :tags, :on => :member
     end
+  
+    # tag list update of the company (special during website phase)
+    match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put
+    match "/companies/:id/tags/:tag/remove" => "companies#remove_tag", :as => :remove_tag_company, :via => :delete
     
   end
   
@@ -76,11 +80,7 @@ end
 
   match "requests/filter/:status" => "requests#index", :as => :requests_filter, :via => "get"
   match "leads/filter/:status" => "leads#index", :as => :leads_filter, :via => "get"
-  
-  # tag list update of the company (special during website phase)
-  match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put
-  match "/companies/:id/tags/:tag/remove" => "companies#remove_tag", :as => :remove_tag_company, :via => :delete
-  
+    
   # static tour pages
   get "tour/profile", :as => :tour_profile
   get "tour/leads", :as => :tour_leads
