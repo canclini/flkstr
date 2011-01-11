@@ -314,7 +314,7 @@ input[type="checkbox"] {
   float: right;
 }
 
-/* line 15, ../../../app/stylesheets/partials/_login.scss */
+/* line 14, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -337,7 +337,7 @@ nav.user #login_menu {
   -moz-box-shadow: 0px 0px 1px #000;
   box-shadow: 0px 0px 1px #000;
 }
-/* line 16, ../../../app/stylesheets/partials/_login.scss */
+/* line 15, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .login_link {
   margin: 12px 9px;
   font-size: 14px;
@@ -347,30 +347,34 @@ nav.user #login_menu .login_link {
   width: 50px;
   float: right;
 }
-/* line 26, ../../../app/stylesheets/partials/_login.scss */
+/* line 25, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form {
   margin-top: 50px;
   text-align: left;
   padding: 0 10px 10px 10px;
 }
-/* line 30, ../../../app/stylesheets/partials/_login.scss */
+/* line 29, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form fieldset {
   margin: 0 0 10px 0;
 }
-/* line 32, ../../../app/stylesheets/partials/_login.scss */
+/* line 31, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form fieldset input[type="text"], nav.user #login_menu .input_form fieldset input[type="password"], nav.user #login_menu .input_form fieldset input[type="email"] {
   width: 210px;
 }
-/* line 36, ../../../app/stylesheets/partials/_login.scss */
+/* line 35, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form .button_form {
   text-align: right;
 }
-/* line 39, ../../../app/stylesheets/partials/_login.scss */
+/* line 38, ../../../app/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form legend {
   font-family: Titillium-Medium;
   display: block;
   font-size: 15px;
   color: #414f57;
+}
+/* line 44, ../../../app/stylesheets/partials/_login.scss */
+nav.user #login_menu .input_form p {
+  font-size: 15px;
 }
 
 /* line 10, ../../../app/stylesheets/application.scss */
