@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  include ::SslRequirement
+#  include ::SslRequirement
+  include UrlHelper
   protect_from_forgery
 
   layout :specify_layout

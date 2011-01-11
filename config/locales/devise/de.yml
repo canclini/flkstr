@@ -7,16 +7,18 @@ de:
 
   devise:
     failure:
-      unauthenticated: 'Du musst dich anmelden oder registrieren bevor es weitergeht.'
-      unconfirmed: 'Du musst dein Konto bestätigen bevor es weitergeht.'
-      locked: 'Dein Konto ist gesperrt.'
+      unauthenticated: 'Sie müssen sich anmelden oder registrieren bevor es weitergeht.'
+      unconfirmed: 'Sie müssen ihr Konto bestätigen bevor es weitergeht.'
+      locked: 'Ihr Konto ist gesperrt.'
       invalid: 'Ungültige Email oder Passwort.'
       invalid_token: 'Ungültiges Authentifizierungs Token.'
-      timeout: 'Deine Sitzung ist abgelaufen, bitte melde dich neu an um fortzufahren.'
-      inactive: 'Dein Konto wurde noch nicht aktiviert.'
+      timeout: 'Ihre Sitzung ist abgelaufen, bitte melden Sie sich neu an um fortzufahren.'
+      inactive: 'Ihr Konto wurde noch nicht aktiviert.'
     sessions:
-      signed_in: 'Erfolgreich angemeldet.'
-      signed_out: 'Erfolgreich abgemeldet.'
+      user:
+        signed_in: 'Erfolgreich angemeldet.'
+        signed_out: 'Besten Dank! Wir werden Sie informieren sobald es los geht.'
+      
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
       updated: 'Dein Passwort wurde erfolgreich geändert. Du bist jetzt angemeldet.'

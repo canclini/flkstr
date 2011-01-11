@@ -2,44 +2,42 @@
   %nav.topnav
     %ul
       %li.active
-        = link_to t('startpage.tagline1'), flockstreet_path()
+        = link_to t('startpage.tagline1'), flockstreet_url()
       %li.last
-        = link_to t('startpage.tagline2'), plans_path()
+        = link_to t('startpage.tagline2'), plans_url()
         
     %h1 &nbsp;
     
   .slim
     - if @app_state == 'website'
-      =link_to t('startpage.register_beta'), register_path(), :class => "big_button call2action"
+      =link_to t('startpage.register_beta'), register_url(), :class => "big_button call2action"
     -else
-      =link_to t('startpage.try'), register_path(), :class => "big_button call2action"
+      =link_to t('startpage.try'), register_url(), :class => "big_button call2action"
    
 .slim
   %h3 Dienstleister finden - schnell und einfach
 .wide
-  %p Im Internet suchen, für Offerten telefonieren und mehrmals erklären was Ihr Auftrag ist - das ersparen Sie sich mit flockstreet. Erfassen Sie einfach Ihren Auftrag. Wir ermitteln und informieren für Sie automatisch passende Dienstleister. Von diesen erhalten Sie direkt Angebote und wählen dann aus einigen Offerten den richtigen Partner aus.
-//.right= image_tag("kunde_lieferant.png")
+  %p Im Internet suchen, für Offerten telefonieren und mehrmals erklären, was Ihr Auftrag ist - das ersparen Sie sich mit flockstreet. Erfassen Sie einfach Ihren Auftrag. Wir ermitteln und informieren für Sie automatisch passende Dienstleister. Von diesen erhalten Sie direkt ein Angebot und wählen dann aus einigen Offerten den richtigen Partner aus.
     
 .slim
   %h3 Dienstleister auswählen - mit Sicherheit
 .wide
-  %p Für die Auswahl des passenden Dienstleisters unterstützen wir Sie mit Informationen. Basis für eine Zusammenarbeit ist Vertrauen und das entsteht durch Kennenlernen. Dank flockstreet erhalten Sie zusätzliche Informationen über allfällige Geschäftspartner und lernen diese besser kennen. Das fördert eine sichere Wahl.
+  %p Für die Auswahl des passenden Dienstleisters unterstützen wir Sie mit Informationen. Basis für eine Zusammenarbeit ist Vertrauen und das entsteht durchs Kennenlernen. Dank flockstreet erhalten Sie zusätzliche Informationen über allfällige Geschäftspartner und lernen diese besser kennen. Das fördert eine sichere Wahl.
 
 .slim
   %h3 Aufträge gewinnen
 .wide
-  %p Auf flockstreet sind Kunden und Dienstleister registriert. Um von den Vorteilen dieses Firemnetzwerks zu profitieren können Sie mit einem einfachen Webformular ein aussagekräftiges Profil Ihrer Unternehmung erfassen. flockstreet findet mit Ihren Informationen alle passenden Aufträge die von Kunden erfasst wurden und sendet Ihnen entsprechende Leads (anonymisiert).
+  %p Auf flockstreet sind Kunden und Dienstleister registriert. Um von den Vorteilen dieses Firemnetzwerks zu profitieren, können Sie mit einem einfachen Webformular ein aussagekräftiges Profil Ihrer Unternehmung erfassen. flockstreet findet mit Ihren Informationen alle passenden Aufträge, die von Kunden erfasst wurden und sendet Ihnen entsprechende Leads.
 
 .slim
   %h3 Einfache Kommunikation
 .wide
-  %p Für die Kommunikation in Ihrem Geschäftsumfeld unterstützen wir Sie mit einem wirkungsvollen Tool: Statusmeldungen sind kurze Mitteilungen welche Ihnen eine einfache, günstige Kommunikation an Ihr Netzwerk ermöglicht.
+  %p Für die Kommunikation in Ihrem Geschäftsumfeld unterstützen wir Sie mit einem wirkungsvollen Tool: Statusmeldungen sind kurze Mitteilungen, welche Ihnen eine einfache, günstige Kommunikation in Ihr Netzwerk ermöglicht.
 .slim
   %h3 Unkomplizierte Kontaktaufnahme
 .wide
-  %p Die Kontaktaufnahme ist in einem Netzwerk viel einfacher und sehr unkompliziert. Sie können zum Beispiel im Netzwerk nach Tags oder Firmennamen suchen. Wenn Sie eine Firma, deren Produkte oder einfach deren Statusmeldungen interessieren, können Sie mit einem Klick eine Verbindung erstellen und erhalten somit in Zukunft deren Statusmeldungen. So wächst Ihr Netzwerk ganz automatisch.
+  %p Die Kontaktaufnahme ist in einem Netzwerk einfach und unkompliziert. Sie können zum Beispiel im Netzwerk nach Tags oder Firmennamen suchen. Wenn Sie ein Unternehmen, dessen Produkte oder deren Statusmeldungen interessieren, können Sie mit einem Klick eine Verbindung herstellen und erhalten somit künftig dessen Neuigkeiten. So wächst Ihr Netzwerk ganz automatisch.
 .slim
-  %h3 B2B Kontakt behalten
+  %h3 B2B-Kontakt behalten
 .wide
-  %p Mitarbeitende knüpfen teilweise Kontakte zu externen Firmen - zum Beispiel im Marketing zum Papierlieferanten. Diese bleiben Ihrer Firma einfach erhalten, wenn sie sich in flockstreet mit ihnen verbinden - selbst wenn die Mitarbeitende Ihre Firma verlassen sollte.
-//.right= image_tag("network.png")
+  %p Mitarbeitende knüpfen teilweise Kontakte zu externen Firmen. Diese Kontakte bleiben Ihrer Firma erhalten, wenn sie sich bei flockstreet mit Ihnen verbinden - selbst wenn die zuständige Person die Firma verlässt.

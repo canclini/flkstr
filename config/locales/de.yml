@@ -2,6 +2,10 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 de:
+  devise:
+    sessions:
+      user:
+        signed_out: Besten Dank! Wir werden Sie informieren sobald es los geht.
   date:
     formats:
       default: "%d.%m.%Y"

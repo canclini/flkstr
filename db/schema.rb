@@ -10,7 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20101228125205) do
+=======
+ActiveRecord::Schema.define(:version => 20110105205408) do
+>>>>>>> production
 
   create_table "addresses", :force => true do |t|
     t.integer  "company_id"
@@ -131,6 +135,13 @@ ActiveRecord::Schema.define(:version => 20101228125205) do
     t.boolean  "notify"
     t.string   "name"
     t.string   "cheddarcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "price_suggestions", :force => true do |t|
+    t.string   "price"
+    t.string   "plan"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

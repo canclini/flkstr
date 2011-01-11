@@ -5,20 +5,17 @@
   .box.plan_content.last
     %ul
       %li 
-        Anzahl Mitarbeiter
+        Anzahl Logins
         %span 1
-      %li 
-        Anzahl Tags
-        %span 3
-      %li
+      %li.lead_qtip
         Anzahl Leads/Mt.
         %span 0
       %li
         Anzahl Aufträge/Mt.
         %span 0
       %li
-        Anzahl Standorte
+        Anzahl Firmenadressen
         %span 1
       %li
-        %span 1 Sammel E-Mail / Woche
-    = link_to "anmelden", register_path(:plan => 'ready'), :class => 'green_button'
+        %span 1 Sammel-E-Mail / Woche
+    = link_to "anmelden", register_url(:plan => 'ready'), :class => 'green_button'

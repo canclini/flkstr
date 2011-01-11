@@ -39,7 +39,6 @@ module Flockstreet
     config.generators do |g|
       g.template_engine :haml
       g.test_framework :rspec
-    #   g.test_framework  :test_unit, :fixture => true
     end
     
 

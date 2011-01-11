@@ -1,14 +1,18 @@
 .plan
   .box.distinguish
     %h1 Connect
-    %h2 CHF 49.- / Monat
+    #connect_price_suggestion.transition
+      %h2=link_to "Ihr Preis?", "#", :class => "show_price_suggestion"
+      =form_for @price_connect, :remote => true  do |f|
+        = f.label :price, "Was wäre Ihnen dieses Abo/Mt. wert?"
+        %br
+        = f.text_field :price, :class => 'text'
+        = f.hidden_field :plan
+        = f.submit "senden", :class => "green_button light"
   .box.plan_content.distinguish
     %ul
       %li 
-        Anzahl Mitarbeiter
-        %span 3
-      %li 
-        Anzahl Tags
+        Anzahl Logins
         %span 3
       %li
         Anzahl Leads/Mt.
@@ -17,10 +21,10 @@
         Anzahl Aufträge/Mt.
         %span 3
       %li
-        Anzahl Standorte
+        Anzahl Firmenadressen
         %span 1
       %li
-        %span Benachrichtigungs E-Mails
+        %span sofortige Benachrichtigung per E-Mail
     - if @app_state == 'website'
       noch nicht verfügbar
     -else

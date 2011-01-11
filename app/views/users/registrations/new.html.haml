@@ -13,14 +13,14 @@
       = c.input :name, :label => "Firmenname",:hint => 'zu registrierende Firma', :input_html => { :class => 'transition', :value => @company_name }
   .green_box.visible.last
     %h3 Ihre Login-Daten
-    = f.input :email, :label => "Mailadresse", :hint => 'ist auch gleich der Username', :input_html => {:class => 'transition' }
-    = f.input :password, :label => "Password",:hint => 'mindestens 6 Zeichen', :input_html => { :class => 'transition' }
+    = f.input :email, :label => "Mailadresse", :hint => 'ist auch gleich der Benutzername', :input_html => {:class => 'transition' }
+    = f.input :password, :label => "Passwort",:hint => 'mindestens 6 Zeichen', :input_html => { :class => 'transition' }
     = f.input :password_confirmation, :label => "Passwortbestätigung", :input_html => { :class => 'transition' }
-    = f.label "AGB", :class => "uppercase"
+    = label :user, :terms_of_service, "AGB"
     = check_box(:user, :terms_of_service)
     %span
       Ich akzeptiere die Datenschutz- bestimmungen und
-      =link_to "AGBs", terms_path(), :class => "uppercase"
+      =link_to "AGBs", terms_path(), :target => 'blank', :class => "uppercase"
 
 
-  = f.submit "Konto erstellen", :class => "green_button"
+  = f.submit "Konto erstellen", :class => "green_button spin"
