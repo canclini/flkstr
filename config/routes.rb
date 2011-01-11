@@ -26,6 +26,7 @@ end
     match "/companies/:id/tags/:tag/remove" => "companies#remove_tag", :as => :remove_tag_company, :via => :delete
     
   end
+  match "signup/", :constraints => {:host => /secure.flockstreet.com/ }, :to => redirect("https://secure.flockstreet.com/signup")
   
   constraints(:host => /secure.flockstreet.com/ ) do
     root :to => redirect("http://flockstreet.com")
