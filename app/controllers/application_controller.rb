@@ -79,7 +79,6 @@ class ApplicationController < ActionController::Base
     @app_state = 'website'
     allowed_controllers = %w[website companies registrations sessions plans price_suggestions]
     allowed_actions = %w[tags update]
-    logger.debug controller_name
     if allowed_controllers.include?(controller_name)
       #continue
     else
