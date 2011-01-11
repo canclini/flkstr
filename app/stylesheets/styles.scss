@@ -107,6 +107,7 @@ h5 { // Footer white on grey
   padding: 30px 0px 0px;
   line-height: 29px;
   width: 620px;
+  footer { margin-top: 20px;}
   a, footer a:visited {
     font-family: Titillium-Medium;
     font-size: 19px;
@@ -265,16 +266,21 @@ nav.topnav {
   overflow: hidden;
 }
 #container.big_footer, #content_two.big_footer {
-  padding-bottom: 250px; // sticky footer + spacing between content and footer
+  padding-bottom: 270px; // sticky footer + spacing between content and footer
   overflow: auto;
 }
 
 #content_two {
   clear: both;
   padding-bottom: 30px;
+  padding-top: 30px;
   @include centered();
 }
 
+article.teaser p {
+  min-height: 230px;
+  margin-bottom: 10px;
+}
 // COLUMNS
 .full {
   clear:both;
@@ -311,6 +317,7 @@ footer.big, footer.small { // website footer link box
     min-height: 185px;
     @include centered();
     padding: 20px 0px 0px 0px;
+    margin-bottom: 20px;
     overflow:hidden;
     text-shadow: 1px 1px 1px #000; 
     a {    
@@ -327,8 +334,8 @@ footer.big, footer.small { // website footer link box
 }
 
 footer.big {
-  margin-top: -241px;
-  height: 240px;
+  margin-top: -261px;
+  height: 260px;
 }
 
 footer.small {
@@ -368,7 +375,6 @@ footer .copyright {
 // WEBSITE TWITTER UPDATE LIST
 section.twitterwall {
   h3, h4 { padding-left: 20px; }  
-  
   footer a.follow, footer a.follow:visited {
     font-family: Titillium-Medium;
     font-size: 19px;

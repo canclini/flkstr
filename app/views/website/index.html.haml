@@ -25,9 +25,9 @@
         %param{:name=>"allowfullscreen", :value=>"true"}	
         %param{:name=>"flashvars", :value=>'config={"playlist":[{"url": "//s3.amazonaws.com/flkstr/movies/flockstreet_movie.m4v","autoPlay":false,"autoBuffering":true}]}'}
   
-  %p.byline
+  %article.byline
     Sie sind Auftraggeber oder Dienstleister im B2B-Bereich? flockstreet ist das Netzwerk mit Auftragsplattform. Sie finden geeignete Dienstleister, neue Aufträge, profitieren von einer kostenlosen Kommunikation und von einfacher Kontaktaufnahme in einem Netzwerk speziell für Firmen.
-    =link_to "Probieren Sie es kostenlos", register_url()
+    %footer=link_to "Probieren Sie es kostenlos", register_url()
 .slim
   %section.twitterwall
     %h3 Twitter Wall
@@ -36,17 +36,15 @@
       =link_to t('startpage.twitter'), "http://twitter.com/flockstreet", :class => 'follow', :target => 'blank'
   
 - content_for :columns do
-  %article.slim
+  %article.slim.teaser
     %h3= t('teaser.left.title')
     %p= t('teaser.left.paragraph')
-    %br
     %h4=link_to t('teaser.link'), flockstreet_path(:anchor => "relations")
-  %article.slim
+  %article.slim.teaser
     %h3= t('teaser.middle.title')
     %p= t('teaser.middle.paragraph')
     %h4=link_to t('teaser.link'), flockstreet_path(:anchor => "customers")
-  %article.slim.last
+  %article.slim.teaser
     %h3= t('teaser.right.title')
     %p=t('teaser.right.paragraph')
-    %br
     %h4=link_to t('teaser.link'), flockstreet_path(:anchor => "network")
