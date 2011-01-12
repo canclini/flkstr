@@ -10,8 +10,8 @@ a.green_button, .green_button {
   background-image: -moz-linear-gradient(top, #81b9b4, #68948f);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81b9b4), color-stop(1, #68948f));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -27,8 +27,8 @@ a.green_button:active, .green_button:active {
   background-image: -moz-linear-gradient(top, #68948f, #81b9b4);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68948f), color-stop(1, #81b9b4));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -46,8 +46,8 @@ a.big_button, .big_button {
   background-image: -moz-linear-gradient(top, #81b9b4, #68948f);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81b9b4), color-stop(1, #68948f));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -71,8 +71,8 @@ a.big_button:active, .big_button:active {
   background-image: -moz-linear-gradient(top, #68948f, #81b9b4);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68948f), color-stop(1, #81b9b4));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -90,8 +90,8 @@ a.login_button, .login_button {
   background-image: -moz-linear-gradient(top, #e68a2c, #c67929);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e68a2c), color-stop(1, #c67929));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -108,8 +108,8 @@ a.login_button:active, .login_button:active {
   background-image: -moz-linear-gradient(top, #c77929, #e68a2c);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c77929), color-stop(1, #e68a2c));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -127,8 +127,8 @@ a.login_button:active, .login_button:active {
   background-image: -moz-linear-gradient(top, #414f57, #1f2d35);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #414f57), color-stop(1, #1f2d35));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -156,8 +156,8 @@ a.near_button {
   background-image: -moz-linear-gradient(top, #43515a, #3a464d);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #43515a), color-stop(1, #3a464d));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -179,8 +179,8 @@ a.near_button {
   background-image: -moz-linear-gradient(top, #3a464d, #43515a);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3a464d), color-stop(1, #43515a));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
