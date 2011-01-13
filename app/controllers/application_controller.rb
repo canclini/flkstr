@@ -77,7 +77,7 @@ class ApplicationController < ActionController::Base
   def app_state
     #@app_state = ENV['APP_STATE']
     @app_state = 'website'
-    allowed_controllers = %w[website companies registrations sessions plans price_suggestions]
+    allowed_controllers = %w[website companies registrations sessions plans price_suggestions widgets]
     allowed_actions = %w[tags update]
     if allowed_controllers.include?(controller_name)
       #continue
