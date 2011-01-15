@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-#  include ::SslRequirement
   include UrlHelper
   protect_from_forgery
 

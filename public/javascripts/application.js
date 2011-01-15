@@ -28,7 +28,7 @@ $(document).ready(function() {
 	
 	$("#twitter").getTwitter({
 		userName: "flockstreet",
-		numTweets: 4,
+		numTweets: 3,
 		loaderText: "Loading tweets...",
 		slideIn: false,
 		slideDuration: 750,
