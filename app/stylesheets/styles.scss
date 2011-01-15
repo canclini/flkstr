@@ -244,6 +244,7 @@ nav.topnav {
     li {
       width: 300px;
       margin-right: 10px;
+      padding-right: 0px;
         a, a:visited, a:hover, a:focus {
           font-family: Titillium-Medium;
           font-size: 30px;
@@ -283,7 +284,7 @@ nav.topnav {
 }
 
 article.teaser p {
-  min-height: 230px;
+//  min-height: 230px;
   margin-bottom: 10px;
 }
 // COLUMNS
