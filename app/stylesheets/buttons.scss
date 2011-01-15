@@ -10,8 +10,8 @@
   background-color: $startcolor;
   background-image: -moz-linear-gradient(top, $startcolor, $endcolor); /* FF3.6 */                                      
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $startcolor),color-stop(1, $endcolor)); 
-      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor'); 
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f'); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px; 
           border-radius: 3px;
@@ -26,8 +26,8 @@
 @mixin standard_button_active($startcolor: #81b9b4, $endcolor: #68948f) {
   background-image: -moz-linear-gradient(top, $endcolor, $startcolor); /* FF3.6 */                                      
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $endcolor),color-stop(1,$startcolor)); 
-      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor'); 
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4'); 
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
   
   -webkit-box-shadow: none;
      -moz-box-shadow: none;

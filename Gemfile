@@ -15,7 +15,7 @@ gem 'twitter'
 gem 'paperclip'
 gem 'aws-s3'
 gem 'delayed_job', '>=2.1.pre2'
-
+gem 'chameleon'
 #gem 'hpricot'
 #gem 'tolk'
 

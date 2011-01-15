@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   belongs_to :company
   has_many :notifications
   validates_length_of :phone, :in => 7..32, :allow_blank => true
-  validates_length_of :password, :in => 6..10
+  validates_length_of :password, :minimum => 6
   validates_acceptance_of :terms_of_service
   
   NOTIFY = %w[immediate daily weekly] # one to many association; see Railscasts 189
