@@ -1,11 +1,11 @@
-%a{ :href => new_request_path()}
-  %li Auftrag erfassen
-%a{ :href => requests_filter_path(:open)}
-  %li offen
-%a{ :href => requests_filter_path(:assigned)}  
-  %li vergeben
-%a{ :href => requests_filter_path(:archived)}
-  %li archiviert
+%ul.action
+  %li=link_to "Auftrag erfassen", new_request_path(), :class => 'sidebar_button'
 
-// maybe not needed anymore?
-#active{:class => "menu_#{@active}"}
+%ul  
+  %li=link_to "offen", requests_filter_path(:open), :class => ("active" if @active == 'open')
+  %li=link_to "vergeben", requests_filter_path(:assigned), :class => ("active" if @active == 'assigned')
+  %li=link_to "zurückgezogen", requests_filter_path(:recalled), :class => ("active" if @active == 'recalled')
+
+%ul
+  %li= link_to "Archiv", requests_filter_path(:archived), :class => ("active" if @active == 'archived')
+  %li= link_to "Entwürfe", requests_filter_path(:drafts), :class => ("active" if @active == 'drafts')

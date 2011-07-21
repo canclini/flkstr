@@ -1,7 +1,7 @@
-=link_block(lead_path(lead)) do
-  .entry
-    .title= truncate(lead.request.name, :length => 30)
-    .date= lead.created_at.to_s(:short)
-    .tags
-      .tag CSS
-      .tag HTML
+%tr
+  %td.checkbox= check_box_tag "lead_ids[]", lead.id, false, :class => "select"
+  %td.title=link_to truncate(lead.request.name, :length => 50), lead
+  %td.date= lead.created_at.strftime('%d.%m.%Y')
+  %td.tags
+    .tag CSS
+    .tag HTML

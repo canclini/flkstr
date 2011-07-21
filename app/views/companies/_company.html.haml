@@ -1,4 +1,14 @@
-#company
-  %h3= link_to company.name, company
-  = company.teaser
-  = company.updates.last.message unless company.updates.empty?
+%tr
+  %td.checkbox= check_box_tag "company_ids[]", company.id, false, :class => "select"
+  %td.logo
+  %td.companyname
+    =link_to company.name, company
+    %br
+    %span.medium Lorem Ipsum
+  %td.state
+    Kunde
+    %br
+    &nbsp;
+  %td.tags
+    - for tag in company.tag_list do
+      %span.tag=tag

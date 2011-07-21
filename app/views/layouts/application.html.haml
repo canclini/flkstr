@@ -6,7 +6,7 @@
     %title= "flockstreet"
     = render :partial => 'layouts/includes'
     = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "modernizr-1.6.min", "video", "jquery.twitter"
+    = javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js", "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application", "jquery.rails", "modernizr-1.6.min", "video", "jquery.twitter"
     = csrf_meta_tag
 
   %body
@@ -15,7 +15,7 @@
         .content
           %a{ :href => dashboard_url}
             .logo
-          = render :partial => 'nav/user'
+          = render :partial => 'nav/meta'
       #bar
         .content
           = render :partial => 'actionbox/actionbox'
@@ -27,10 +27,8 @@
           = content_tag :div, msg, :id => "flash_#{name}"
 
       #container
-        %nav.main.full= render :partial => 'layouts/maintopics'
-        %nav.sidebar
-          %ul
-            =render :partial => 'sidebar'
+        %nav.main= render :partial => 'layouts/maintopics'
+        %nav.sidebar=render :partial => 'sidebar'
         %section{:id =>"content"}= yield
     %footer.small
       .copyright

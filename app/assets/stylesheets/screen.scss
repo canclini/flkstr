@@ -1,0 +1,481 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "blueprint";
+//@import "blueprint/typography";
+@import "compass/reset";
+@import "compass/utilities";
+
+@import "partials/base";
+@import "partials/layout";
+@import "partials/forms";
+@import "partials/menu";
+@import "partials/login";
+
+@include blueprint-typography;
+
+body {
+  font-family: Georgia;
+//  color: #354048;
+  color: #414f57;
+  font-size: 15px;
+}
+
+a, a:visited { 
+  color: $orange;
+}
+a:hover, a:focus {
+  color: $orange_hover;
+}
+
+ul {
+  @include no-bullets;
+  padding: 0px;
+  li {
+    margin-top: 5px;
+  }
+}
+p {
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+address {
+  margin:0px;
+}
+h1, h2, h3, h4, h5 {
+  color: $grey;
+  margin-bottom: 6px;
+  text-shadow: 0px 0px 1px rgba(0,0,0,0.4); 
+  line-height: 1.5;
+  }
+  a, a:visited, a:hover, a:focus {
+    text-decoration: none;
+  }
+h2 {
+}
+
+h3, h4 {
+  // create a special underline for the links with more space between text and line.
+  a, a:visited { 
+    border-bottom: 1px solid $orange;
+  }
+  a:hover, a:focus { 
+    border-bottom: 1px solid $orange_hover;
+  }
+}
+
+h1  { //BIG Title on Startpage
+  font-family: Titillium-Light;
+  color: $grey;
+  line-height: 1.2;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h2 { // taglines
+  font-family: Titillium-Medium;
+  color: $grey;
+  font-size: 30px;
+}
+
+h3 { // 3 column stuff on website
+  font-family: Titillium-Medium;
+  padding-bottom: 5px;
+  color: $grey;
+  font-size: 26px;
+}
+
+h4 { //byline below movie, link "follow on twitter"
+  font-family: Titillium-Medium;
+  font-size: 19px;
+  text-shadow: 0px 0px 0px;
+}
+
+h5 { // Footer white on grey
+  color: white;
+  font-family: Titillium-Medium;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px #000; 
+  margin: 0px 0px 20px 0px;
+}
+
+.titillium {
+  font-family: Titillium-Medium;
+  font-size: 15px;
+  color: #354048;
+}
+
+.byline {  
+  font-family: Titillium-Medium;
+  color: $grey;
+  font-size: 19px;
+  text-shadow: 0px 0px 0px;
+  padding: 30px 0px 0px;
+  line-height: 29px;
+  width: 630px;
+}
+
+.meta {
+  font-family: Titillium-Medium;
+}
+
+nav.footer {
+  color: white;
+  font-family: Titillium-Medium;
+  font-size: 15px;
+  text-shadow: 1px 1px 1px #000; 
+  margin: 0px;
+  
+  a {    
+    font-family: Titillium-Medium;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+  }  
+  
+}
+
+.copyright {
+  font-family: Titillium-Medium;
+  font-size: 13px;
+  color: #cfd6d0;
+  text-shadow: 1px 1px 1px #000; 
+  
+  a {
+    font-size: 12px;
+    color: #cfd6d0;
+    text-shadow: 1px 1px 1px #000; 
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+  }  
+}
+
+.green_box {
+  @include column(8);
+  background: #f5fdf2;
+  padding: 10px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+
+.green_box.visible {
+  overflow: visible;
+}
+
+.green_box.last {
+  margin-bottom: 20px;
+}
+
+// PLANS
+#plans {
+//  padding: 0px;
+clear: both;
+}
+
+.plan {
+	font-family: Titillium-Medium;
+  font-size: 15px;
+	color: #354048;
+	width: 300px;
+	margin-right: 20px;
+	float: left;
+	
+  h1  { //Abo Name
+    font-family: Titillium-XBold;
+    line-height: 50px;
+    margin-bottom: 10px;
+  }
+
+  h2 { // price
+    font-family: Titillium-Light;
+    line-height: 20px;
+  }
+  .box {
+	  background: #f5fdf3;
+  	padding: 5px 18px 15px;
+  	margin-bottom: 4px;
+  	ul {
+      @include no-bullets;
+      padding: 0px;
+      line-height: 30px;
+      li {
+	      margin-top: 5px;
+        span {
+          color: #80b8b3;
+        }
+      }
+    }
+  }  
+  .box.distinguish {
+    background: $light_green;
+  } 
+}
+
+.plan.last {
+  margin-right: 0px;
+}
+
+.plan_content {
+min-height: 270px;
+}
+
+// NAVIGATION
+#maintopics {
+  a {
+    font-size: 1.5em;
+    color: black;
+  }
+  span {
+    margin: 0px 10px;
+  }
+}
+
+// SIDEBAR
+#active {
+  height: 40px;
+  width: 190px;
+  z-index: -1;
+  opacity: .5;
+      filter: alpha(opacity=50);
+      -moz-opacity: .5;
+  background: $dark_green;
+  position: absolute;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; 
+  
+}
+#active.menu_create, #active.menu_action { top: 200px; }
+#active.menu_open,#active.menu_first, #active.menu_new, #active.menu_in { top: 250px; }
+#active.menu_assigned, #active.menu_second, #active.menu_accepted, #active.menu_out { top: 300px; }
+#active.menu_archived, #active.menu_third, #active.menu_won { top: 350px; }
+#active.menu_lost, #active.menu_fourth { top: 390px; }
+
+// content biglist
+.biglist .entry {
+  border-bottom: 1px solid black;
+  height: 30px;
+  font-size: 1.2em;
+  padding-top: 8px;
+}
+.biglist .heading {
+  height: 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-top: 8px;
+}
+
+.biglist .entry:hover {
+  background: $light_green; 
+}
+
+.title {
+  @include column(3);
+}
+.date {
+  @include column(3);
+}
+
+.tag {
+  float: left;
+     -moz-box-shadow: 1px 1px 2px #333; 
+  -webkit-box-shadow: 1px 1px 2px #333;
+          box-shadow: 1px 1px 2px #333;
+          background-color: #43515A;
+          background-image: -moz-linear-gradient(top, #43515A, #3a464d); /* FF3.6 */                                      
+          background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #43515A),color-stop(1, #3a464d)); 
+              filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d'); 
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')";
+  
+       -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+            border-radius: 4px; 
+            margin: 5px;
+            padding: 2px 10px;
+  .tagname {
+    padding: 0 5px;
+    color: #fff;
+    font-family: Titillium-Light;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    float: left;
+  }
+  .tagdestroy {
+    padding: 0 0 0 5px;
+    float: left;
+    border-left: 1px solid #414f57;
+    background: rgba(255,255,255,0);
+    input[type="submit"] {
+      background: $dark_green;
+      background: rgba(255,255,255,0);
+      font-family: Titillium-Light;
+      color: #fff;
+      border: none;
+      font-size: 1em;
+      padding: 3px 0px;
+      margin: 0;
+      display: inline-block;
+      text-decoration: none;      
+      line-height: 1;
+      position: relative;
+      cursor: pointer;
+            
+    }
+    a {
+      font-family: Titillium-Medium;
+      color: #414f57;
+    }
+  }
+}
+
+// RIGHT SIDE
+.processbox, .businesscard {
+  padding: 3px;
+  margin: 5px 0px;
+  @include column(4);
+  border: 1px solid black;
+     -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+          border-radius: 5px; 
+}
+.businesscard .logo {
+  @include column(1);
+}
+.businesscard .contact {
+  @include column(3);
+  @include last;
+}
+
+// ACTIONBOX design stuff 
+.actionbox_title {
+  background: $light_grey;
+  padding: 3px;
+  height: 15px;
+}
+
+.actionbox_title {
+  float: left;
+  height: 15px;
+}
+.actionbox_top_link {
+  text-align: right;
+}
+.actionbox_footer {
+  text-align: right;
+  background: $light_grey;
+  border-top: 1px solid black;
+  padding: 3px;
+  height: 18px;
+}
+.actionbox_entry {
+  border-bottom: 1px solid black;
+  padding: 2px;
+}
+
+.actionbox_entry .title {
+  font-weight: bold;
+  text-align: left;
+}
+.actionbox_entry .content {
+  
+}
+// FLASH MESSAGES, NOTICE MESSAGES, ERROR IN FORMS
+#flash_container {
+  @include container();
+}
+#flash_notice {
+  @include boxed($dark_green);
+}
+
+#flash_error {
+  @include boxed($light_green, $dark_green);
+}
+
+// CSS3 stuff
+.transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; 
+}
+
+.box_shadow {
+   -moz-box-shadow: 2px 2px 6px #222222; 
+-webkit-box-shadow: 2px 2px 6px #222222;
+        box-shadow: 2px 2px 6px #222222;
+}
+
+.ui-autocomplete-loading { 
+  background: white url(/images/ajax-loader.gif) right center no-repeat;
+}
+
+// WEBSITE TWITTER UPDATE LIST
+
+section.twitterwall {
+  h3, h4 { padding-left: 20px; }  
+  
+  footer a.follow, footer a.follow:visited {
+    font-family: Titillium-Medium;
+    font-size: 19px;
+    text-shadow: 0px 0px 0px;
+    border-bottom: 1px solid $orange;
+
+  }
+  footer a.follow:hover, footer a.follow:focus { 
+    border-bottom: 1px solid $orange_hover;
+  }
+  
+  #twitter {
+    .preLoader {
+      margin-left: 22px;
+    }
+    #twitter_update_list {
+      margin: 0px 0px 10px 10px;
+      list-style: none;
+      padding: 0px;
+      font-size: 14px;
+      font-family: Titillium-Medium;
+      color: $grey;      
+      a {
+        color: #7b8c96;      
+        text-decoration: none;
+        }
+      article {
+        margin-bottom: 10px;
+        .status {
+          background: #eef6eb;
+          padding: 10px;
+          a, a:hover {
+            color: $grey;
+            font-family: Titillium-XBold;
+            text-decoration: underline;
+          }
+          a:hover {
+            color: $dark_grey; 
+          }
+        }
+        .bubble {
+          height: 10px;
+          background: url(/images/twitter_bubble.png) no-repeat 0% 100%;  
+        }
+      }
+    }
+}
+}

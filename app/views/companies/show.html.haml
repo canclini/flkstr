@@ -1,40 +1,60 @@
-- title @company.name
+.item-action
+  %span.backlink=link_to "< zurück zur Übersicht", company_associates_path(current_company), :class => "underline"
+  .actions
+    %span=link_to "editieren", edit_company_path(current_user.company), :class => "small_action_button" if current_user && current_company == @company
+    %span=link_to "Dran bleiben!", new_company_associate_path(@company), :class => "small_action_button" unless !current_user || current_company == @company || current_company.associates.include?(@company)
 
-= link_to "editieren", edit_company_path(current_user.company), :class => 'button edit'  if current_user && current_company == @company
-
-=link_to "Dran bleiben!", new_company_associate_path(@company) unless !current_user || current_company == @company || current_company.associates.include?(@company)
-
-
-%h1= @company.name
-= image_tag @company.logo.url(:medium)
-= @company.teaser
-
-%p= @company.tag_list
-
-%p#address_map
-  %strong main address
-  = render :partial =>  @company.main_address
-  = render :partial => 'maps/address', :locals => {:map =>  @company.main_address.map(@company.name)}
-
-#details
+#logocol
+  = image_tag @company.logo_url(:medium).to_s if @company.logo?
+  &nbsp;
+  
+%article.company
+  %h1= @company.name
+  
   %p
-    %strong telephone
+    %strong Beziehung
+    %br
+    Kunde
+
+  %p
+    %strong Adresse
+    %br
+    = render :partial =>  @company.main_address
+
+  %p
+    %strong Telefon
+    %br
     = @company.phone
   %p 
-    %strong fax
+    %strong Fax
+    %br
     = @company.fax
   %p
-    %strong email
+    %strong e-Mail
+    %br
     = @company.email
   %p
-    %strong twitter
-    = @company.twitter
-  %p
     %strong Webseite
-    = @company.website
+    %br
+    =link_to @company.website, @company.website, :class => "underline", :target => :blank
   %p
-    %strong anzahl mitarbeiter
+    %strong Anzahl Mitarbeitende
+    %br
     = @company.staff
   %p
-    %strong history
+    %strong Über uns
+    %br
     = @company.history
+%aside.companyprofile
+  %article.contacts
+    %h1 Kontakte
+    %ul
+      -for contact in @company.associates do
+        %li{:style => "background: url(#{contact.logo_url(:thumb).to_s}) no-repeat 2%;"}
+          =link_to contact.name, contact
+  %article.internetprofiles
+    %h1 Internetprofile
+    =link_to image_tag('icons/twitter.png'), "http://twitter.com/#{@company.twitter}", :target => :blank if @company.twitter?
+    =link_to image_tag('icons/facebook.png'), "#", :target => :blank
+    =link_to image_tag('icons/linkedin.png'), "#", :target => :blank
+    =link_to image_tag('icons/xing.png'), "#", :target => :blank

@@ -1,4 +1,4 @@
-/* line 37, ../../../app/stylesheets/buttons.scss */
+/* line 37, ../../../app/assets/stylesheets/buttons.scss */
 a.green_button, .green_button {
   font-family: Titillium-XBold;
   font-size: 15px;
@@ -22,7 +22,7 @@ a.green_button, .green_button {
   color: #fff;
 }
 
-/* line 40, ../../../app/stylesheets/buttons.scss */
+/* line 40, ../../../app/assets/stylesheets/buttons.scss */
 a.green_button:active, .green_button:active {
   background-image: -moz-linear-gradient(top, #68948f, #81b9b4);
   /* FF3.6 */
@@ -34,7 +34,7 @@ a.green_button:active, .green_button:active {
   box-shadow: none;
 }
 
-/* line 44, ../../../app/stylesheets/buttons.scss */
+/* line 44, ../../../app/assets/stylesheets/buttons.scss */
 a.big_button, .big_button {
   font-family: Titillium-XBold;
   font-size: 15px;
@@ -60,13 +60,13 @@ a.big_button, .big_button {
   padding: 18px 35px;
 }
 
-/* line 50, ../../../app/stylesheets/buttons.scss */
+/* line 50, ../../../app/assets/stylesheets/buttons.scss */
 .call2action {
   float: right;
   margin-top: 20px;
 }
 
-/* line 55, ../../../app/stylesheets/buttons.scss */
+/* line 55, ../../../app/assets/stylesheets/buttons.scss */
 a.big_button:active, .big_button:active {
   background-image: -moz-linear-gradient(top, #68948f, #81b9b4);
   /* FF3.6 */
@@ -78,7 +78,7 @@ a.big_button:active, .big_button:active {
   box-shadow: none;
 }
 
-/* line 59, ../../../app/stylesheets/buttons.scss */
+/* line 59, ../../../app/assets/stylesheets/buttons.scss */
 a.login_button, .login_button {
   font-family: Titillium-XBold;
   font-size: 15px;
@@ -103,7 +103,7 @@ a.login_button, .login_button {
   padding: 2px 12px;
 }
 
-/* line 65, ../../../app/stylesheets/buttons.scss */
+/* line 64, ../../../app/assets/stylesheets/buttons.scss */
 a.login_button:active, .login_button:active {
   background-image: -moz-linear-gradient(top, #c77929, #e68a2c);
   /* FF3.6 */
@@ -115,36 +115,12 @@ a.login_button:active, .login_button:active {
   box-shadow: none;
 }
 
-/* line 69, ../../../app/stylesheets/buttons.scss */
-.search_button {
-  font-family: Titillium-XBold;
-  font-size: 15px;
-  text-align: center;
-  padding: 7px 30px;
-  border: 1px solid #1f2d35;
-  /*css*/
-  background-color: #414f57;
-  background-image: -moz-linear-gradient(top, #414f57, #1f2d35);
-  /* FF3.6 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #414f57), color-stop(1, #1f2d35));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
-  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
-  color: #fff;
-}
-
-/* line 73, ../../../app/stylesheets/buttons.scss */
+/* line 68, ../../../app/assets/stylesheets/buttons.scss */
 a.near_button {
   height: 23px;
 }
 
-/* line 77, ../../../app/stylesheets/buttons.scss */
+/* line 72, ../../../app/assets/stylesheets/buttons.scss */
 .near_button, .near_button:hover, .near_button:focus {
   font-family: Titillium-XBold;
   font-size: 15px;
@@ -174,7 +150,7 @@ a.near_button {
   border-radius: 0px 5px 5px 0px;
 }
 
-/* line 86, ../../../app/stylesheets/buttons.scss */
+/* line 81, ../../../app/assets/stylesheets/buttons.scss */
 .near_button:active {
   background-image: -moz-linear-gradient(top, #3a464d, #43515a);
   /* FF3.6 */
@@ -186,7 +162,7 @@ a.near_button {
   box-shadow: none;
 }
 
-/* line 90, ../../../app/stylesheets/buttons.scss */
+/* line 85, ../../../app/assets/stylesheets/buttons.scss */
 .search_button, .search_button:hover, .search_button:focus {
   font-family: Titillium-XBold;
   font-size: 15px;
@@ -198,8 +174,8 @@ a.near_button {
   background-image: -moz-linear-gradient(top, #fefefe, #dee6e5);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(1, #dee6e5));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$startcolor', EndColorStr='$endcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -209,23 +185,142 @@ a.near_button {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
   color: #fff;
   color: #42515a;
-  font-family: Titillium-Light;
-  margin: 2px 0;
-  padding: 2px 10px;
+  font-family: Titillium-Medium;
+  padding: 4px 9px 2px 9px;
   cursor: pointer;
-  -webkit-border-radius: 0px 5px 5px 0px;
-  -moz-border-radius: 0px 5px 5px 0px;
-  border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 
-/* line 101, ../../../app/stylesheets/buttons.scss */
+/* line 95, ../../../app/assets/stylesheets/buttons.scss */
 .search_button:active {
   background-image: -moz-linear-gradient(top, #dee6e5, #fefefe);
   /* FF3.6 */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #dee6e5), color-stop(1, #fefefe));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$endcolor', EndColorStr='$startcolor')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+}
+
+/* line 100, ../../../app/assets/stylesheets/buttons.scss */
+a.sidebar_button, .sidebar_button, a.sidebar_button:visited {
+  font-family: Titillium-XBold;
+  font-size: 15px;
+  text-align: center;
+  padding: 7px 30px;
+  border: 1px solid #66928c;
+  /*css*/
+  background-color: #81b9b4;
+  background-image: -moz-linear-gradient(top, #81b9b4, #68948f);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81b9b4), color-stop(1, #68948f));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 5px 12px;
+}
+
+/* line 104, ../../../app/assets/stylesheets/buttons.scss */
+a.sidebar_button:active, .sidebar_button:active {
+  background-image: -moz-linear-gradient(top, #68948f, #81b9b4);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68948f), color-stop(1, #81b9b4));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#68948f', EndColorStr='#81b9b4')";
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 5px 12px;
+}
+
+/* line 109, ../../../app/assets/stylesheets/buttons.scss */
+a.dark_button, .dark_button, a.dark_button:visited {
+  font-family: Titillium-XBold;
+  font-size: 15px;
+  text-align: center;
+  padding: 7px 30px;
+  border: 1px solid #414f57;
+  /*css*/
+  background-color: #42515a;
+  background-image: -moz-linear-gradient(top, #42515a, #37444c);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #42515a), color-stop(1, #37444c));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 2px 14px;
+}
+
+/* line 114, ../../../app/assets/stylesheets/buttons.scss */
+a.dark_button:active, .dark_button:active {
+  font-family: Titillium-XBold;
+  font-size: 15px;
+  text-align: center;
+  padding: 7px 30px;
+  border: 1px solid #414f57;
+  /*css*/
+  background-color: #37444c;
+  background-image: -moz-linear-gradient(top, #37444c, #42515a);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #37444c), color-stop(1, #42515a));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 2px 14px;
+}
+
+/* line 119, ../../../app/assets/stylesheets/buttons.scss */
+a.small_action_button, .small_action_button, a.small_action_button:visited {
+  font-family: Titillium-XBold;
+  font-size: 15px;
+  text-align: center;
+  padding: 7px 30px;
+  border: 1px solid #bdc8b8;
+  /*css*/
+  background-color: #e8f1e4;
+  background-image: -moz-linear-gradient(top, #e8f1e4, #dfe9dc);
+  /* FF3.6 */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e8f1e4), color-stop(1, #dfe9dc));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#81b9b4', EndColorStr='#68948f')";
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  text-shadow: none;
+  font-size: 14px;
+  padding: 2px 14px;
+  color: #42515a;
+  color: rgba(65, 79, 87, 0.7);
 }

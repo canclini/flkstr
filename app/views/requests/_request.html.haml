@@ -1,7 +1,8 @@
-=link_block(request_path(request)) do
-  .entry
-    .title= truncate(request.name, :length => 30)
-    .date= request.created_at.to_s(:short)
-    .tags
-      .tag CSS
-      .tag HTML
+%tr
+  %td.checkbox= check_box_tag "request_ids[]", request.id, false, :class => "select"
+  %td.title=link_to truncate(request.name, :length => 50), request
+  %td.date= request.created_at.strftime('%d.%m.%Y')
+  %td.tags
+    -for tag in request.tag_list do
+      %span.tag=tag
+  

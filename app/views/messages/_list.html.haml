@@ -1,8 +1,3 @@
-%h2 Nachrichten
-#leads.biglist
-  .heading
-    .title Betreff
-    .date Erhalten
-    .from Von
-  = render @messages
-  = will_paginate @messages
+%table{:id => "messages"}
+  %tbody
+    = render @messages

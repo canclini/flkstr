@@ -1,8 +1,3 @@
-%h2 Leads
-#leads.biglist
-  .heading
-    .title Titel
-    .date Datum
-    .tags Keywords
-  = render @leads
-  = will_paginate @leads
+%table{:id => "leads"}
+  %tbody
+    = render @leads

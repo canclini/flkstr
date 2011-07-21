@@ -15,7 +15,7 @@ class RequestsController < ApplicationController
   def new
     @company = current_company
     redirect_to settings_path unless @company.add_request?
-    @request = current_company.requests.new(:company => @company)
+    @request = current_company.requests.new(:company => @company, :duedate => (Time.now + 1.month))
     @active = :create
   end
 
@@ -35,5 +35,28 @@ class RequestsController < ApplicationController
   
   def edit
   end
+  
+  def confirm_archive
+    
+  end
 
+  def assign
+    request = Request.find(params[:id])
+    request.update_attributes(:status => "assigned")
+    redirect_to request
+  end
+
+  def recall
+    request = Request.find(params[:id])
+    request.update_attributes(:status => "recalled")
+    redirect_to request
+  end
+
+  def archive
+    Request.find(params[:request_ids]).each do |request|
+      request.archive
+    end
+    #Request.update_all(["archived_at=?", Time.now], :id => params[:requests_ids])
+    redirect_to requests_path
+  end
 end

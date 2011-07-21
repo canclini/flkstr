@@ -1,5 +1,5 @@
-=link_block(message_path(message_copy)) do
-  .entry
-    .title= truncate(message_copy.subject, :length => 30)
-    .date= message_copy.created_at.to_s(:short)
-    .from= message_copy.author.name
+%tr
+  %td.checkbox= check_box_tag ",message_copy_ids[]", message_copy.id, false, :class => "select"
+  %td.from= message_copy.author.name
+  %td.subject=link_to truncate(message_copy.subject, :length => 50), message_copy.message
+  %td.date= message_copy.created_at.strftime('%d.%m.%Y')

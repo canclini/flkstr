@@ -1,0 +1,6 @@
+%nav.user
+  %ul
+    %li=link_to "Mein Profil", company_path(current_company)
+    %li=link_to "Einstellungen", "#", :class => "settings_trigger"
+    %li=link_to "Feedback", "#"
+    %li=link_to "Logout", destroy_user_session_path

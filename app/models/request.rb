@@ -23,6 +23,12 @@ class Request < ActiveRecord::Base
     search
   end
   
+  def archive
+    #TODO: what happens to open leads?
+    self.status = "archived"
+    save
+  end
+  
   private
   def add2feeds
     # dashboard feed for followers

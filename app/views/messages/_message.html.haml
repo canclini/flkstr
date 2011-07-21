@@ -1,5 +1,5 @@
-=link_block(message_path(message)) do
-  .entry
-    .title= truncate(message.subject, :length => 30)
-    .date= message.created_at.to_s(:short)
-    .from= message.recipients.map(&:name).to_sentence
+%tr
+  %td.checkbox= check_box_tag "messages_ids[]", message.id, false, :class => "select"
+  %td.from= truncate(message.recipients.map(&:name).to_sentence, :length => 30)
+  %td.subject=link_to truncate(message.subject, :length => 50), message
+  %td.date= message.created_at.strftime('%d.%m.%Y')

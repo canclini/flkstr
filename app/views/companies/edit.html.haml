@@ -1,26 +1,63 @@
 -title "Firmendaten editieren"
 
-=simple_form_for @company, :html => { :multipart => true } do |f|
+=form_for @company, :html => {:class => "tight_form", :multipart => true } do |f|
   = f.error_messages  
-  
-  =f.input :name
-  =f.input :logo
-  =f.input :teaser
-  =f.input :tag_list
-  
-  %h3 addresses
-  = f.simple_fields_for :addresses do |builder|
-    = render "addresses/address_fields", :f => builder
-    
-  %h3 more details
-  = f.input :phone
-  = f.input :fax
-  = f.input :email
-  = f.input :twitter
-  = f.input :website, :as => :url
-  = f.input :staff, :input_html => {:min => 1, :step => 1}
-    
-  %h3 tell us about your company
-  = f.input :history
 
-  %p= f.submit "Speichern", :class => "button light"
+  #logocol
+    = image_tag @company.logo_url(:medium).to_s if @company.logo?
+    %br/
+    =link_to "bild ändern", "#"
+    //  =f.input :logo, :as => :file
+    &nbsp;
+    
+  %article.company
+    %p
+      = label :name, "Firmenname"
+      = text_field_tag :name, @company.name
+    %p
+      = label :teaser, "Teaser"
+      = text_field_tag :teaser, @company.teaser
+    %p
+      = label :tag_list, "Tags"
+      = text_field_tag :tag_list, @company.tag_list
+    
+    = f.fields_for :addresses do |address_fields|
+      %p
+        = label :street, "Strasse"
+        =address_fields.text_field :street
+        %br/
+        = label :plz, "Postleitzahl"
+        =address_fields.text_field :plz
+        %br/
+        = label :city, "Stadt"
+        =address_fields.text_field :city
+        %br/
+        = label :country, "Land"
+        =address_fields.text_field :country
+        
+    %p
+      = label :phone, "Telefon"
+      = text_field_tag :phone, @company.phone
+    %p
+      = label :fax, "Fax"
+      = text_field_tag :fax, @company.fax
+    %p
+      = label :email, "e-Mail"
+      = text_field_tag :email, @company.email
+    %p
+      = label :website, "Webseite"
+      = text_field_tag :website, @company.website
+    %p
+      = label :twitter, "Twitter"
+      = text_field_tag :twitter, @company.twitter
+    %p
+      = label :staff, "Mitarbeiter"
+      = text_field_tag :staff, @company.staff
+      
+    %h3 Erzählen Sie uns etwas über Ihre Firma
+    %p
+      = label :history, ""
+      = text_area_tag :history, @company.history
+    %br/
+    = f.submit "Speichern", :class => "button light"
+        

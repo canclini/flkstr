@@ -1,7 +1,12 @@
-.filter 
-.filter= link_to "neu", leads_filter_path(:new), :remote => true
-.filter= link_to "in Bearbeitung", leads_filter_path(:accepted), :remote => true
-.filter= link_to "gewonnen", leads_filter_path(:won), :remote => true
-.filter= link_to "verloren", leads_filter_path(:lost), :remote => true
+%ul.action
+  %li=link_to "Auftrag erfassen", new_request_path(), :class => 'sidebar_button'
 
-#active{:class => "menu_#{@active}"}
+%ul  
+  %li=link_to "Neu", leads_filter_path(:new), :class => ("active" if @active == 'new')
+  %li=link_to "In Bearbeitung", leads_filter_path(:accepted), :class => ("active" if @active == 'accepted')
+%ul
+  %li=link_to "Gewonnen", leads_filter_path(:won), :class => ("active" if @active == 'won')
+  %li=link_to "Verloren", leads_filter_path(:lost), :class => ("active" if @active == 'lost')
+
+%ul
+  %li= link_to "zurückgezogen", leads_filter_path(:back), :class => ("active" if @active == 'back')

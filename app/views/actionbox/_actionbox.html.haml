@@ -1,41 +1,46 @@
 #actionsearch
   = form_tag search_path do |f|
     = text_field_tag :query, params[:query] = "Suche nach Firma oder Tag", :class => "search clearme"
-    = submit_tag "suchen", :class => "search_button"
+    = submit_tag "Suchen", :class => "search_button"
 %nav.actionbuttons
-  =link_to image_tag("message.png"), messages_path(), :class => "message dropdown"  
-  =link_to image_tag("contact.png"), company_associates_path(current_company), :class => "contact dropdown"
-  =link_to image_tag("lead.png"), leads_path(), :class => "lead dropdown"
+  =link_to image_tag("leads.png"), leads_path(), :class => "lead dropdown"
+  =link_to image_tag("messages.png"), messages_path(), :class => "message dropdown"  
+  =link_to image_tag("network.png"), company_associates_path(current_company), :class => "contact dropdown"
   
-  #message_menu.dropdownmenu.box_shadow.transition
-    .actionbox_header
-      .actionbox_title
-        %h4 Nachrichten
-      .actionbox_top_link
-        = link_to "Alle Nachrichten >>", messages_path()
-      
-    #actionbox_messages
-      Loading...
-    .actionbox_footer
-      = link_to "Neue Nachricht", new_message_path(), :class => "small_button"
+  .actionbox.messages
+    #pointer
+    %section
+      .header
+        .boxname
+          %h1 Nachrichten
+        .toplink
+          = link_to "Alle Nachrichten", messages_path()
+      #content.actionbox_messages
+        Loading...
+      #actionfooter= link_to "Neue Nachricht", new_message_path(), :class => "dark_button"
   
-  #contact_menu.dropdownmenu.box_shadow
-    .actionbox_header
-      .actionbox_title
-        %h4 Beziehungen
-      .actionbox_top_link
-        = link_to "Netzwerk >>", company_associates_path(current_company)
-    #actionbox_contacts
-      Loading...
-    .actionbox_footer
+  .actionbox.leads
+    #pointer
+    %section
+      .header
+        .boxname
+          %h1 Leads
+        .toplink
+          = link_to "Alle Leads", leads_path()
 
-  #lead_menu.dropdownmenu.box_shadow
-    .actionbox_header
-      .actionbox_title
-        %h4 Leads
-      .actionbox_top_link
-        = link_to "Alle Leads >>", leads_path()
-    #actionbox_leads
-      Loading...
-    .actionbox_footer
-  
+      #content.actionbox_leads
+        Loading...
+      #actionfooter
+
+  .actionbox.contacts
+    #pointer
+    %section
+      .header
+        .boxname
+          %h1 Beziehungen
+        .toplink
+          = link_to "Netzwerk", company_associates_path(current_company)
+
+      #content.actionbox_contacts
+        Loading...
+      #actionfooter

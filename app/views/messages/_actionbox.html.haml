@@ -3,6 +3,7 @@
     .actionbox_entry
       .title= message.author.name
       = truncate(message.subject, :length => 45)
+      .footer= message.created_at.to_s(:short)
 
 -if @messages.empty?
   %span Keine Nachrichten

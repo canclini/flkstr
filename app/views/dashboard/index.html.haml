@@ -1,11 +1,11 @@
-= simple_form_for @update do |f|
-  = f.text_field :message, :class => 'statusupdate'
-  = f.check_box :twitter
-  = f.label "Twitter"
-  = f.submit "Aktualisieren", :class => "green_button"
-.latestupdate= "#{@latest_update.message} - sent #{distance_of_time_in_words(@latest_update.created_at, Time.now)} ago" unless @latest_update.nil?
-
-#feed
+#interaction
+  = simple_form_for @update do |f|
+    = f.text_field :message, :class => 'statusupdate'
+    = f.check_box :twitter
+    = f.label "Twitter"
+    = f.submit "Aktualisieren", :class => "dark_button"
+  
+%section{:id => "feed"} 
   %ul
     - for feed in @feeds do
       %li.item= render :partial => "feed_items/#{feed.partial}", :locals => {:feed_item =>  feed.item}

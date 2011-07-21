@@ -1,0 +1,48 @@
+// flockstreet colors
+$dark_green: #7FB6B1;
+$light_green: #E4F0E0;
+$dark_grey: #42515A;
+$orange: #E78B2C;
+$dark_orange: #EA8C1C;
+$orange_hover: $orange - #111;
+
+$grey_hover: #354047;
+$grey: #414f57;
+//$dark_grey: #2C353B;
+$light_grey: #f3f3f3;
+
+// mixins
+@mixin centered() {
+  margin: 0px auto;
+  width: 960px;
+}
+
+@mixin slim() {
+  float: left;
+  margin: 0px 10px;
+  width: 300px;
+}
+@mixin wide() {
+  width: 620px;
+  margin: 0 10px;
+  float: left;
+}
+
+@mixin single_column() {
+  float: left;
+  width: 60px;
+  margin: 0px 10px;
+}
+
+@mixin single_column_right() {
+  float: right;
+  width: 60px;
+  margin: 0px 10px;
+}
+
+@mixin full() {
+  clear:both;
+  width: 960px;
+  float: left;
+  margin: 0px 10px;
+}

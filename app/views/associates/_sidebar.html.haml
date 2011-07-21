@@ -1,5 +1,5 @@
-.filter 
-.filter= link_to "FOO", "#", :remote => true
-.filter= link_to "BAR", "#", :remote => true
+%ul.action
+  %li=link_to "Alle Firmen", "#", :class => 'sidebar_button'
 
-#active{:class => "menu_#{@active}"}
+%ul  
+  %li=link_to "Alle Kontakte", "#", :class => "active"

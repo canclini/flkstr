@@ -1,0 +1,7 @@
+.bulk-action
+  %span.checkbox=check_box_tag "select_all"
+  .actions
+    %span=link_to "archivieren", "#", :class => "small_action_button", :onclick => "$('#items_form').submit(); return false;" unless @active == 'archived'
+  %span.paginate
+    = page_entries_info @requests
+    = will_paginate @requests

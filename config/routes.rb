@@ -10,7 +10,7 @@ constraints(:host => /www.localhost/ ) do
   match '/*path', :to => redirect {|params| "http://localhost:3000/#{params[:path]}"}
 end
   
-  match "users/sign_in" => 'website#index' # only for website phase
+#  match "users/sign_in" => 'website#index' # only for website phase
   scope :protocol => 'https', :subdomain => 'secure', :constraints => { :protocol => 'https', :subdomain => 'secure'} do
     devise_for :users, :controllers => { :registrations => "users/registrations"}
     
@@ -38,8 +38,19 @@ end
     match '/*path', :to => redirect {|params| "http://localhost:3000/#{params[:path]}"}
   end
   
-  resources :products, :requests, :updates, :settings, :price_suggestions
+  resources :products, :updates, :settings, :price_suggestions
   
+   resources :requests do
+     collection do
+       put :confirm_archive
+       put :archive
+     end
+     member do
+       put :recall
+       put :assign
+     end
+   end
+   
   # singular resource definition for search
   resource :search, :controller => 'search'
     

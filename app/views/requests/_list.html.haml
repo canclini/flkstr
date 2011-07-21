@@ -1,8 +1,3 @@
-%h2 Aufträge
-#requests.biglist
-  .heading
-    .title Titel
-    .date Datum
-    .tags Keywords
-  = render @requests
-  = will_paginate @requests
+%table{:id => "requests"}
+  %tbody
+    = render @requests

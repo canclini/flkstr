@@ -1,1 +1,4 @@
-= render :partial => 'list'
+= form_tag '#', :id => "items_form", :method => :put do
+  = render :partial => 'bulk-action'
+  = render :partial => 'list'
+  = render :partial => 'bulk-action'# if @leads.count > 5

@@ -1,23 +1,26 @@
-%h3 "Nachricht verfassen"
+=simple_form_for @message do |f|
+  .item-action
+    .actions
+      =f.submit "senden", :class => "dark_button", :html => {:style => "margin-top: -4px;"}
+      =link_to "verwerfen", messages_path()
 
-=form_for @message do |f|
-  = f.error_messages  
-  %p  
-    = text_field :ac, :companies, :class => "text"
-    %br
-    = f.label :to, "AN:"
-    #ac_selection  
-  %p
-    = f.label :subject, "Betreff"
-    %br
-    = f.text_field :subject, :class => 'text'
-  %p
-    = f.label :body, "Text"
-    %br
-    = f.text_area :body, :cols => 40, :rows => 3
-
-  %p= f.submit "senden", :class => "button light"
-  
-  
-  #removeme
-    =link_to "remove", "#", :class => "remove-link"
+  %article.request
+    = f.error_messages  
+    %p  
+      = f.label :to, "An"
+      = text_field :ac, :companies, :class => "small long"
+      #ac_selection  
+    %p
+      = f.label :subject, "Betreff"
+      %br
+      = f.text_field :subject, :class => 'small long'
+    %p
+      = f.label :body, "Nachricht"
+      %br
+      = f.text_area :body, :class => "small long"
+          
+  .item-action
+    .actions
+      =f.submit "senden", :class => "dark_button", :html => {:style => "margin-top: -4px;"}
+      =link_to "verwerfen", messages_path()
+    

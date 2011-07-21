@@ -1,8 +1,10 @@
-#address
-  = address.street
-  %br
-  = address.plz
-  = address.city
-  %br
-  = address.country
-  %br
+//= address.street
+//%br
+//= address.plz
+//= address.city
+//%br
+//= address.country
+//
+// link to google map: http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003
+
+=link_to "#{address.street}, #{address.plz} #{address.city}, #{address.country}", "http://maps.google.com/?q=#{address.street},#{address.plz} #{address.city}, #{address.country}", :class => "underline", :target => :blank

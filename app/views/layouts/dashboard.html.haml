@@ -15,7 +15,7 @@
         .content
           %a{ :href => dashboard_url}
             .logo
-          = render :partial => 'nav/user'
+          = render :partial => 'nav/meta'
       #bar
         .content
           = render :partial => 'actionbox/actionbox'
@@ -27,9 +27,8 @@
           = content_tag :div, msg, :id => "flash_#{name}"
 
       #container
-        %nav.main.full= render :partial => 'layouts/maintopics'
-        #dashboard= yield
-        #actionbutton=link_to "Neuer Auftrag", new_request_path, :class => 'green_button'
+        %nav.main= render :partial => 'layouts/maintopics'
+        %section{:id =>"content"}= yield
     %footer.small
       .copyright
         .ginetta

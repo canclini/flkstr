@@ -1,0 +1,218 @@
+input[type="text"], input[type="password"], input[type="email"], textarea {
+  width: 280px;
+  padding: 7px 8px;
+  font-size: 1.2em;
+  color: #666;
+  border: 1px solid #b1b9be;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -border-radius: 5px;
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear,0% 0%, 0% 12%, from(#EEE), to(#fff));
+  background-image: -moz-linear-gradient(0% 12% 90deg, #FFF, #EEE);
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+textarea {
+  background-image: -webkit-gradient(linear,0% 0%, 0% 1%, from(#EEE), to(#fff));
+  background-image: -moz-linear-gradient(0% 1% 90deg, #FFF, #EEE);  
+  height: 100px;
+}
+
+select {
+  float: left;
+  clear: both;
+}
+input[type="text"].search {
+  margin-right: -5px;
+  width: 220px;
+  padding: 3px 4px;
+  font-size: 15px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+     -moz-border-radius: 4px 0px 0px 4px;
+       -o-border-radius: 4px 0px 0px 4px;
+         -border-radius: 4px 0px 0px 4px;
+}
+
+input[type="text"].near, input[type="password"].near, input[type="email"].near {
+  width: 200px;
+  -webkit-border-radius: 5px 1px 1px 5px;
+  -moz-border-radius: 5px 1px 1px 5px;
+  -o-border-radius: 5px 1px 1px 5px;
+  -border-radius: 5px 1px 1px 5px;
+}
+
+input[type="checkbox"]:focus, input[type="password"]:focus,
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border: 1px solid $orange;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin: 0 0 15px 0;
+  font-size: 1.2em;
+  width: 25px;
+}
+
+.simple_form label, .simple_form span {
+  font-family: Titillium-Medium;
+  display: block;
+  font-size: 16px;
+  color: $grey;
+}
+
+.hint {
+  background: url(/images/icons/info.png) no-repeat 0% 80%;
+  padding-left: 25px;
+  padding-top: 10px;
+  display: none;
+  margin-left: 650px;
+  color: $grey;
+  font-family: Titillium-Medium;
+  width: 250px;
+}
+
+.forgot {
+  margin-left: 300px;
+  font-family: Titillium-Medium;
+}
+
+// ERRORS
+.field_with_errors input {
+  border-color: #d47b17;
+  margin-bottom: 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+     -moz-border-radius: 5px 5px 0px 0px;
+       -o-border-radius: 5px 5px 0px 0px;
+         -border-radius: 5px 5px 0px 0px;
+}
+
+.errorExplanation {
+  h2, h3 { color: #fff; }
+  font-family: Titilium-Medium;
+  color: #fff;
+  float: left;
+  width: 618px;
+  margin: 0px 10px;
+  padding: 10px;
+  margin-bottom: 4px;
+  background: $dark_orange;
+  border: 1px solid #d47b17;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+       -o-border-radius: 5px;
+         -border-radius: 5px;
+
+  .title {
+    float: left;
+    width: 300px;
+    h2 {
+      font-family: Titillium-XBold;
+      line-height: 1.2;
+    }
+  }
+  .content {
+    float: left;
+    h3 {
+      font-family: Titillium-XBold;
+      font-size: 20px;
+    }
+    ul {
+      font-family: Titillium-Light;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      width: 290px;
+    }
+  }
+}
+
+.simple_form span.error {
+  font-family: Titillium-Medium;
+  color: #fff;
+  background: $dark_orange;
+  clear: left;
+  margin-left: 300px;
+  padding: 2px 10px;
+  width: 276px;
+  font-size: 14px;
+  //display: block;
+  border: 1px solid #d47b17;
+  border-top: none;
+  -webkit-border-radius: 0px 0px 5px 5px;
+     -moz-border-radius: 0px 0px 5px 5px;
+       -o-border-radius: 0px 0px 5px 5px;
+         -border-radius: 0px 0px 5px 5px;
+}
+
+
+// SIMPLE_FORM stuff (from railscasts.com)
+.simple_form input {
+  float: left;
+}
+
+.simple_form input.long, textarea.long {
+  width: 745px;
+}
+
+.simple_form label {
+  margin: 0px 10px;
+  width: 100%;
+  float: left;
+  text-align: left;
+  font-family: Titillium-XBold;
+  font-size: 15px;
+  margin: 2px 0px;
+}
+
+.simple_form .green_button, a.form_button {
+  margin-top: 10px;
+  margin-left: 320px;
+}
+
+.simple_form fieldset {
+  margin-bottom: 15px;
+}
+
+.simple_form div.boolean {
+  margin-left: 180px;
+}
+
+.simple_form div.boolean label, .simple_form label.collection_radio {
+  float: none;
+  margin: 0;
+}
+
+.simple_form label.collection_radio {
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+.simple_form input.small {
+  height: 12px;
+  font-size: 15px;
+}
+
+.simple_form input.date, .simple_form input.currency {
+  width: 90px;
+  margin-right: 10px;
+}
+
+span.currency {
+  font-family: Georgia;
+  font-size: 15px;
+}
+
+////////////
+.tight_form label {
+  margin: 0px 10px;
+  float: left;
+  text-align: left;
+  font-family: Titillium-XBold;
+  font-size: 15px;
+  margin: 2px 0px;
+  width: 100px;
+}

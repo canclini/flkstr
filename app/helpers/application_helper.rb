@@ -6,7 +6,7 @@ module ApplicationHelper
       yield
     end
   end
-  
+    
   def tag_flag(text, destroy_link)
     content_tag(:div, :class =>"tag") do
       concat(content_tag(:span, :class =>"tagname") do
@@ -17,7 +17,7 @@ module ApplicationHelper
       end)
     end
   end
-  
+    
   def errors_for(object, header=nil, message=nil)
     html = ""
     unless object.errors.blank?

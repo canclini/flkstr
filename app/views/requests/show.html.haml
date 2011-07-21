@@ -1,22 +1,57 @@
-%h2= @request.name
-= link_to "Edit Request", edit_request_path(@request), :class => 'button edit' if current_user && current_company == @company
-%p= @request.tag_list
-%p= @request.description
-%p
-  %h3 Filter Kriterien
-  %strong Budget [CHF]:
-  = @request.budget
-%p
-  %strong: Wo:
-  -if @request.area_filter == 'distance'
-    Im Umkreis von 
-    %strong= @request.distance
-    km
-  - else
-    = @request.area_filter
+= render :partial => "item-action"
+%article.request
+  %h1= @request.name
   
+  %p
+    %strong Lieferdatum
+    %br
+    =@request.duedate.strftime('%d.%m.%Y') if @request.duedate?
+    
+  %p
+    %strong Keywords
+    %br
+    -for tag in @request.tag_list do
+      %span.tag=tag
+    %br
+  %p
+    %strong Beschrieb
+    %br
+    = @request.description
+  %p
+    %strong Kontaktsprache
+    %br
+    -long_language = case @request.language
+      -when "DE" then "deutsch"
+      -when "FR" then "französisch"
+      -when "EN" then "englisch"
+      -else @request.language
+    = long_language
+  %p
+    %strong Budget
+    %br
+    = "CHF #{@request.budget}"
 
-%h3 generierte Leads
-Es wurden 
-%strong= @request.leads.size
-Firmen über diesen Auftrag informiert
+  %p
+    %strong Distanz
+    %br
+    -if @request.area_filter == 'distance'
+      Im Umkreis von 
+      = @request.distance
+      km
+    - else
+      = @request.area_filter
+    
+  %p
+    %strong Statistik
+    %br
+    Es wurden 
+    = @request.leads.size
+    Firmen über diesen Auftrag informiert
+
+-if current_user && current_company == @company
+  #action-menu
+    %h2 Status ändern auf:
+    =link_to "✔ Vergeben", assign_request_path(@request), :method => 'put', :class => "underline"
+    %br
+    =link_to "X Zurückgezogen", recall_request_path(@request), :method => 'put', :class => "underline"
+  = render :partial => "item-action"

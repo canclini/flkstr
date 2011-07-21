@@ -1,65 +1,71 @@
-/* line 14, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
   font-size: 100%;
-  font-family: inherit;
+  font: inherit;
   vertical-align: baseline;
 }
 
-/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
-  color: black;
-  background: white;
 }
 
-/* line 19, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 21, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
-  vertical-align: middle;
 }
 
-/* line 23, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 25, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
-  quotes: "" "";
+  quotes: none;
 }
-/* line 96, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
+  content: none;
 }
 
-/* line 27, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 1, ../../../app/stylesheets/partials/_forms.scss */
-input[type="text"], input[type="password"], input[type="email"] {
+/* line 115, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 1, ../../../app/assets/stylesheets/partials/_forms.scss */
+input[type="text"], input[type="password"], input[type="email"], textarea {
   width: 280px;
   padding: 7px 8px;
   font-size: 1.2em;
@@ -78,17 +84,32 @@ input[type="text"], input[type="password"], input[type="email"] {
   transition: all 0.3s ease-out;
 }
 
-/* line 19, ../../../app/stylesheets/partials/_forms.scss */
-input[type="text"].search {
-  padding: 2px 0px;
-  font-size: 15px;
-  -webkit-border-radius: 5px 1px 1px 5px;
-  -moz-border-radius: 5px 1px 1px 5px;
-  -o-border-radius: 5px 1px 1px 5px;
-  -border-radius: 5px 1px 1px 5px;
+/* line 20, ../../../app/assets/stylesheets/partials/_forms.scss */
+textarea {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 1%, from(#eeeeee), to(white));
+  background-image: -moz-linear-gradient(0% 1% 90deg, white, #eeeeee);
+  height: 100px;
 }
 
-/* line 28, ../../../app/stylesheets/partials/_forms.scss */
+/* line 26, ../../../app/assets/stylesheets/partials/_forms.scss */
+select {
+  float: left;
+  clear: both;
+}
+
+/* line 30, ../../../app/assets/stylesheets/partials/_forms.scss */
+input[type="text"].search {
+  margin-right: -5px;
+  width: 220px;
+  padding: 3px 4px;
+  font-size: 15px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -o-border-radius: 4px 0px 0px 4px;
+  -border-radius: 4px 0px 0px 4px;
+}
+
+/* line 41, ../../../app/assets/stylesheets/partials/_forms.scss */
 input[type="text"].near, input[type="password"].near, input[type="email"].near {
   width: 200px;
   -webkit-border-radius: 5px 1px 1px 5px;
@@ -97,21 +118,21 @@ input[type="text"].near, input[type="password"].near, input[type="email"].near {
   -border-radius: 5px 1px 1px 5px;
 }
 
-/* line 37, ../../../app/stylesheets/partials/_forms.scss */
+/* line 50, ../../../app/assets/stylesheets/partials/_forms.scss */
 input[type="checkbox"]:focus, input[type="password"]:focus,
-input[type="text"]:focus, input[type="email"]:focus {
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   border: 1px solid #e78b2c;
   outline: none;
 }
 
-/* line 42, ../../../app/stylesheets/partials/_forms.scss */
+/* line 55, ../../../app/assets/stylesheets/partials/_forms.scss */
 input[type="checkbox"] {
   margin: 0 0 15px 0;
   font-size: 1.2em;
   width: 25px;
 }
 
-/* line 48, ../../../app/stylesheets/partials/_forms.scss */
+/* line 61, ../../../app/assets/stylesheets/partials/_forms.scss */
 .simple_form label, .simple_form span {
   font-family: Titillium-Medium;
   display: block;
@@ -119,9 +140,9 @@ input[type="checkbox"] {
   color: #414f57;
 }
 
-/* line 55, ../../../app/stylesheets/partials/_forms.scss */
+/* line 68, ../../../app/assets/stylesheets/partials/_forms.scss */
 .hint {
-  background: url(/images/info_button.png) no-repeat 0% 80%;
+  background: url(/images/icons/info.png) no-repeat 0% 80%;
   padding-left: 25px;
   padding-top: 10px;
   display: none;
@@ -131,13 +152,13 @@ input[type="checkbox"] {
   width: 250px;
 }
 
-/* line 66, ../../../app/stylesheets/partials/_forms.scss */
+/* line 79, ../../../app/assets/stylesheets/partials/_forms.scss */
 .forgot {
   margin-left: 300px;
   font-family: Titillium-Medium;
 }
 
-/* line 72, ../../../app/stylesheets/partials/_forms.scss */
+/* line 85, ../../../app/assets/stylesheets/partials/_forms.scss */
 .field_with_errors input {
   border-color: #d47b17;
   margin-bottom: 0px;
@@ -147,7 +168,7 @@ input[type="checkbox"] {
   -border-radius: 5px 5px 0px 0px;
 }
 
-/* line 81, ../../../app/stylesheets/partials/_forms.scss */
+/* line 94, ../../../app/assets/stylesheets/partials/_forms.scss */
 .errorExplanation {
   font-family: Titilium-Medium;
   color: #fff;
@@ -163,30 +184,30 @@ input[type="checkbox"] {
   -o-border-radius: 5px;
   -border-radius: 5px;
 }
-/* line 82, ../../../app/stylesheets/partials/_forms.scss */
+/* line 95, ../../../app/assets/stylesheets/partials/_forms.scss */
 .errorExplanation h2, .errorExplanation h3 {
   color: #fff;
 }
-/* line 97, ../../../app/stylesheets/partials/_forms.scss */
+/* line 110, ../../../app/assets/stylesheets/partials/_forms.scss */
 .errorExplanation .title {
   float: left;
   width: 300px;
 }
-/* line 100, ../../../app/stylesheets/partials/_forms.scss */
+/* line 113, ../../../app/assets/stylesheets/partials/_forms.scss */
 .errorExplanation .title h2 {
   font-family: Titillium-XBold;
   line-height: 1.2;
 }
-/* line 105, ../../../app/stylesheets/partials/_forms.scss */
+/* line 118, ../../../app/assets/stylesheets/partials/_forms.scss */
 .errorExplanation .content {
   float: left;
 }
-/* line 107, ../../../app/stylesheets/partials/_forms.scss */
+/* line 120, ../../../app/assets/stylesheets/partials/_forms.scss */
 .errorExplanation .content h3 {
   font-family: Titillium-XBold;
   font-size: 20px;
 }
-/* line 111, ../../../app/stylesheets/partials/_forms.scss */
+/* line 124, ../../../app/assets/stylesheets/partials/_forms.scss */
 .errorExplanation .content ul {
   font-family: Titillium-Light;
   letter-spacing: 0.03em;
@@ -194,7 +215,7 @@ input[type="checkbox"] {
   width: 290px;
 }
 
-/* line 120, ../../../app/stylesheets/partials/_forms.scss */
+/* line 133, ../../../app/assets/stylesheets/partials/_forms.scss */
 .simple_form span.error {
   font-family: Titillium-Medium;
   color: #fff;
@@ -212,50 +233,85 @@ input[type="checkbox"] {
   -border-radius: 0px 0px 5px 5px;
 }
 
-/* line 140, ../../../app/stylesheets/partials/_forms.scss */
+/* line 153, ../../../app/assets/stylesheets/partials/_forms.scss */
 .simple_form input {
   float: left;
 }
 
-/* line 144, ../../../app/stylesheets/partials/_forms.scss */
+/* line 157, ../../../app/assets/stylesheets/partials/_forms.scss */
+.simple_form input.long, textarea.long {
+  width: 745px;
+}
+
+/* line 161, ../../../app/assets/stylesheets/partials/_forms.scss */
 .simple_form label {
-  width: 300px;
   margin: 0px 10px;
+  width: 100%;
   float: left;
   text-align: left;
-  font-size: 20px;
+  font-family: Titillium-XBold;
+  font-size: 15px;
   margin: 2px 0px;
 }
 
-/* line 154, ../../../app/stylesheets/partials/_forms.scss */
+/* line 171, ../../../app/assets/stylesheets/partials/_forms.scss */
 .simple_form .green_button, a.form_button {
   margin-top: 10px;
   margin-left: 320px;
 }
 
-/* line 159, ../../../app/stylesheets/partials/_forms.scss */
+/* line 176, ../../../app/assets/stylesheets/partials/_forms.scss */
 .simple_form fieldset {
   margin-bottom: 15px;
 }
 
-/* line 163, ../../../app/stylesheets/partials/_forms.scss */
+/* line 180, ../../../app/assets/stylesheets/partials/_forms.scss */
 .simple_form div.boolean {
   margin-left: 180px;
 }
 
-/* line 167, ../../../app/stylesheets/partials/_forms.scss */
+/* line 184, ../../../app/assets/stylesheets/partials/_forms.scss */
 .simple_form div.boolean label, .simple_form label.collection_radio {
   float: none;
   margin: 0;
 }
 
-/* line 172, ../../../app/stylesheets/partials/_forms.scss */
+/* line 189, ../../../app/assets/stylesheets/partials/_forms.scss */
 .simple_form label.collection_radio {
   margin-right: 10px;
   margin-left: 2px;
 }
 
-/* line 4, ../../../app/stylesheets/partials/_menu.scss */
+/* line 194, ../../../app/assets/stylesheets/partials/_forms.scss */
+.simple_form input.small {
+  height: 12px;
+  font-size: 15px;
+}
+
+/* line 199, ../../../app/assets/stylesheets/partials/_forms.scss */
+.simple_form input.date, .simple_form input.currency {
+  width: 90px;
+  margin-right: 10px;
+}
+
+/* line 204, ../../../app/assets/stylesheets/partials/_forms.scss */
+span.currency {
+  font-family: Georgia;
+  font-size: 15px;
+}
+
+/* line 210, ../../../app/assets/stylesheets/partials/_forms.scss */
+.tight_form label {
+  margin: 0px 10px;
+  float: left;
+  text-align: left;
+  font-family: Titillium-XBold;
+  font-size: 15px;
+  margin: 2px 0px;
+  width: 100px;
+}
+
+/* line 4, ../../../app/assets/stylesheets/partials/_menu.scss */
 #small_signup {
   display: inline;
   float: none;
@@ -264,41 +320,106 @@ input[type="checkbox"] {
   width: 170px;
 }
 
-/* line 13, ../../../app/stylesheets/partials/_menu.scss */
-#message_menu {
-  right: 10px;
+/* line 13, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox.messages {
+  position: absolute;
+  left: 36px;
+  top: 29px;
   z-index: 2;
 }
 
-/* line 17, ../../../app/stylesheets/partials/_menu.scss */
-#contact_menu {
-  right: -30px;
-  z-index: 3;
-}
-
-/* line 22, ../../../app/stylesheets/partials/_menu.scss */
-#lead_menu {
-  right: -60px;
-  z-index: 1;
-}
-
-/* line 28, ../../../app/stylesheets/partials/_menu.scss */
-.dropdownmenu {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  display: none;
-  background-color: white;
+/* line 19, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox.contacts {
   position: absolute;
-  width: 210px;
-  border: 2px solid black;
-  text-align: left;
-  top: 40px;
-  margin-right: 0px;
-  *margin-right: -1px;
-  font-size: 11px;
+  left: 85px;
+  top: 29px;
+  z-index: 2;
 }
 
-/* line 1, ../../../app/stylesheets/partials/_login.scss */
+/* line 25, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox.leads {
+  position: absolute;
+  left: -10px;
+  top: 29px;
+  z-index: 2;
+}
+
+/* line 31, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox {
+  width: 350px;
+  display: none;
+}
+/* line 34, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox #pointer {
+  background: url(/images/bubble_pointer.png) no-repeat 100% 100%;
+  height: 9px;
+}
+/* line 38, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section {
+  background: white;
+  border-right: 1px solid #9ea3a0;
+  border-bottom: 1px solid #9ea3a0;
+  border-left: 1px solid #9ea3a0;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 0px 3px #9ea3a0;
+  -webkit-box-shadow: 0px 0px 3px #9ea3a0;
+  box-shadow: 0px 0px 3px #9ea3a0;
+}
+/* line 53, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section .header .boxname {
+  float: left;
+  padding: 7px 5px;
+}
+/* line 56, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section .header .boxname h1 {
+  font-family: Titillium-XBold;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+/* line 62, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section .header .toplink {
+  padding: 8px 5px;
+  float: right;
+}
+/* line 65, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section .header .toplink a {
+  font-family: Titillium-Medium;
+  font-size: 14px;
+}
+/* line 72, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section #content {
+  clear: both;
+}
+/* line 74, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section #content .actionbox_entry {
+  background: #f5fdf2;
+  margin-bottom: 4px;
+  font-family: Titillium-Medium;
+  color: #42515a;
+  font-size: 13px;
+  padding: 5px 10px;
+}
+/* line 82, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section #content .actionbox_entry:hover {
+  background: #e2edde;
+}
+/* line 85, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section #content .title {
+  font-family: Titillium-XBold;
+}
+/* line 88, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section #content .footer {
+  color: #CFD6D0;
+}
+/* line 92, ../../../app/assets/stylesheets/partials/_menu.scss */
+.actionbox section #actionfooter {
+  padding: 10px 10px;
+  text-align: right;
+}
+
+/* line 1, ../../../app/assets/stylesheets/partials/_login.scss */
 .login_link {
   background: url(/images/dropdown.png) 100% 100% no-repeat;
   height: 17px;
@@ -306,15 +427,7 @@ input[type="checkbox"] {
   float: right;
 }
 
-/* line 7, ../../../app/stylesheets/partials/_login.scss */
-.logout_link {
-  text-align: right;
-  height: 17px;
-  width: 50px;
-  float: right;
-}
-
-/* line 14, ../../../app/stylesheets/partials/_login.scss */
+/* line 9, ../../../app/assets/stylesheets/partials/_login.scss */
 nav.user #login_menu {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -337,7 +450,7 @@ nav.user #login_menu {
   -moz-box-shadow: 0px 0px 1px #000;
   box-shadow: 0px 0px 1px #000;
 }
-/* line 15, ../../../app/stylesheets/partials/_login.scss */
+/* line 10, ../../../app/assets/stylesheets/partials/_login.scss */
 nav.user #login_menu .login_link {
   margin: 12px 9px;
   font-size: 14px;
@@ -347,81 +460,98 @@ nav.user #login_menu .login_link {
   width: 50px;
   float: right;
 }
-/* line 25, ../../../app/stylesheets/partials/_login.scss */
+/* line 20, ../../../app/assets/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form {
   margin-top: 50px;
   text-align: left;
   padding: 0 10px 10px 10px;
 }
-/* line 29, ../../../app/stylesheets/partials/_login.scss */
+/* line 24, ../../../app/assets/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form fieldset {
   margin: 0 0 10px 0;
 }
-/* line 31, ../../../app/stylesheets/partials/_login.scss */
+/* line 26, ../../../app/assets/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form fieldset input[type="text"], nav.user #login_menu .input_form fieldset input[type="password"], nav.user #login_menu .input_form fieldset input[type="email"] {
   width: 210px;
 }
-/* line 35, ../../../app/stylesheets/partials/_login.scss */
+/* line 30, ../../../app/assets/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form .button_form {
   text-align: right;
 }
-/* line 38, ../../../app/stylesheets/partials/_login.scss */
+/* line 33, ../../../app/assets/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form legend {
   font-family: Titillium-Medium;
   display: block;
   font-size: 15px;
   color: #414f57;
 }
-/* line 44, ../../../app/stylesheets/partials/_login.scss */
+/* line 39, ../../../app/assets/stylesheets/partials/_login.scss */
 nav.user #login_menu .input_form p {
   font-size: 15px;
 }
 
-/* line 10, ../../../app/stylesheets/application.scss */
+/* line 10, ../../../app/assets/stylesheets/application.scss */
 section, header, footer, aside, nav, article {
   display: block;
 }
 
-/* line 14, ../../../app/stylesheets/application.scss */
+/* line 14, ../../../app/assets/stylesheets/application.scss */
 html, body {
   height: 100%;
 }
 
-/* line 18, ../../../app/stylesheets/application.scss */
+/* line 18, ../../../app/assets/stylesheets/application.scss */
 body {
   font-family: Georgia;
-  color: #414f57;
+  color: #42515a;
   font-size: 15px;
   line-height: 1.5;
 }
 
-/* line 25, ../../../app/stylesheets/application.scss */
+/* line 27, ../../../app/assets/stylesheets/application.scss */
 a, a:visited {
   color: #e78b2c;
 }
 
-/* line 28, ../../../app/stylesheets/application.scss */
+/* line 30, ../../../app/assets/stylesheets/application.scss */
 a:hover, a:focus {
   color: #d67a1b;
 }
 
-/* line 32, ../../../app/stylesheets/application.scss */
+/* line 34, ../../../app/assets/stylesheets/application.scss */
+a.underline, a.underline:visited {
+  border-bottom: 1px solid #e78b2c;
+}
+
+/* line 37, ../../../app/assets/stylesheets/application.scss */
+a.underline:hover, a.underline:focus {
+  border-bottom: 1px solid #d67a1b;
+}
+
+/* line 41, ../../../app/assets/stylesheets/application.scss */
 ul {
   list-style: none;
   padding: 0px;
 }
-/* line 35, ../../../app/stylesheets/application.scss */
-ul li {
-  margin-top: 5px;
+
+/* line 46, ../../../app/assets/stylesheets/application.scss */
+strong {
+  font-family: Titillium-XBold;
+  font-size: 15px;
 }
 
-/* line 40, ../../../app/stylesheets/application.scss */
+/* line 51, ../../../app/assets/stylesheets/application.scss */
 p {
   line-height: 1.7;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-/* line 45, ../../../app/stylesheets/application.scss */
+/* line 56, ../../../app/assets/stylesheets/application.scss */
+.medium {
+  font-family: Titillium-Medium;
+}
+
+/* line 59, ../../../app/assets/stylesheets/application.scss */
 h1, h2, h3, h4, h5 {
   color: #414f57;
   margin-bottom: 6px;
@@ -429,86 +559,44 @@ h1, h2, h3, h4, h5 {
   line-height: 1.5;
 }
 
-/* line 51, ../../../app/stylesheets/application.scss */
+/* line 65, ../../../app/assets/stylesheets/application.scss */
 a, a:visited, a:hover, a:focus {
   text-decoration: none;
 }
 
-/* line 59, ../../../app/stylesheets/application.scss */
-h3 a, h3 a:visited, h4 a, h4 a:visited {
-  border-bottom: 1px solid #e78b2c;
-}
-/* line 62, ../../../app/stylesheets/application.scss */
-h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus {
-  border-bottom: 1px solid #d67a1b;
-}
-
-/* line 67, ../../../app/stylesheets/application.scss */
+/* line 69, ../../../app/assets/stylesheets/application.scss */
 h1 {
-  font-family: Titillium-Light;
-  color: #414f57;
-  line-height: 1.2;
-  font-size: 40px;
-  margin-bottom: 30px;
+  font-family: Titillium-XBold;
+  font-size: 23px;
+  margin-bottom: 20px;
 }
 
-/* line 75, ../../../app/stylesheets/application.scss */
-h2 {
-  font-family: Titillium-Medium;
-  color: #414f57;
-  font-size: 30px;
-}
-
-/* line 81, ../../../app/stylesheets/application.scss */
-h3 {
-  font-family: Titillium-Medium;
-  padding-bottom: 5px;
-  color: #414f57;
-  font-size: 26px;
-}
-
-/* line 88, ../../../app/stylesheets/application.scss */
-h4 {
-  font-family: Titillium-Medium;
-  font-size: 19px;
-  text-shadow: 0px 0px 0px;
-}
-
-/* line 94, ../../../app/stylesheets/application.scss */
-h5 {
-  color: white;
-  font-family: Titillium-Medium;
-  font-size: 26px;
-  text-shadow: 1px 1px 1px #000;
-  margin: 0px 0px 20px 0px;
-}
-
-/* line 102, ../../../app/stylesheets/application.scss */
+/* line 75, ../../../app/assets/stylesheets/application.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 106, ../../../app/stylesheets/application.scss */
+/* line 79, ../../../app/assets/stylesheets/application.scss */
 article {
   margin-bottom: 20px;
 }
 
-/* line 110, ../../../app/stylesheets/application.scss */
+/* line 83, ../../../app/assets/stylesheets/application.scss */
 .titillium {
   font-family: Titillium-Medium;
   font-size: 15px;
   color: #354048;
 }
 
-/* line 116, ../../../app/stylesheets/application.scss */
+/* line 89, ../../../app/assets/stylesheets/application.scss */
 #wrapper {
   min-height: 100%;
 }
 
-/* line 121, ../../../app/stylesheets/application.scss */
+/* line 94, ../../../app/assets/stylesheets/application.scss */
 #wrapper header {
   font-size: 14px;
-  height: 50px;
+  height: 45px;
   clear: both;
   border-bottom: 1px solid #fff;
   background: #e4f0e0;
@@ -517,14 +605,14 @@ article {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#E4F0E0', EndColorStr='#E0ebdc');
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#E4F0E0', EndColorStr='#E0ebdc')";
 }
-/* line 133, ../../../app/stylesheets/application.scss */
+/* line 106, ../../../app/assets/stylesheets/application.scss */
 #wrapper header .content {
-  padding: 20px 0px;
+  padding: 10px 0px;
   margin: 0px auto;
   width: 960px;
   overflow: visible;
 }
-/* line 137, ../../../app/stylesheets/application.scss */
+/* line 110, ../../../app/assets/stylesheets/application.scss */
 #wrapper header .content .logo {
   float: left;
   margin: 0px 10px;
@@ -533,54 +621,98 @@ article {
   height: 24px;
   background: url(/images/flockstreet-beta.png) no-repeat 100% 100%;
 }
-/* line 143, ../../../app/stylesheets/application.scss */
+/* line 116, ../../../app/assets/stylesheets/application.scss */
 #wrapper header .content nav.user {
-  text-align: left;
   float: right;
-  width: 60px;
-  margin: 0px 10px;
   margin: 0px;
+  margin-top: 5px;
+}
+/* line 120, ../../../app/assets/stylesheets/application.scss */
+#wrapper header .content nav.user a, #wrapper header .content nav.user a:hover, #wrapper header .content nav.user a:active {
+  color: #414f57;
+  color: rgba(65, 79, 87, 0.8);
+}
+/* line 124, ../../../app/assets/stylesheets/application.scss */
+#wrapper header .content nav.user ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  font-family: Titillium-Medium;
+}
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#wrapper header .content nav.user ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#wrapper header .content nav.user ul li:first-child, #wrapper header .content nav.user ul li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#wrapper header .content nav.user ul li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+#wrapper header .content nav.user ul li.last {
+  padding-right: 0;
+}
+/* line 127, ../../../app/assets/stylesheets/application.scss */
+#wrapper header .content nav.user ul li {
+  margin-left: 15px;
 }
 
-/* line 151, ../../../app/stylesheets/application.scss */
+/* line 133, ../../../app/assets/stylesheets/application.scss */
 #bar {
   font-size: 15px;
-  height: 50px;
+  height: 44px;
   clear: both;
   border-bottom: 1px solid #D0D6D0;
   background: #414f57;
 }
-/* line 157, ../../../app/stylesheets/application.scss */
+/* line 139, ../../../app/assets/stylesheets/application.scss */
 #bar .content {
-  padding: 5px 0px;
+  padding: 7px 0px;
   margin: 0px auto;
   width: 960px;
   overflow: visible;
 }
-/* line 161, ../../../app/stylesheets/application.scss */
+/* line 143, ../../../app/assets/stylesheets/application.scss */
 #bar .content #actionsearch {
-  float: left;
-  width: 380px;
-  margin: 0px 10px;
-}
-/* line 166, ../../../app/stylesheets/application.scss */
-#bar .content nav.actionbuttons {
   float: left;
   width: 300px;
   margin: 0px 10px;
 }
-/* line 171, ../../../app/stylesheets/application.scss */
+/* line 148, ../../../app/assets/stylesheets/application.scss */
+#bar .content nav.actionbuttons {
+  float: left;
+  width: 220px;
+  margin: 0px 10px;
+  position: relative;
+}
+/* line 153, ../../../app/assets/stylesheets/application.scss */
+#bar .content nav.actionbuttons a.dropdown {
+  padding-right: 10px;
+}
+/* line 157, ../../../app/assets/stylesheets/application.scss */
 #bar .content .profile {
   font-family: Titillium-Medium;
   text-align: right;
-  padding-top: 10px;
+  padding-top: 5px;
   float: right;
   width: 220px;
   margin: 0px 0px;
   color: #fff;
 }
 
-/* line 183, ../../../app/stylesheets/application.scss */
+/* line 169, ../../../app/assets/stylesheets/application.scss */
 #hass_shadow {
   height: 3px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
@@ -588,36 +720,42 @@ article {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
 }
 
-/* line 190, ../../../app/stylesheets/application.scss */
+/* line 176, ../../../app/assets/stylesheets/application.scss */
 #flash {
   margin: 0px auto;
   width: 960px;
   min-height: 20px;
 }
 
-/* line 195, ../../../app/stylesheets/application.scss */
+/* line 181, ../../../app/assets/stylesheets/application.scss */
 #flash_notice {
   background: #7fb6b1;
   border: 1px solid #aaa;
 }
 
-/* line 200, ../../../app/stylesheets/application.scss */
+/* line 186, ../../../app/assets/stylesheets/application.scss */
 #flash_error {
   background: #e78b2c;
   border: 1px solid #ea8c1c;
 }
 
-/* line 207, ../../../app/stylesheets/application.scss */
+/* line 192, ../../../app/assets/stylesheets/application.scss */
+nav.main {
+  clear: both;
+  width: 960px;
+  float: left;
+  margin: 0px 10px;
+}
+/* line 194, ../../../app/assets/stylesheets/application.scss */
 nav.main ul {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
   overflow: hidden;
   *zoom: 1;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
-/* line 51, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+/* line 60, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 nav.main ul li {
   list-style-image: none;
   list-style-type: none;
@@ -628,27 +766,23 @@ nav.main ul li {
   padding-left: 4px;
   padding-right: 4px;
 }
-/* line 43, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
+/* line 48, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 nav.main ul li:first-child, nav.main ul li.first {
-  padding-left: 0px;
+  padding-left: 0;
 }
-/* line 44, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/lists/_horizontal-list.scss */
-nav.main ul li:last-child, nav.main ul li.last {
-  padding-right: 0px;
+/* line 49, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+nav.main ul li:last-child {
+  padding-right: 0;
 }
-/* line 210, ../../../app/stylesheets/application.scss */
-nav.main ul li.active a {
-  border-bottom: 3px solid #414f57;
+/* line 50, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+nav.main ul li.last {
+  padding-right: 0;
 }
-/* line 213, ../../../app/stylesheets/application.scss */
-nav.main ul li.active a:hover {
-  border-bottom: 3px solid #313131;
-}
-/* line 216, ../../../app/stylesheets/application.scss */
+/* line 197, ../../../app/assets/stylesheets/application.scss */
 nav.main ul li {
   margin-right: 25px;
 }
-/* line 218, ../../../app/stylesheets/application.scss */
+/* line 199, ../../../app/assets/stylesheets/application.scss */
 nav.main ul li a, nav.main ul li a:visited, nav.main ul li a:hover, nav.main ul li a:focus {
   font-family: Titillium-Medium;
   font-size: 20px;
@@ -657,13 +791,24 @@ nav.main ul li a, nav.main ul li a:visited, nav.main ul li a:hover, nav.main ul 
   padding-bottom: 2px;
   white-space: nowrap;
 }
-/* line 226, ../../../app/stylesheets/application.scss */
+/* line 207, ../../../app/assets/stylesheets/application.scss */
 nav.main ul li a:hover, nav.main ul li a:focus {
   color: #313131;
   border-bottom: 1px solid #313131;
 }
+/* line 212, ../../../app/assets/stylesheets/application.scss */
+nav.main ul li:first-child {
+  padding-left: 20px;
+  background: url(/images/icons/home.png) no-repeat 0% 40%;
+}
+/* line 217, ../../../app/assets/stylesheets/application.scss */
+nav.main ul a.active, nav.main ul a.active:visited, nav.main ul a.active:hover {
+  font-family: Titillium-XBold;
+  padding-bottom: 1px;
+  border-bottom: 3px solid #414f57;
+}
 
-/* line 235, ../../../app/stylesheets/application.scss */
+/* line 226, ../../../app/assets/stylesheets/application.scss */
 #container {
   margin: 0px auto;
   width: 960px;
@@ -672,28 +817,13 @@ nav.main ul li a:hover, nav.main ul li a:focus {
   overflow: hidden;
 }
 
-/* line 242, ../../../app/stylesheets/application.scss */
+/* line 233, ../../../app/assets/stylesheets/application.scss */
 #actionbutton {
   float: right;
   margin: 0px 0px;
 }
 
-/* line 247, ../../../app/stylesheets/application.scss */
-section.content {
-  float: left;
-  margin: 0 10px;
-  width: 780px;
-}
-
-/* line 253, ../../../app/stylesheets/application.scss */
-.full {
-  clear: both;
-  width: 960px;
-  float: left;
-  margin: 0px 10px;
-}
-
-/* line 259, ../../../app/stylesheets/application.scss */
+/* line 239, ../../../app/assets/stylesheets/application.scss */
 #dashboard, .wide {
   width: 620px;
   margin: 0 10px;
@@ -701,14 +831,7 @@ section.content {
   marign-bottom: 20px;
 }
 
-/* line 264, ../../../app/stylesheets/application.scss */
-#content {
-  width: 620px;
-  margin: 0 10px;
-  float: left;
-}
-
-/* line 267, ../../../app/stylesheets/application.scss */
+/* line 244, ../../../app/assets/stylesheets/application.scss */
 .slim {
   float: left;
   margin: 0px 10px;
@@ -716,25 +839,84 @@ section.content {
   margin-bottom: 20px;
 }
 
-/* line 273, ../../../app/stylesheets/application.scss */
+/* line 250, ../../../app/assets/stylesheets/application.scss */
 nav.sidebar {
-  margin: 0 10px;
+  margin: 70px 10px 20px 10px;
   float: left;
   width: 140px;
 }
-/* line 278, ../../../app/stylesheets/application.scss */
-nav.sidebar ul a {
-  font-family: Titillium-XBold;
-  color: #414f57;
+/* line 254, ../../../app/assets/stylesheets/application.scss */
+nav.sidebar ul {
+  margin-bottom: 20px;
 }
-/* line 282, ../../../app/stylesheets/application.scss */
-nav.sidebar ul li {
-  background: #e2eede;
+/* line 256, ../../../app/assets/stylesheets/application.scss */
+nav.sidebar ul li:first-child a {
+  -moz-border-top-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 264, ../../../app/assets/stylesheets/application.scss */
+nav.sidebar ul li:last-child a {
+  -moz-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 272, ../../../app/assets/stylesheets/application.scss */
+nav.sidebar ul a, nav.sidebar ul a:active, nav.sidebar ul a:hover {
+  font-family: Titillium-Medium;
   padding: 10px;
-  margin-bottom: 4px;
+  background: #e2eede;
+  margin-bottom: 2px;
+  display: block;
+  color: #42515a;
+  color: rgba(77, 89, 98, 0.9);
+}
+/* line 281, ../../../app/assets/stylesheets/application.scss */
+nav.sidebar ul a.active {
+  background: #414f57;
+  color: white;
 }
 
-/* line 292, ../../../app/stylesheets/application.scss */
+/* line 289, ../../../app/assets/stylesheets/application.scss */
+ul.action li.action {
+  background: none;
+  padding: 0px;
+}
+
+/* line 295, ../../../app/assets/stylesheets/application.scss */
+section#content {
+  width: 800px;
+  float: left;
+}
+/* line 298, ../../../app/assets/stylesheets/application.scss */
+section#content article.request {
+  float: left;
+  width: 520px;
+  margin: 30px 10px 10px 30px;
+  padding: 0px;
+}
+/* line 304, ../../../app/assets/stylesheets/application.scss */
+section#content #action-menu {
+  background: #F5FdF3;
+  float: left;
+  width: 200px;
+  margin: 40px 10px;
+  padding: 10px;
+  line-height: 2.2em;
+}
+/* line 311, ../../../app/assets/stylesheets/application.scss */
+section#content #action-menu h2 {
+  font-family: Titillium-XBold;
+  font-size: 15px;
+}
+
+/* line 318, ../../../app/assets/stylesheets/application.scss */
 footer.small {
   clear: both;
   border-top: 1px solid #42515a;
@@ -752,7 +934,7 @@ footer.small {
   -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
   -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
 }
-/* line 309, ../../../app/stylesheets/application.scss */
+/* line 335, ../../../app/assets/stylesheets/application.scss */
 footer.small nav.footer {
   min-height: 185px;
   margin: 0px auto;
@@ -761,7 +943,7 @@ footer.small nav.footer {
   overflow: hidden;
   text-shadow: 1px 1px 1px #000;
 }
-/* line 315, ../../../app/stylesheets/application.scss */
+/* line 341, ../../../app/assets/stylesheets/application.scss */
 footer.small nav.footer a {
   font-family: Titillium-Medium;
   font-size: 0.9em;
@@ -769,12 +951,12 @@ footer.small nav.footer a {
   color: white;
   text-decoration: none;
 }
-/* line 322, ../../../app/stylesheets/application.scss */
+/* line 348, ../../../app/assets/stylesheets/application.scss */
 footer.small nav.footer a:hover {
   color: #fff;
 }
 
-/* line 328, ../../../app/stylesheets/application.scss */
+/* line 354, ../../../app/assets/stylesheets/application.scss */
 footer .copyright {
   margin: 0px auto;
   width: 960px;
@@ -784,49 +966,43 @@ footer .copyright {
   color: #cfd6d0;
   text-shadow: 1px 1px 1px #000;
 }
-/* line 335, ../../../app/stylesheets/application.scss */
+/* line 361, ../../../app/assets/stylesheets/application.scss */
 footer .copyright a {
   font-size: 12px;
   color: #cfd6d0;
   text-shadow: 1px 1px 1px #000;
   text-decoration: none;
 }
-/* line 341, ../../../app/stylesheets/application.scss */
+/* line 367, ../../../app/assets/stylesheets/application.scss */
 footer .copyright a:hover {
   color: #fff;
 }
-/* line 344, ../../../app/stylesheets/application.scss */
+/* line 370, ../../../app/assets/stylesheets/application.scss */
 footer .copyright .ginetta {
   text-align: right;
   float: left;
   width: 780px;
   margin: 0px 10px;
 }
-/* line 350, ../../../app/stylesheets/application.scss */
+/* line 376, ../../../app/assets/stylesheets/application.scss */
 footer .copyright .flockstreet {
   text-align: right;
   margin-right: 10px;
 }
 
-/* line 357, ../../../app/stylesheets/application.scss */
+/* line 383, ../../../app/assets/stylesheets/application.scss */
 .tag {
   float: left;
-  -moz-box-shadow: 1px 1px 2px #333;
-  -webkit-box-shadow: 1px 1px 2px #333;
-  box-shadow: 1px 1px 2px #333;
-  background-color: #43515A;
-  background-image: -moz-linear-gradient(top, #43515a, #3a464d);
-  /* FF3.6 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #43515a), color-stop(1, #3a464d));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#43515A', EndColorStr='#3a464d')";
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  background-color: #e2edd3;
   margin: 5px;
   padding: 2px 10px;
+  color: #42515a;
+  font-size: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
 }
-/* line 373, ../../../app/stylesheets/application.scss */
+/* line 394, ../../../app/assets/stylesheets/application.scss */
 .tag .tagname {
   padding: 0 5px;
   color: #fff;
@@ -835,14 +1011,14 @@ footer .copyright .flockstreet {
   text-transform: uppercase;
   float: left;
 }
-/* line 381, ../../../app/stylesheets/application.scss */
+/* line 402, ../../../app/assets/stylesheets/application.scss */
 .tag .tagdestroy {
   padding: 0 0 0 5px;
   float: left;
   border-left: 1px solid #414f57;
   background: rgba(255, 255, 255, 0);
 }
-/* line 386, ../../../app/stylesheets/application.scss */
+/* line 407, ../../../app/assets/stylesheets/application.scss */
 .tag .tagdestroy input[type="submit"] {
   background: #7fb6b1;
   background: rgba(255, 255, 255, 0);
@@ -858,47 +1034,229 @@ footer .copyright .flockstreet {
   position: relative;
   cursor: pointer;
 }
-/* line 402, ../../../app/stylesheets/application.scss */
+/* line 423, ../../../app/assets/stylesheets/application.scss */
 .tag .tagdestroy a {
   font-family: Titillium-Medium;
   color: #414f57;
 }
 
-/* line 410, ../../../app/stylesheets/application.scss */
+/* line 430, ../../../app/assets/stylesheets/application.scss */
+#interaction {
+  width: 620px;
+  margin: 0 10px;
+  float: left;
+}
+
+/* line 435, ../../../app/assets/stylesheets/application.scss */
 input[type="text"].statusupdate {
   margin: 0px;
   width: 602px;
 }
 
-/* line 416, ../../../app/stylesheets/application.scss */
+/* line 441, ../../../app/assets/stylesheets/application.scss */
 form.update input[type="checkbox"] {
   margin-top: 20px;
 }
-/* line 419, ../../../app/stylesheets/application.scss */
+/* line 444, ../../../app/assets/stylesheets/application.scss */
 form.update label {
   margin-top: 12px;
 }
-/* line 422, ../../../app/stylesheets/application.scss */
+/* line 447, ../../../app/assets/stylesheets/application.scss */
 form.update input[type="submit"] {
   float: right;
   margin: 10px 0px;
 }
 
-/* line 428, ../../../app/stylesheets/application.scss */
-#feed {
+/* line 453, ../../../app/assets/stylesheets/application.scss */
+section#feed {
+  width: 620px;
+  margin: 0 10px;
+  float: left;
   margin-top: 30px;
 }
-/* line 432, ../../../app/stylesheets/application.scss */
-#feed ul li article {
+/* line 458, ../../../app/assets/stylesheets/application.scss */
+section#feed ul li article {
   background: #f5fdf2;
   padding: 10px;
   margin-bottom: 4px;
 }
 
-/* line 443, ../../../app/stylesheets/application.scss */
+/* line 469, ../../../app/assets/stylesheets/application.scss */
 .icon_statusupdate, .icon_request, .icon_message, .icon_lead {
-  background: url(/images/icon_statusupdate.png);
+  background: url(/images/icons/statusupdate.png);
   float: left;
   width: 25px;
   height: 25px;
+}
+
+/* line 477, ../../../app/assets/stylesheets/application.scss */
+.bulk-action, .item-action {
+  float: left;
+  width: 780px;
+  margin: 0px 10px;
+  height: 21px;
+  background: #F5FdF3;
+  padding: 12px 0px;
+  border: 1px solid #dae8d8;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
+  font-family: Titillium-Medium;
+}
+/* line 489, ../../../app/assets/stylesheets/application.scss */
+.bulk-action .backlink, .item-action .backlink {
+  float: left;
+  margin: 0px 15px;
+}
+/* line 493, ../../../app/assets/stylesheets/application.scss */
+.bulk-action .checkbox, .item-action .checkbox {
+  text-align: center;
+  width: 50px;
+  float: left;
+}
+/* line 498, ../../../app/assets/stylesheets/application.scss */
+.bulk-action .actions, .item-action .actions {
+  float: left;
+}
+/* line 502, ../../../app/assets/stylesheets/application.scss */
+.bulk-action .paginate, .item-action .paginate {
+  float: right;
+  margin-right: 20px;
+}
+/* line 506, ../../../app/assets/stylesheets/application.scss */
+.bulk-action span, .item-action span {
+  float: left;
+}
+
+/* line 512, ../../../app/assets/stylesheets/application.scss */
+table {
+  float: left;
+  width: 780px;
+  margin: 20px 10px;
+  font-family: Titillium-Light;
+}
+/* line 517, ../../../app/assets/stylesheets/application.scss */
+table a, table a:visited, table a:hover {
+  font-size: 14px;
+  color: #42515a;
+}
+
+/* line 523, ../../../app/assets/stylesheets/application.scss */
+tr:hover, tr.selected {
+  background: #f5fdf3;
+}
+
+/* line 527, ../../../app/assets/stylesheets/application.scss */
+td {
+  font-size: 14px;
+}
+
+/* line 531, ../../../app/assets/stylesheets/application.scss */
+td.checkbox {
+  text-align: center;
+  width: 50px;
+  padding-top: 10px;
+}
+
+/* line 537, ../../../app/assets/stylesheets/application.scss */
+td.title {
+  width: 320px;
+  font-family: Titillium-XBold;
+}
+
+/* line 542, ../../../app/assets/stylesheets/application.scss */
+td.date {
+  width: 85px;
+  text-align: right;
+}
+
+/* line 547, ../../../app/assets/stylesheets/application.scss */
+td.tags {
+  padding-left: 10px;
+  width: 320px;
+}
+
+/* line 553, ../../../app/assets/stylesheets/application.scss */
+#associates_form #companies_search {
+  margin: 30px -5px 0 25px;
+  width: 365px;
+}
+
+/* line 558, ../../../app/assets/stylesheets/application.scss */
+td.logo {
+  width: 35px;
+}
+
+/* line 562, ../../../app/assets/stylesheets/application.scss */
+td.companyname {
+  width: 170px;
+  font-family: Titillium-XBold;
+}
+
+/* line 567, ../../../app/assets/stylesheets/application.scss */
+td.state {
+  width: 110px;
+}
+
+/* line 572, ../../../app/assets/stylesheets/application.scss */
+td.from {
+  width: 180px;
+}
+
+/* line 576, ../../../app/assets/stylesheets/application.scss */
+td.subject {
+  width: 465px;
+  font-family: Titillium-XBold;
+}
+
+/* line 582, ../../../app/assets/stylesheets/application.scss */
+#logocol {
+  float: left;
+  min-width: 90px;
+  margin: 10px 5px;
+}
+
+/* line 588, ../../../app/assets/stylesheets/application.scss */
+article.company {
+  float: left;
+  width: 430px;
+  margin: 30px 10px 10px 30px;
+  padding: 0px;
+}
+
+/* line 595, ../../../app/assets/stylesheets/application.scss */
+aside.companyprofile {
+  float: left;
+  width: 210px;
+  margin: 40px 0px 20px 0px;
+}
+/* line 599, ../../../app/assets/stylesheets/application.scss */
+aside.companyprofile article.contacts {
+  min-height: 150px;
+  background: #f5fdf3;
+  margin-bottom: 30px;
+}
+/* line 600, ../../../app/assets/stylesheets/application.scss */
+aside.companyprofile article.contacts h1 {
+  padding: 5px;
+}
+/* line 605, ../../../app/assets/stylesheets/application.scss */
+aside.companyprofile article.contacts ul li {
+  height: 35px;
+  margin-bottom: 2px;
+}
+/* line 608, ../../../app/assets/stylesheets/application.scss */
+aside.companyprofile article.contacts ul li a, aside.companyprofile article.contacts ul li a:active, aside.companyprofile article.contacts ul li a:hover {
+  height: 29px;
+  font-family: Titillium-XBold;
+  font-size: 14px;
+  padding-top: 6px;
+  padding-left: 45px;
+  display: block;
+  color: #42515a;
+  color: rgba(66, 81, 90, 0.9);
+}
+/* line 620, ../../../app/assets/stylesheets/application.scss */
+aside.companyprofile article.contacts ul li a:hover {
+  background: rgba(206, 217, 191, 0.5);
 }

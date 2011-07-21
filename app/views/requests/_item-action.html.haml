@@ -1,0 +1,4 @@
+.item-action
+  %span.backlink=link_to "< zurück zur Übersicht", requests_filter_path(@active), :class => "underline"
+  .actions
+    %span=link_to "editieren", edit_request_path(@request), :class => "small_action_button" if current_user && current_company == @company

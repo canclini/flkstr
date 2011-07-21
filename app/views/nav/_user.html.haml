@@ -1,24 +1,19 @@
-.search
-  \&nbsp;
-.language
-  - available_locales.each do |locale|
-    = link_to_unless current_locale?(locale), locale, current_page_path(:locale => locale)
 %nav.user
   - if current_user
-    %a{ :href => destroy_user_session_path, :class => "logout", :title => "logout"}
+    %a{ :href => destroy_user_session_url, :class => "logout", :title => "logout"}
       .logout_link
         Logout
   - else
-    %a{ :href => new_user_session_path, :class => "login", :title => "Login"}
+    %a{ :href => new_user_session_url, :class => "login", :title => "Login"}
       .login_link
         Login  
       
   #login_menu.transition  
-    %a{ :href => new_user_session_path, :class => "login", :title => "Login"}
+    %a{ :href => new_user_session_url, :class => "login", :title => "Login"}
       .login_link
         Login  
     .input_form        
-      = form_tag new_user_session_path do
+      = form_tag new_user_session_url do
         = field_set_tag 'E-Mail' do
           = text_field_tag 'user[email]', nil, :type => 'email'
         = field_set_tag 'Passwort' do
