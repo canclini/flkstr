@@ -1,4 +1,5 @@
 class PriceSuggestionsController < ApplicationController
+  skip_before_filter :force_subdomain
   
   def create
     @price = PriceSuggestion.new(params[:price_suggestion])

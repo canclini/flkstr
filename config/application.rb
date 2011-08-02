@@ -48,6 +48,6 @@ module Flockstreet
     
     # Enable the asset pipeline #Rails 3.1
     config.assets.enabled = false #Rails 3.1
-    
+        
   end
 end

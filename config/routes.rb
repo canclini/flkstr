@@ -1,43 +1,19 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
 
-constraints(:host => /www.flockstreet.com/ ) do
-  root :to => redirect("http://flockstreet.com")
-  match '/*path', :to => redirect {|params| "http://flockstreet.com/#{params[:path]}"}
-end
-constraints(:host => /www.localhost/ ) do
-  root :to => redirect("http://localhost:3000")
-  match '/*path', :to => redirect {|params| "http://localhost:3000/#{params[:path]}"}
-end
+  devise_for :users, :controllers => { :registrations => "users/registrations"}
   
-#  match "users/sign_in" => 'website#index' # only for website phase
-  scope :protocol => 'https', :subdomain => 'secure', :constraints => { :protocol => 'https', :subdomain => 'secure'} do
-    devise_for :users, :controllers => { :registrations => "users/registrations"}
-    
-    devise_for :users do
-      match "/(:plan)/signup" => "users/registrations#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
-    end
-    resources :companies do
-      get :tags, :on => :member
-    end
-  
-    # tag list update of the company (special during website phase)
-    match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put
-    match "/companies/:id/tags/:tag/remove" => "companies#remove_tag", :as => :remove_tag_company, :via => :delete
-    
+  devise_for :users do
+    match "/(:plan)/signup" => "users/registrations#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
   end
-  match "signup/", :constraints => {:host => /secure.flockstreet.com/ }, :to => redirect("https://secure.flockstreet.com/signup")
-  
-  constraints(:host => /secure.flockstreet.com/ ) do
-    root :to => redirect("http://flockstreet.com")
-    match '/*path', :to => redirect {|params| "http://flockstreet.com/#{params[:path]}"}
+  resources :companies do
+    get :tags, :on => :member
   end
-  
-  constraints(:host => /secure.localhost:3000/ ) do
-    root :to => redirect("http://localhost:3000")
-    match '/*path', :to => redirect {|params| "http://localhost:3000/#{params[:path]}"}
-  end
-  
+
+  # tag list update of the company (special during website phase)
+  match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put
+  match "/companies/:id/tags/:tag/remove" => "companies#remove_tag", :as => :remove_tag_company, :via => :delete
+      
   resources :products, :updates, :settings, :price_suggestions
   
    resources :requests do

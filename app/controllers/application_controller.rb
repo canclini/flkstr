@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   helper :all
   
-  before_filter :set_locale, :app_state
+  before_filter :force_subdomain, :set_locale, :app_state
   
   helper_method :flockstreet?, :current_company, :no_user!, :needs_company!, :app_state,
                 :available_locales, :current_locale?, :current_page_path
@@ -36,6 +36,18 @@ class ApplicationController < ActionController::Base
   #### PRIVATE #######
   private
   
+  def force_subdomain
+   if Rails.env == 'production'
+     if request.subdomain != 'secure' or request.protocol != 'https'
+       redirect_to :subdomain => 'secure', :protocol => 'https'
+     end
+   else
+      if request.subdomain != 'secure'
+        redirect_to :subdomain => 'secure'
+      end
+    end
+  end
+    
   def no_user!
     if user_signed_in?
       flash[:notice] = "Only logged out Users"
