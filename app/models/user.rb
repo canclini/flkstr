@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # fix to run devise with new bcrypt encryptor
+  devise :encryptable, :encryptor => :sha1
+  devise :database_authenticatable, :authentication_keys => [:email]
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :firstname, :lastname, :language, :email, :password, :password_confirmation, :remember_me, :notify, :notifiers, :terms_of_service
   
