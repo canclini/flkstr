@@ -41,9 +41,9 @@ group :test, :development do
 end
 
 group :test do
-#  gem 'spork', '~> 0.9.0.rc'
-#  gem 'guard-spork'
-  gem "factory_girl_rails"
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'guard-spork'
+  gem 'factory_girl_rails', :require => false
   gem "capybara"
   gem 'guard-rspec'
   gem 'database_cleaner'
