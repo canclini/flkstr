@@ -23,8 +23,8 @@ Spork.prefork do
    # If you're not using ActiveRecord, or you'd prefer not to run each of your
    # examples within a transaction, comment the following line or assign false
    # instead of true.
-   config.use_transactional_fixtures = true
-   config.use_instantiated_fixtures = false
+   config.use_transactional_fixtures = false
+   #config.use_instantiated_fixtures = false
    
    config.before(:suite) do
      DatabaseCleaner.strategy = :transaction
@@ -32,6 +32,7 @@ Spork.prefork do
    end
 
    config.before(:each) do
+     reset_email
      DatabaseCleaner.start
    end
 
@@ -43,20 +44,10 @@ end
 
 Spork.each_run do
  # This code will be run each time you run your specs.
- #config.include(MailerMacros)
- #config.before(:each) { reset_email } 
- load "#{Rails.root}/spec/support/auth_macros.rb"
- load "#{Rails.root}/spec/support/mailer_macros.rb"
- reset_email
- 
- 
- 
-  Flockstreet::Application.reload_routes!
-  require 'factory_girl_rails' 
-  
-  DatabaseCleaner.strategy = :truncation
-  DatabaseCleaner.clean
- 
+ load "#{Rails.root}/spec/support/auth_macros.rb" 
+ Flockstreet::Application.reload_routes!
+ require 'factory_girl_rails' 
+   
 end
 
 # --- Instructions ---
