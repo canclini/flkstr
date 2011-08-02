@@ -5,7 +5,7 @@ de:
   devise:
     sessions:
       user:
-        signed_out: Besten Dank! Wir werden Sie informieren sobald es los geht.
+        signed_out: Auf Wiedersehen
   date:
     formats:
       default: "%d.%m.%Y"

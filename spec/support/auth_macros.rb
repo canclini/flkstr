@@ -4,7 +4,7 @@ module AuthMacros
     visit new_user_session_path
     fill_in "Mailadresse", :with => user.email
     fill_in "Password", :with => user.password
-    click_button "Anmelden"
+    click_button "Login"
     @_current_user = user
   end
 
