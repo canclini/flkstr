@@ -2,9 +2,10 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-# If you have a Gemfile, require the gems listed there, including any gems
-# you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env) if defined?(Bundler)
+# If you have a Gemfile, require the default gems, the ones in the
+# current environment and also include :assets gems if in development
+# or test environments.
+Bundler.require *Rails.groups(:assets) if defined?(Bundler)
 
 module Flockstreet
   class Application < Rails::Application
@@ -44,5 +45,9 @@ module Flockstreet
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    # Enable the asset pipeline #Rails 3.1
+    config.assets.enabled = false #Rails 3.1
+    
   end
 end
