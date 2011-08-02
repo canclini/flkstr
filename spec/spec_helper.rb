@@ -16,6 +16,7 @@ Spork.prefork do
  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
  
  include MailerMacros
+ include AuthMacros
  
  RSpec.configure do |config|
    config.mock_with :rspec
@@ -44,8 +45,11 @@ Spork.each_run do
  # This code will be run each time you run your specs.
  #config.include(MailerMacros)
  #config.before(:each) { reset_email } 
+ load "#{Rails.root}/spec/support/auth_macros.rb"
  load "#{Rails.root}/spec/support/mailer_macros.rb"
  reset_email
+ 
+ 
  
   Flockstreet::Application.reload_routes!
   require 'factory_girl_rails' 
