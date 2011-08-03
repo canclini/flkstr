@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110803092939) do
+ActiveRecord::Schema.define(:version => 20110803181705) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "company_id"
@@ -195,15 +195,7 @@ ActiveRecord::Schema.define(:version => 20110803092939) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                :default => "",       :null => false
-    t.string   "reset_password_token"
-    t.string   "remember_token"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",        :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string   "email"
     t.string   "firstname"
     t.string   "lastname"
     t.string   "language"
@@ -214,17 +206,19 @@ ActiveRecord::Schema.define(:version => 20110803092939) do
     t.string   "fb"
     t.string   "twitter"
     t.string   "skype"
-    t.boolean  "admin",                :default => false
+    t.boolean  "admin",                  :default => false
     t.date     "since"
     t.text     "details"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "notify",               :default => "weekly"
-    t.integer  "notifiers_mask",       :default => 7
+    t.string   "notify",                 :default => "weekly"
+    t.integer  "notifiers_mask",         :default => 7
     t.string   "password_digest"
+    t.string   "auth_token"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

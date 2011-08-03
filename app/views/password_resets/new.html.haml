@@ -1,0 +1,7 @@
+= form_tag password_resets_path, :method => :post do
+  .green_box
+    %h3 Passwort vergessen
+    %fieldset
+      = label :email, "Mailadresse", :class => "transition"
+      = text_field_tag :email, params[:email], :class => 'transition'
+  = submit_tag "Reset Password", :class => "green_button"

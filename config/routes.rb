@@ -1,4 +1,5 @@
 Flockstreet::Application.routes.draw do
+
   # See how all your routes lay out with "rake routes"
   
 
@@ -13,7 +14,7 @@ Flockstreet::Application.routes.draw do
   get "login" => "sessions#new", :as => "login"
   get "signup" => "companies#new", :as => "register"
   
-  resources :users, :sessions, :products, :updates, :settings, :price_suggestions
+  resources :users, :sessions, :products, :updates, :settings, :price_suggestions, :password_resets
   
   resources :companies do
     get :tags, :on => :member

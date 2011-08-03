@@ -1,6 +1,0 @@
-= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |f|
-  = devise_error_messages! 
-  .green_box
-    %h3 Passwort vergessen
-    = f.input :email, :label => "Mailadresse", :input_html => { :class => 'transition' }
-  = f.submit "Reset Password", :class => "register_button"
