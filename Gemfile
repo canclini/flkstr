@@ -16,7 +16,7 @@ gem 'compass', '>= 0.10.5'
 gem 'simple_form', '>=1.3.0'
 gem 'will_paginate', "~> 3.0.pre4"
 gem 'acts-as-taggable-on'
-gem 'devise', ">=1.3.4"
+#gem 'devise', ">=1.3.4"
 #gem 'devise', "=1.1.3" # old version which was running ok
 
 gem 'geokit'
@@ -40,6 +40,7 @@ group :test, :development do
   gem 'growl'  
   gem 'guard-livereload'    
   gem 'launchy'
+	gem 'fuubar'
 end
 
 group :test do

@@ -1,7 +1,31 @@
 class CompaniesController < ApplicationController
   before_filter :authenticate_user!, :except => [:new, :create, :exists, :join]
-  layout 'small_footer', :only => [:tags, :add_tag, :remove_tag]
-  layout 'application'
+  
+  def new
+    @company = Company.new  
+    @user = @company.users.new    
+    render :layout => 'small_footer'
+  end
+  
+  def create
+    @company = Company.new(params[:company][:company])
+    @user = User.new(params[:company])
+    
+    if @company.valid? && @user.valid?
+      @company.save
+      @user.save
+      @company.plan = Plan.find_by_name('ready')    
+      @company.users << @user
+
+      flash[:notice] = "Erfolgreich registiert"
+      #UserMailer.registration_confirmation(resource).deliver
+      redirect_to dashboard_url
+        
+    else
+      render :new
+    end
+    
+  end
   
   def index
     @companies = Company.search(params[:query]).paginate :per_page => 10, :page => params[:page]
@@ -15,6 +39,7 @@ class CompaniesController < ApplicationController
     # only for initial signup during website phase
     @company = Company.find(params[:id])
     @tag_list = @company.tag_list
+    render :layout => 'small_footer'
   end
   
   def add_tag
@@ -85,7 +110,8 @@ class CompaniesController < ApplicationController
       flash[:notice] = "Successfully updated company profile."  
       redirect_to @company
     else  
-      render :action => 'edit'  
+      render :action => 'edit'
     end
   end
+  
 end

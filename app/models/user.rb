@@ -1,20 +1,13 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable, :lockable and :timeoutable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
-  # fix to run devise with new bcrypt encryptor
-  devise :encryptable, :encryptor => :sha1
-  devise :database_authenticatable, :authentication_keys => [:email]
-
+  has_secure_password
   # Setup accessible (or protected) attributes for your model
   attr_accessible :firstname, :lastname, :language, :email, :password, :password_confirmation, :remember_me, :notify, :notifiers, :terms_of_service
   
   belongs_to :company
   has_many :notifications
   validates_length_of :phone, :in => 7..32, :allow_blank => true
-  validates_length_of :password, :minimum => 6
+  validates_presence_of :password, :on => :create
+  validates :email, :presence => true, :uniqueness => true, :email_format => true
   validates_acceptance_of :terms_of_service
   
   NOTIFY = %w[immediate daily weekly] # one to many association; see Railscasts 189

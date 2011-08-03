@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "PasswordResets" do
   it "emails user when requesting password reset" do
     user = Factory(:user)
-    visit new_user_session_path
+    visit login_path
     click_link "password"
     within(:xpath, "//div[@class='green_box']") do
       fill_in "Mailadresse", :with => user.email
@@ -15,7 +15,7 @@ describe "PasswordResets" do
   end
 
  it "does not email invalid user when requesting password reset" do
-   visit new_user_session_path
+   visit login_path
    click_link "password"
    within(:xpath, "//div[@class='green_box']") do
      fill_in "Mailadresse", :with => "nobody@example.com"

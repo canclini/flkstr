@@ -1,22 +1,22 @@
 %nav.user
   - if current_user
-    %a{ :href => destroy_user_session_url, :class => "logout", :title => "logout"}
+    %a{ :href => logout_url, :class => "logout", :title => "logout"}
       .logout_link
         Logout
   - else
-    %a{ :href => new_user_session_url, :class => "login", :title => "Login"}
+    %a{ :href => login_url, :class => "login", :title => "Login"}
       .login_link
         Login  
       
   #login_menu.transition  
-    %a{ :href => new_user_session_url, :class => "login", :title => "Login"}
+    %a{ :href => login_url, :class => "login", :title => "Login"}
       .login_link
         Login  
     .input_form        
-      = form_tag new_user_session_url do
+      = form_tag sessions_url(:subdomain => 'secure' ) do
         = field_set_tag 'E-Mail' do
-          = text_field_tag 'user[email]', nil, :type => 'email'
+          = text_field_tag 'email', nil, :type => 'email'
         = field_set_tag 'Passwort' do
-          = password_field_tag 'user[password]'
+          = password_field_tag 'password'
         .button_form
           %button.login_button Login

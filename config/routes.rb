@@ -1,20 +1,23 @@
 Flockstreet::Application.routes.draw do
   # See how all your routes lay out with "rake routes"
-
-  devise_for :users, :controllers => { :registrations => "users/registrations"}
   
-  devise_for :users do
-    match "/(:plan)/signup" => "users/registrations#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
-  end
+
+  # tag list update of the company (special during website phase)
+  
+  match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put
+  match "/companies/:id/tags/:tag/remove" => "companies#remove_tag", :as => :remove_tag_company, :via => :delete
+
+  match "/(:plan)/signup" => "companies#new", :as => :register, :plan => /scale|connect|ready/, :defaults => { :plan => 'ready' }
+  
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "companies#new", :as => "register"
+  
+  resources :users, :sessions, :products, :updates, :settings, :price_suggestions
+  
   resources :companies do
     get :tags, :on => :member
   end
-
-  # tag list update of the company (special during website phase)
-  match "/companies/:id/tags/add" => "companies#add_tag", :as => :add_tag_company, :via => :put
-  match "/companies/:id/tags/:tag/remove" => "companies#remove_tag", :as => :remove_tag_company, :via => :delete
-      
-  resources :products, :updates, :settings, :price_suggestions
   
    resources :requests do
      collection do
@@ -26,6 +29,7 @@ Flockstreet::Application.routes.draw do
        put :assign
      end
    end
+  
    
   # singular resource definition for search
   resource :search, :controller => 'search'

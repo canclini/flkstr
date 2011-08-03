@@ -1,0 +1,14 @@
+= form_tag sessions_path, :class => "simple_form" do |f|
+  .green_box
+    %h3 Anmelden
+    %fieldset
+      = label :email, "Mailadresse", :class => "transition"
+      = text_field_tag :email, params[:email], :class => 'transition'
+    %fieldset
+      = label :password, "Password", :class => "transition"
+      = password_field_tag :password, params[:password], :class => 'transition'
+
+    //= f.input :email, :label => "Mailadresse", :input_html => { :class => 'transition' }
+    //= f.input :password, :label => "Password", :input_html => { :class => 'transition' }
+    //= link_to "Forgot your password?", new_password_path(user), :class => "forgot"
+  = submit_tag "Anmelden", :class => "green_button"

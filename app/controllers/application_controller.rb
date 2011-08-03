@@ -2,14 +2,14 @@ class ApplicationController < ActionController::Base
   include UrlHelper
   protect_from_forgery
 
-  layout :specify_layout
+  layout 'application'
 
   helper :all
   
   before_filter :force_subdomain, :set_locale, :app_state
   
   helper_method :flockstreet?, :current_company, :no_user!, :needs_company!, :app_state,
-                :available_locales, :current_locale?, :current_page_path
+                :available_locales, :current_locale?, :current_page_path, :current_user, :user_signed_in?
   
   def after_sign_in_path_for(resource_or_scope)
       dashboard_url
@@ -22,16 +22,6 @@ class ApplicationController < ActionController::Base
   #### PROTECTED #######
   protected 
 
-  def specify_layout
-    specific_layout = case controller_name
-       when 'sessions' then 'small_footer'
-       when 'passwords' then 'small_footer'
-       when 'registrations' then action_name == 'edit' ? 'application' : 'small_footer'
-       else "application"
-    end
-
-    specific_layout
-  end
 
   #### PRIVATE #######
   private
@@ -100,7 +90,33 @@ class ApplicationController < ActionController::Base
   def current_company?
     !!current_company
   end  
+
+  def user_signed_in?
+    current_user
+  end
   
+  def authenticate_user!
+    unless user_signed_in?
+      store_target_location
+      redirect_to login_url, :alert => "You must first log in or sign up before accessing this page."
+    end
+  end  
+
+  def redirect_to_target_or_default(default, *args)
+    redirect_to(session[:return_to] || default, *args)
+    session[:return_to] = nil
+  end
+
+  private
+
+  def store_target_location
+    session[:return_to] = request.url
+  end
+  
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+
   def current_company
     if user_signed_in?
       @current_company ||= current_user.company
