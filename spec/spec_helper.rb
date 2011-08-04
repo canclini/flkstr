@@ -5,7 +5,9 @@ Spork.prefork do
  # if you change any configuration or code from libraries loaded here, you'll
  # need to restart spork for it take effect.
  ENV["RAILS_ENV"] ||= 'test' 
- require File.expand_path("../../config/environment", __FILE__)
+ 
+ require File.expand_path("../../config/application", __FILE__) #preload gems
+ # require File.expand_path("../../config/environment", __FILE__)
   
  require 'rspec/rails'
  require 'capybara/rspec' 
@@ -24,7 +26,7 @@ Spork.prefork do
    # examples within a transaction, comment the following line or assign false
    # instead of true.
    config.use_transactional_fixtures = true
-   config.use_instantiated_fixtures = true
+   config.use_instantiated_fixtures = false
    
    config.before(:suite) do
      DatabaseCleaner.strategy = :transaction
@@ -32,7 +34,7 @@ Spork.prefork do
    end
    
    config.before(:each) do
-     reset_email
+     reset_email     
      DatabaseCleaner.start
    end
    
@@ -46,4 +48,9 @@ Spork.each_run do
  # This code will be run each time you run your specs.
  # Flockstreet::Application.reload_routes!
  require 'factory_girl_rails'
-end
+ require File.expand_path("../../config/environment", __FILE__)
+ 
+ # ActiveSupport::Dependencies.clear
+ # ActiveRecord::Base.instantiate_observers
+ 
+end #if Spork.using_spork?
