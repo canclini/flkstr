@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   layout 'small_footer'
   
   def new  
+    cookies.delete(:auth_token)
   end
   
   def create

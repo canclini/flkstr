@@ -8,6 +8,8 @@ class CompaniesController < ApplicationController
   end
   
   def create
+    # hack for terms of service
+    params[:company][:terms_of_service] = params[:user][:terms_of_service]
     @company = Company.new(params[:company][:company])
     @user = User.new(params[:company])
     
@@ -19,10 +21,12 @@ class CompaniesController < ApplicationController
 
       flash[:notice] = "Erfolgreich registiert"
       #UserMailer.registration_confirmation(resource).deliver
+      cookies.permanent[:auth_token] = @user.auth_token
+      
       redirect_to dashboard_url
         
     else
-      render :new
+      render :new, :layout => 'small_footer'
     end
     
   end

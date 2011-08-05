@@ -7,12 +7,11 @@ Spork.prefork do
  ENV["RAILS_ENV"] ||= 'test' 
  
  require File.expand_path("../../config/application", __FILE__) #preload gems
- # require File.expand_path("../../config/environment", __FILE__)
+ #require File.expand_path("../../config/environment", __FILE__)
   
  require 'rspec/rails'
  require 'capybara/rspec' 
  require 'database_cleaner'
- 
  # Requires supporting files with custom matchers and macros, etc,
  # in ./support/ and its subdirectories.
  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
@@ -35,7 +34,7 @@ Spork.prefork do
    
    config.before(:each) do
      reset_email     
-     DatabaseCleaner.start
+    DatabaseCleaner.start
    end
    
    config.after(:each) do
@@ -48,9 +47,9 @@ Spork.each_run do
  # This code will be run each time you run your specs.
  # Flockstreet::Application.reload_routes!
  require 'factory_girl_rails'
- require File.expand_path("../../config/environment", __FILE__)
+require File.expand_path("../../config/environment", __FILE__)
  
- # ActiveSupport::Dependencies.clear
- # ActiveRecord::Base.instantiate_observers
+  # ActiveSupport::Dependencies.clear
+  # ActiveRecord::Base.instantiate_observers
  
-end #if Spork.using_spork?
+end
