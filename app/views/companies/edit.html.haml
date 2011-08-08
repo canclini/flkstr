@@ -1,63 +1,62 @@
--title "Firmendaten editieren"
+= render :partial => "item-action"
+%article.company_profile
+  %h1= "Firmenprofil von #{@company.name} editieren"
 
-=form_for @company, :html => {:class => "tight_form", :multipart => true } do |f|
-  = f.error_messages  
-
-  #logocol
-    = image_tag @company.logo_url(:medium).to_s if @company.logo?
-    %br/
-    =link_to "bild ändern", "#"
-    //  =f.input :logo, :as => :file
-    &nbsp;
-    
-  %article.company
-    %p
-      = label :name, "Firmenname"
-      = text_field_tag :name, @company.name
-    %p
-      = label :teaser, "Teaser"
-      = text_field_tag :teaser, @company.teaser
-    %p
-      = label :tag_list, "Tags"
-      = text_field_tag :tag_list, @company.tag_list
-    
-    = f.fields_for :addresses do |address_fields|
-      %p
-        = label :street, "Strasse"
-        =address_fields.text_field :street
-        %br/
-        = label :plz, "Postleitzahl"
-        =address_fields.text_field :plz
-        %br/
-        = label :city, "Stadt"
-        =address_fields.text_field :city
-        %br/
-        = label :country, "Land"
-        =address_fields.text_field :country
-        
-    %p
-      = label :phone, "Telefon"
-      = text_field_tag :phone, @company.phone
-    %p
-      = label :fax, "Fax"
-      = text_field_tag :fax, @company.fax
-    %p
-      = label :email, "e-Mail"
-      = text_field_tag :email, @company.email
-    %p
-      = label :website, "Webseite"
-      = text_field_tag :website, @company.website
-    %p
-      = label :twitter, "Twitter"
-      = text_field_tag :twitter, @company.twitter
-    %p
-      = label :staff, "Mitarbeiter"
-      = text_field_tag :staff, @company.staff
+  =form_for @company, :html => {:class => "tight_form", :multipart => true } do |f|
+    = f.error_messages  
+  
+    #logocol
+      = image_tag @company.logo_url(:medium).to_s if @company.logo?
+      %br/
+      =link_to "bild ändern", "#"
+      //  =f.input :logo, :as => :file
+      &nbsp;
       
-    %h3 Erzählen Sie uns etwas über Ihre Firma
-    %p
-      = label :history, ""
-      = text_area_tag :history, @company.history
-    %br/
-    = f.submit "Speichern", :class => "button light"
+    %article.company  
+      %p
+        = f.label :teaser, "Teaser"
+        = f.text_field :teaser
+      %p
+        = f.label :tag_list, "Tags"
+        = f.text_field :tag_list
+      
+      = f.fields_for :addresses do |address_fields|
+        %p
+          = label :street, "Strasse"
+          =address_fields.text_field :street
+          %br/
+          = label :plz, "Postleitzahl"
+          =address_fields.text_field :plz
+          %br/
+          = label :city, "Stadt"
+          =address_fields.text_field :city
+          %br/
+          = label :country, "Land"
+          =address_fields.text_field :country
+          
+      %p
+        = f.label :phone, "Telefon"
+        = f.text_field :phone
+      %p
+        = f.label :fax, "Fax"
+        = f.text_field :fax
+      %p
+        = f.label :email, "e-Mail"
+        = f.text_field :email
+      %p
+        = f.label :website, "Webseite"
+        = f.text_field :website
+      %p
+        = f.label :twitter, "Twitter"
+        = f.text_field :twitter
+      %p
+        = f.label :staff, "Mitarbeiter"
+        = f.text_field :staff
+        
+      %h3 Erzählen Sie uns etwas über Ihre Firma
+      %p
+        = f.label :history, ""
+        = f.text_area :history
+      %br/
+      = f.submit "Speichern", :class => "button light"
         

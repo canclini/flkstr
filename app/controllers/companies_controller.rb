@@ -106,12 +106,16 @@ class CompaniesController < ApplicationController
   
   def edit
     @company = current_company
+    unless @company ==  Company.find(params[:id])
+      flash[:error] = "Unerlaubte Aktion"
+      redirect_to dashboard_url
+    end
   end
   
   def update
     @company = current_company
     if @company.update_attributes(params[:company])  
-      flash[:notice] = "Successfully updated company profile."  
+      flash[:notice] = "Profil wurde aktualisiert"
       redirect_to @company
     else  
       render :action => 'edit'

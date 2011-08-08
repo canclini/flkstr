@@ -50,7 +50,7 @@ Spork.each_run do
  # This code will be run each time you run your specs.
  # Flockstreet::Application.reload_routes!
  require 'factory_girl_rails'
-require File.expand_path("../../config/environment", __FILE__)
+ require File.expand_path("../../config/environment", __FILE__)
  
   # ActiveSupport::Dependencies.clear
   # ActiveRecord::Base.instantiate_observers
