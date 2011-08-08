@@ -5,6 +5,9 @@ Spork.prefork do
  # if you change any configuration or code from libraries loaded here, you'll
  # need to restart spork for it take effect.
  ENV["RAILS_ENV"] ||= 'test' 
+
+ require 'simplecov'
+ SimpleCov.start 'rails'
  
  require File.expand_path("../../config/application", __FILE__) #preload gems
  #require File.expand_path("../../config/environment", __FILE__)

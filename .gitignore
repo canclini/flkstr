@@ -7,3 +7,4 @@ public/system
 .sass-cache/
 public/assets/
 tmp/restart.txt
+coverage/
