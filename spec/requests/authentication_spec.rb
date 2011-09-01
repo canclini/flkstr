@@ -13,12 +13,14 @@ describe "Authentication Requests" do
   
   context "when logged out" do
     before { visit logout_path }
-    
-    it "logs in with known user" do
+
+    #normal flow
+    it "logs in with known user" do 
       login subject
       page.should have_content("Neuigkeiten")
     end
     
+    # e4
     it "should not login with wrong password" do
       visit login_path
       fill_in "email", :with => subject.email
@@ -48,6 +50,8 @@ describe "Authentication Requests" do
 end
 
 describe "PasswordResets" do
+  # e2  
+
   it "emails user when requesting password reset" do
     user = Factory(:user)
     visit login_path
@@ -57,7 +61,7 @@ describe "PasswordResets" do
     end
     click_button "Reset Password"
     current_path.should eq(root_path)
-    page.should have_content("Email sent")
+    page.should have_content("E-Mail mit Instruktionen versendet")
     last_email.to.should include(user.email)
   end
   
@@ -80,8 +84,8 @@ describe "PasswordResets" do
      fill_in "email", :with => "nobody@example.com"
    end
    click_button "Reset Password"
-   current_path.should eq(root_path)
-   page.should have_content("Email sent")
+   current_path.should eq(new_password_reset_path)
+   page.should have_content("E-Mail Adresse nicht bekannt")
    last_email.should be_nil
  end
 

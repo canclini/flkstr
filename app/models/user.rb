@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :notifications
   validates_length_of :phone, :in => 7..32, :allow_blank => true
   validates_presence_of :password, :on => :create
+  validates_length_of :password, :minimum => 4, :on => :create, :too_short => "zu kurz (mindestens 4 Zeichen)"
   validates :email, :presence => true, :uniqueness => true, :email_format => true
   validates_acceptance_of :terms_of_service
   

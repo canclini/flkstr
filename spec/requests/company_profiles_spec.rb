@@ -1,12 +1,18 @@
 require 'spec_helper'
 
+# UseCases: 
+# UC n2, UCn2-Firmenprofil_erfassen.odt
+
 describe "Company Profile" do
   
-  before { @user = Factory(:user) }
+  before do
+    @user = Factory(:user)
+    login @user
+  end
   
   it "can be searched by company name and be displayed" do
     profile = Factory(:company)
-    login @user
+  #  login @user
     fill_in "query", :with => profile.name
     click_button "Suchen"
     page.should have_content(profile.name)
@@ -16,14 +22,15 @@ describe "Company Profile" do
   
   context "the users company profile" do
     before do
-       login @user
        visit company_path(@user.company)
      end
     
+    # normal flow
     it "can be shown" do
       page.should have_content(@user.company.name)
     end
     
+    # normal flow
     it "can be edited" do
       click_link "editieren"
       page.should have_content("Firmenprofil von #{@user.company.name} editieren")
@@ -36,7 +43,6 @@ describe "Company Profile" do
 
     context "a different company profile page" do
       before do
-         login @user
          @othercompany = Factory(:company)
          visit company_path(@othercompany)
        end
