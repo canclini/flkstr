@@ -11,6 +11,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'activeadmin'
 gem 'haml'
 gem "compass", "~> 0.12.alpha.0"
 #gem 'compass', '>= 0.11.5', :require => false
