@@ -1,4 +1,8 @@
-@import "blueprint";
+/*
+*= require_self
+*/
+
+@import "_blueprint";
 @import "compass/reset";
 @import "compass/utilities";
 
@@ -111,7 +115,7 @@ article {
       @include slim();
       width: 160px;
       height: 24px;
-      background: url(/images/flockstreet-beta.png) no-repeat 100% 100%;
+      background: url(flockstreet-beta.png) no-repeat 100% 100%;
     }
     nav.user { // Top Right User Navigation
       float: right;
@@ -211,7 +215,7 @@ nav.main {
     }
     li:first-child {
       padding-left: 20px;
-      background: url(/images/icons/home.png) no-repeat 0% 40%;
+      background: url(icons/home.png) no-repeat 0% 40%;
     }
     
     a.active, a.active:visited, a.active:hover  {
@@ -467,7 +471,7 @@ section#feed {
 
 // ICONS
 .icon_statusupdate, .icon_request, .icon_message, .icon_lead {
-  background: url(/images/icons/statusupdate.png);
+  background: url(icons/statusupdate.png);
   float: left;
   width: 25px;
   height: 25px;

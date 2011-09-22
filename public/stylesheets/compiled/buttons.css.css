@@ -1,34 +1,27 @@
 /*
-Syntax error: Undefined mixin 'boxed'.
-        on line 404 of /Users/marcel/code/flockstreet/app/assets/stylesheets/screen.scss, in `boxed'
-        from line 404 of /Users/marcel/code/flockstreet/app/assets/stylesheets/screen.scss
+Syntax error: File to import not found or unreadable: partials/base.
+              Load paths:
+                Compass::SpriteImporter
+                /Users/marcel/code/flockstreet/public/stylesheets/sass
+                /Users/marcel/code/flockstreet/app/assets/stylesheets
+                /Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/compass-0.11.5/frameworks/blueprint/stylesheets
+                /Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/compass-0.11.5/frameworks/compass/stylesheets
+        on line 1 of /Users/marcel/code/flockstreet/app/assets/stylesheets/buttons.css.scss
 
-399: // FLASH MESSAGES, NOTICE MESSAGES, ERROR IN FORMS
-400: #flash_container {
-401:   @include container();
-402: }
-403: #flash_notice {
-404:   @include boxed($dark_green);
-405: }
-406: 
-407: #flash_error {
-408:   @include boxed($light_green, $dark_green);
-409: }
+1: @import "partials/base";
+2: 
+3: @mixin standard_button($startcolor: #81b9b4, $endcolor: #68948f, $bordercolor: #66928c) {
+4:   font-family: Titillium-XBold;
+5:   font-size: 15px;
+6:   text-align: center;
 
 Backtrace:
-/Users/marcel/code/flockstreet/app/assets/stylesheets/screen.scss:404:in `boxed'
-/Users/marcel/code/flockstreet/app/assets/stylesheets/screen.scss:404
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:169:in `visit_mixin'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:235:in `visit_rule'
+/Users/marcel/code/flockstreet/app/assets/stylesheets/buttons.css.scss:1
+/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/import_node.rb:64:in `rescue in import'
+/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/import_node.rb:42:in `import'
+/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/import_node.rb:25:in `imported_file'
+/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:148:in `rescue in visit_import'
+/Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:153:in `visit_import'
 /Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/perform.rb:18:in `visit'
 /Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/sass-3.1.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -96,4 +89,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'boxed'.\A         on line 404 of /Users/marcel/code/flockstreet/app/assets/stylesheets/screen.scss, in `boxed'\A         from line 404 of /Users/marcel/code/flockstreet/app/assets/stylesheets/screen.scss\A \A 399: // FLASH MESSAGES, NOTICE MESSAGES, ERROR IN FORMS\A 400: #flash_container {\A 401:   @include container();\A 402: }\A 403: #flash_notice {\A 404:   @include boxed($dark_green);\A 405: }\A 406: \A 407: #flash_error {\A 408:   @include boxed($light_green, $dark_green);\A 409: }"; }
+  content: "Syntax error: File to import not found or unreadable: partials/base.\A               Load paths:\A                 Compass::SpriteImporter\A                 /Users/marcel/code/flockstreet/public/stylesheets/sass\A                 /Users/marcel/code/flockstreet/app/assets/stylesheets\A                 /Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/compass-0.11.5/frameworks/blueprint/stylesheets\A                 /Users/marcel/.rvm/gems/ruby-1.9.2-head@flockstreet/gems/compass-0.11.5/frameworks/compass/stylesheets\A         on line 1 of /Users/marcel/code/flockstreet/app/assets/stylesheets/buttons.css.scss\A \A 1: @import \"partials/base\";\A 2: \A 3: @mixin standard_button($startcolor: #81b9b4, $endcolor: #68948f, $bordercolor: #66928c) {\A 4:   font-family: Titillium-XBold;\A 5:   font-size: 15px;\A 6:   text-align: center;"; }

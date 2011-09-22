@@ -1,3 +1,7 @@
+/*
+*= require_self
+*= require_tree .
+*/
 /* line 17, ../../../../../.rvm/gems/ruby-1.9.2-head@flockstreet/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -489,17 +493,17 @@ nav.user #login_menu .input_form p {
   font-size: 15px;
 }
 
-/* line 10, ../../../app/assets/stylesheets/application.scss */
+/* line 15, ../../../app/assets/stylesheets/application.scss */
 section, header, footer, aside, nav, article {
   display: block;
 }
 
-/* line 14, ../../../app/assets/stylesheets/application.scss */
+/* line 19, ../../../app/assets/stylesheets/application.scss */
 html, body {
   height: 100%;
 }
 
-/* line 18, ../../../app/assets/stylesheets/application.scss */
+/* line 23, ../../../app/assets/stylesheets/application.scss */
 body {
   font-family: Georgia;
   color: #42515a;
@@ -507,50 +511,50 @@ body {
   line-height: 1.5;
 }
 
-/* line 27, ../../../app/assets/stylesheets/application.scss */
+/* line 32, ../../../app/assets/stylesheets/application.scss */
 a, a:visited {
   color: #e78b2c;
 }
 
-/* line 30, ../../../app/assets/stylesheets/application.scss */
+/* line 35, ../../../app/assets/stylesheets/application.scss */
 a:hover, a:focus {
   color: #d67a1b;
 }
 
-/* line 34, ../../../app/assets/stylesheets/application.scss */
+/* line 39, ../../../app/assets/stylesheets/application.scss */
 a.underline, a.underline:visited {
   border-bottom: 1px solid #e78b2c;
 }
 
-/* line 37, ../../../app/assets/stylesheets/application.scss */
+/* line 42, ../../../app/assets/stylesheets/application.scss */
 a.underline:hover, a.underline:focus {
   border-bottom: 1px solid #d67a1b;
 }
 
-/* line 41, ../../../app/assets/stylesheets/application.scss */
+/* line 46, ../../../app/assets/stylesheets/application.scss */
 ul {
   list-style: none;
   padding: 0px;
 }
 
-/* line 46, ../../../app/assets/stylesheets/application.scss */
+/* line 51, ../../../app/assets/stylesheets/application.scss */
 strong {
   font-family: Titillium-XBold;
   font-size: 15px;
 }
 
-/* line 51, ../../../app/assets/stylesheets/application.scss */
+/* line 56, ../../../app/assets/stylesheets/application.scss */
 p {
   line-height: 1.7;
   margin-bottom: 20px;
 }
 
-/* line 56, ../../../app/assets/stylesheets/application.scss */
+/* line 61, ../../../app/assets/stylesheets/application.scss */
 .medium {
   font-family: Titillium-Medium;
 }
 
-/* line 59, ../../../app/assets/stylesheets/application.scss */
+/* line 64, ../../../app/assets/stylesheets/application.scss */
 h1, h2, h3, h4, h5 {
   color: #414f57;
   margin-bottom: 6px;
@@ -558,41 +562,41 @@ h1, h2, h3, h4, h5 {
   line-height: 1.5;
 }
 
-/* line 65, ../../../app/assets/stylesheets/application.scss */
+/* line 70, ../../../app/assets/stylesheets/application.scss */
 a, a:visited, a:hover, a:focus {
   text-decoration: none;
 }
 
-/* line 69, ../../../app/assets/stylesheets/application.scss */
+/* line 74, ../../../app/assets/stylesheets/application.scss */
 h1 {
   font-family: Titillium-XBold;
   font-size: 23px;
   margin-bottom: 20px;
 }
 
-/* line 75, ../../../app/assets/stylesheets/application.scss */
+/* line 80, ../../../app/assets/stylesheets/application.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 79, ../../../app/assets/stylesheets/application.scss */
+/* line 84, ../../../app/assets/stylesheets/application.scss */
 article {
   margin-bottom: 20px;
 }
 
-/* line 83, ../../../app/assets/stylesheets/application.scss */
+/* line 88, ../../../app/assets/stylesheets/application.scss */
 .titillium {
   font-family: Titillium-Medium;
   font-size: 15px;
   color: #354048;
 }
 
-/* line 89, ../../../app/assets/stylesheets/application.scss */
+/* line 94, ../../../app/assets/stylesheets/application.scss */
 #wrapper {
   min-height: 100%;
 }
 
-/* line 94, ../../../app/assets/stylesheets/application.scss */
+/* line 99, ../../../app/assets/stylesheets/application.scss */
 #wrapper header {
   font-size: 14px;
   height: 45px;
@@ -604,14 +608,14 @@ article {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#E4F0E0', EndColorStr='#E0ebdc');
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#E4F0E0', EndColorStr='#E0ebdc')";
 }
-/* line 106, ../../../app/assets/stylesheets/application.scss */
+/* line 111, ../../../app/assets/stylesheets/application.scss */
 #wrapper header .content {
   padding: 10px 0px;
   margin: 0px auto;
   width: 960px;
   overflow: visible;
 }
-/* line 110, ../../../app/assets/stylesheets/application.scss */
+/* line 115, ../../../app/assets/stylesheets/application.scss */
 #wrapper header .content .logo {
   float: left;
   margin: 0px 10px;
@@ -620,18 +624,18 @@ article {
   height: 24px;
   background: url(/images/flockstreet-beta.png) no-repeat 100% 100%;
 }
-/* line 116, ../../../app/assets/stylesheets/application.scss */
+/* line 121, ../../../app/assets/stylesheets/application.scss */
 #wrapper header .content nav.user {
   float: right;
   margin: 0px;
   margin-top: 5px;
 }
-/* line 120, ../../../app/assets/stylesheets/application.scss */
+/* line 125, ../../../app/assets/stylesheets/application.scss */
 #wrapper header .content nav.user a, #wrapper header .content nav.user a:hover, #wrapper header .content nav.user a:active {
   color: #414f57;
   color: rgba(65, 79, 87, 0.8);
 }
-/* line 124, ../../../app/assets/stylesheets/application.scss */
+/* line 129, ../../../app/assets/stylesheets/application.scss */
 #wrapper header .content nav.user ul {
   margin: 0;
   padding: 0;
@@ -663,12 +667,12 @@ article {
 #wrapper header .content nav.user ul li.last {
   padding-right: 0;
 }
-/* line 127, ../../../app/assets/stylesheets/application.scss */
+/* line 132, ../../../app/assets/stylesheets/application.scss */
 #wrapper header .content nav.user ul li {
   margin-left: 15px;
 }
 
-/* line 133, ../../../app/assets/stylesheets/application.scss */
+/* line 138, ../../../app/assets/stylesheets/application.scss */
 #bar {
   font-size: 15px;
   height: 44px;
@@ -676,31 +680,31 @@ article {
   border-bottom: 1px solid #D0D6D0;
   background: #414f57;
 }
-/* line 139, ../../../app/assets/stylesheets/application.scss */
+/* line 144, ../../../app/assets/stylesheets/application.scss */
 #bar .content {
   padding: 7px 0px;
   margin: 0px auto;
   width: 960px;
   overflow: visible;
 }
-/* line 143, ../../../app/assets/stylesheets/application.scss */
+/* line 148, ../../../app/assets/stylesheets/application.scss */
 #bar .content #actionsearch {
   float: left;
   width: 300px;
   margin: 0px 10px;
 }
-/* line 148, ../../../app/assets/stylesheets/application.scss */
+/* line 153, ../../../app/assets/stylesheets/application.scss */
 #bar .content nav.actionbuttons {
   float: left;
   width: 220px;
   margin: 0px 10px;
   position: relative;
 }
-/* line 153, ../../../app/assets/stylesheets/application.scss */
+/* line 158, ../../../app/assets/stylesheets/application.scss */
 #bar .content nav.actionbuttons a.dropdown {
   padding-right: 10px;
 }
-/* line 157, ../../../app/assets/stylesheets/application.scss */
+/* line 162, ../../../app/assets/stylesheets/application.scss */
 #bar .content .profile {
   font-family: Titillium-Medium;
   text-align: right;
@@ -711,7 +715,7 @@ article {
   color: #fff;
 }
 
-/* line 169, ../../../app/assets/stylesheets/application.scss */
+/* line 174, ../../../app/assets/stylesheets/application.scss */
 #hass_shadow {
   height: 3px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
@@ -719,33 +723,33 @@ article {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset;
 }
 
-/* line 176, ../../../app/assets/stylesheets/application.scss */
+/* line 181, ../../../app/assets/stylesheets/application.scss */
 #flash {
   margin: 0px auto;
   width: 960px;
   min-height: 20px;
 }
 
-/* line 181, ../../../app/assets/stylesheets/application.scss */
+/* line 186, ../../../app/assets/stylesheets/application.scss */
 #flash_notice {
   background: #7fb6b1;
   border: 1px solid #aaa;
 }
 
-/* line 186, ../../../app/assets/stylesheets/application.scss */
+/* line 191, ../../../app/assets/stylesheets/application.scss */
 #flash_error {
   background: #e78b2c;
   border: 1px solid #ea8c1c;
 }
 
-/* line 192, ../../../app/assets/stylesheets/application.scss */
+/* line 197, ../../../app/assets/stylesheets/application.scss */
 nav.main {
   clear: both;
   width: 960px;
   float: left;
   margin: 0px 10px;
 }
-/* line 194, ../../../app/assets/stylesheets/application.scss */
+/* line 199, ../../../app/assets/stylesheets/application.scss */
 nav.main ul {
   margin: 0;
   padding: 0;
@@ -777,11 +781,11 @@ nav.main ul li:last-child {
 nav.main ul li.last {
   padding-right: 0;
 }
-/* line 197, ../../../app/assets/stylesheets/application.scss */
+/* line 202, ../../../app/assets/stylesheets/application.scss */
 nav.main ul li {
   margin-right: 25px;
 }
-/* line 199, ../../../app/assets/stylesheets/application.scss */
+/* line 204, ../../../app/assets/stylesheets/application.scss */
 nav.main ul li a, nav.main ul li a:visited, nav.main ul li a:hover, nav.main ul li a:focus {
   font-family: Titillium-Medium;
   font-size: 20px;
@@ -790,24 +794,24 @@ nav.main ul li a, nav.main ul li a:visited, nav.main ul li a:hover, nav.main ul 
   padding-bottom: 2px;
   white-space: nowrap;
 }
-/* line 207, ../../../app/assets/stylesheets/application.scss */
+/* line 212, ../../../app/assets/stylesheets/application.scss */
 nav.main ul li a:hover, nav.main ul li a:focus {
   color: #313131;
   border-bottom: 1px solid #313131;
 }
-/* line 212, ../../../app/assets/stylesheets/application.scss */
+/* line 217, ../../../app/assets/stylesheets/application.scss */
 nav.main ul li:first-child {
   padding-left: 20px;
   background: url(/images/icons/home.png) no-repeat 0% 40%;
 }
-/* line 217, ../../../app/assets/stylesheets/application.scss */
+/* line 222, ../../../app/assets/stylesheets/application.scss */
 nav.main ul a.active, nav.main ul a.active:visited, nav.main ul a.active:hover {
   font-family: Titillium-XBold;
   padding-bottom: 1px;
   border-bottom: 3px solid #414f57;
 }
 
-/* line 226, ../../../app/assets/stylesheets/application.scss */
+/* line 231, ../../../app/assets/stylesheets/application.scss */
 #container {
   margin: 0px auto;
   width: 960px;
@@ -816,13 +820,13 @@ nav.main ul a.active, nav.main ul a.active:visited, nav.main ul a.active:hover {
   overflow: hidden;
 }
 
-/* line 233, ../../../app/assets/stylesheets/application.scss */
+/* line 238, ../../../app/assets/stylesheets/application.scss */
 #actionbutton {
   float: right;
   margin: 0px 0px;
 }
 
-/* line 239, ../../../app/assets/stylesheets/application.scss */
+/* line 244, ../../../app/assets/stylesheets/application.scss */
 #dashboard, .wide {
   width: 620px;
   margin: 0 10px;
@@ -830,7 +834,7 @@ nav.main ul a.active, nav.main ul a.active:visited, nav.main ul a.active:hover {
   marign-bottom: 20px;
 }
 
-/* line 244, ../../../app/assets/stylesheets/application.scss */
+/* line 249, ../../../app/assets/stylesheets/application.scss */
 .slim {
   float: left;
   margin: 0px 10px;
@@ -838,17 +842,17 @@ nav.main ul a.active, nav.main ul a.active:visited, nav.main ul a.active:hover {
   margin-bottom: 20px;
 }
 
-/* line 250, ../../../app/assets/stylesheets/application.scss */
+/* line 255, ../../../app/assets/stylesheets/application.scss */
 nav.sidebar {
   margin: 70px 10px 20px 10px;
   float: left;
   width: 140px;
 }
-/* line 254, ../../../app/assets/stylesheets/application.scss */
+/* line 259, ../../../app/assets/stylesheets/application.scss */
 nav.sidebar ul {
   margin-bottom: 20px;
 }
-/* line 256, ../../../app/assets/stylesheets/application.scss */
+/* line 261, ../../../app/assets/stylesheets/application.scss */
 nav.sidebar ul li:first-child a {
   -moz-border-top-left-radius: 4px;
   -webkit-border-top-left-radius: 4px;
@@ -857,7 +861,7 @@ nav.sidebar ul li:first-child a {
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 264, ../../../app/assets/stylesheets/application.scss */
+/* line 269, ../../../app/assets/stylesheets/application.scss */
 nav.sidebar ul li:last-child a {
   -moz-border-bottom-left-radius: 4px;
   -webkit-border-bottom-left-radius: 4px;
@@ -866,7 +870,7 @@ nav.sidebar ul li:last-child a {
   -webkit-border-bottom-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-/* line 272, ../../../app/assets/stylesheets/application.scss */
+/* line 277, ../../../app/assets/stylesheets/application.scss */
 nav.sidebar ul a, nav.sidebar ul a:active, nav.sidebar ul a:hover {
   font-family: Titillium-Medium;
   padding: 10px;
@@ -876,31 +880,31 @@ nav.sidebar ul a, nav.sidebar ul a:active, nav.sidebar ul a:hover {
   color: #42515a;
   color: rgba(77, 89, 98, 0.9);
 }
-/* line 281, ../../../app/assets/stylesheets/application.scss */
+/* line 286, ../../../app/assets/stylesheets/application.scss */
 nav.sidebar ul a.active {
   background: #414f57;
   color: white;
 }
 
-/* line 289, ../../../app/assets/stylesheets/application.scss */
+/* line 294, ../../../app/assets/stylesheets/application.scss */
 ul.action li.action {
   background: none;
   padding: 0px;
 }
 
-/* line 295, ../../../app/assets/stylesheets/application.scss */
+/* line 300, ../../../app/assets/stylesheets/application.scss */
 section#content {
   width: 800px;
   float: left;
 }
-/* line 298, ../../../app/assets/stylesheets/application.scss */
+/* line 303, ../../../app/assets/stylesheets/application.scss */
 section#content article.request {
   float: left;
   width: 520px;
   margin: 30px 10px 10px 30px;
   padding: 0px;
 }
-/* line 304, ../../../app/assets/stylesheets/application.scss */
+/* line 309, ../../../app/assets/stylesheets/application.scss */
 section#content #action-menu {
   background: #F5FdF3;
   float: left;
@@ -909,13 +913,13 @@ section#content #action-menu {
   padding: 10px;
   line-height: 2.2em;
 }
-/* line 311, ../../../app/assets/stylesheets/application.scss */
+/* line 316, ../../../app/assets/stylesheets/application.scss */
 section#content #action-menu h2 {
   font-family: Titillium-XBold;
   font-size: 15px;
 }
 
-/* line 318, ../../../app/assets/stylesheets/application.scss */
+/* line 323, ../../../app/assets/stylesheets/application.scss */
 footer.small {
   clear: both;
   border-top: 1px solid #42515a;
@@ -933,7 +937,7 @@ footer.small {
   -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
   -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4) inset;
 }
-/* line 335, ../../../app/assets/stylesheets/application.scss */
+/* line 340, ../../../app/assets/stylesheets/application.scss */
 footer.small nav.footer {
   min-height: 185px;
   margin: 0px auto;
@@ -942,7 +946,7 @@ footer.small nav.footer {
   overflow: hidden;
   text-shadow: 1px 1px 1px #000;
 }
-/* line 341, ../../../app/assets/stylesheets/application.scss */
+/* line 346, ../../../app/assets/stylesheets/application.scss */
 footer.small nav.footer a {
   font-family: Titillium-Medium;
   font-size: 0.9em;
@@ -950,12 +954,12 @@ footer.small nav.footer a {
   color: white;
   text-decoration: none;
 }
-/* line 348, ../../../app/assets/stylesheets/application.scss */
+/* line 353, ../../../app/assets/stylesheets/application.scss */
 footer.small nav.footer a:hover {
   color: #fff;
 }
 
-/* line 354, ../../../app/assets/stylesheets/application.scss */
+/* line 359, ../../../app/assets/stylesheets/application.scss */
 footer .copyright {
   margin: 0px auto;
   width: 960px;
@@ -965,31 +969,31 @@ footer .copyright {
   color: #cfd6d0;
   text-shadow: 1px 1px 1px #000;
 }
-/* line 361, ../../../app/assets/stylesheets/application.scss */
+/* line 366, ../../../app/assets/stylesheets/application.scss */
 footer .copyright a {
   font-size: 12px;
   color: #cfd6d0;
   text-shadow: 1px 1px 1px #000;
   text-decoration: none;
 }
-/* line 367, ../../../app/assets/stylesheets/application.scss */
+/* line 372, ../../../app/assets/stylesheets/application.scss */
 footer .copyright a:hover {
   color: #fff;
 }
-/* line 370, ../../../app/assets/stylesheets/application.scss */
+/* line 375, ../../../app/assets/stylesheets/application.scss */
 footer .copyright .ginetta {
   text-align: right;
   float: left;
   width: 780px;
   margin: 0px 10px;
 }
-/* line 376, ../../../app/assets/stylesheets/application.scss */
+/* line 381, ../../../app/assets/stylesheets/application.scss */
 footer .copyright .flockstreet {
   text-align: right;
   margin-right: 10px;
 }
 
-/* line 383, ../../../app/assets/stylesheets/application.scss */
+/* line 388, ../../../app/assets/stylesheets/application.scss */
 .tag {
   float: left;
   background-color: #e2edd3;
@@ -1001,7 +1005,7 @@ footer .copyright .flockstreet {
   -webkit-border-radius: 12px;
   border-radius: 12px;
 }
-/* line 394, ../../../app/assets/stylesheets/application.scss */
+/* line 399, ../../../app/assets/stylesheets/application.scss */
 .tag .tagname {
   padding: 0 5px;
   color: #fff;
@@ -1010,14 +1014,14 @@ footer .copyright .flockstreet {
   text-transform: uppercase;
   float: left;
 }
-/* line 402, ../../../app/assets/stylesheets/application.scss */
+/* line 407, ../../../app/assets/stylesheets/application.scss */
 .tag .tagdestroy {
   padding: 0 0 0 5px;
   float: left;
   border-left: 1px solid #414f57;
   background: rgba(255, 255, 255, 0);
 }
-/* line 407, ../../../app/assets/stylesheets/application.scss */
+/* line 412, ../../../app/assets/stylesheets/application.scss */
 .tag .tagdestroy input[type="submit"] {
   background: #7fb6b1;
   background: rgba(255, 255, 255, 0);
@@ -1033,54 +1037,54 @@ footer .copyright .flockstreet {
   position: relative;
   cursor: pointer;
 }
-/* line 423, ../../../app/assets/stylesheets/application.scss */
+/* line 428, ../../../app/assets/stylesheets/application.scss */
 .tag .tagdestroy a {
   font-family: Titillium-Medium;
   color: #414f57;
 }
 
-/* line 430, ../../../app/assets/stylesheets/application.scss */
+/* line 435, ../../../app/assets/stylesheets/application.scss */
 #interaction {
   width: 620px;
   margin: 0 10px;
   float: left;
 }
 
-/* line 435, ../../../app/assets/stylesheets/application.scss */
+/* line 440, ../../../app/assets/stylesheets/application.scss */
 input[type="text"].statusupdate {
   margin: 0px;
   width: 602px;
 }
 
-/* line 441, ../../../app/assets/stylesheets/application.scss */
+/* line 446, ../../../app/assets/stylesheets/application.scss */
 form.update input[type="checkbox"] {
   margin-top: 20px;
 }
-/* line 444, ../../../app/assets/stylesheets/application.scss */
+/* line 449, ../../../app/assets/stylesheets/application.scss */
 form.update label {
   margin-top: 12px;
 }
-/* line 447, ../../../app/assets/stylesheets/application.scss */
+/* line 452, ../../../app/assets/stylesheets/application.scss */
 form.update input[type="submit"] {
   float: right;
   margin: 10px 0px;
 }
 
-/* line 453, ../../../app/assets/stylesheets/application.scss */
+/* line 458, ../../../app/assets/stylesheets/application.scss */
 section#feed {
   width: 620px;
   margin: 0 10px;
   float: left;
   margin-top: 30px;
 }
-/* line 458, ../../../app/assets/stylesheets/application.scss */
+/* line 463, ../../../app/assets/stylesheets/application.scss */
 section#feed ul li article {
   background: #f5fdf2;
   padding: 10px;
   margin-bottom: 4px;
 }
 
-/* line 469, ../../../app/assets/stylesheets/application.scss */
+/* line 474, ../../../app/assets/stylesheets/application.scss */
 .icon_statusupdate, .icon_request, .icon_message, .icon_lead {
   background: url(/images/icons/statusupdate.png);
   float: left;
@@ -1088,7 +1092,7 @@ section#feed ul li article {
   height: 25px;
 }
 
-/* line 477, ../../../app/assets/stylesheets/application.scss */
+/* line 482, ../../../app/assets/stylesheets/application.scss */
 .bulk-action, .item-action {
   float: left;
   width: 780px;
@@ -1102,120 +1106,120 @@ section#feed ul li article {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
   font-family: Titillium-Medium;
 }
-/* line 489, ../../../app/assets/stylesheets/application.scss */
+/* line 494, ../../../app/assets/stylesheets/application.scss */
 .bulk-action .backlink, .item-action .backlink {
   float: left;
   margin: 0px 15px;
 }
-/* line 493, ../../../app/assets/stylesheets/application.scss */
+/* line 498, ../../../app/assets/stylesheets/application.scss */
 .bulk-action .checkbox, .item-action .checkbox {
   text-align: center;
   width: 50px;
   float: left;
 }
-/* line 498, ../../../app/assets/stylesheets/application.scss */
+/* line 503, ../../../app/assets/stylesheets/application.scss */
 .bulk-action .actions, .item-action .actions {
   float: left;
 }
-/* line 502, ../../../app/assets/stylesheets/application.scss */
+/* line 507, ../../../app/assets/stylesheets/application.scss */
 .bulk-action .paginate, .item-action .paginate {
   float: right;
   margin-right: 20px;
 }
-/* line 506, ../../../app/assets/stylesheets/application.scss */
+/* line 511, ../../../app/assets/stylesheets/application.scss */
 .bulk-action span, .item-action span {
   float: left;
 }
 
-/* line 512, ../../../app/assets/stylesheets/application.scss */
+/* line 517, ../../../app/assets/stylesheets/application.scss */
 table {
   float: left;
   width: 780px;
   margin: 20px 10px;
   font-family: Titillium-Light;
 }
-/* line 517, ../../../app/assets/stylesheets/application.scss */
+/* line 522, ../../../app/assets/stylesheets/application.scss */
 table a, table a:visited, table a:hover {
   font-size: 14px;
   color: #42515a;
 }
 
-/* line 523, ../../../app/assets/stylesheets/application.scss */
+/* line 528, ../../../app/assets/stylesheets/application.scss */
 tr:hover, tr.selected {
   background: #f5fdf3;
 }
 
-/* line 527, ../../../app/assets/stylesheets/application.scss */
+/* line 532, ../../../app/assets/stylesheets/application.scss */
 td {
   font-size: 14px;
 }
 
-/* line 531, ../../../app/assets/stylesheets/application.scss */
+/* line 536, ../../../app/assets/stylesheets/application.scss */
 td.checkbox {
   text-align: center;
   width: 50px;
   padding-top: 10px;
 }
 
-/* line 537, ../../../app/assets/stylesheets/application.scss */
+/* line 542, ../../../app/assets/stylesheets/application.scss */
 td.title {
   width: 320px;
   font-family: Titillium-XBold;
 }
 
-/* line 542, ../../../app/assets/stylesheets/application.scss */
+/* line 547, ../../../app/assets/stylesheets/application.scss */
 td.date {
   width: 85px;
   text-align: right;
 }
 
-/* line 547, ../../../app/assets/stylesheets/application.scss */
+/* line 552, ../../../app/assets/stylesheets/application.scss */
 td.tags {
   padding-left: 10px;
   width: 320px;
 }
 
-/* line 553, ../../../app/assets/stylesheets/application.scss */
+/* line 558, ../../../app/assets/stylesheets/application.scss */
 #associates_form #companies_search {
   margin: 30px -5px 0 25px;
   width: 365px;
 }
 
-/* line 558, ../../../app/assets/stylesheets/application.scss */
+/* line 563, ../../../app/assets/stylesheets/application.scss */
 td.logo {
   width: 35px;
 }
 
-/* line 562, ../../../app/assets/stylesheets/application.scss */
+/* line 567, ../../../app/assets/stylesheets/application.scss */
 td.companyname {
   width: 170px;
   font-family: Titillium-XBold;
 }
 
-/* line 567, ../../../app/assets/stylesheets/application.scss */
+/* line 572, ../../../app/assets/stylesheets/application.scss */
 td.state {
   width: 110px;
 }
 
-/* line 572, ../../../app/assets/stylesheets/application.scss */
+/* line 577, ../../../app/assets/stylesheets/application.scss */
 td.from {
   width: 180px;
 }
 
-/* line 576, ../../../app/assets/stylesheets/application.scss */
+/* line 581, ../../../app/assets/stylesheets/application.scss */
 td.subject {
   width: 465px;
   font-family: Titillium-XBold;
 }
 
-/* line 582, ../../../app/assets/stylesheets/application.scss */
+/* line 587, ../../../app/assets/stylesheets/application.scss */
 #logocol {
   float: left;
   min-width: 90px;
   margin: 10px 5px;
 }
 
-/* line 588, ../../../app/assets/stylesheets/application.scss */
+/* line 593, ../../../app/assets/stylesheets/application.scss */
 article.company {
   float: left;
   width: 430px;
@@ -1223,28 +1227,28 @@ article.company {
   padding: 0px;
 }
 
-/* line 595, ../../../app/assets/stylesheets/application.scss */
+/* line 600, ../../../app/assets/stylesheets/application.scss */
 aside.companyprofile {
   float: left;
   width: 210px;
   margin: 40px 0px 20px 0px;
 }
-/* line 599, ../../../app/assets/stylesheets/application.scss */
+/* line 604, ../../../app/assets/stylesheets/application.scss */
 aside.companyprofile article.contacts {
   min-height: 150px;
   background: #f5fdf3;
   margin-bottom: 30px;
 }
-/* line 600, ../../../app/assets/stylesheets/application.scss */
+/* line 605, ../../../app/assets/stylesheets/application.scss */
 aside.companyprofile article.contacts h1 {
   padding: 5px;
 }
-/* line 605, ../../../app/assets/stylesheets/application.scss */
+/* line 610, ../../../app/assets/stylesheets/application.scss */
 aside.companyprofile article.contacts ul li {
   height: 35px;
   margin-bottom: 2px;
 }
-/* line 608, ../../../app/assets/stylesheets/application.scss */
+/* line 613, ../../../app/assets/stylesheets/application.scss */
 aside.companyprofile article.contacts ul li a, aside.companyprofile article.contacts ul li a:active, aside.companyprofile article.contacts ul li a:hover {
   height: 29px;
   font-family: Titillium-XBold;
@@ -1255,7 +1259,7 @@ aside.companyprofile article.contacts ul li a, aside.companyprofile article.cont
   color: #42515a;
   color: rgba(66, 81, 90, 0.9);
 }
-/* line 620, ../../../app/assets/stylesheets/application.scss */
+/* line 625, ../../../app/assets/stylesheets/application.scss */
 aside.companyprofile article.contacts ul li a:hover {
   background: rgba(206, 217, 191, 0.5);
 }

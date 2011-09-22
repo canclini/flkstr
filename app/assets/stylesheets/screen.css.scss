@@ -1,12 +1,16 @@
+/*
+*= require_self
+*/
+
+
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "blueprint";
-//@import "blueprint/typography";
-@import "compass/reset";
-@import "compass/utilities";
+ @import "_blueprint";
+ @import "compass/reset";
+ @import "compass/utilities";
 
 @import "partials/base";
 @import "partials/layout";
@@ -423,7 +427,7 @@ min-height: 270px;
 }
 
 .ui-autocomplete-loading { 
-  background: white url(/images/ajax-loader.gif) right center no-repeat;
+  background: white url(ajax-loader.gif) right center no-repeat;
 }
 
 // WEBSITE TWITTER UPDATE LIST
@@ -473,7 +477,7 @@ section.twitterwall {
         }
         .bubble {
           height: 10px;
-          background: url(/images/twitter_bubble.png) no-repeat 0% 100%;  
+          background: url(twitter_bubble.png) no-repeat 0% 100%;  
         }
       }
     }

@@ -5,8 +5,8 @@
     %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}/
     %title= "flockstreet"
     = render :partial => 'layouts/includes'
-    = stylesheet_link_tag 'compiled/application.css', :media => 'screen, projection'
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "jquery.rails", "modernizr-1.6.min", "video", "jquery.twitter"
+    = stylesheet_link_tag 'application', :media => 'screen, projection'
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "application", "modernizr-1.6.min", "video", "jquery.twitter"
     = csrf_meta_tag
 
   %body

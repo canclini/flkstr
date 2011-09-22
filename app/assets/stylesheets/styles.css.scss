@@ -1,4 +1,8 @@
-@import "blueprint";
+/*
+*= require_self
+*/
+
+@import "_blueprint";
 @import "compass/reset";
 @import "compass/utilities";
 
@@ -175,7 +179,7 @@ article {
       @include slim();
       width: 263px;
       height: 48px;
-      background: url(/images/3owls_flockstreet_beta.png) no-repeat 100% 100%;
+      background: url(3owls_flockstreet_beta.png) no-repeat 100% 100%;
     }
     .meta {
       font-family: Titillium-Medium;
@@ -423,7 +427,7 @@ section.twitterwall {
         }
         .bubble {
           height: 10px;
-          background: url(/images/twitter_bubble.png) no-repeat 0% 100%;  
+          background: url(twitter_bubble.png) no-repeat 0% 100%;  
         }
       }
     }
@@ -638,7 +642,7 @@ input[type="checkbox"] {
 }
 
 .hint {
-  background: url(/images/info_button.png) no-repeat 0% 80%;
+  background: url(info_button.png) no-repeat 0% 80%;
   padding-left: 25px;
   padding-top: 10px;
   display: none;

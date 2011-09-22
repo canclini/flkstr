@@ -35,5 +35,8 @@ Flockstreet::Application.configure do
   config.action_dispatch.best_standards_support = :builtin # Rails 3.1
   # Do not compress assets # Rails 3.1
   config.assets.compress = false # Rails 3.1
+
+  # Expands the lines which load the assets
+  config.assets.debug = true
   
 end

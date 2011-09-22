@@ -1,20 +1,21 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc5'
+gem 'rails', '3.1.0'
 gem 'rails3-generators'
 
 group :assets do
-  gem 'sass-rails', "~> 3.1.0.rc"
-  gem 'coffee-rails', "~> 3.1.0.rc"
+  gem 'sass-rails', "~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
 
 gem 'jquery-rails'
 
 gem 'haml'
-gem 'compass', '>= 0.10.5'
+gem "compass", "~> 0.12.alpha.0"
+#gem 'compass', '>= 0.11.5', :require => false
 gem 'simple_form', '>=1.3.0'
-gem 'will_paginate', "~> 3.0.pre4"
+gem 'will_paginate', "= 3.0.pre4"
 gem 'acts-as-taggable-on', :git => "git://github.com/mbleigh/acts-as-taggable-on.git"
 
 gem 'geokit'
