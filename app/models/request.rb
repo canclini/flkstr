@@ -11,6 +11,8 @@ class Request < ActiveRecord::Base
   # scope :this_month - created since the first of current month
   scope :this_month, where("created_at > ?", Date.new(Time.now.year, Time.now.month, 1))
 
+  paginates_per 5;
+
   #validates_length_of :name, :within => 4..15, :too_long => "pick a shorter name", :too_short => "pick a longer name"
   validates_presence_of :name, :description
     

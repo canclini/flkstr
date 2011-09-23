@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
   before_filter :authenticate_user!
-   
+     
   def index
-    @messages = current_company.received_messages.paginate :per_page => 10, :page => params[:page], :order => 'updated_at DESC'
+    @messages = current_company.received_messages.order("updated_at").page(params[:page])
     @active = "in"
   end
   
@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
   end
   
   def sent
-    @messages = current_company.sent_messages.paginate :per_page => 10, :page => params[:page], :order => 'created_at DESC'
+    @messages = current_company.sent_messages..order("created_at").page(params[:page])
     @active = "out"
   end
   

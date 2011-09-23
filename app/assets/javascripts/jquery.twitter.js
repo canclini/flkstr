@@ -59,7 +59,7 @@
 			// show container element
 			c.show();
 
-			$.getScript("/javascripts/twitter_extract.js", function() {
+			$.getScript("assets/twitter_extract.js", function() {
 			$.getScript("http://twitter.com/statuses/user_timeline/"+o.userName+".json?callback=twitterCallback2&count="+o.numTweets, function() {
 				// remove preLoader from container element
 				$(preLoaderHTML).remove();

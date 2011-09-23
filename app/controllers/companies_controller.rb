@@ -32,7 +32,7 @@ class CompaniesController < ApplicationController
   end
   
   def index
-    @companies = Company.search(params[:query]).paginate :per_page => 10, :page => params[:page]
+    @companies = Company.search(params[:query]).page(params[:page])
     respond_to do |format|
       format.html
       format.js

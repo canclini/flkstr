@@ -5,8 +5,8 @@ class SearchController < ApplicationController
   end
   
   def create
-    @companies = Company.search(params[:query]).paginate :per_page => 10, :page => params[:page]
-    @requests = Request.search(params[:query]).paginate :per_page => 10, :page => params[:page]
+    @companies = Kaminari.paginate_array(Company.search(params[:query])).page(params[:page])
+    @requests = Kaminari.paginate_array(Request.search(params[:query])).page(params[:page])
 
     render :action => 'index'
   end

@@ -8,6 +8,8 @@ class Lead < ActiveRecord::Base
   scope :new_or_accepted, where("status != ?", "declined")
   scope :this_month, where("status = 'accepted' and created_at > ?", Date.new(Time.now.year, Time.now.month, 1)) # accepted leads in current_month
   
+  paginates_per 5;
+  
   after_create :add2feeds
   
   # states (status attribute)

@@ -2,7 +2,7 @@ class RequestsController < ApplicationController
 
   def index
     params[:status] ||= "open"
-    @requests = current_company.requests.where("status = ?", params[:status]).paginate :per_page => 5, :page => params[:page], :order => 'created_at ASC'
+    @requests = current_company.requests.where("status = ?", params[:status]).order("created_at").page(params[:page])
     @active = params[:status]
   end
 

@@ -198,3 +198,9 @@ de:
     blank_slate:
       content: "There are no %{resource_name} yet."
       link: "Create one"
+  views:
+    pagination:
+      previous: "&lt; Zur&uuml;ck"
+      next: "Weiter &gt;"
+      truncate: "..."
+  

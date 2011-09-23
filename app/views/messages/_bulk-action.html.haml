@@ -3,5 +3,4 @@
   .actions
     %span=link_to "archivieren", "#", :class => "small_action_button" unless @active == 'archived'
   %span.paginate
-    = page_entries_info @messages
-    = will_paginate @messages
+    = paginate @messages

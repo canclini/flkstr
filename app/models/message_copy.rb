@@ -7,6 +7,8 @@ class MessageCopy < ActiveRecord::Base
   
   
   after_save :add2feeds, :notify
+
+  paginates_per 10;
   
   private
   

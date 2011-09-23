@@ -3,7 +3,9 @@ class Company < ActiveRecord::Base
   acts_as_taggable_on :tags
   
   mount_uploader :logo, LogoUploader
-
+  
+  paginates_per 10;
+  
 # Paperclip stuff  
 #  has_attached_file :logo,
 #    :styles => { :medium => "95x95>", :thumb => "35x35#" },

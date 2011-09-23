@@ -4,9 +4,8 @@
     %meta{:charset=>"UTF-8"}
     %link{:rel=>"shortcut icon", :href=>"/favicon.ico"}/
     %title= "flockstreet"
-    = render :partial => 'layouts/includes'
     = stylesheet_link_tag 'application', :media => 'screen, projection'
-    = javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js", "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application", "modernizr-1.6.min", "video", "jquery.twitter"
+    = javascript_include_tag "application"
     = csrf_meta_tag
 
   %body

@@ -3,5 +3,4 @@
   .actions
     %span=link_to "verwerfen", "#", :class => "small_action_button"
   %span.paginate
-    = page_entries_info @leads
-    = will_paginate @leads
+    = paginate @leads

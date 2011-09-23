@@ -5,6 +5,8 @@ class Message < ActiveRecord::Base
 
     before_create :prepare_copies
 
+    paginates_per 10;
+
     attr_accessor :to # array od recipients
     attr_accessible :subject, :body, :to
 

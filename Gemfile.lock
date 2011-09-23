@@ -264,7 +264,6 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.0.5)
       rack (>= 1.0)
-    will_paginate (3.0.pre4)
     xml-simple (1.1.0)
     xpath (0.1.4)
       nokogiri (~> 1.3)
@@ -294,6 +293,7 @@ DEPENDENCIES
   guard-spork
   haml
   jquery-rails
+  kaminari
   launchy
   mysql2 (>= 0.3)
   pg
@@ -311,4 +311,3 @@ DEPENDENCIES
   turn
   twitter
   uglifier
-  will_paginate (= 3.0.pre4)
