@@ -39,13 +39,12 @@ group :test, :development do
   gem 'growl'  
   gem 'guard-livereload'    
   gem 'launchy'
-	gem 'fuubar'
 end
 
 group :test do
   gem 'spork', '~> 0.9.0.rc'
   gem 'guard-spork'
-  gem 'factory_girl_rails', :require => false
+  gem 'factory_girl_rails'#, :require => false
   gem "capybara"
   gem 'guard-rspec'
   gem 'database_cleaner'

@@ -17,11 +17,13 @@ describe Company do
     Company.search("Foo").should_not include(c)
   end
    
-  describe "#to_param" do    
-    company = Company.new
-    company.name = "FooBar"
-    company.save
-    company.to_param.should == "#{company.id}-foobar"
+  describe "#to_param" do
+    it "returns the company id with a the name" do
+      company = Company.new
+      company.name = "FooBar"
+      company.save
+      company.to_param.should == "#{company.id}-foobar"
+    end
   end
   
   describe "#as_json" do

@@ -112,10 +112,6 @@ GEM
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
     fssm (0.2.7)
-    fuubar (0.0.6)
-      rspec (~> 2.0)
-      rspec-instafail (~> 0.1.8)
-      ruby-progressbar (~> 0.0.10)
     geokit (1.6.0)
     growl (1.0.3)
     guard (0.7.0)
@@ -207,7 +203,6 @@ GEM
     rspec-core (2.6.4)
     rspec-expectations (2.6.0)
       diff-lcs (~> 1.1.2)
-    rspec-instafail (0.1.8)
     rspec-mocks (2.6.0)
     rspec-rails (2.6.1)
       actionpack (~> 3.0)
@@ -215,7 +210,6 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.6.0)
     ruby-hmac (0.4.0)
-    ruby-progressbar (0.0.10)
     rubyzip (0.9.4)
     sass (3.1.7)
     sass-rails (3.1.2)
@@ -285,7 +279,6 @@ DEPENDENCIES
   delayed_job (>= 2.1.pre2)
   factory_girl_rails
   foreman
-  fuubar
   geokit
   growl
   guard-livereload
