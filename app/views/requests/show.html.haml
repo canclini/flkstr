@@ -1,6 +1,11 @@
 = render :partial => "item-action"
 %article.request
-  %h1= @request.name
+  %h1
+    - if @request.status == "draft"
+      ENTWURF -  
+    = @request.name
+    
+    
   
   %p
     %strong Lieferdatum
@@ -48,7 +53,7 @@
     = @request.leads.size
     Firmen über diesen Auftrag informiert
 
--if current_user && current_company == @company
+-if current_user && current_company == @company && @request.status == 'open'
   #action-menu
     %h2 Status ändern auf:
     =link_to "✔ Vergeben", assign_request_path(@request), :method => 'put', :class => "underline"

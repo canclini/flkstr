@@ -22,6 +22,10 @@ class RequestsController < ApplicationController
   def create
     @company = current_company
     redirect_to signup_path unless @company.add_request? 
+    if params[:commit] == 'speichern'
+      params[:request][:status] = 'draft'
+    end
+    params[:request][:tag_list] = params[:request][:tag_list].join(",") unless params[:request][:tag_list].nil?
     @request = Request.new(params[:request])
     if @request.save
       Delayed::Job.enqueue(MatchJob.new(@request.id))
@@ -34,6 +38,34 @@ class RequestsController < ApplicationController
   end
   
   def edit
+    @company = current_company
+    @request = current_company.requests.find(params[:id])
+    @request.duedate ||= Time.now + 1.month
+    @active = @request.status
+  end
+  
+  def update
+    @request = Request.find(params[:id])
+
+    if params[:commit] == 'speichern'
+      params[:request][:status] = 'draft'
+    else
+      params[:request][:status] = 'open'
+    end
+    
+    if @request.update_attributes(params[:request])  
+      flash[:notice] = "Request wurde aktualisiert"
+      redirect_to @request
+    else  
+      render :action => 'edit'
+    end    
+  end
+  
+  def destroy
+    @request = current_company.requests.find(params[:id])
+    @request.destroy
+    flash[:notice] = "Der Auftrag wurde verworfen."
+    redirect_to requests_filter_path(:status => "draft")    
   end
   
   def confirm_archive

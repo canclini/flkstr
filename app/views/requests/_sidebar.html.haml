@@ -8,4 +8,4 @@
 
 %ul
   %li= link_to "Archiv", requests_filter_path(:archived), :class => ("active" if @active == 'archived')
-  %li= link_to "Entwürfe", requests_filter_path(:drafts), :class => ("active" if @active == 'drafts')
+  %li= link_to "Entwürfe", requests_filter_path(:draft), :class => ("active" if @active == 'draft')

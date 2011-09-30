@@ -11,8 +11,9 @@
     =f.input :duedate, :label => "Lieferdatum", :as => :string, :input_html => { :value => @request.duedate.strftime('%d.%m.%Y'), :class => "small date" }
     = field_set_tag do
       = label :tags, "Tags"
-      = text_field :tags, :tag, :class => "text near small"
-      = f.submit "add", :class => "search_button"
+      = text_field :tags, :tag, :class => "ac_tags text near small"
+      = f.submit "hinzufügen", :class => "search_button", :id => "add_tag"
+      #ac_selection
     
     = f.input :description, :label => "Beschreibung", :as => :text, :input_html => {:class => "long" }
     = field_set_tag do

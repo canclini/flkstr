@@ -1,4 +1,5 @@
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require flockstreet
 //= require modernizr-1.6.min

@@ -39,6 +39,7 @@ group :test, :development do
   gem 'growl'  
   gem 'guard-livereload'    
   gem 'launchy'
+  gem 'rails-dev-tweaks', '~> 0.5.0'
 end
 
 group :test do

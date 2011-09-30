@@ -37,6 +37,6 @@ Flockstreet::Application.configure do
   config.assets.compress = false # Rails 3.1
 
   # Expands the lines which load the assets
-  config.assets.debug = false
+  config.assets.debug = true
   
 end

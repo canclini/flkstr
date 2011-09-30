@@ -3,6 +3,9 @@
 
 de:
   activerecord:
+    models:
+      request: "Auftrag"
+        
     errors:
       messages:
         record_invalid: "record invalid"

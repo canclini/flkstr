@@ -152,7 +152,7 @@ $(document).ready(function() {
 
   $('.focus').focus();  
   
-  $('#request_duedate').datepicker({dateFormat: 'dd.mm.yy', showAnim: 'fade'});
+//  $('#request_duedate').datepicker({dateFormat: 'dd.mm.yy', showAnim: 'fade'});
 
   //  $("#new_review").submitWithAjax();
   
@@ -168,24 +168,52 @@ $(document).ready(function() {
 //        $(this).parent().remove();
 //      });    
 //  	}
-//  });  		      
-  
-  
-//  $( "#ac_tags" ).autocomplete({
-//    source: "/tags/autocomplete",
-//  	minLength: 2,
-//  	select: function( event, ui ) {
-//  	  // das muss in eine Funktion ausgelagert werden... falls das Tag existiert wird value übernommen, falls es nicht existiert, muss der eingegebene wert hinzugefügt werden.
-//      var sel = "<div id='tag_container_" + ui.item.id + "'> <input id='request_tags_' name='request[tags][]' type='hidden' value =" + ui.item.value + "> <span class = 'tag'>" + ui.item.value + "</span> <a href='#' id='tag-remove_" + ui.item.id + "' class='tag-remove'>Remove</a> </div>";
-//          
-//      $("#ac_selection").append(sel);
-//          
-//      $(".tag-remove").click(function() {
-//        $(this).parent().remove();
-//      });    
-//  	}
-//  });  		      
-  
+//  });
+
+//$( "#tags_tag" ).autocomplete({source: "/tags/autocomplete.json"});     
+// $( "#tags_tag" ).autocomplete({
+//   source: "/tags/autocomplete.json",
+//   minLength: 2,
+//   select: function( event, ui ) {
+//   // das muss in eine Funktion ausgelagert werden... falls das Tag existiert wird value übernommen, falls es nicht existiert, muss der eingegebene wert hinzugefügt werden.
+//     var sel = "<div id='tag_container_" + ui.item.id + "'> <input id='request_tags_' name='request[tags][]' type='hidden' value =" + ui.item.value + "> <span class = 'tag'>" + ui.item.value + "</span> <a href='#' id='tag-remove_" + ui.item.id + "' class='tag-remove'>Remove</a> </div>";
+//           
+//       $("#ac_selection").append(sel);
+//           
+//       $(".tags-remove").click(function() {
+//         $(this).parent().remove();
+//       });    
+//       }
+//   });  
+
+$('#tags_tag').keyup(function(e) {
+  e.preventDefault();
+	if(e.keyCode == 13) {
+	  alert('enter pressed');
+	  alert(ui.item.value);
+		var sel = "<div id='tag_container_" + ui.item.id + "'> <input id='request_tags_' name='request[tags][]' type='hidden' value =" + ui.item.value + "> <span class = 'tag'>" + ui.item.value + "</span> <a href='#' id='tag-remove_" + ui.item.id + "' class='tag-remove'>Remove</a> </div>";
+		$("#ac_selection").append(sel);
+		$(".tags-remove").click(function() {
+      $(this).parent().remove();
+    });    
+    
+	}
+});
+
+
+  $("#add_tag").click(function(e) {
+    e.preventDefault();
+		var sel = "<div id='tag_container_" + $('#tags_tag').val() + "'> <input id='request_tag_list_' name='request[tag_list][]' type='hidden' value =" + $('#tags_tag').val() + "> <span class = 'tag'>" + $('#tags_tag').val() + "</span> <a href='#' id='tag-remove_" + $('#tags_tag').val() + "' class='tag-remove'>Remove</a> </div>";
+		$("#ac_selection").append(sel);
+		$(".tag-remove").click(function() {
+      $(this).parent().remove();
+    });    
+    $("#tags_tag").val('');
+		$("#tags_tag").focus();
+  });
+
+
+
 });
 
 function updateExistingCompanies() {

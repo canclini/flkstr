@@ -1,2 +1,37 @@
-%h1 Requests#edit
-%p Find me in app/views/requests/edit.html.haml
+=simple_form_for @request do |f|
+  .item-action
+    .actions
+      =f.submit "freigeben", :class => "dark_button", :html => {:style => "margin-top: -4px;"}
+      =f.submit "speichern", :class => "small_action_button"
+      =link_to "verwerfen", dashboard_path()
+  
+  %article.request
+    = f.error_messages
+    = f.input :name, :label => "Auftrags Titel", :input_html => {:class => "long clearme" }, :placeholder => "Einen für sich sprechenden Name vergeben"
+    =f.input :duedate, :label => "Lieferdatum", :as => :string, :input_html => { :value => @request.duedate.strftime('%d.%m.%Y'), :class => "small date" }
+    = field_set_tag do
+      = label :tags, "Tags"
+      = text_field :tags, :tag, :class => "ac_tags text near small"
+      = f.submit "hinzufügen", :class => "search_button", :id => "add_tag"
+      #ac_selection
+    
+    = f.input :description, :label => "Beschreibung", :as => :text, :input_html => {:class => "long" }
+    = field_set_tag do
+      = f.label :language, "Kontaktsprache"
+      = f.select :language, [['Deutsch', 'DE'], ['Francais', 'FR'], ['Italiano', 'IT'], ['English', 'EN']]
+    = field_set_tag do
+      = f.label :budget, "Budget"
+      = f.text_field :budget, :class => "small currency"
+      %span.currency CHF
+    = field_set_tag do
+      = f.label :area_filter, "welche Lieferanten sollen anvisiert werden?"
+      = f.select :area_filter, [['Alle', 'everywhere'], ['im eigenen Land', 'own country'], ['Im Umkreis von', 'distance']]
+      = f.select :distance, [['5km', 5], ['10km', 10], ['20km', 20], ['50km', 50],['100km', 100] ], {}, {:class => 'hide'}
+    
+      
+      = f.hidden_field :company_id
+  .item-action
+    .actions
+      =f.submit "freigeben", :class => "dark_button", :html => {:style => "margin-top: -4px;"}
+      =f.submit "speichern", :class => "small_action_button"
+      =link_to "verwerfen", dashboard_path()
