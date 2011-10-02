@@ -4,11 +4,19 @@
 de:
   activerecord:
     models:
-      request: "Auftrag"
+      request: Auftrag
+    attributes:
+      request:
+        name: Auftrags Titel
+        description: Beschreibung
+        duedate: Lieferdatum
+        distance: Distanz
+        budget: Budget
+        language: Sprache
         
     errors:
       messages:
-        record_invalid: "record invalid"
+        record_invalid: record invalid
 
   devise:
     sessions:

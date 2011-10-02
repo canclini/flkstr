@@ -64,7 +64,7 @@ class RequestsController < ApplicationController
   def destroy
     @request = current_company.requests.find(params[:id])
     @request.destroy
-    flash[:notice] = "Der Auftrag wurde verworfen."
+    flash[:notice] = "Der Auftrag wurde geloescht."
     redirect_to requests_filter_path(:status => "draft")    
   end
   
@@ -72,6 +72,11 @@ class RequestsController < ApplicationController
     
   end
 
+  def discard
+    flash[:notice] = "Der Auftrag wurde verworfen"
+    redirect_to requests_path()
+  end
+  
   def assign
     request = Request.find(params[:id])
     request.update_attributes(:status => "assigned")

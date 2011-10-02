@@ -31,7 +31,25 @@ describe "Request Management Requests" do
       page.should have_content("ENTWURF")
   end
   
-  it "creates a new request an publish it" do
+  it "does not create a new request without a title" do
+    visit requests_path
+    click_on "Auftrag erfassen"
+    fill_in "Beschreibung", :with => "New WebDesign for us!"    
+    click_on "speichern"
+    page.should have_content("Konnte auftrag nicht speichern")
+    page.should have_content("Auftrags Titel muss")
+  end
+
+  it "does not create a new request without a description" do
+    visit requests_path
+    click_on "Auftrag erfassen"
+    fill_in "Auftrags Titel", :with => "New WebDesign for us!"    
+    click_on "speichern"
+    page.should have_content("Konnte auftrag nicht speichern")
+    page.should have_content("Beschreibung muss")
+  end
+  
+  it "creates a new request and publish it" do
     visit requests_path
     click_on "Auftrag erfassen"
     fill_in "Auftrags Titel", :with => "New WebDesign for us!"
@@ -41,6 +59,16 @@ describe "Request Management Requests" do
     page.should have_content("Der Auftrag wurde erfasst. Wir suchen nach geeigneten Lieferanten")
     page.should have_content("New WebDesign for us!")
     page.should_not have_content("ENTWURF")    
+  end
+  
+  it "discards a request" do
+    visit requests_path
+    click_on "Auftrag erfassen"
+    fill_in "Auftrags Titel", :with => "New WebDesign for us!"
+    fill_in "Beschreibung", :with => "Unsere Firma braucht ein neues Webdesign"
+    click_on "verwerfen"
+    page.current_path.should eq(requests_path)
+    page.should have_content("Der Auftrag wurde verworfen")
   end
       
   it "shows all open requests" do
@@ -57,7 +85,7 @@ describe "Request Management Requests" do
       @req = Factory(:request, :status => "draft", :company => @user.company)
     end
     
-    it "should display the reuqest only in Drafts" do
+    it "should display a draft request only in drafts" do
       visit requests_path
       page.should_not have_content(@req.name)
       click_link "Entw" # problems with Umlaute

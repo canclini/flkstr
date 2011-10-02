@@ -3,7 +3,7 @@
     .actions
       =f.submit "freigeben", :class => "dark_button", :html => {:style => "margin-top: -4px;"}
       =f.submit "speichern", :class => "small_action_button"
-      =link_to "verwerfen", dashboard_path()
+      =link_to "verwerfen", discard_requests_path(), :method => :delete
   
   %article.request
     = f.error_messages

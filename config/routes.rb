@@ -26,6 +26,7 @@ Flockstreet::Application.routes.draw do
   
    resources :requests do
      collection do
+       delete :discard
        put :confirm_archive
        put :archive
      end

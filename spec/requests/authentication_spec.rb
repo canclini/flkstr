@@ -20,7 +20,7 @@ describe "Authentication Requests" do
       page.should have_content("Neuigkeiten")
     end
     
-    # e4
+    # e1
     it "should not login with wrong password" do
       visit login_path
       fill_in "email", :with => subject.email
