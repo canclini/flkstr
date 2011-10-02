@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Geokit
   module GeocoderControl
     def set_geokit_domain

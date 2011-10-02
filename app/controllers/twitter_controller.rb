@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class TwitterController < ApplicationController
   before_filter :twitter_wrapper, :authenticate_user!
   

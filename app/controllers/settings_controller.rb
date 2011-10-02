@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class SettingsController < ApplicationController
   before_filter :authenticate_user!, :twitter_wrapper
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class TweetJob < Struct.new(:company_id, :update)
   def perform
     company = Company.find(company_id)

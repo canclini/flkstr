@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ChangeAuthentication < ActiveRecord::Migration
   def up
     add_column :users, :password_digest, :string

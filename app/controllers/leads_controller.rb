@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class LeadsController < ApplicationController
   def index
     params[:status] ||= "new"
@@ -54,7 +55,7 @@ class LeadsController < ApplicationController
   def lost
     @lead = current_company.leads.find(params[:id])
     if @lead.update_attributes(:status => 'lost')  
-      flash[:notice] = "Schade, viel Erfolg beim naechsten Lead"  
+      flash[:notice] = "Schade, viel Erfolg beim nächsten Lead"
       redirect_to leads_path()
     else  
       flash[:notice] = "Uups.. da ging was schief."  

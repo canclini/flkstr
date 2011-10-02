@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Factory.define :company do |f|
   f.sequence(:name) { |n| "foobar #{n} GmbH" }
   f.association :plan

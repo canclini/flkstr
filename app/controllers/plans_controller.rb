@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class PlansController < ApplicationController
   skip_before_filter :force_subdomain
   layout 'website'

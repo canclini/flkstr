@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreatePriceSuggestions < ActiveRecord::Migration
   def self.up
     create_table :price_suggestions do |t|

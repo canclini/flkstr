@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Association < ActiveRecord::Base
   belongs_to :company
   belongs_to :associate, :class_name => 'Company'  

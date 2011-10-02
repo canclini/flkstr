@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Tag < ActiveRecord::Base
 
   def as_json(options = {})    

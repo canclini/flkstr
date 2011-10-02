@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Notification < ActiveRecord::Base
   belongs_to :notifiable, :polymorphic => true
   belongs_to :user

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class NotificationCreateJob < Struct.new(:company_id, :notifiable)
   def perform
     company = Company.find(company_id)

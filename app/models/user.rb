@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
   has_secure_password
   # Setup accessible (or protected) attributes for your model

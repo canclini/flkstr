@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CustomLocation < ActiveRecord::Base
   belongs_to :company
   acts_as_mappable :distance_column_name => 'dist', 

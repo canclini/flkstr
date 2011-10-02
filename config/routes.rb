@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Flockstreet::Application.routes.draw do
 
   ActiveAdmin.routes(self)

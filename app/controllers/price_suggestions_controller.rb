@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class PriceSuggestionsController < ApplicationController
   skip_before_filter :force_subdomain
   

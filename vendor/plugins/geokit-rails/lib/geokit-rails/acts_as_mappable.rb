@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Geokit
   # Contains the class method acts_as_mappable targeted to be mixed into ActiveRecord.
   # When mixed in, augments find services such that they provide distance calculation

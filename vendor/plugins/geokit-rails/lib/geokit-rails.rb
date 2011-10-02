@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Load modules and classes needed to automatically mix in ActiveRecord and 
 # ActionController helpers.  All other functionality must be explicitly 
 # required.

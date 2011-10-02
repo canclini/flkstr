@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ActiveAdmin::Dashboards.build do
   section "Recent Companies" do
     ul do

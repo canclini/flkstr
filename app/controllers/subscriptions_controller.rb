@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class SubscriptionsController < ApplicationController
   before_filter :authenticate_user!, :needs_company!
 

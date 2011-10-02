@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateLeads < ActiveRecord::Migration
   def self.up
     create_table :leads do |t|

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module AuthMacros
   def login(user = nil)
     user ||= Factory(:user)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AssociatesController < ApplicationController
   def index
     @company = current_company

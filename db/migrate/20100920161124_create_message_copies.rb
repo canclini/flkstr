@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateMessageCopies < ActiveRecord::Migration
   def self.up
     create_table :message_copies do |t|

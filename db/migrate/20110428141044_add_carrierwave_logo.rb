@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddCarrierwaveLogo < ActiveRecord::Migration
   def self.up
 
