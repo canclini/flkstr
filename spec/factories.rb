@@ -29,3 +29,11 @@ Factory.define :request do |f|
   # f.distance
   # association with leads?
 end
+
+
+Factory.define :lead do |f|
+  f.association :request
+  f.association :source, :factory => :company
+  f.association :company
+  f.status "new"
+end

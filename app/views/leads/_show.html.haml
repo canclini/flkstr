@@ -8,8 +8,8 @@
     = render :partial => 'companies/businesscard', :locals  => {:company => @lead.source}
     .processbox
       %h3 Status ändern
-      = button_to "Auftrag gewonnen", accept_lead_path(@lead), :remote => true, :method => :put, :class => 'button'
-      = button_to "Auftrag verloren", accept_lead_path(@lead), :remote => true, :method => :put, :class => 'button'
+      = button_to "Auftrag gewonnen", won_lead_path(@lead), :method => :put, :class => 'button'
+      = button_to "Auftrag verloren", lost_lead_path(@lead), :method => :put, :class => 'button'
   - else
     .processbox
       %h3 Status ändern
@@ -17,4 +17,4 @@
         = button_to "Ja, unser Ding!", accept_lead_path(@lead), :remote => true, :method => :put, :class => 'button'
       - else 
         = link_to "Ja, unser Ding!", signup_path, :class => 'button'
-      = button_to "nicht interessant", decline_lead_path(@lead), :remote => true, :method => :put, :class => 'button'
+      = button_to "nicht interessiert", decline_lead_path(@lead), :remote => true, :method => :put, :class => 'button'

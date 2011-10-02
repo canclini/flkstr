@@ -54,6 +54,8 @@ Flockstreet::Application.routes.draw do
     member do
       put :decline
       put :accept
+      put :won
+      put :lost
     end
   end
   

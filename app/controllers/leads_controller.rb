@@ -39,5 +39,27 @@ class LeadsController < ApplicationController
       redirect_to @lead
     end
   end
+  
+  def won
+    @lead = current_company.leads.find(params[:id])
+    if @lead.update_attributes(:status => 'won')  
+      flash[:notice] = "Gratulation zum gewonnenen Auftrag!"  
+      redirect_to leads_path()
+    else  
+      flash[:notice] = "Uups.. da ging was schief."  
+      redirect_to @lead
+    end    
+  end
+
+  def lost
+    @lead = current_company.leads.find(params[:id])
+    if @lead.update_attributes(:status => 'lost')  
+      flash[:notice] = "Schade, viel Erfolg beim naechsten Lead"  
+      redirect_to leads_path()
+    else  
+      flash[:notice] = "Uups.. da ging was schief."  
+      redirect_to @lead
+    end    
+  end
 
 end
