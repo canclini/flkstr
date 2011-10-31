@@ -7,12 +7,12 @@ require 'spec_helper'
 describe "Company Profile" do
   
   before do
-    @user = Factory(:user)
+    @user = create(:user)
     login @user
   end
   
   it "can be searched by company name and be displayed" do
-    profile = Factory(:company)
+    profile = create(:company)
   #  login @user
     fill_in "query", :with => profile.name
     click_button "Suchen"
@@ -44,7 +44,7 @@ describe "Company Profile" do
 
     context "a different company profile page" do
       before do
-         @othercompany = Factory(:company)
+         @othercompany = create(:company)
          visit company_path(@othercompany)
        end
 

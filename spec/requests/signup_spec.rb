@@ -83,7 +83,7 @@ describe "Signup Requests" do
   
   # e6
   it "does not register if the company does exist" do
-    Factory(:company, :name => 'Foobar GmbH')
+    create(:company, :name => 'Foobar GmbH')
     fill_in "Firmenname", :with => 'Foobar GmbH'
     fill_in "Mailadresse", :with => 'foo@bar.com'
     fill_in "Passwort", :with => 'secret'
@@ -100,7 +100,7 @@ describe "Signup Requests" do
   
   # e7
   it "does not register if the email address already exists" do
-    Factory(:user, :email => 'foo@bar.com')
+    create(:user, :email => 'foo@bar.com')
     fill_in "Firmenname", :with => 'Foobar GmbH'
     fill_in "Mailadresse", :with => 'foo@bar.com'
     fill_in "Passwort", :with => 'secret'

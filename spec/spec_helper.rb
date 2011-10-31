@@ -21,7 +21,7 @@ Spork.prefork do
       DatabaseCleaner.strategy = :transaction
       DatabaseCleaner.clean_with(:truncation)
     end
-    
+    config.include Factory::Syntax::Methods
     config.include(MailerMacros)
     config.include(AuthMacros)
     config.before(:each) do

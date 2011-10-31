@@ -8,12 +8,12 @@ require 'spec_helper'
 
 describe "Request Management Requests" do
   before do
-    @user = Factory(:user)
+    @user = create(:user)
     login @user
   end
   
   it "lists open requests" do
-    @req = Factory(:request, :company => @user.company)
+    @req = create(:request, :company => @user.company)
     visit requests_path
     page.should have_content(@req.name)
   end
@@ -116,7 +116,7 @@ describe "Request Management Requests" do
   
   context "handling published requests" do
     before(:each) do
-      @req = Factory(:request, :status => "open", :company => @user.company)
+      @req = create(:request, :status => "open", :company => @user.company)
       visit request_path(@req)
     end
     

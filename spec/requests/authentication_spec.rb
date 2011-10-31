@@ -10,13 +10,13 @@ require 'spec_helper'
 
 
 describe "Authentication Requests" do
-  subject { Factory(:user) }
+  subject { create(:user) }
   
   context "when logged out" do
     before { visit logout_path }
 
     #normal flow
-    it "logs in with known user" do 
+    it "logs in with known user" do
       login subject
       page.should have_content("Neuigkeiten")
     end
@@ -54,7 +54,7 @@ describe "PasswordResets" do
   # e2  
 
   it "emails user when requesting password reset" do
-    user = Factory(:user)
+    user = create(:user)
     visit login_path
     click_link "Passwort vergessen"
     within(:xpath, "//div[@class='green_box']") do
@@ -67,7 +67,7 @@ describe "PasswordResets" do
   end
   
   it "updates the user password when confirmation matches" do
-    user=Factory(:user, :password_reset_token => "something", :password_reset_sent_at => 1.hour.ago)
+    user=create(:user, :password_reset_token => "something", :password_reset_sent_at => 1.hour.ago)
     visit edit_password_reset_path(user.password_reset_token)
     fill_in "Password", :with => "foobar"
     click_button "Update Password"
@@ -91,7 +91,7 @@ describe "PasswordResets" do
  end
 
  it "reports when password token has expired" do
-   user = Factory(:user, :password_reset_token => "something", :password_reset_sent_at => 5.hour.ago)
+   user = create(:user, :password_reset_token => "something", :password_reset_sent_at => 5.hour.ago)
    visit edit_password_reset_path(user.password_reset_token)
    fill_in "Password", :with => "foobar"
    fill_in "Password confirmation", :with => "foobar"

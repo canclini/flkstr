@@ -7,13 +7,13 @@ require 'spec_helper'
 
 describe "Leads Management Requests" do
   before do
-    @user = Factory(:user)
+    @user = create(:user)
     login @user
   end
   
   context "a new lead" do
     before do
-      @lead = Factory(:lead, :company => @user.company)
+      @lead = create(:lead, :company => @user.company)
     end
     it "can be accepted" do
       visit leads_path
@@ -40,7 +40,7 @@ describe "Leads Management Requests" do
   
   context "an accepted lead" do
     before do
-      @lead = Factory(:lead, :company => @user.company, :status => "accepted")
+      @lead = create(:lead, :company => @user.company, :status => "accepted")
     end
     
     it "can be won" do
