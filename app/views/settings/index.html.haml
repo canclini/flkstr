@@ -1,13 +1,13 @@
 #leftcontent
-  %h2 Allgemeine Einstellungen
+  %h1 Allgemeine Einstellungen
   =simple_form_for @setting do |f|
     = f.error_messages  
 
-    %h3 Twitter Einstellungen
+    %h2 Twitter Einstellungen
     - unless @twitter
       %p
         Um Status Updates auch gleich über Twitter zu senden muss der Account verifiziert werden.
-        =link_to image_tag("http://apiwiki.twitter.com/f/1242697715/Sign-in-with-Twitter-darker.png"), twitter_signin_path
+        %span=link_to image_tag("//si0.twimg.com/a/1319826270/images/logos/logo_twitter_withbird_1000_allblue.png", :width => 120), twitter_signin_path
     - else
       = f.input :default_twitter_send, :label => "Jedes Statusupdate soll auch zu Twitter"
       = f.submit "Speichern", :class => "button"
@@ -15,4 +15,3 @@
   %h2 Abo Einstellungen
   %h3 Jetziges Abo
   %p= @plan.name
-  

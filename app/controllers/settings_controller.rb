@@ -6,13 +6,13 @@ class SettingsController < ApplicationController
     @company = current_company
     @setting = @company.setting
     @plan = @company.plan
+    @active = "company"
     # twitter stuff
     begin
       @twitter = @wrapper.get_twitter
     rescue
       @twitter = nil
     end
-    @active = :first
   end
       
   def update
