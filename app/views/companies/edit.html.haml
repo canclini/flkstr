@@ -3,26 +3,22 @@
   %h1= "Firmenprofil von #{@company.name} editieren"
 
   =form_for @company, :html => {:class => "tight_form", :multipart => true } do |f|
-    = f.error_messages  
-  
-    #logocol
-      = image_tag @company.logo_url(:medium).to_s if @company.logo?
-      %br/
-      =link_to "bild ändern", "#"
-      //  =f.input :logo, :as => :file
-      &nbsp;
-      
-    %article.company  
+    = f.error_messages
+
+    %article.company
       %p
         = f.label :teaser, "Teaser"
+        %br
         = f.text_field :teaser
       %p
         = f.label :tag_list, "Tags"
+        %br
         = f.text_field :tag_list
       
       = f.fields_for :addresses do |address_fields|
         %p
           = label :street, "Strasse"
+          %br
           =address_fields.text_field :street
           %br/
           = label :plz, "Postleitzahl"

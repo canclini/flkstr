@@ -1,0 +1,356 @@
+//@import "_blueprint";
+@import "compass/reset";
+@import "compass/utilities";
+
+@import "partials/base";
+@import "partials/forms";
+@import "partials/menu";
+@import "partials/login";
+
+section, header, footer, aside, nav, article{
+  display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Georgia;
+  color: #42515a;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a, a:visited { 
+  color: $orange;
+}
+a:hover, a:focus { 
+  color: $orange_hover;
+}
+
+a.underline, a.underline:visited {
+  border-bottom: 1px solid $orange;
+}
+a.underline:hover, a.underline:focus {
+  border-bottom: 1px solid $orange_hover;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+strong {
+  font-family: Titillium-XBold;
+  font-size: 15px;
+}    
+
+p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.medium {
+  font-family: Titillium-Medium;
+}
+
+h1, h2, h3, h4, h5 {
+  color: $grey;
+  margin-bottom: 6px;
+  text-shadow: 0px 0px 1px rgba(0,0,0,0.4); 
+  line-height: 1.5;
+  }
+  a, a:visited, a:hover, a:focus {
+    text-decoration: none;
+  }
+  
+h1 {
+  font-family: Titillium-XBold;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+  
+.uppercase {
+  text-transform: uppercase;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+.titillium {
+  font-family: Titillium-Medium;
+  font-size: 15px;
+  color: #354048;
+}
+
+#wrapper {
+  min-height: 100%;
+}
+
+#flash {
+  @include centered();
+  min-height: 20px;  
+}
+
+#flash_notice {
+  background: $dark_green;
+  border: 1px solid #aaa;  
+}
+
+#flash_error {
+  background: $orange;
+  border: 1px solid $dark_orange;
+}
+
+// the 2 Main Links
+nav.main {
+  @include full();
+  ul {
+    @include horizontal-list;
+    margin-bottom: 30px;
+    li {
+      margin-right: 25px;
+        a, a:visited, a:hover, a:focus {
+          font-family: Titillium-Medium;
+          font-size: 20px;
+          color: $grey;
+          border-bottom: 1px solid $grey;
+          padding-bottom: 2px;
+          white-space: nowrap;
+        }
+        a:hover, a:focus {
+          color: #313131;
+          border-bottom: 1px solid #313131;
+        }
+    }
+    li:first-child {
+      padding-left: 20px;
+      background: url(image_path('icons/home.png')) no-repeat 0% 40%;
+    }
+    
+    a.active, a.active:visited, a.active:hover  {
+      font-family: Titillium-XBold;
+      padding-bottom: 1px;
+      border-bottom: 3px solid $grey;
+    }
+  }
+}
+
+// CONTAINER
+#container {
+  @include centered();
+  padding-top: 40px;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+#actionbutton {
+  float: right;
+  margin: 0px 0px;
+}
+
+//// COLUMNS
+#dashboard, .wide {
+  @include wide();
+  marign-bottom: 20px;
+}
+
+.slim {
+  @include slim();
+  margin-bottom: 20px;
+}
+
+// LEFT SIDEBAR NAVIGATION
+nav.sidebar {
+  margin: 70px 10px 20px 10px;
+  float: left;
+  width: 140px;
+  ul {
+    margin-bottom: 20px;
+    li:first-child a {
+         -moz-border-top-left-radius: 4px; 
+      -webkit-border-top-left-radius: 4px; 
+              border-top-left-radius: 4px; 
+         -moz-border-top-right-radius: 4px; 
+      -webkit-border-top-right-radius: 4px; 
+              border-top-right-radius: 4px;         
+    }
+    li:last-child a {
+         -moz-border-bottom-left-radius: 4px; 
+      -webkit-border-bottom-left-radius: 4px; 
+              border-bottom-left-radius: 4px; 
+         -moz-border-bottom-right-radius: 4px; 
+      -webkit-border-bottom-right-radius: 4px; 
+              border-bottom-right-radius: 4px; 
+    }    
+    a, a:active, a:hover {      
+      font-family: Titillium-Medium;
+      padding: 10px;
+      background: #e2eede;
+      margin-bottom: 2px;
+      display: block;
+      color: $dark_grey; //fallback
+      color: rgba(77,89,98, 0.9);
+    }
+    a.active {
+      background: $grey;
+      color: white;
+    }
+  }
+}
+
+ul.action {
+  li.action { 
+    background: none;
+    padding: 0px;
+  }
+}
+
+section#content {  
+  width: 800px;
+  float: left;
+  article.request {
+    float: left;
+    width: 520px;
+    margin: 30px 10px 10px 30px;
+    padding: 0px;
+  }
+  #action-menu {
+    background: #F5FdF3;
+    float: left;
+    width: 200px;
+    margin: 40px 10px;
+    padding: 10px;
+    line-height: 2.2em;
+    h2 {
+      font-family: Titillium-XBold;
+      font-size: 15px;
+    }    
+  }
+}
+
+// TAGS
+.tag {
+  float: left;
+  background-color: #e2edd3;  
+  margin: 5px;
+  padding: 2px 10px;
+  color: #42515a;
+  font-size: 12px;
+     -moz-border-radius: 12px; 
+  -webkit-border-radius: 12px; 
+          border-radius: 12px; 
+            
+  .tagname {
+    padding: 0 5px;
+    color: #fff;
+    font-family: Titillium-Light;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    float: left;
+  }
+  .tagdestroy {
+    padding: 0 0 0 5px;
+    float: left;
+    border-left: 1px solid #414f57;
+    background: rgba(255,255,255,0);
+    input[type="submit"] {
+      background: $dark_green;
+      background: rgba(255,255,255,0);
+      font-family: Titillium-Light;
+      color: #fff;
+      border: none;
+      font-size: 1em;
+      padding: 3px 0px;
+      margin: 0;
+      display: inline-block;
+      text-decoration: none;      
+      line-height: 1;
+      position: relative;
+      cursor: pointer;
+            
+    }
+    a {
+      font-family: Titillium-Medium;
+      color: #414f57;
+    }
+  }
+}
+
+// BULK BAR
+.bulk-action, .item-action {
+  float: left;
+  width: 780px;
+  margin: 0px 10px;
+  height: 21px;
+  background: #F5FdF3;
+  padding: 12px 0px;
+  border: 1px solid #dae8d8;
+  -webkit-box-shadow: 0px 0px 1px rgba(0,0,0,.15);
+     -moz-box-shadow: 0px 0px 1px rgba(0,0,0,.15);
+          box-shadow: 0px 0px 1px rgba(0,0,0,.15);
+  font-family: Titillium-Medium;
+  .backlink {
+    float: left;
+    margin: 0px 15px;
+  }
+  .checkbox {
+    text-align: center;
+    width: 50px;
+    float: left;
+  }
+  .actions {
+  //  display: none;
+    float: left;
+  }
+  .paginate {
+    float: right;
+    margin-right: 20px;
+  }
+  span {
+    float: left;
+  }
+}
+
+// TABLES
+table {
+  float: left;
+  width: 780px;
+  margin: 20px 10px;
+  font-family: Titillium-Light;
+  a, a:visited, a:hover {
+    font-size: 14px;
+    color: #42515a;    
+  }
+}
+
+tr:hover, tr.selected {
+  background: #f5fdf3;
+}
+
+td {
+//  margin: 0px 5px;
+  font-size: 14px;
+}
+td.checkbox {
+  text-align: center;
+  width: 50px;
+  padding-top: 10px;
+}
+
+td.title {
+  width: 320px;
+  font-family: Titillium-XBold;
+}
+
+td.date {
+  width: 85px;
+  text-align: right;
+}
+
+td.tags {
+  padding-left: 10px;
+  width: 320px;
+}

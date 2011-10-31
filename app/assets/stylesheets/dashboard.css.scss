@@ -1,0 +1,39 @@
+@import "compass/utilities";
+@import "partials/base";
+
+#interaction {
+  @include wide();
+  
+}
+// STATUS UPDATE FORM
+input[type="text"].statusupdate {
+  margin:0px;
+  width: 602px;
+}
+
+form.update {
+  input[type="checkbox"] {
+    margin-top: 20px;
+  }
+  label {
+    margin-top: 12px;
+  }
+  input[type="submit"] {
+    float: right;
+    margin: 10px 0px;
+  }
+}
+
+section#feed {
+  @include wide();
+  margin-top: 30px;
+  ul {
+    li {
+      article {
+        background: #f5fdf2;
+        padding: 10px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

@@ -17,7 +17,7 @@
           = render :partial => 'nav/meta'
       #bar
         .content
-          = render :partial => 'actionbox/actionbox'
+          = render :partial => 'actionbox/index'
           .profile
             flockstreet
       #hass_shadow  
@@ -26,9 +26,10 @@
           = content_tag :div, msg, :id => "flash_#{name}"
 
       #container
-        %nav.main= render :partial => 'layouts/maintopics'
-        %nav.sidebar=render :partial => 'sidebar'
-        %section{:id =>"content"}= yield
+        %nav.main= render :partial => 'nav/main'
+        %nav.sidebar=render :partial => 'sidebar' rescue nil
+        %section{:id =>"content"}
+          =yield
     %footer.small
       .copyright
         .ginetta
