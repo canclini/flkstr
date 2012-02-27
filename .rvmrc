@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 rvm use 1.9.2-p290@flockstreet --create
-=======
-rvm use ruby-1.9.2@flockstreet --create
->>>>>>> logo cropping

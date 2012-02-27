@@ -20,7 +20,7 @@
         .content
           = render :partial => 'actionbox/index'
           .profile
-            = image_tag @company.logo_url(:thumb).to_s if @company.logo?
+            = image_tag current_company.logo_url(:thumb).to_s if current_company.logo?
             = current_company.name
             
       #hass_shadow  
