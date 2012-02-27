@@ -1,8 +1,10 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require jquery.Jcrop.min
 //= require flockstreet
 //= require modernizr-1.6.min
 //= require jquery.twitter
 //= require video
 //= require flockstreet
+//= require companies

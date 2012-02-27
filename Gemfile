@@ -21,7 +21,7 @@ gem 'acts-as-taggable-on', :git => "git://github.com/mbleigh/acts-as-taggable-on
 gem 'geokit'
 gem 'cheddargetter'
 gem 'twitter'
-gem 'carrierwave'
+gem 'carrierwave', '>=0.5.8'
 gem 'rmagick'
 gem 'aws-s3'
 gem 'delayed_job', '>=2.1.pre2'

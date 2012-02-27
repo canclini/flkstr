@@ -33,9 +33,9 @@ class ApplicationController < ActionController::Base
        redirect_to :subdomain => 'secure', :protocol => 'https'
      end
    else
-      if request.subdomain != 'secure' and Rails.env != 'test'
-        redirect_to :subdomain => 'secure'
-      end
+      #if request.subdomain != 'secure' and Rails.env != 'test'
+      #  redirect_to :subdomain => 'secure'
+      #end
     end
   end
     

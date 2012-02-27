@@ -7,6 +7,8 @@
 
     %article.company
       %p
+        = f.file_field :logo
+      %p
         = f.label :teaser, "Teaser"
         %br
         = f.text_field :teaser
@@ -20,7 +22,7 @@
           = label :street, "Strasse"
           %br
           =address_fields.text_field :street
-          %br/
+          %br
           = label :plz, "Postleitzahl"
           =address_fields.text_field :plz
           %br/

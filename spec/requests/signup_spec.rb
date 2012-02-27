@@ -15,7 +15,7 @@ describe "Signup Requests" do
      click_link "Jetzt testen!"
    end
 
-    # nromal flow
+    # normal flow
     it "registers company and user correctly if they do not exist" do
       fill_in "Firmenname", :with => 'Foobar GmbH'
       fill_in "Mailadresse", :with => 'foo@bar.com'
@@ -23,7 +23,7 @@ describe "Signup Requests" do
       fill_in "company_password_confirmation", :with => 'secret'
       check('user_terms_of_service')
       click_button "Konto erstellen"
-      current_path.should eq(dashboard_path)
+      current_path.should eq(edit_company_path(Company.last))
       page.should have_content("Erfolgreich registiert")
   end
   
@@ -108,5 +108,9 @@ describe "Signup Requests" do
     check('user_terms_of_service')
     click_button "Konto erstellen"
     page.should have_content("Email ist bereits vergeben")
-  end    
+  end
+  
+  it "follows the first signup path on registratio" do
+    
+  end
 end

@@ -18,6 +18,7 @@ describe "Authentication Requests" do
     #normal flow
     it "logs in with known user" do
       login subject
+      current_path.should eq(dashboard_path)
       page.should have_content("Neuigkeiten")
     end
     

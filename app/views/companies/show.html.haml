@@ -49,12 +49,20 @@
   %article.contacts
     %h1 Kontakte
     %ul
+      - if @company.associates.empty?
+        - if current_company == @company
+          = link_to "Finden Sie Ihre Kontakte", search_index_path()
+        - else
+          keine Kontakte
+          
+      - else
       -for contact in @company.associates do
         %li{:style => "background: url(#{contact.logo_url(:thumb).to_s}) no-repeat 2%;"}
           =link_to contact.name, contact
+
   %article.internetprofiles
     %h1 Internetprofile
-    =link_to image_tag('icons/twitter.png'), "http://twitter.com/#{@company.twitter}", :target => :blank if @company.twitter?
-    =link_to image_tag('icons/facebook.png'), "#", :target => :blank
-    =link_to image_tag('icons/linkedin.png'), "#", :target => :blank
-    =link_to image_tag('icons/xing.png'), "#", :target => :blank
+    =link_to image_tag('icons/twitter.png'), "http://twitter.com/#{@company.twitter}", :target => :blank unless @company.twitter.blank?
+    =#link_to image_tag('icons/facebook.png'), @company.facebook, :target => :blank unless @company.facebook.empty?
+    =#link_to image_tag('icons/linkedin.png'), "#", :target => :blank
+    =#link_to image_tag('icons/xing.png'), "#", :target => :blank

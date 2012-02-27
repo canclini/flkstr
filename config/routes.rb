@@ -39,7 +39,10 @@ Flockstreet::Application.routes.draw do
   
    
   # singular resource definition for search
-  resource :search, :controller => 'search'
+  #resource :search, :controller => 'search'
+  #get "search" => "search#index", :as => "search"
+  resources :search, :controller => 'search'
+
     
   resources :companies do
     get :exists, :on => :collection

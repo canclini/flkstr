@@ -20,7 +20,9 @@
         .content
           = render :partial => 'actionbox/index'
           .profile
-            flockstreet
+            = image_tag @company.logo_url(:thumb).to_s if @company.logo?
+            = current_company.name
+            
       #hass_shadow  
       #flash
         - flash.each do |name, msg|

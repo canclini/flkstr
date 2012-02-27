@@ -13,7 +13,7 @@
       .login_link
         Login  
     .input_form        
-      = form_tag sessions_url(:subdomain => 'secure' ) do
+      = form_tag sessions_url() do
         = field_set_tag 'E-Mail' do
           = text_field_tag 'email', nil, :type => 'email'
         = field_set_tag 'Passwort' do

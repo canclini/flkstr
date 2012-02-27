@@ -3,6 +3,8 @@ class SearchController < ApplicationController
   before_filter :authenticate_user!, :except => [:public]
   def index
     @active = :first
+    @companies = []
+    @requests = []
   end
   
   def create

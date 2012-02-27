@@ -1,5 +1,5 @@
 #actionsearch
-  = form_tag search_path do |f|
+  = form_tag search_index_path do |f|
     = text_field_tag :query, params[:query] = "Suche nach Firma oder Tag", :class => "search clearme"
     = submit_tag "Suchen", :class => "search_button"
 %nav.actionbuttons

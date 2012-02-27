@@ -4,6 +4,7 @@ class Company < ActiveRecord::Base
   acts_as_taggable_on :tags
   
   mount_uploader :logo, LogoUploader
+  attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
   
   paginates_per 10;
   
@@ -55,6 +56,8 @@ class Company < ActiveRecord::Base
   before_create :set_permalink
   after_create :create_related_models
   
+  after_update :crop_logo
+  
   
   def to_param
     [id, permalink].join('-')
@@ -89,6 +92,10 @@ class Company < ActiveRecord::Base
     }.as_json(options)
   end    
   
+  def crop_logo
+    logo.recreate_versions! if crop_x.present?    
+  end
+  
   ############ PRIVATE ###############    
   private
   def set_permalink
@@ -100,35 +107,3 @@ class Company < ActiveRecord::Base
     self.create_setting
   end
 end
-
-
-#  # cancel post-processing now, and set flag...
-#  before_logo_post_process do |company|
-#    if company.logo_changed?
-#      company.logo_processing = true
-##      false # halts processing
-#    end
-#  end
-# 
-#  # ...and perform after save in background
-#  after_save do |company| 
-#    if company.logo_changed?
-##      Delayed::Job.enqueue LogoJob.new(company.id)
-#    end
-#  end
-# 
-#  # generate styles (downloads original first)
-#  def regenerate_styles!
-#    self.logo.reprocess! 
-#    self.logo_processing = false   
-#    self.save(false)
-#  end
-# 
-#  # detect if our source file has changed
-#  def logo_changed?
-#    self.logo_file_size_changed? || 
-#    self.logo_file_name_changed? ||
-#    self.logo_content_type_changed? || 
-#    self.logo_updated_at_changed?
-#  end
-#

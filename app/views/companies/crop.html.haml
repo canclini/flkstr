@@ -1,0 +1,9 @@
+%h1 Crop Avatar
+
+= image_tag @company.logo_url(:large), id: "cropbox"
+
+= form_for @company do |f|
+  - %w[x y w h].each do |attribute|
+    = f.hidden_field "crop_#{attribute}"
+  .actions
+    = f.submit "Crop"

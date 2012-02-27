@@ -1,6 +1,6 @@
 - title "Suche"
 
-= form_tag search_path do
+= form_tag search_index_path do
   %p
     = text_field_tag :query, params[:query]
     = submit_tag "Search", :name => nil, :class => "button light"

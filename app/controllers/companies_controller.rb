@@ -17,14 +17,16 @@ class CompaniesController < ApplicationController
     if @company.valid? && @user.valid?
       @company.save
       @user.save
-      @company.plan = Plan.find_by_name('ready')    
+      # beta only
+      @company.plan = Plan.find_by_name('scale')    
+      #@company.plan = Plan.find_by_name('ready')    
       @company.users << @user
 
       flash[:notice] = "Erfolgreich registiert"
       #UserMailer.registration_confirmation(resource).deliver
       cookies.permanent[:auth_token] = @user.auth_token
       
-      redirect_to dashboard_url
+      redirect_to edit_company_path(@company)
         
     else
       render :new, :layout => 'small_footer'
@@ -116,8 +118,11 @@ class CompaniesController < ApplicationController
   def update
     @company = current_company
     if @company.update_attributes(params[:company])  
-      flash[:notice] = "Profil wurde aktualisiert"
-      redirect_to @company
+      if params[:company][:logo].present?
+        render :crop
+      else
+        redirect_to @company, notice: "Profil wurde aktualisiert"
+      end
     else  
       render :action => 'edit'
     end

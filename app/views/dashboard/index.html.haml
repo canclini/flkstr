@@ -1,6 +1,6 @@
 #interaction
   = simple_form_for @update do |f|
-    = f.text_field :message, :class => 'statusupdate'
+    = f.text_field :message, :class => 'statusupdate', :placeholder => 'Was gibts Neues?'
     = f.check_box :twitter
     = f.label "Twitter"
     = f.submit "Aktualisieren", :class => "dark_button"
