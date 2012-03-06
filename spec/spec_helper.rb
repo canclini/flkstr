@@ -24,11 +24,19 @@ Spork.prefork do
     config.include Factory::Syntax::Methods
     config.include(MailerMacros)
     config.include(AuthMacros)
+
     config.before(:each) do
       reset_email
       DatabaseCleaner.start
+
+      #Stub out the geo locator
+      loc = mock(
+        lng: 47.4961324,
+        lat: 8.7190118
+      )
+      Geokit::Geocoders::YahooGeocoder.stub(:geocode).and_return(loc)
     end
-    
+
     config.after(:each) do
       DatabaseCleaner.clean
     end
@@ -42,4 +50,5 @@ end
 Spork.each_run do
   # This code will be run each time you run your specs.
   FactoryGirl.reload
+
 end

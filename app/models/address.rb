@@ -11,6 +11,7 @@ class Address < ActiveRecord::Base
   def geo
     # gets the geo object which includes the latitude and langitude values
     #used to save with the object
+    #Geokit::Geocoders::GoogleGeocoder.geocode full_address
     Geokit::Geocoders::YahooGeocoder.geocode full_address
   end
 
