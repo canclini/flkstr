@@ -1,60 +1,75 @@
 = render :partial => "item-action"
-%article.company_profile
-  %h1= "Firmenprofil von #{@company.name} editieren"
+=form_for @company, :html => {:class => "tight_form", :multipart => true } do |f|
+  #logocol
+    = image_tag @company.logo_url(:medium).to_s if @company.logo?
+    &nbsp;
+  %article.company_profile
 
-  =form_for @company, :html => {:class => "tight_form", :multipart => true } do |f|
     = f.error_messages
 
     %article.company
+      %h1= @company.name
       %p
-        = f.file_field :logo
-      %p
-        = f.label :teaser, "Teaser"
+        = f.label :teaser, "Byline"
         %br
         = f.text_field :teaser
       %p
-        = f.label :tag_list, "Tags"
+        = f.label :tag_list, "Keywords"
         %br
         = f.text_field :tag_list
-      
-      = f.fields_for :addresses do |address_fields|
-        %p
-          = label :street, "Strasse"
-          %br
-          =address_fields.text_field :street
-          %br
-          = label :plz, "Postleitzahl"
-          =address_fields.text_field :plz
-          %br/
-          = label :city, "Stadt"
-          =address_fields.text_field :city
-          %br/
-          = label :country, "Land"
-          =address_fields.text_field :country
-          
+      %p
+        = f.label :address, "Adresse"
+        %br
+        = text_area :address, :street
+
+      -#= f.fields_for :addresses do |address_fields|
+        -#%p
+          -#= label :street, "Strasse"
+          -#%br
+          -#=address_fields.text_field :street
+          -#%br
+          -#= label :plz, "Postleitzahl"
+          -#=address_fields.text_field :plz
+          -#%br/
+          -#= label :city, "Stadt"
+          -#=address_fields.text_field :city
+          -#%br/
+          -#= label :country, "Land"
+          -#=address_fields.text_field :country
+
       %p
         = f.label :phone, "Telefon"
+        %br
         = f.text_field :phone
       %p
-        = f.label :fax, "Fax"
-        = f.text_field :fax
-      %p
         = f.label :email, "e-Mail"
+        %br
         = f.text_field :email
       %p
         = f.label :website, "Webseite"
+        %br
         = f.text_field :website
       %p
-        = f.label :twitter, "Twitter"
-        = f.text_field :twitter
+        = f.label :googleplus, "Google+ Firmenaccount"
+        %br
+        = f.text_field :googleplus
       %p
-        = f.label :staff, "Mitarbeiter"
-        = f.text_field :staff
-        
+        = f.label :facebook, "Facebook Firmenaccount"
+        %br
+        = f.text_field :facebook
+      %p
+        = f.label :twitter, "Twitter Firmenaccount"
+        %br
+        = f.text_field :twitter
+
       %h3 Erzählen Sie uns etwas über Ihre Firma
       %p
-        = f.label :history, ""
+        = f.label :history, "Über uns"
         = f.text_area :history
-      %br/
+      %p
+        = f.label :staff, "Mitarbeiter"
+        %br
+        = f.text_field :staff
+      %p
+        = f.file_field :logo
       = f.submit "Speichern", :class => "button light"
-        
