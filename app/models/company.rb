@@ -51,7 +51,6 @@ class Company < ActiveRecord::Base
   validates_presence_of :name
   validates_length_of :teaser, :in=>10...140, :allow_blank => true
   validates_length_of :phone, :in => 7..32, :allow_blank => true
-  validates_length_of :fax, :in => 7..32, :allow_blank => true
   
   before_create :set_permalink
   after_create :create_related_models

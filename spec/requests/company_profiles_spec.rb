@@ -34,7 +34,8 @@ describe "Company Profile" do
     # normal flow
     it "can be edited" do
       click_link "editieren"
-      page.should have_content("Firmenprofil von #{@user.company.name} editieren")
+      page.should have_content(@user.company.name)
+      page.should have_content("zurück zum Profil")
       fill_in "company_history", :with => "lorem ipsum dolor..."
       click_button "Speichern"
       current_path.should eq(company_path(@user.company))
