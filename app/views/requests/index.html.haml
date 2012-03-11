@@ -1,3 +1,5 @@
+- content_for(:sidebar) do
+  = render "sidebar"
 = render :partial => 'bulk-action'
 = form_tag archive_requests_path(), :id => "items_form", :method => :put do
   = render :partial => 'list'

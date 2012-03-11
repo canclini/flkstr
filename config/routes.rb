@@ -18,6 +18,7 @@ Flockstreet::Application.routes.draw do
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "companies#new", :as => "register"
+  get "settings/companyprofile" => "companies#edit", :as => "settings_company_profile"
   
   resources :users, :sessions, :products, :updates, :settings, :price_suggestions, :password_resets
   

@@ -1,3 +1,5 @@
+- content_for(:sidebar) do
+  = render "sidebar"
 %h3 Antwort verfassen
 -form_for @message do |f|
   = f.error_messages  

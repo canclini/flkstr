@@ -23,7 +23,7 @@ describe "Signup Requests" do
       fill_in "company_password_confirmation", :with => 'secret'
       check('user_terms_of_service')
       click_button "Konto erstellen"
-      current_path.should eq(edit_company_path(Company.last))
+      current_path.should eq(settings_company_profile_path())
       page.should have_content("Erfolgreich registiert")
   end
   

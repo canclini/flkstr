@@ -1,3 +1,5 @@
-%ul  
-  %li=link_to "Firma", settings_path, :class => ("active" if @active == 'company')
-  %li=link_to "Benutzer", "#", :class => ("active" if @active == 'user')
+%ul
+  %li=link_to "Allgemein", settings_path, :class => ("active" if @active == 'common')
+  %li=link_to "Passwort", "#"
+  %li=link_to "Firmenprofil", settings_company_profile_path, :class => ("active" if @active == 'companyprofile')
+  %li=link_to "Konto deaktivieren", "#"

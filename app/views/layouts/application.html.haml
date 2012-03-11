@@ -30,7 +30,8 @@
 
       #container
         %nav.main= render :partial => 'nav/main'
-        %nav.sidebar=render :partial => 'sidebar' rescue nil
+        -#%nav.sidebar=render :partial => 'sidebar' rescue nil
+        %nav.sidebar= yield :sidebar
         %section{:id =>"content"}
           =yield
     %footer.small

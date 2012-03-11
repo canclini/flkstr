@@ -1,7 +1,7 @@
 .item-action
   %span.backlink=link_to "< zurück zur Übersicht", company_associates_path(current_company), :class => "underline"
   .actions
-    %span=link_to "editieren", edit_company_path(current_user.company), :class => "small_action_button" if current_user && current_company == @company
+    %span=link_to "editieren", settings_company_profile_path, :class => "small_action_button" if current_user && current_company == @company
     %span=link_to "Dran bleiben!", new_company_associate_path(@company), :class => "small_action_button" unless !current_user || current_company == @company || current_company.associates.include?(@company)
 
 #logocol
