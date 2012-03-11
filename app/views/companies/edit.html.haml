@@ -2,13 +2,16 @@
 =form_for @company, :html => {:class => "tight_form", :multipart => true } do |f|
   #logocol
     = image_tag @company.logo_url(:medium).to_s if @company.logo?
-    &nbsp;
   %article.company_profile
 
     = f.error_messages
 
     %article.company
       %h1= @company.name
+      %p
+        = f.label :logo, "Ein anderes Logo hochladen"
+        %br
+        = f.file_field :logo, :name => "Logo"
       %p
         = f.label :teaser, "Byline"
         %br
@@ -17,25 +20,25 @@
         = f.label :tag_list, "Keywords"
         %br
         = f.text_field :tag_list
-      %p
-        = f.label :address, "Adresse"
-        %br
-        = text_area :address, :street
+      -#%p
+        -#= f.label :address, "Adresse"
+        -#%br
+        -#= f.text_area :address, :street
 
-      -#= f.fields_for :addresses do |address_fields|
-        -#%p
-          -#= label :street, "Strasse"
-          -#%br
-          -#=address_fields.text_field :street
-          -#%br
-          -#= label :plz, "Postleitzahl"
-          -#=address_fields.text_field :plz
-          -#%br/
-          -#= label :city, "Stadt"
-          -#=address_fields.text_field :city
-          -#%br/
-          -#= label :country, "Land"
-          -#=address_fields.text_field :country
+      = f.fields_for :addresses do |address_fields|
+        %p
+          = label :street, "Strasse"
+          %br
+          =address_fields.text_field :street
+          %br
+          = label :plz, "Postleitzahl"
+          =address_fields.text_field :plz
+          %br/
+          = label :city, "Stadt"
+          =address_fields.text_field :city
+          %br/
+          = label :country, "Land"
+          =address_fields.text_field :country
 
       %p
         = f.label :phone, "Telefon"
@@ -62,14 +65,12 @@
         %br
         = f.text_field :twitter
 
-      %h3 Erzählen Sie uns etwas über Ihre Firma
       %p
         = f.label :history, "Über uns"
+        %br
         = f.text_area :history
       %p
         = f.label :staff, "Mitarbeiter"
         %br
         = f.text_field :staff
-      %p
-        = f.file_field :logo
       = f.submit "Speichern", :class => "button light"
